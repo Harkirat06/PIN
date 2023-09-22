@@ -9,7 +9,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 
 app.get("/api", (req, res) => {
-  res.json({ message: "Hola desde el servidor!" });
+  res.json({ message: "Proyecto inicial de PIN!" });
 });
 
 app.get('*', (req, res) => {

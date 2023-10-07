@@ -2,12 +2,14 @@ const pcBuilderRouter = require("express").Router()
 
 const configuration = {
     "placaBase": {
+        "type": "PlacaBase",
         "nombre": "ASUS PRIME Z790-P WIFI",
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
         "gama": "Alta"
     },
     "CPU": {
+        "type": "CPU",
         "marca": "Intel",
         "nombre": "Intel Core i7-13700K 3.4 GHz",
         "gama": "Alta",
@@ -49,7 +51,7 @@ const cpuList = [
     },
 ]
 
-const placas = [
+const placasList = [
     {
         "marca": "Asus",
         "nombre": "ASUS PRIME Z790-P WIFI",
@@ -72,16 +74,20 @@ const placas = [
         "gama": "Baja",
     },
 ] 
-const handleCPU = (cpu)=> {
-    const motherBoards = placas.filter(p=>p.socket === "Intel LGA 1700" && p.gama === "Alta")
-    return motherBoards
-} 
+const handleCPUPlaca = (component)=> {
+    let compatibleComponents = cpuList.filter(p=>p.socket === component.socket && p.gama === component.gama)
+    if(component.type === "CPU"){
+        compatibleComponents = placasList.filter(p=>p.socket === component.socket && p.gama === component.gama)
+    }
+    return compatibleComponents
+}
 
 pcBuilderRouter.get("/", async (req, res, next) => {
-    const data = handleCPU({
+    const data = handleCPUPlaca({
+        "type": "CPU",
         "marca": "Intel",
         "nombre": "Intel Core i3-13100 3.4 GHz/4.5 GHz",
-        "gama": "Baja",
+        "gama": "Alta",
         "socket": "Intel LGA 1700",
         "gpu": true,
     })

@@ -7,6 +7,8 @@ const gamaMediaAlta = 4;
 const gamaAlta = 5;
 const gamaPremium = 6;
 
+const emptyConfiguration = {}
+
 const configuration = {
     "placaBase": {
         "type": "PlacaBase",
@@ -64,7 +66,7 @@ const configuration = {
         "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
         "tipo": "Liquida",
         "gama": gamaMedia
-    },
+    }
 }
 
 const cpuList = [
@@ -88,7 +90,7 @@ const cpuList = [
         "gama": gamaBaja,
         "socket": "Intel LGA 1700",
         "gpu": true
-    },
+    }
 ]
 
 const placasList = [
@@ -98,7 +100,8 @@ const placasList = [
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
         "tipoRam": "DDR5",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "numero m2": 2  
     },
     {
         "marca": "Asus",
@@ -106,7 +109,8 @@ const placasList = [
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
         "tipoRam": "DDR5",
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "numero m2": 2  
     },
     {
         "marca": "MSI",
@@ -114,8 +118,9 @@ const placasList = [
         "tamaño": "ATX",
         "socket": "Intel LGA 1200",
         "tipoRam": "DDR5",
-        "gama": gamaBaja
-    },
+        "gama": gamaBaja,
+        "numero m2": 2  
+    }
 ] 
 
 const gpuList = [
@@ -133,7 +138,7 @@ const gpuList = [
         "marca": "Gigabyte",
         "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
         "gama": gamaMediaAlta
-    },
+    }
 ]
 
 const ramList = [
@@ -157,7 +162,7 @@ const ramList = [
         "tipo": "DDR5",
         "capacidad": 32,
         "gama": gamaMedia
-    },
+    }
 ]
 
 const discoList = [
@@ -181,7 +186,7 @@ const discoList = [
         "capacidad": 2,
         "tecnologia": "Sata",
         "gama": gamaBaja
-    },
+    }
 ]
 
 const monitorList = [
@@ -199,7 +204,7 @@ const monitorList = [
         "marca": "LG",
         "nombre": "LG 27GR95QE-B 26.5 OLED QHD 240Hz G-Sync/FreeSync Premium",
         "gama": gamaPremium
-    },
+    }
 ]
 
 const disipadorList = [
@@ -220,7 +225,7 @@ const disipadorList = [
         "nombre": "Forgeon Azoth 360 ARGB Kit de Refrigeración Líquida 360mm Negro",
         "tipo": "Liquida",
         "gama": gamaAlta
-    },
+    }
 ]
 
 const cajaList = [
@@ -238,7 +243,7 @@ const cajaList = [
         "marca": "Nox",
         "nombre": "Nox Hummer Void USB 3.0 Negro",
         "gama": gamaBaja
-    },
+    }
 ]
 
 const fuenteList = [
@@ -262,8 +267,85 @@ const fuenteList = [
         "potencia": "750",
         "ochetaplus": false,
         "gama": gamaBaja
-    },
+    }
 ]
+
+const ratonList = [
+    {
+        "marca": "Tempest",
+        "nombre": "Tempest X8 Keeper RGB Ratón Gaming 10.000 DPI Negro",
+        "gama": gamaMedia
+    },
+    {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Vendetta Ratón Gaming RGB 16000DPI Negro",
+        "gama": gamaBaja
+    },
+    {
+        "marca": "Newskill",
+        "nombre": "Newskill Eos Ivory Ratón Gaming Professional RGB 16000DPI Blanco",
+        "gama": gamaAlta
+    }
+]
+
+const tecladoList = [
+    {
+        "marca": "Tempest",
+        "nombre": "Tempest Cataclysm Combo 3 en 1 Gaming Teclado",
+        "gama": gamaMedia,
+        "mecanico": false
+    },
+    {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Clutch Teclado Gaming RGB 60% Switch Blue",
+        "gama": gamaBaja,
+        "mecanico": true
+    },
+    {
+        "marca": "Newskill",
+        "nombre": "Newskill Suiko Teclado Mecánico Gaming Full RGB Switch Kailh Blue",
+        "gama": gamaAlta,
+        "mecanico": true
+    }
+]
+
+const filtroPorGama = (gama, lista)=>{
+    return lista.filter(item => item.gama === gama || item.gama === gama - 1 || item.gama === gama + 1)
+}
+
+const filtrarListasPorGama = (gama)=>{
+    placasListFiltrada = filtroPorGama(gama, placasList)
+    cpuListFiltrada = filtroPorGama(gama, cpuList)
+    disipadorListFiltrada = filtroPorGama(gama, disipadorList)
+    ramListFiltrada = filtroPorGama(gama, ramList)
+    discoListFiltrada = filtroPorGama(gama, discoList)
+    gpuListFiltrada = filtroPorGama(gama, gpuList)
+    fuenteListFiltrada = filtroPorGama(gama, fuenteList)
+    cajaListFiltrada = filtroPorGama(gama, cajaList)
+    monitorListFiltrada = filtroPorGama(gama, monitorList)
+    tecladoListFiltrada = filtroPorGama(gama, tecladoList)
+    ratonListFiltrada = filtroPorGama(gama, ratonList)
+    return [placasListFiltrada, cpuListFiltrada, disipadorListFiltrada, ramListFiltrada, discoListFiltrada,
+            gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada]
+}
+
+const handleConfiguacion = (config)=>{
+    let configObjects = Object.values(config);
+    console.log(configObjects.length)
+    if( configObjects.length !== 0){
+        let gama = configObjects[0].gama
+        const [placasList, cpuList, disipadorList, ramList, discoList,
+        gpuList, fuenteList, cajaList, monitorList, tecladoList,
+        ratonList] = filtrarListasPorGama(gama)
+        return [placasList, cpuList, disipadorList, ramList, discoList,
+            gpuList, fuenteList, cajaList, monitorList, tecladoList,
+            ratonList]
+    }else{
+        return [placasList, cpuList, disipadorList, ramList, discoList,
+            gpuList, fuenteList, cajaList, monitorList, tecladoList,
+            ratonList]
+    }
+}
 
 const handleCPUPlaca = (component)=> {
     let compatibleComponents = cpuList.filter(p=>p.socket === component.socket && p.gama === component.gama)
@@ -274,16 +356,22 @@ const handleCPUPlaca = (component)=> {
 }
 
 pcBuilderRouter.get("/", async (req, res, next) => {
-    const data = handleCPUPlaca({
-        "type": "CPU",
-        "marca": "Intel",
-        "nombre": "Intel Core i3-13100 3.4 GHz/4.5 GHz",
-        "gama": "Alta",
-        "socket": "Intel LGA 1700",
-        "gpu": true,
-    })
+    const [placasList, cpuList, disipadorList, ramList, discoList,
+        gpuList, fuenteList, cajaList, monitorList, tecladoList,
+        ratonList] = handleConfiguacion(configuration)
+    
     res.json({
-        data
+        placasList,
+        cpuList,
+        disipadorList,
+        ramList,
+        discoList,
+        gpuList,
+        fuenteList,
+        cajaList,
+        monitorList,
+        tecladoList,
+        ratonList 
     })
 })
 module.exports = pcBuilderRouter

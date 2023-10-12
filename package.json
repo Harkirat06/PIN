@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "amazon-product-api": "^0.4.4"
+  }
+}

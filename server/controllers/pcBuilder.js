@@ -309,11 +309,45 @@ const tecladoList = [
     }
 ]
 
+const mapList = (lista)=>{
+    return lista.map((item => {
+        switch(item.gama){
+            case gamaBaja: item.gama =  "Baja"; break;
+            case gamaBajaMedia: item.gama =  "BajaMedia"; break;
+            case gamaMedia: item.gama =  "Media"; break;
+            case gamaMediaAlta: item.gama =  "MediaAlta"; break;
+            case gamaAlta: item.gama =  "Alta"; break;
+            case gamaPremium: item.gama = "Premium"; break;
+            default: break
+        }
+        return item
+    }))
+}
+const mapGamas = ()=>{
+    placasListMapeada = mapList(placasList)
+    cpuListMapeada = mapList(cpuList)
+    disipadorListMapeada = mapList(disipadorList)
+    ramListMapeada = mapList(ramList)
+    discoListMapeada = mapList(discoList)
+    gpuListMapeada = mapList(gpuList)
+    fuenteListMapeada = mapList(fuenteList)
+    cajaListMapeada = mapList(cajaList)
+    monitorListMapeada = mapList(monitorList)
+    tecladoListMapeada = mapList(tecladoList)
+    ratonListMapeada = mapList(ratonList)
+    return [placasListMapeada, cpuListMapeada, disipadorListMapeada, ramListMapeada, discoListMapeada,
+            gpuListMapeada, fuenteListMapeada, cajaListMapeada, monitorListMapeada, tecladoListMapeada, ratonListMapeada]
+}
+
 const filtroPorGama = (gama, lista)=>{
     return lista.filter(item => item.gama === gama || item.gama === gama - 1 || item.gama === gama + 1)
 }
 
+
 const filtrarListasPorGama = (gama)=>{
+    const [placasList, cpuList, disipadorList, ramList, discoList,
+        gpuList, fuenteList, cajaList, monitorList, tecladoList,
+        ratonList] = mapGamas()
     placasListFiltrada = filtroPorGama(gama, placasList)
     cpuListFiltrada = filtroPorGama(gama, cpuList)
     disipadorListFiltrada = filtroPorGama(gama, disipadorList)
@@ -341,9 +375,9 @@ const handleConfiguacion = (config)=>{
             gpuList, fuenteList, cajaList, monitorList, tecladoList,
             ratonList]
     }else{
-        return [placasList, cpuList, disipadorList, ramList, discoList,
-            gpuList, fuenteList, cajaList, monitorList, tecladoList,
-            ratonList]
+        return [placasLista, cpuLista, disipadorLista, ramLista, discoLista,
+            gpuLista, fuenteLista, cajaLista, monitorLista, tecladoLista,
+            ratonLista] = mapGamas()
     }
 }
 
@@ -358,7 +392,7 @@ const handleCPUPlaca = (component)=> {
 pcBuilderRouter.get("/", async (req, res, next) => {
     const [placasList, cpuList, disipadorList, ramList, discoList,
         gpuList, fuenteList, cajaList, monitorList, tecladoList,
-        ratonList] = handleConfiguacion(configuration)
+        ratonList] = handleConfiguacion(emptyConfiguration)
     
     res.json({
         placasList,

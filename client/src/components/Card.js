@@ -6,11 +6,11 @@ function Card ({context}) {
     
     return (
         <div className="Card">
-            <img src={context.imagen} alt={context.nombre}/>
-            <h3>{context.nombre}</h3>
-            <p> PrecioAmazon: ${context.precioAmazon} </p>
-            <p> PrecioEbay: ${context.precioEbay} </p>
-            <p> PrecioSegundaMano: ${context.precioSegundaMano} </p>
+            <img src={imagen} alt={nombre}/>
+            <h3>{nombre}</h3>
+            <p> PrecioAmazon: ${precioAmazon} </p>
+            <p> PrecioEbay: ${precioEbay} </p>
+            <p> PrecioSegundaMano: ${precioSegundaMano} </p>
         </div>
     )
 

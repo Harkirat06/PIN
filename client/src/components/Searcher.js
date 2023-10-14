@@ -2,13 +2,26 @@ import { useState, useEffect } from "react";
 
 function Searcher() {
     const lista = [{
-        "type": "CPU",
         "marca": "Intel",
-        "nombre": "Intel Core i3-13100 3.4 GHz/4.5 GHz",
+        "nombre": "Intel Core i7-13700K 3.4 GHz",
         "gama": "Alta",
         "socket": "Intel LGA 1700",
-        "gpu": true,
-    }]
+        "gpu": true
+    },
+    {
+        "marca": "Intel",
+        "nombre": "Intel Core i5-13600KF 3.5 GHz",
+        "gama": "Media",
+        "socket": "Intel LGA 1700",
+        "gpu": false
+    },
+    {
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13100 3.4 GHz/4.5 GHz",
+        "gama": "Baja",
+        "socket": "Intel LGA 1700",
+        "gpu": true
+    }];
 
     const [items, setItems] = useState(lista);
 
@@ -24,18 +37,23 @@ function Searcher() {
         let newItems = [];
         console.log(items);
         lista.forEach(item => {
-            if (item.nombre.toLocaleLowerCase().includes(q.toLocaleLowerCase())) {
-                newItems = newItems.concat(item);
-            }
+            let words = q.toLocaleLowerCase().split(' ')
+            let containsAll=true;
+            words.forEach(word => {
+                   if (!item.nombre.toLocaleLowerCase().includes(word)) {
+                       containsAll=false;
+                   }
+            });
+            if (containsAll) {newItems = newItems.concat(item);}
         });
         console.log(newItems);
         setItems(newItems);
         event.preventDefault();
-    }
+       }
     
     return (
         <div className="wrapper">
-            <div className="search-wrapper">
+            <div className="search-wrapper" >
                 <label htmlFor="search-form">
                     <form onSubmit={filter}>
                         <input
@@ -54,6 +72,7 @@ function Searcher() {
                     </form>
                 </label>
             </div>
+            
             {items.length !== 0 ? <ul className="card-grid">
                 {items.map((item) => (
                     <li>

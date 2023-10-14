@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 import {useState, useEffect} from "react";
-import {Button} from "react-bootstrap";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { createContext} from 'react'
+import NotFound from './components/NotFound'
+import StateProvider from './components/StateProvider'
+import Marketplace from './components/Marketplace'
+import Searcher from './components/Searcher';
 
 function App() {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+  const StateContext = createContext()
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-        <Button variant="primary">Empieza Ahora</Button>
-      </header>
-    </div>
+    <BrowserRouter id="App">
+      <StateProvider context={StateContext}>
+          <Routes>
+            <Route exact path="/" element={<Searcher context={StateContext} />} />
+            <Route path="/marketplace" element={
+                <Marketplace context={StateContext} />
+            } />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+      </StateProvider>
+    </BrowserRouter>
   );
 }
 

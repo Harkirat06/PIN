@@ -24,21 +24,21 @@ function Cards({ context }) {
       ];
 
       return (
-        <div className="container">
-          <div className="row">
-            {ejemplo.map((cardData, index) => (
-              <div className="col-12 col-md-6 col-lg-4" key={index}>
+        <div className="wrapper">
+          <ul className="card-grid">
+            {ejemplo.map((item, index) => (
+              <li key={index}>
                 <Card
-                  nombre={cardData.nombre}
-                  imagen={cardData.imagen}
-                  precioAmazon={cardData.precioAmazon}
-                  precioEbay={cardData.precioEbay}
-                  precioSegundaMano={cardData.precioSegundaMano}
-                  context={context}
+                  nombre={item.nombre}
+                  precioAmazon={item.precioAmazon}
+                  precioEbay={item.precioEbay}
+                  precioSegundaMano={item.precioSegundaMano}
                 />
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       );
     }
+    
+    export default Cards;

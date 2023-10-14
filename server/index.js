@@ -4,6 +4,7 @@ const express = require("express") // Servidor
 const compression = require('compression') // Rendimiento
 const cors = require('cors') // Control de acceso
 const pcBuilderRouter = require('./controllers/pcbuilder') // Gestion de pc Builder
+const imageRouter = require('./controllers/image') // Gestion de pc Builder
 const PORT = process.env.PORT || 5000
 
 const server = express()
@@ -11,6 +12,7 @@ server.use(express.json())
 server.use(compression())
 server.use(cors())
 
+server.use("/image", imageRouter)
 server.use("/api/pcbuilder", pcBuilderRouter)
 
 server.get("/api", (req, res) => {

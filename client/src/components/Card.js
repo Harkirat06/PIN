@@ -19,5 +19,5 @@ function Card ({context}) {
 }
         </div>
     )
-
 }
+ export default Card

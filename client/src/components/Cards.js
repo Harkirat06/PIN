@@ -30,6 +30,7 @@ function Cards({ context }) {
               <li key={index}>
                 <Card
                   nombre={item.nombre}
+                  imagen={item.imagen}
                   precioAmazon={item.precioAmazon}
                   precioEbay={item.precioEbay}
                   precioSegundaMano={item.precioSegundaMano}

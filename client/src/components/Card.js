@@ -1,9 +1,5 @@
-import { useState, useEffect, useContext } from "react";
-
-function Card ({context}) {
-    const {nombre,setNombre,imagen,setImagen,precioAmazon,setPrecioAmazon,
-        precioEbay,setPrecioEbay,precioSegundaMano,setPrecioSegundaMano} = useContext(context)
-    
+//utilizar boostrap para el return.
+function Card ({nombre, imagen, precioAmazon, precioEbay, precioSegundaMano}) {
     return (
         <div className="Card">
             <img src={imagen} alt={nombre}/>
@@ -19,5 +15,6 @@ function Card ({context}) {
 }
         </div>
     )
+
 }
- export default Card
+export default Card;

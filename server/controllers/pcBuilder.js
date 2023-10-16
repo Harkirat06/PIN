@@ -7,7 +7,20 @@ const gamaMediaAlta = 4;
 const gamaAlta = 5;
 const gamaPremium = 6;
 
-const emptyConfiguration = {}
+const potenciaExtra = 50; //para calcular la potencia solo tengo en cuenta la cpu y la gpu. todo lo demas entra en este extra, un poco arbitrario.
+
+const emptyConfiguration = {
+    /*"placaBase": {},
+    "cpu": {},
+    "ram": {},
+    "disco1": {},
+    "disco2": {},
+    "gpu": {},
+    "fuenteAlimentacion": {},
+    "monitor": {},
+    "caja": {},
+    "disipador": {},*/
+}
 
 const configuration = {
     "placaBase": {
@@ -15,14 +28,18 @@ const configuration = {
         "nombre": "ASUS PRIME Z790-P WIFI",
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "numeroM2": 2,
+        "numeroSata" : 2   
     },
-    "CPU": {
+    "cpu": {
         "type": "CPU",
         "marca": "Intel",
         "nombre": "Intel Core i7-13700K 3.4 GHz",
         "gama": gamaAlta,
         "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
         "gpu": true
     },
     "ram": {
@@ -32,14 +49,21 @@ const configuration = {
         "capacidad": 32,
         "gama": gamaMedia
     },
-    "disco": {
+    "disco1": {
         "marca": "Samsung",
         "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
         "capacidad": 1,
         "tecnologia": "m.2",
         "gama": gamaAlta
     },
-    "GPU": {
+    "disco2": {
+        "marca": "Samsung",
+        "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+        "capacidad": 1,
+        "tecnologia": "m.2",
+        "gama": gamaAlta
+    },
+    "gpu": {
         "marca": "Gigabyte",
         "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
         "gama": gamaMediaAlta
@@ -75,6 +99,9 @@ const cpuList = [
         "nombre": "Intel Core i7-13700K 3.4 GHz",
         "gama": gamaAlta,
         "socket": "Intel LGA 1700",
+        "consumo": 253,
+        "tipoRam": "DDR5",
+        "ventilador": false,
         "gpu": true
     },
     {
@@ -82,6 +109,9 @@ const cpuList = [
         "nombre": "Intel Core i5-13600KF 3.5 GHz",
         "gama": gamaMedia,
         "socket": "Intel LGA 1700",
+        "consumo": 181,
+        "tipoRam": "DDR5",
+        "ventilador": false,
         "gpu": false
     },
     {
@@ -89,6 +119,9 @@ const cpuList = [
         "nombre": "Intel Core i3-13100 3.4 GHz/4.5 GHz",
         "gama": gamaBaja,
         "socket": "Intel LGA 1700",
+        "consumo": 89,
+        "tipoRam": "DDR5",
+        "ventilador": false,
         "gpu": true
     }
 ]
@@ -101,7 +134,8 @@ const placasList = [
         "socket": "Intel LGA 1700",
         "tipoRam": "DDR5",
         "gama": gamaAlta,
-        "numero m2": 2  
+        "numeroM2": 2,
+        "numeroSata" : 2  
     },
     {
         "marca": "Asus",
@@ -110,7 +144,8 @@ const placasList = [
         "socket": "Intel LGA 1700",
         "tipoRam": "DDR5",
         "gama": gamaMedia,
-        "numero m2": 2  
+        "numeroM2": 2,
+        "numeroSata" : 2  
     },
     {
         "marca": "MSI",
@@ -119,7 +154,8 @@ const placasList = [
         "socket": "Intel LGA 1200",
         "tipoRam": "DDR5",
         "gama": gamaBaja,
-        "numero m2": 2  
+        "numeroM2": 2,
+        "numeroSata" : 2  
     }
 ] 
 
@@ -127,16 +163,22 @@ const gpuList = [
     {
         "marca": "MSI",
         "nombre":"MSI GeForce RTX 3060 VENTUS 2X OC LHR 12GB GDDR6",
+        "consumo": 170,
+        "potenciaRecomendada": 550,
         "gama": gamaMedia
     },
     {
         "marca": "AMD",
         "nombre":"Sapphire Pulse AMD Radeon RX 6700 XT 12GB GDDR6",
+        "consumo": 230,
+        "potenciaRecomendada": 650,
         "gama": gamaMedia
     },
     {
         "marca": "Gigabyte",
         "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "consumo": null,
+        "potenciaRecomendada": 750,
         "gama": gamaMediaAlta
     }
 ]
@@ -345,9 +387,6 @@ const filtroPorGama = (gama, lista)=>{
 
 
 const filtrarListasPorGama = (gama)=>{
-    const [placasList, cpuList, disipadorList, ramList, discoList,
-        gpuList, fuenteList, cajaList, monitorList, tecladoList,
-        ratonList] = mapGamas()
     placasListFiltrada = filtroPorGama(gama, placasList)
     cpuListFiltrada = filtroPorGama(gama, cpuList)
     disipadorListFiltrada = filtroPorGama(gama, disipadorList)
@@ -377,16 +416,159 @@ const handleConfiguacion = (config)=>{
     }else{
         return [placasLista, cpuLista, disipadorLista, ramLista, discoLista,
             gpuLista, fuenteLista, cajaLista, monitorLista, tecladoLista,
-            ratonLista] = mapGamas()
+            ratonLista]
     }
 }
 
-const handleCPUPlaca = (component)=> {
-    let compatibleComponents = cpuList.filter(p=>p.socket === component.socket && p.gama === component.gama)
-    if(component.type === "CPU"){
-        compatibleComponents = placasList.filter(p=>p.socket === component.socket && (p.gama === component.gama || p.gama === component.gama - 1 || p.gama === component.gama + 1))
+const handleCPU = (lista, placaBase, ram) => {
+    if (placaBase !== undefined && ram !== undefined) {
+        return lista.filter(item => item.socket === placaBase.socket && item.ram === ram.tipo);
+    } else if (placaBase !== undefined) {
+        return lista.filter(item => item.socket === placaBase.socket);
+    } else if (ram !== undefined) {
+        return lista.filter(item => item.ram === ram.tipo);
+    } else {
+        return lista;
     }
-    return compatibleComponents
+}
+
+const handlePlacaBase = (lista, cpu, ram, disco1, disco2) => {
+    if (disco1 !== undefined && disco1.tecnologia === "m.2" && disco2 !== undefined && disco2.tecnologia === "Sata") {
+        if (cpu !== undefined && ram !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
+        } else if (cpu !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 0 && item.numeroSata > 0);
+        } else if (ram !== undefined) {
+            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
+        } else {
+            return lista.filter(item => item.numeroM2 > 0 && item.numeroSata > 0);
+        }
+    } else if (disco1 !== undefined && disco1.tecnologia === "m.2" && disco2 !== undefined && disco2.tecnologia === "m.2") {
+        if (cpu !== undefined && ram !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 1);
+        } else if (cpu !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 1);
+        } else if (ram !== undefined) {
+            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 1);
+        } else {
+            return lista.filter(item => item.numeroM2 > 1);
+        }
+    } else if (disco1 !== undefined && disco1.tecnologia === "m.2" && disco2 === undefined) {
+        if (cpu !== undefined && ram !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 0);
+        } else if (cpu !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 0);
+        } else if (ram !== undefined) {
+            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 0);
+        } else {
+            return lista.filter(item => item.numeroM2 > 0);
+        }
+    } else if (disco1 !== undefined && disco1.tecnologia === "Sata" && disco2 !== undefined && disco2.tecnologia === "Sata") {
+        if (cpu !== undefined && ram !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroSata > 1);
+        } else if (cpu !== undefined) {
+        return lista.filter(item => item.socket === cpu.socket && item.numeroSata > 1);
+        } else if (ram !== undefined) {
+            return lista.filter(item => item.ram === ram.tipo && item.numeroSata > 1);
+        } else {
+            return lista.filter(item => item.numeroSata > 1);
+        }
+    } else if (disco1 !== undefined && disco1.tecnologia === "Sata" && disco2 !== undefined && disco2.tecnologia === "m.2") {
+        if (cpu !== undefined && ram !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
+        } else if (cpu !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 0 && item.numeroSata > 0);
+        } else if (ram !== undefined) {
+            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
+        } else {
+            return lista.filter(item => item.numeroM2 > 0 && item.numeroSata > 0);
+        }
+    } else if (disco1 !== undefined && disco1.tecnologia === "Sata" && disco2 === undefined) {
+        if (cpu !== undefined && ram !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroSata > 0);
+        } else if (cpu !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.numeroSata > 0);
+        } else if (ram !== undefined) {
+            return lista.filter(item => item.ram === ram.tipo && item.numeroSata > 0);
+        } else {
+            return lista.filter(item => item.numeroSata > 0);
+        }
+    }
+    else if (disco1 === undefined && disco2 === undefined) {
+        if (cpu !== undefined && ram !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo);
+        } else if (cpu !== undefined) {
+            return lista.filter(item => item.socket === cpu.socket);
+        } else if (ram !== undefined) {
+            return lista.filter(item => item.ram === ram.tipo);
+        } else {
+            return lista;
+        }
+    }
+}
+
+const handleRam = (lista, placaBase, cpu) => {
+    if (placaBase !== undefined && cpu !== undefined) {
+        return lista.filter(item => item.tipo === placaBase.ram && item.tipo === cpu.ram);
+    } else if (placaBase !== undefined) {
+        return lista.filter(item => item.tipo === placaBase.ram);
+    } else if (cpu !== undefined) {
+        return lista.filter(item => item.tipo === cpu.ram);
+    } else {
+        return lista;
+    }
+}
+
+const handleDisco = (lista, placaBase, otroDisco) => {
+    if (otroDisco !== undefined && otroDisco.tecnologia === "Sata") {
+        if (placaBase.numeroSata > 1 && placaBase.numeroM2 > 0) {
+            return lista;
+        } else if (placaBase.numeroSata > 1) {
+            return lista.filter(item => item.tecnologia === "Sata");
+        } else if (placaBase.numeroM2 > 0) {
+            return lista.filter(item => item.tecnologia === "m.2");
+        } else {
+            return [];
+        }
+    } else if (otroDisco !== undefined && otroDisco.tecnologia === "m.2") {
+        if (placaBase.numeroSata > 0 && placaBase.numeroM2 > 1) {
+            return lista;
+        } else if (placaBase.numeroSata > 0) {
+            return lista.filter(item => item.tecnologia === "Sata");
+        } else if (placaBase.numeroM2 > 1) {
+            return lista.filter(item => item.tecnologia === "m.2");
+        } else {
+            return [];
+        }
+    } else {
+        if (placaBase.numeroSata > 0 && placaBase.numeroM2 > 0) {
+            return lista;
+        } else if (placaBase.numeroSata > 0) {
+            return lista.filter(item => item.tecnologia === "Sata");
+        } else if (placaBase.numeroM2 > 0) {
+            return lista.filter(item => item.tecnologia === "m.2");
+        } else {
+            return [];
+        }
+    }  
+}
+
+const handleDisipador = (lista, cpu) => {
+    if (cpu !== undefined && !cpu.ventilador) {
+        return lista;
+    } else {
+        return [];
+    }
+}
+
+const handleFuente = (lista, cpu, gpu) => {
+    if (gpu !== undefined && gpu.potenciaRecomendada !== null) {
+        return lista.filter(item => item.potencia >= gpu.potenciaRecomendada);
+    } else if (gpu !== undefined && cpu !== undefined) {
+        return lista.filter(item => item.potencia >= ((gpu.consumo + cpu.consumo + potenciaExtra) * 80 / 100))
+    } else {
+        return lista;
+    }
 }
 
 pcBuilderRouter.get("/", async (req, res, next) => {

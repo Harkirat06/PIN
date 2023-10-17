@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 function Searcher() {
     const lista = [{
         "marca": "Intel",

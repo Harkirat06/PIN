@@ -9,18 +9,7 @@ const gamaPremium = 6;
 
 const potenciaExtra = 50; //para calcular la potencia solo tengo en cuenta la cpu y la gpu. todo lo demas entra en este extra, un poco arbitrario.
 
-const emptyConfiguration = {
-    /*"placaBase": {},
-    "cpu": {},
-    "ram": {},
-    "disco1": {},
-    "disco2": {},
-    "gpu": {},
-    "fuenteAlimentacion": {},
-    "monitor": {},
-    "caja": {},
-    "disipador": {},*/
-}
+const emptyConfiguration = {}
 
 const configuration = {
     "placaBase": {
@@ -52,11 +41,11 @@ const configuration = {
         "gama": gamaMedia
     },
     "m2": [{
-        "marca": "Samsung",
-        "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
-        "capacidad": 1,
-        "tecnologia": "m.2",
-        "gama": gamaAlta
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaAlta
         },
         {
             "marca": "Samsung",
@@ -476,11 +465,11 @@ const handlePlacaBase = (lista, cpu, ram, m2, sata) => {
     }
 
     if(m2.length !== 0){
-        lista = lista.filter(item => item.numeroM2 == m2.length)
+        lista = lista.filter(item => item.numeroM2 >= m2.length)
     }
 
     if(sata.length !== 0){
-        lista = lista.filter(item => item.numeroSata == sata.length)
+        lista = lista.filter(item => item.numeroSata >= sata.length)
     }
     return lista
 }
@@ -524,16 +513,12 @@ const handleDisipador = (lista, cpu) => {
 }
 
 const handleFuente = (lista, cpu, gpu) => {
-    let potenciaTotal = 0;
-    if(gpu){
-        potenciaTotal += gpu.potenciaRecomendada
+    if(gpu.potenciaRecomendada){
+        lista.filter(item => item.potencia >= gpu.potenciaRecomendada);
+    } else if (cpu && gpu) {
+        lista.filter(item => (item.potencia * 80 / 100) >= (gpu.consumo + cpu.consumo + potenciaExtra))
     }
-
-    if(cpu){
-        potenciaTotal += cpu.consumo
-    }
-
-    return lista.filter(item => item.potencia >= ((potenciaTotal + potenciaExtra) * 80 / 100))
+    return lista;
 }
 
 const handleConfiguacion = (config)=>{
@@ -545,6 +530,11 @@ const handleConfiguacion = (config)=>{
         gpuList, fuenteList, cajaList, monitorList, tecladoList,
         ratonList] = filtrarListasPorGama(gama)
         placasList = handlePlacaBase(placasList, config.cpu, config.m2, config.sata)
+        cpuList = handleCPU(cpuList, config.placaBase, config,ram)
+        ramList = handleRam(ramList, config.placaBase, config.cpu)
+        discoList = handleDisco(discoList, config.placaBase, config.m2, config.sata)
+        disipadorList = handleDisipador(disipadorList, config.cpu)
+        fuenteList = handleFuente(fuenteList, config.cpu, config.gpu)
         return [placasList, cpuList, disipadorList, ramList, discoList,
             gpuList, fuenteList, cajaList, monitorList, tecladoList,
             ratonList]

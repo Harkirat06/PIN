@@ -29,8 +29,8 @@ const configuration = {
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
         "gama": gamaAlta,
-        "numeroM2": 2,
-        "numeroSata" : 2,
+        "numeroM2": 0,
+        "numeroSata" : 1,
         "tipoRam": "DDR5"
     },
     "cpu": {
@@ -252,7 +252,7 @@ const discoList = [
         "nombre": "Samsung 870 QVO SSD 1TB SATA3",
         "capacidad": 1, //tb
         "tecnologia": "Sata",
-        "gama": gamaMedia
+        "gama": gamaAlta
     },
     {
         "marca": "Samsung",
@@ -266,7 +266,7 @@ const discoList = [
         "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
         "capacidad": 2,
         "tecnologia": "Sata",
-        "gama": gamaBaja
+        "gama": gamaAlta
     }
 ]
 
@@ -495,38 +495,24 @@ const handleRam = (lista, placaBase, cpu) => {
     }
 }
 
-const handleDisco = (lista, placaBase, otroDisco) => {
-    if (otroDisco !== undefined && otroDisco.tecnologia === "Sata") {
-        if (placaBase.numeroSata > 1 && placaBase.numeroM2 > 0) {
-            return lista;
-        } else if (placaBase.numeroSata > 1) {
-            return lista.filter(item => item.tecnologia === "Sata");
-        } else if (placaBase.numeroM2 > 0) {
-            return lista.filter(item => item.tecnologia === "m.2");
-        } else {
-            return [];
+const handleDisco = (lista, placaBase, m2, sata) => {
+    if(placaBase){
+        if(m2.length >= placaBase.numeroM2){
+            lista = lista.filter(item => item.tipo == "Sata")
         }
-    } else if (otroDisco !== undefined && otroDisco.tecnologia === "m.2") {
-        if (placaBase.numeroSata > 0 && placaBase.numeroM2 > 1) {
-            return lista;
-        } else if (placaBase.numeroSata > 0) {
-            return lista.filter(item => item.tecnologia === "Sata");
-        } else if (placaBase.numeroM2 > 1) {
-            return lista.filter(item => item.tecnologia === "m.2");
-        } else {
-            return [];
+        if(sata.length >= placaBase.numeroSata){
+            lista = lista.filter(item => item.tipo == "m.2")
         }
-    } else {
-        if (placaBase.numeroSata > 0 && placaBase.numeroM2 > 0) {
-            return lista;
-        } else if (placaBase.numeroSata > 0) {
-            return lista.filter(item => item.tecnologia === "Sata");
-        } else if (placaBase.numeroM2 > 0) {
-            return lista.filter(item => item.tecnologia === "m.2");
-        } else {
-            return [];
-        }
-    }  
+        return lista
+    }
+    
+    if(m2.length >= 2){
+        lista = lista.filter(item => item.tipo == "Sata")
+    }
+    if(sata.length >= 2){
+        lista = lista.filter(item => item.tipo == "m.2")
+    }
+    return lista  
 }
 
 const handleDisipador = (lista, cpu) => {

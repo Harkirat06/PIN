@@ -29,8 +29,9 @@ const configuration = {
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
         "gama": gamaAlta,
-        "numeroM2": 2,
-        "numeroSata" : 2   
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5"
     },
     "cpu": {
         "type": "CPU",
@@ -40,7 +41,8 @@ const configuration = {
         "socket": "Intel LGA 1700",
         "tipoRam": "DDR5",
         "ventilador": false,
-        "gpu": true
+        "gpu": true,
+        "tipoRam": "DDR5"
     },
     "ram": {
         "marca": "Corsair",
@@ -49,20 +51,37 @@ const configuration = {
         "capacidad": 32,
         "gama": gamaMedia
     },
-    "disco1": {
+    "m2": [{
         "marca": "Samsung",
         "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
         "capacidad": 1,
         "tecnologia": "m.2",
         "gama": gamaAlta
-    },
-    "disco2": {
-        "marca": "Samsung",
-        "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
-        "capacidad": 1,
-        "tecnologia": "m.2",
-        "gama": gamaAlta
-    },
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaAlta
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": gamaMedia
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": gamaBaja
+        }
+    ],
     "gpu": {
         "marca": "Gigabyte",
         "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
@@ -96,11 +115,21 @@ const configuration = {
 const cpuList = [
     {
         "marca": "Intel",
-        "nombre": "Intel Core i7-13700K 3.4 GHz",
+        "nombre": "Intel Core i9-13700K 4 GHz",
         "gama": gamaAlta,
         "socket": "Intel LGA 1700",
         "consumo": 253,
         "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true
+    },
+    {
+        "marca": "Intel",
+        "nombre": "Intel Core i7-13700K 3.4 GHz",
+        "gama": gamaAlta,
+        "socket": "Intel LGA 1700",
+        "consumo": 253,
+        "tipoRam": "DDR4",
         "ventilador": false,
         "gpu": true
     },
@@ -139,12 +168,22 @@ const placasList = [
     },
     {
         "marca": "Asus",
+        "nombre": "ASUS PRIME Z790-V",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "gama": gamaAlta,
+        "numeroM2": 2,
+        "numeroSata" : 2  
+    },
+    {
+        "marca": "Asus",
         "nombre": "ASUS TUF GAMING Z790 PLUS WIFI",
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
         "tipoRam": "DDR5",
         "gama": gamaMedia,
-        "numeroM2": 2,
+        "numeroM2": 1,
         "numeroSata" : 2  
     },
     {
@@ -154,7 +193,7 @@ const placasList = [
         "socket": "Intel LGA 1200",
         "tipoRam": "DDR5",
         "gama": gamaBaja,
-        "numeroM2": 2,
+        "numeroM2": 1,
         "numeroSata" : 2  
     }
 ] 
@@ -213,7 +252,7 @@ const discoList = [
         "nombre": "Samsung 870 QVO SSD 1TB SATA3",
         "capacidad": 1, //tb
         "tecnologia": "Sata",
-        "gama": gamaMedia
+        "gama": gamaAlta
     },
     {
         "marca": "Samsung",
@@ -227,7 +266,7 @@ const discoList = [
         "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
         "capacidad": 2,
         "tecnologia": "Sata",
-        "gama": gamaBaja
+        "gama": gamaAlta
     }
 ]
 
@@ -365,18 +404,18 @@ const mapList = (lista)=>{
         return item
     }))
 }
-const mapGamas = ()=>{
-    placasListMapeada = mapList(placasList)
-    cpuListMapeada = mapList(cpuList)
-    disipadorListMapeada = mapList(disipadorList)
-    ramListMapeada = mapList(ramList)
-    discoListMapeada = mapList(discoList)
-    gpuListMapeada = mapList(gpuList)
-    fuenteListMapeada = mapList(fuenteList)
-    cajaListMapeada = mapList(cajaList)
-    monitorListMapeada = mapList(monitorList)
-    tecladoListMapeada = mapList(tecladoList)
-    ratonListMapeada = mapList(ratonList)
+const mapGamas = (listas)=>{
+    placasListMapeada = mapList(listas.placasList)
+    cpuListMapeada = mapList(listas.cpuList)
+    disipadorListMapeada = mapList(listas.disipadorList)
+    ramListMapeada = mapList(listas.ramList)
+    discoListMapeada = mapList(listas.discoList)
+    gpuListMapeada = mapList(listas.gpuList)
+    fuenteListMapeada = mapList(listas.fuenteList)
+    cajaListMapeada = mapList(listas.cajaList)
+    monitorListMapeada = mapList(listas.monitorList)
+    tecladoListMapeada = mapList(listas.tecladoList)
+    ratonListMapeada = mapList(listas.ratonList)
     return [placasListMapeada, cpuListMapeada, disipadorListMapeada, ramListMapeada, discoListMapeada,
             gpuListMapeada, fuenteListMapeada, cajaListMapeada, monitorListMapeada, tecladoListMapeada, ratonListMapeada]
 }
@@ -398,163 +437,86 @@ const filtrarListasPorGama = (gama)=>{
     monitorListFiltrada = filtroPorGama(gama, monitorList)
     tecladoListFiltrada = filtroPorGama(gama, tecladoList)
     ratonListFiltrada = filtroPorGama(gama, ratonList)
-    return [placasListFiltrada, cpuListFiltrada, disipadorListFiltrada, ramListFiltrada, discoListFiltrada,
-            gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada]
-}
-
-const handleConfiguacion = (config)=>{
-    let configObjects = Object.values(config);
-    console.log(configObjects.length)
-    if( configObjects.length !== 0){
-        let gama = configObjects[0].gama
-        const [placasList, cpuList, disipadorList, ramList, discoList,
-        gpuList, fuenteList, cajaList, monitorList, tecladoList,
-        ratonList] = filtrarListasPorGama(gama)
-        return [placasList, cpuList, disipadorList, ramList, discoList,
-            gpuList, fuenteList, cajaList, monitorList, tecladoList,
-            ratonList]
-    }else{
-        return [placasLista, cpuLista, disipadorLista, ramLista, discoLista,
-            gpuLista, fuenteLista, cajaLista, monitorLista, tecladoLista,
-            ratonLista]
+    let list = {
+        "placasList" : placasListFiltrada,
+        "cpuList" : cpuListFiltrada,
+        "disipadorList" : disipadorListFiltrada,
+        "ramList" : ramListFiltrada,
+        "discoList" : discoListFiltrada,
+        "gpuList" : gpuListFiltrada,
+        "fuenteList" : fuenteListFiltrada,
+        "cajaList" : cajaListFiltrada,
+        "monitorList" : monitorListFiltrada,
+        "tecladoList" : tecladoListFiltrada,
+        "ratonList" : ratonListFiltrada
     }
+    return [placasListFiltrada, cpuListFiltrada, disipadorListFiltrada, ramListFiltrada, discoListFiltrada,
+            gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada] = mapGamas(list)
 }
 
 const handleCPU = (lista, placaBase, ram) => {
-    if (placaBase !== undefined && ram !== undefined) {
-        return lista.filter(item => item.socket === placaBase.socket && item.ram === ram.tipo);
-    } else if (placaBase !== undefined) {
-        return lista.filter(item => item.socket === placaBase.socket);
-    } else if (ram !== undefined) {
-        return lista.filter(item => item.ram === ram.tipo);
-    } else {
-        return lista;
+    if(placaBase){
+        lista = lista.filter(item => item.socket === placaBase.socket)
     }
+
+    if(ram){
+        lista = lista.filter(item => item.tipoRam == ram.tipo)
+    }
+
+    return lista
 }
 
-const handlePlacaBase = (lista, cpu, ram, disco1, disco2) => {
-    if (disco1 !== undefined && disco1.tecnologia === "m.2" && disco2 !== undefined && disco2.tecnologia === "Sata") {
-        if (cpu !== undefined && ram !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
-        } else if (cpu !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 0 && item.numeroSata > 0);
-        } else if (ram !== undefined) {
-            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
-        } else {
-            return lista.filter(item => item.numeroM2 > 0 && item.numeroSata > 0);
-        }
-    } else if (disco1 !== undefined && disco1.tecnologia === "m.2" && disco2 !== undefined && disco2.tecnologia === "m.2") {
-        if (cpu !== undefined && ram !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 1);
-        } else if (cpu !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 1);
-        } else if (ram !== undefined) {
-            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 1);
-        } else {
-            return lista.filter(item => item.numeroM2 > 1);
-        }
-    } else if (disco1 !== undefined && disco1.tecnologia === "m.2" && disco2 === undefined) {
-        if (cpu !== undefined && ram !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 0);
-        } else if (cpu !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 0);
-        } else if (ram !== undefined) {
-            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 0);
-        } else {
-            return lista.filter(item => item.numeroM2 > 0);
-        }
-    } else if (disco1 !== undefined && disco1.tecnologia === "Sata" && disco2 !== undefined && disco2.tecnologia === "Sata") {
-        if (cpu !== undefined && ram !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroSata > 1);
-        } else if (cpu !== undefined) {
-        return lista.filter(item => item.socket === cpu.socket && item.numeroSata > 1);
-        } else if (ram !== undefined) {
-            return lista.filter(item => item.ram === ram.tipo && item.numeroSata > 1);
-        } else {
-            return lista.filter(item => item.numeroSata > 1);
-        }
-    } else if (disco1 !== undefined && disco1.tecnologia === "Sata" && disco2 !== undefined && disco2.tecnologia === "m.2") {
-        if (cpu !== undefined && ram !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
-        } else if (cpu !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.numeroM2 > 0 && item.numeroSata > 0);
-        } else if (ram !== undefined) {
-            return lista.filter(item => item.ram === ram.tipo && item.numeroM2 > 0 && item.numeroSata > 0);
-        } else {
-            return lista.filter(item => item.numeroM2 > 0 && item.numeroSata > 0);
-        }
-    } else if (disco1 !== undefined && disco1.tecnologia === "Sata" && disco2 === undefined) {
-        if (cpu !== undefined && ram !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo && item.numeroSata > 0);
-        } else if (cpu !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.numeroSata > 0);
-        } else if (ram !== undefined) {
-            return lista.filter(item => item.ram === ram.tipo && item.numeroSata > 0);
-        } else {
-            return lista.filter(item => item.numeroSata > 0);
-        }
+const handlePlacaBase = (lista, cpu, ram, m2, sata) => {
+    if(cpu){
+        lista = lista.filter(item => item.socket === cpu.socket)
     }
-    else if (disco1 === undefined && disco2 === undefined) {
-        if (cpu !== undefined && ram !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket && item.ram === ram.tipo);
-        } else if (cpu !== undefined) {
-            return lista.filter(item => item.socket === cpu.socket);
-        } else if (ram !== undefined) {
-            return lista.filter(item => item.ram === ram.tipo);
-        } else {
-            return lista;
-        }
+
+    if(ram){
+        lista = lista.filter(item => item.tipoRam == ram.tipo)
     }
+
+    if(m2.length !== 0){
+        lista = lista.filter(item => item.numeroM2 == m2.length)
+    }
+
+    if(sata.length !== 0){
+        lista = lista.filter(item => item.numeroSata == sata.length)
+    }
+    return lista
 }
 
 const handleRam = (lista, placaBase, cpu) => {
-    if (placaBase !== undefined && cpu !== undefined) {
-        return lista.filter(item => item.tipo === placaBase.ram && item.tipo === cpu.ram);
-    } else if (placaBase !== undefined) {
-        return lista.filter(item => item.tipo === placaBase.ram);
-    } else if (cpu !== undefined) {
-        return lista.filter(item => item.tipo === cpu.ram);
-    } else {
-        return lista;
+    if(placaBase){
+        lista = lista.filter(item=> item.tipo == placaBase.tipoRam)
+    }
+
+    if(cpu){
+        lista = lista.filter(item=> item.tipo == cpu.tipoRam)
     }
 }
 
-const handleDisco = (lista, placaBase, otroDisco) => {
-    if (otroDisco !== undefined && otroDisco.tecnologia === "Sata") {
-        if (placaBase.numeroSata > 1 && placaBase.numeroM2 > 0) {
-            return lista;
-        } else if (placaBase.numeroSata > 1) {
-            return lista.filter(item => item.tecnologia === "Sata");
-        } else if (placaBase.numeroM2 > 0) {
-            return lista.filter(item => item.tecnologia === "m.2");
-        } else {
-            return [];
+const handleDisco = (lista, placaBase, m2, sata) => {
+    if(placaBase){
+        if(m2.length >= placaBase.numeroM2){
+            lista = lista.filter(item => item.tipo == "Sata")
         }
-    } else if (otroDisco !== undefined && otroDisco.tecnologia === "m.2") {
-        if (placaBase.numeroSata > 0 && placaBase.numeroM2 > 1) {
-            return lista;
-        } else if (placaBase.numeroSata > 0) {
-            return lista.filter(item => item.tecnologia === "Sata");
-        } else if (placaBase.numeroM2 > 1) {
-            return lista.filter(item => item.tecnologia === "m.2");
-        } else {
-            return [];
+        if(sata.length >= placaBase.numeroSata){
+            lista = lista.filter(item => item.tipo == "m.2")
         }
-    } else {
-        if (placaBase.numeroSata > 0 && placaBase.numeroM2 > 0) {
-            return lista;
-        } else if (placaBase.numeroSata > 0) {
-            return lista.filter(item => item.tecnologia === "Sata");
-        } else if (placaBase.numeroM2 > 0) {
-            return lista.filter(item => item.tecnologia === "m.2");
-        } else {
-            return [];
-        }
-    }  
+        return lista
+    }
+    
+    if(m2.length >= 2){
+        lista = lista.filter(item => item.tipo == "Sata")
+    }
+    if(sata.length >= 2){
+        lista = lista.filter(item => item.tipo == "m.2")
+    }
+    return lista  
 }
 
 const handleDisipador = (lista, cpu) => {
-    if (cpu !== undefined && !cpu.ventilador) {
+    if (cpu && !cpu.ventilador) {
         return lista;
     } else {
         return [];
@@ -562,19 +524,56 @@ const handleDisipador = (lista, cpu) => {
 }
 
 const handleFuente = (lista, cpu, gpu) => {
-    if (gpu !== undefined && gpu.potenciaRecomendada !== null) {
-        return lista.filter(item => item.potencia >= gpu.potenciaRecomendada);
-    } else if (gpu !== undefined && cpu !== undefined) {
-        return lista.filter(item => item.potencia >= ((gpu.consumo + cpu.consumo + potenciaExtra) * 80 / 100))
-    } else {
-        return lista;
+    let potenciaTotal = 0;
+    if(gpu){
+        potenciaTotal += gpu.potenciaRecomendada
+    }
+
+    if(cpu){
+        potenciaTotal += cpu.consumo
+    }
+
+    return lista.filter(item => item.potencia >= ((potenciaTotal + potenciaExtra) * 80 / 100))
+}
+
+const handleConfiguacion = (config)=>{
+    let configObjects = Object.values(config);
+    console.log(configObjects.length)
+    if( configObjects.length !== 0){
+        let gama = configObjects[0].gama
+        let [placasList, cpuList, disipadorList, ramList, discoList,
+        gpuList, fuenteList, cajaList, monitorList, tecladoList,
+        ratonList] = filtrarListasPorGama(gama)
+        placasList = handlePlacaBase(placasList, config.cpu, config.m2, config.sata)
+        return [placasList, cpuList, disipadorList, ramList, discoList,
+            gpuList, fuenteList, cajaList, monitorList, tecladoList,
+            ratonList]
+    }else{
+        let list = {
+            placasList,
+            cpuList,
+            disipadorList,
+            ramList,
+            discoList,
+            gpuList,
+            fuenteList,
+            cajaList,
+            monitorList,
+            tecladoList,
+            ratonList
+        }
+        return [placasLista, cpuLista, disipadorLista, ramLista, discoLista,
+            gpuLista, fuenteLista, cajaLista, monitorLista, tecladoLista,
+            ratonLista] = mapGamas(list)
     }
 }
 
 pcBuilderRouter.get("/", async (req, res, next) => {
     const [placasList, cpuList, disipadorList, ramList, discoList,
         gpuList, fuenteList, cajaList, monitorList, tecladoList,
-        ratonList] = handleConfiguacion(emptyConfiguration)
+        ratonList] = handleConfiguacion(configuration)
+
+    
     
     res.json({
         placasList,

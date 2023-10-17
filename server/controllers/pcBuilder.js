@@ -516,7 +516,7 @@ const handleDisco = (lista, placaBase, m2, sata) => {
 }
 
 const handleDisipador = (lista, cpu) => {
-    if (cpu !== undefined && !cpu.ventilador) {
+    if (cpu && !cpu.ventilador) {
         return lista;
     } else {
         return [];
@@ -524,13 +524,16 @@ const handleDisipador = (lista, cpu) => {
 }
 
 const handleFuente = (lista, cpu, gpu) => {
-    if (gpu !== undefined && gpu.potenciaRecomendada !== null) {
-        return lista.filter(item => item.potencia >= gpu.potenciaRecomendada);
-    } else if (gpu !== undefined && cpu !== undefined) {
-        return lista.filter(item => item.potencia >= ((gpu.consumo + cpu.consumo + potenciaExtra) * 80 / 100))
-    } else {
-        return lista;
+    let potenciaTotal = 0;
+    if(gpu){
+        potenciaTotal += gpu.potenciaRecomendada
     }
+
+    if(cpu){
+        potenciaTotal += cpu.consumo
+    }
+
+    return lista.filter(item => item.potencia >= ((potenciaTotal + potenciaExtra) * 80 / 100))
 }
 
 const handleConfiguacion = (config)=>{

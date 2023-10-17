@@ -454,17 +454,25 @@ const filtrarListasPorGama = (gama)=>{
             gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada] = mapGamas(list)
 }
 
-const handleCPU = (lista, placaBase) => {
+const handleCPU = (lista, placaBase, ram) => {
     if(placaBase){
-        lista = lista.filter(item => item.socket === placaBase.socket && item.tipoRam == placaBase.tipoRam)
+        lista = lista.filter(item => item.socket === placaBase.socket)
+    }
+
+    if(ram){
+        lista = lista.filter(item => item.tipoRam == ram.tipo)
     }
 
     return lista
 }
 
-const handlePlacaBase = (lista, cpu, m2, sata) => {
+const handlePlacaBase = (lista, cpu, ram, m2, sata) => {
     if(cpu){
-        lista = lista.filter(item => item.socket === cpu.socket && item.tipoRam == cpu.tipoRam)
+        lista = lista.filter(item => item.socket === cpu.socket)
+    }
+
+    if(ram){
+        lista = lista.filter(item => item.tipoRam == ram.tipo)
     }
 
     if(m2.length !== 0){
@@ -478,14 +486,12 @@ const handlePlacaBase = (lista, cpu, m2, sata) => {
 }
 
 const handleRam = (lista, placaBase, cpu) => {
-    if (placaBase !== undefined && cpu !== undefined) {
-        return lista.filter(item => item.tipo === placaBase.ram && item.tipo === cpu.ram);
-    } else if (placaBase !== undefined) {
-        return lista.filter(item => item.tipo === placaBase.ram);
-    } else if (cpu !== undefined) {
-        return lista.filter(item => item.tipo === cpu.ram);
-    } else {
-        return lista;
+    if(placaBase){
+        lista = lista.filter(item=> item.tipo == placaBase.tipoRam)
+    }
+
+    if(cpu){
+        lista = lista.filter(item=> item.tipo == cpu.tipoRam)
     }
 }
 

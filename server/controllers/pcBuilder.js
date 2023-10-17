@@ -365,18 +365,19 @@ const mapList = (lista)=>{
         return item
     }))
 }
-const mapGamas = ()=>{
-    placasListMapeada = mapList(placasList)
-    cpuListMapeada = mapList(cpuList)
-    disipadorListMapeada = mapList(disipadorList)
-    ramListMapeada = mapList(ramList)
-    discoListMapeada = mapList(discoList)
-    gpuListMapeada = mapList(gpuList)
-    fuenteListMapeada = mapList(fuenteList)
-    cajaListMapeada = mapList(cajaList)
-    monitorListMapeada = mapList(monitorList)
-    tecladoListMapeada = mapList(tecladoList)
-    ratonListMapeada = mapList(ratonList)
+const mapGamas = (listas)=>{
+    console.log(listas)
+    placasListMapeada = mapList(listas.placasList)
+    cpuListMapeada = mapList(listas.cpuList)
+    disipadorListMapeada = mapList(listas.disipadorList)
+    ramListMapeada = mapList(listas.ramList)
+    discoListMapeada = mapList(listas.discoList)
+    gpuListMapeada = mapList(listas.gpuList)
+    fuenteListMapeada = mapList(listas.fuenteList)
+    cajaListMapeada = mapList(listas.cajaList)
+    monitorListMapeada = mapList(listas.monitorList)
+    tecladoListMapeada = mapList(listas.tecladoList)
+    ratonListMapeada = mapList(listas.ratonList)
     return [placasListMapeada, cpuListMapeada, disipadorListMapeada, ramListMapeada, discoListMapeada,
             gpuListMapeada, fuenteListMapeada, cajaListMapeada, monitorListMapeada, tecladoListMapeada, ratonListMapeada]
 }
@@ -398,8 +399,21 @@ const filtrarListasPorGama = (gama)=>{
     monitorListFiltrada = filtroPorGama(gama, monitorList)
     tecladoListFiltrada = filtroPorGama(gama, tecladoList)
     ratonListFiltrada = filtroPorGama(gama, ratonList)
+    let list = {
+        "placasList" : placasListFiltrada,
+        "cpuList" : cpuListFiltrada,
+        "disipadorList" : disipadorListFiltrada,
+        "ramList" : ramListFiltrada,
+        "discoList" : discoListFiltrada,
+        "gpuList" : gpuListFiltrada,
+        "fuenteList" : fuenteListFiltrada,
+        "cajaList" : cajaListFiltrada,
+        "monitorList" : monitorListFiltrada,
+        "tecladoList" : tecladoListFiltrada,
+        "ratonList" : ratonListFiltrada
+    }
     return [placasListFiltrada, cpuListFiltrada, disipadorListFiltrada, ramListFiltrada, discoListFiltrada,
-            gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada]
+            gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada] = mapGamas(list)
 }
 
 const handleConfiguacion = (config)=>{
@@ -414,9 +428,22 @@ const handleConfiguacion = (config)=>{
             gpuList, fuenteList, cajaList, monitorList, tecladoList,
             ratonList]
     }else{
+        let list = {
+            placasList,
+            cpuList,
+            disipadorList,
+            ramList,
+            discoList,
+            gpuList,
+            fuenteList,
+            cajaList,
+            monitorList,
+            tecladoList,
+            ratonList
+        }
         return [placasLista, cpuLista, disipadorLista, ramLista, discoLista,
             gpuLista, fuenteLista, cajaLista, monitorLista, tecladoLista,
-            ratonLista]
+            ratonLista] = mapGamas(list)
     }
 }
 

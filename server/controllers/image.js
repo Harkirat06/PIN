@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 imageRouter.post("/", upload.single('docs'), async (req, res) => {
     const { filename, mimetype } = req.file;
     sharp(req.file.path)
-    .jpeg({ quality: 80 }) // Ajusta la calidad a tu preferencia
+    .jpeg({ quality: 60 }) // Ajusta la calidad a tu preferencia
     .toBuffer(async (err, data, info) => {
       if (err) {
         return res.status(500).send('Error al comprimir la imagen.');

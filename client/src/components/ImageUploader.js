@@ -26,12 +26,6 @@ function ImageUploader({context}) {
       >
         Arrastra y suelta una imagen aquí
       </div>
-      {selectedImage && (
-        <div>
-          <p>Imagen seleccionada: {selectedImage.name}</p>
-          <button onClick={handleImageUpload}>Subir Imagen</button>
-        </div>
-      )}
     </div>
   );
 }

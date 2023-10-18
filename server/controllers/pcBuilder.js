@@ -25,7 +25,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "placaBase.jpg" 
     },
     "cpu": {
         "type": "CPU",
@@ -41,7 +42,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "intel.jpg"
     },
     "ram": {
         "marca": "Corsair",
@@ -53,7 +55,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "ram.jpg"
     },
     "m2": [{
             "marca": "Samsung",
@@ -65,7 +68,8 @@ const configuration = {
                 "segundaMano": 100,
                 "amazon": 150,
                 "ebay": 200
-            }
+            },
+            "imagen": "m2.jpg"
         },
         {
             "marca": "Samsung",
@@ -77,7 +81,8 @@ const configuration = {
                 "segundaMano": 100,
                 "amazon": 150,
                 "ebay": 200
-            }
+            },
+            "imagen": "m2.jpg"
         }
     ],
     "sata": [
@@ -91,7 +96,8 @@ const configuration = {
                 "segundaMano": 100,
                 "amazon": 150,
                 "ebay": 200
-            }
+            },
+            "imagen": "sata.jpg"
         },
         {
             "marca": "Seagate",
@@ -103,7 +109,8 @@ const configuration = {
                 "segundaMano": 100,
                 "amazon": 150,
                 "ebay": 200
-            }
+            },
+            "imagen": "sata.jpg"
         }
     ],
     "gpu": {
@@ -114,7 +121,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "gpu.jpg"
     },
     "fuenteAlimentacion": {
         "marca": "Forgeon",
@@ -126,7 +134,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "fuente.jpg"
     },
     "monitor": {
         "marca": "ASUS",
@@ -136,7 +145,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "monitor.jpg"
     },
     "caja": {
         "marca": "Tempest",
@@ -146,7 +156,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "caja.jpg"
     },
     "disipador": {
         "marca": "Forgeon",
@@ -157,7 +168,8 @@ const configuration = {
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "disipador.jpg"
     }
 }
 
@@ -175,7 +187,8 @@ const cpuList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "intel.jpg"
     },
     {
         "marca": "Intel",
@@ -190,7 +203,8 @@ const cpuList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "intel.jpg"
     },
     {
         "marca": "Intel",
@@ -205,7 +219,8 @@ const cpuList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "intel.jpg"
     },
     {
         "marca": "Intel",
@@ -220,7 +235,8 @@ const cpuList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "intel.jpg"
     }
 ]
 
@@ -238,7 +254,8 @@ const placasList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "placaBase.jpg"
     },
     {
         "marca": "Asus",
@@ -253,7 +270,8 @@ const placasList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "placaBase.jpg"
     },
     {
         "marca": "Asus",
@@ -268,7 +286,8 @@ const placasList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "placaBase.jpg"
     },
     {
         "marca": "MSI",
@@ -283,7 +302,8 @@ const placasList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "placaBase.jpg"
     }
 ] 
 
@@ -298,7 +318,8 @@ const gpuList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "gpu.jpg"
     },
     {
         "marca": "AMD",
@@ -310,7 +331,8 @@ const gpuList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "gpu.jpg"
     },
     {
         "marca": "Gigabyte",
@@ -322,7 +344,8 @@ const gpuList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "gpu.jpg"
     }
 ]
 
@@ -337,7 +360,8 @@ const ramList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "ram.jpg"
     },
     {
         "marca": "Kingston",
@@ -349,7 +373,8 @@ const ramList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "ram.jpg"
     },
     {
         "marca": "Corsair",
@@ -361,7 +386,8 @@ const ramList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "ram.jpg"
     }
 ]
 
@@ -376,7 +402,8 @@ const discoList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "sata.jpg"
     },
     {
         "marca": "Samsung",
@@ -388,7 +415,8 @@ const discoList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "m2.jpg"
     },
     {
         "marca": "Seagate",
@@ -400,7 +428,8 @@ const discoList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "sata.jpg"
     }
 ]
 
@@ -413,7 +442,8 @@ const monitorList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "monitor.jpg"
     },
     {
         "marca": "AOC",
@@ -423,7 +453,8 @@ const monitorList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "monitor.jpg"
     },
     {
         "marca": "LG",
@@ -433,7 +464,8 @@ const monitorList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "monitor.jpg"
     }
 ]
 
@@ -447,7 +479,8 @@ const disipadorList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "disipador.jpg"
     },
     {
         "marca": "Forgeon",
@@ -458,7 +491,8 @@ const disipadorList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "disipador.jpg"
     },
     {
         "marca": "Forgeon",
@@ -469,7 +503,8 @@ const disipadorList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "disipador.jpg"
     }
 ]
 
@@ -482,7 +517,8 @@ const cajaList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "caja.jpg"
     },
     {
         "marca": "Tempest",
@@ -492,7 +528,8 @@ const cajaList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "caja.jpg"
     },
     {
         "marca": "Nox",
@@ -502,7 +539,8 @@ const cajaList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "caja.jpg"
     }
 ]
 
@@ -517,7 +555,8 @@ const fuenteList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "fuente.jpg"
     },
     {
         "marca": "Forgeon",
@@ -529,7 +568,8 @@ const fuenteList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "fuente.jpg"
     },
     {
         "marca": "Tempest",
@@ -541,7 +581,8 @@ const fuenteList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "fuente.jpg"
     }
 ]
 
@@ -554,7 +595,8 @@ const ratonList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "raton.jpg"
     },
     {
         "marca": "Forgeon",
@@ -564,7 +606,8 @@ const ratonList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "raton.jpg"
     },
     {
         "marca": "Newskill",
@@ -574,7 +617,8 @@ const ratonList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "raton.jpg"
     }
 ]
 
@@ -588,7 +632,8 @@ const tecladoList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "teclado.jpg"
     },
     {
         "marca": "Forgeon",
@@ -599,7 +644,8 @@ const tecladoList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "teclado.jpg"
     },
     {
         "marca": "Newskill",
@@ -610,7 +656,8 @@ const tecladoList = [
             "segundaMano": 100,
             "amazon": 150,
             "ebay": 200
-        }
+        },
+        "imagen": "teclado.jpg"
     }
 ]
 

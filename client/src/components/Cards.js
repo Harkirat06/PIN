@@ -13,7 +13,7 @@ function Cards({ context }) {
               <li key={index}>
                 <Cardd
                   nombre= {item.nombre}
-                  imagen = {"imagen2.jpg"}
+                  imagen = {item.imagen}
                 />
               </li>
             ))

@@ -571,7 +571,7 @@ const handleConfiguacion = (config)=>{
 pcBuilderRouter.get("/", async (req, res, next) => {
     const [placasList, cpuList, disipadorList, ramList, discoList,
         gpuList, fuenteList, cajaList, monitorList, tecladoList,
-        ratonList] = handleConfiguacion(configuration)
+        ratonList] = handleConfiguacion(emptyConfiguration)
 
     
     

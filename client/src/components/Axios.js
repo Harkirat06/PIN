@@ -10,6 +10,11 @@ export async function getImage(nombre){
       return response
 }
 
+export async function getListas(){
+    const response = await axios.get("/api/pcbuilder")
+    return response
+}
+
 export async function deleteFiles(path, token) {
     return axios.delete("/delete", {
         headers: {"Authorization" : `Bearer ${token}`},

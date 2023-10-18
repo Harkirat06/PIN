@@ -1,53 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { getListas } from "./Axios";
 
-function Searcher() {
-    const lista = [{
-        "marca": "Intel",
-        "nombre": "Intel Core i7-13700K 3.4 GHz",
-        "gama": "Alta",
-        "socket": "Intel LGA 1700",
-        "gpu": true
-    },
-    {
-        "marca": "Intel",
-        "nombre": "Intel Core i5-13600KF 3.5 GHz",
-        "gama": "Media",
-        "socket": "Intel LGA 1700",
-        "gpu": false
-    },
-    {
-        "marca": "Intel",
-        "nombre": "Intel Core i3-13100 3.4 GHz/4.5 GHz",
-        "gama": "Baja",
-        "socket": "Intel LGA 1700",
-        "gpu": true
-    }];
-
-    const [items, setItems] = useState(lista);
-
-    //establece el parámetro de búsqueda a una cadena de texto vacía.
-    const [q, setQ] = useState("");
-    //     set search parameters establece parámetros de búsqueda
-    //     solo queremos buscar países por capital y nombre
-    //     esta lista puede ser más larga si quieres
-    //     hasta puedes buscar países por su número de población
-    // 	  solo tienes que agregarlo al arreglo.
+function Searcher({context}) {
+    const { list, setList, items, setItems, q, setQ,} = useContext(context);
+    useEffect(() => {
+            getListas().then(res=>{
+                setItems(res.data)
+                setList(res.data.cpuList)
+            })
+        }, []);
+    
 
     const filter = (event) => {
-        let newItems = [];
-        console.log(items);
-        lista.forEach(item => {
-            let words = q.toLocaleLowerCase().split(' ')
+        let newList = [];
+        list.forEach(item => {
+            let words = q.toLocaleLowerCase().split(' ');
             let containsAll=true;
             words.forEach(word => {
                    if (!item.nombre.toLocaleLowerCase().includes(word)) {
                        containsAll=false;
                    }
             });
-            if (containsAll) {newItems = newItems.concat(item);}
+            if (containsAll) {newList = newList.concat(item);}
         });
-        console.log(newItems);
-        setItems(newItems);
+        setList(newList);
         event.preventDefault();
        }
     
@@ -73,17 +49,14 @@ function Searcher() {
                 </label>
             </div>
             
-            {items.length !== 0 ? <ul className="card-grid">
-                {items.map((item) => (
+            {list.length !== 0 ? <ul className="card-grid">
+                {list.map((item) => (
                     <li>
                         <article className="card" key={item.type}>
                             
                             <div className="card-content">
                                 <h2 className="card-name">{item.nombre}</h2>
                                 <ol className="card-list">
-                                    <li>
-                                        Socket: <span>{item.socket}</span>
-                                    </li>
                                     <li>
                                         Gama: <span>{item.gama}</span>
                                     </li>

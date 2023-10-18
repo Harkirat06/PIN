@@ -14,10 +14,7 @@ function App() {
     <BrowserRouter id="App">
       <StateProvider context={StateContext}>
           <Routes>
-            <Route exact path="/" element={<Searcher context={StateContext} />} />
-            <Route path="/marketplace" element={
-                <Marketplace context={StateContext} />
-            } />
+            <Route exact path="/" element={<Marketplace context={StateContext} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
       </StateProvider>

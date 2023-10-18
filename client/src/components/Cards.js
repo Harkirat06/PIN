@@ -5,6 +5,7 @@ import React from "react";
 import Cardd from "./Card";
 import { getImage } from "./Axios";
 import StateProvider from "./StateProvider";
+import imagen2 from "../images/imagen2.jpg"
 
 function Cards({ context }) {
   const { list, setList, items, setItems, q, setQ,} = useContext(context);
@@ -25,7 +26,8 @@ function Cards({ context }) {
             list.map((item, index) => (
               <li key={index}>
                 <Cardd
-                  nombre={item.nombre}
+                  nombre= {item.nombre}
+                  imagen = {imagen2}
                 />
               </li>
             ))

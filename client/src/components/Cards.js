@@ -2,10 +2,12 @@ import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Alert } from 'react-bootstrap'
 import React from "react";
-import Card from "./Card";
+import Cardd from "./Card";
+import { getImage } from "./Axios";
+import StateProvider from "./StateProvider";
 
 function Cards({ context }) {
-    const ejemplo = [
+  const ejemplo = [
         {
           nombre: "Producto 1",
           imagen: "url_imagen_1.jpg",
@@ -22,18 +24,23 @@ function Cards({ context }) {
         },
         // Agrega más cartas manualmente aquí
       ];
+      /* items.forEach((item) => {
+          useEffect(() => {
+          getImage(item.nombre + ".jpg");
+          }, []);
+          item.image = 
+          i++;
+}
+
+      */
 
       return (
         <div className="wrapper">
           <ul className="card-grid">
             {ejemplo.map((item, index) => (
               <li key={index}>
-                <Card
+                <Cardd
                   nombre={item.nombre}
-                  imagen={item.imagen}
-                  precioAmazon={item.precioAmazon}
-                  precioEbay={item.precioEbay}
-                  precioSegundaMano={item.precioSegundaMano}
                 />
               </li>
             ))}

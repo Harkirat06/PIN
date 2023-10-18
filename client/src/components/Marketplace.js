@@ -1,11 +1,11 @@
-import Cards from "./Cards";
 import Searcher from "./Searcher";
+import Cards from "./Cards";
 
 function Marketplace({context}) {
   return (
     <div>
-      <Searcher/>
-      <Cards/>
+      <Searcher></Searcher>
+      <Cards></Cards>
     </div>
   );
 }

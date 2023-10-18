@@ -1,20 +1,28 @@
-//utilizar boostrap para el return.
-function Card ({nombre, imagen, precioAmazon, precioEbay, precioSegundaMano}) {
-    return (
-        <div className="Card">
-            <img src={imagen} alt={nombre}/>
-            <h3>{nombre}</h3>
-            if (precioAmazon != null){
-            <p> PrecioAmazon: ${precioAmazon} </p>
-}
-            if (precioEbay != null) {
-            <p> PrecioEbay: ${precioEbay} </p>
-}
-            if (precioSegundaMano != null){
-            <p> PrecioSegundaMano: ${precioSegundaMano} </p>
-}
-        </div>
-    )
+import { getImage } from "./Axios";
+import { useEffect, useState } from "react"; // Asegúrate de importar useState
+import imagen2 from "../images/imagen2.jpg"
+import Card from 'react-bootstrap/Card'
 
+function Cardd ({ nombre }) {
+    const [imagen, setImagen] = useState(null); // Declarar imagen como estado local
+
+    useEffect(() => {
+        const nombreImagen = 'imagen2.jpg';
+        const fetchImagen = async () => {
+            const image = await getImage(nombreImagen);
+            setImagen(image);
+        };
+        fetchImagen();
+    }, []);
+
+    return (
+      <Card style={{ width: '18rem' }}>
+        {imagen && <Card.Img variant="top" src={imagen2} />}
+        <Card.Body>
+          <Card.Title>{nombre}</Card.Title>
+        </Card.Body>
+      </Card>
+    );
 }
-export default Card;
+
+export default Cardd;

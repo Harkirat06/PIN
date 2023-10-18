@@ -403,7 +403,7 @@ const discoList = [
             "amazon": 150,
             "ebay": 200
         },
-        "imagen": "sata.jpg"
+        "imagen": "hdd.jpg"
     },
     {
         "marca": "Samsung",
@@ -429,7 +429,7 @@ const discoList = [
             "amazon": 150,
             "ebay": 200
         },
-        "imagen": "sata.jpg"
+        "imagen": "hdd.jpg"
     }
 ]
 

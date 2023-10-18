@@ -8,7 +8,6 @@ import StateProvider from "./StateProvider";
 
 function Cards({ context }) {
   const { list, setList, items, setItems, q, setQ,} = useContext(context);
-  console.log(list)
       /* items.forEach((item) => {
           useEffect(() => {
           getImage(item.nombre + ".jpg");
@@ -22,13 +21,17 @@ function Cards({ context }) {
       return (
         <div className="wrapper">
           <ul className="card-grid">
-            {list.map((item, index) => (
+            {list.length !== 0 ? 
+            list.map((item, index) => (
               <li key={index}>
                 <Cardd
                   nombre={item.nombre}
                 />
               </li>
-            ))}
+            ))
+            :
+            <h1>No hay resultados</h1>
+            }
           </ul>
         </div>
       );

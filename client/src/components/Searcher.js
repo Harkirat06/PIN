@@ -8,7 +8,6 @@ function Searcher({context}) {
                 let array = []
                 let objects = Object.values(res.data);
                 objects.forEach((item)=> array = array.concat(item))
-                console.log(array)
                 setItems(array)
                 setList(array)
             })
@@ -49,6 +48,7 @@ function Searcher({context}) {
                             */
                             onChange={(e) => {
                                 setQ(e.target.value)
+                                console.log(q)
                                 if(q === ""){
                                     setList(items)
                                 }
@@ -58,26 +58,6 @@ function Searcher({context}) {
                     </form>
                 </label>
             </div>
-            
-            {list.length !== 0 ? <ul className="card-grid">
-                {list.map((item) => (
-                    <li>
-                        <article className="card" key={item.type}>
-                            
-                            <div className="card-content">
-                                <h2 className="card-name">{item.nombre}</h2>
-                                <ol className="card-list">
-                                    <li>
-                                        Gama: <span>{item.gama}</span>
-                                    </li>
-                                </ol>
-                            </div>
-                        </article>
-                    </li>
-                ))}
-            </ul> 
-            : 
-            <h1>No hay resultados</h1>}
         </div>
     );
 }

@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card'
 function Cardd ({ nombre }) {
     const [imagen, setImagen] = useState(null); // Declarar imagen como estado local
 
+  
     useEffect(() => {
         const nombreImagen = 'imagen2.jpg';
         const fetchImagen = async () => {
@@ -14,6 +15,9 @@ function Cardd ({ nombre }) {
         };
         fetchImagen();
     }, []);
+    
+    
+  
 
     return (
       <Card style={{ width: '18rem' }}>

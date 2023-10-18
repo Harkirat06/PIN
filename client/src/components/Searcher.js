@@ -5,8 +5,12 @@ function Searcher({context}) {
     const { list, setList, items, setItems, q, setQ,} = useContext(context);
     useEffect(() => {
             getListas().then(res=>{
-                setItems(res.data)
-                setList(res.data.cpuList)
+                let array = []
+                let objects = Object.values(res.data);
+                objects.forEach((item)=> array = array.concat(item))
+                console.log(array)
+                setItems(array)
+                setList(array)
             })
         }, []);
     
@@ -43,7 +47,13 @@ function Searcher({context}) {
                             // establece el valor de nuestro parametro q del useState
                             //  cada vez que el usuario tipea en el campo de búsqueda
                             */
-                            onChange={(e) => setQ(e.target.value)}
+                            onChange={(e) => {
+                                setQ(e.target.value)
+                                if(q === ""){
+                                    setList(items)
+                                }
+                            }
+                                }
                         />
                     </form>
                 </label>

@@ -9,15 +9,6 @@ import imagen2 from "../images/imagen2.jpg"
 
 function Cards({ context }) {
   const { list, setList, items, setItems, q, setQ,} = useContext(context);
-      /* items.forEach((item) => {
-          useEffect(() => {
-          getImage(item.nombre + ".jpg");
-          }, []);
-          item.image = 
-          i++;
-}
-
-      */
 
       return (
         <div className="wrapper">

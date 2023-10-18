@@ -20,7 +20,12 @@ const configuration = {
         "gama": gamaAlta,
         "numeroM2": 0,
         "numeroSata" : 1,
-        "tipoRam": "DDR5"
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     "cpu": {
         "type": "CPU",
@@ -31,28 +36,48 @@ const configuration = {
         "tipoRam": "DDR5",
         "ventilador": false,
         "gpu": true,
-        "tipoRam": "DDR5"
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     "ram": {
         "marca": "Corsair",
         "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
         "tipo": "DDR5",
         "capacidad": 32,
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     "m2": [{
             "marca": "Samsung",
             "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
             "capacidad": 1,
             "tecnologia": "m.2",
-            "gama": gamaAlta
+            "gama": gamaAlta,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            }
         },
         {
             "marca": "Samsung",
             "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
             "capacidad": 1,
             "tecnologia": "m.2",
-            "gama": gamaAlta
+            "gama": gamaAlta,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            }
         }
     ],
     "sata": [
@@ -61,43 +86,78 @@ const configuration = {
             "nombre": "Samsung 870 QVO SSD 1TB SATA3",
             "capacidad": 1, //tb
             "tecnologia": "Sata",
-            "gama": gamaMedia
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            }
         },
         {
             "marca": "Seagate",
             "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
             "capacidad": 2,
             "tecnologia": "Sata",
-            "gama": gamaBaja
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            }
         }
     ],
     "gpu": {
         "marca": "Gigabyte",
         "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-        "gama": gamaMediaAlta
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     "fuenteAlimentacion": {
         "marca": "Forgeon",
         "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
         "potencia": "850",
         "ochetaplus": true,
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     "monitor": {
         "marca": "ASUS",
         "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     "caja": {
         "marca": "Tempest",
         "nombre": "Tempest Umbra RGB Torre ATX Blanca",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     "disipador": {
         "marca": "Forgeon",
         "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
         "tipo": "Liquida",
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 }
 
@@ -110,7 +170,12 @@ const cpuList = [
         "consumo": 253,
         "tipoRam": "DDR5",
         "ventilador": false,
-        "gpu": true
+        "gpu": true,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Intel",
@@ -120,7 +185,12 @@ const cpuList = [
         "consumo": 253,
         "tipoRam": "DDR4",
         "ventilador": false,
-        "gpu": true
+        "gpu": true,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Intel",
@@ -130,7 +200,12 @@ const cpuList = [
         "consumo": 181,
         "tipoRam": "DDR5",
         "ventilador": false,
-        "gpu": false
+        "gpu": false,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Intel",
@@ -140,7 +215,12 @@ const cpuList = [
         "consumo": 89,
         "tipoRam": "DDR5",
         "ventilador": false,
-        "gpu": true
+        "gpu": true,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -153,7 +233,12 @@ const placasList = [
         "tipoRam": "DDR5",
         "gama": gamaAlta,
         "numeroM2": 2,
-        "numeroSata" : 2  
+        "numeroSata" : 2,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Asus",
@@ -163,7 +248,12 @@ const placasList = [
         "tipoRam": "DDR5",
         "gama": gamaAlta,
         "numeroM2": 2,
-        "numeroSata" : 2  
+        "numeroSata" : 2,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Asus",
@@ -173,7 +263,12 @@ const placasList = [
         "tipoRam": "DDR5",
         "gama": gamaMedia,
         "numeroM2": 1,
-        "numeroSata" : 2  
+        "numeroSata" : 2,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "MSI",
@@ -183,7 +278,12 @@ const placasList = [
         "tipoRam": "DDR5",
         "gama": gamaBaja,
         "numeroM2": 1,
-        "numeroSata" : 2  
+        "numeroSata" : 2,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ] 
 
@@ -193,21 +293,36 @@ const gpuList = [
         "nombre":"MSI GeForce RTX 3060 VENTUS 2X OC LHR 12GB GDDR6",
         "consumo": 170,
         "potenciaRecomendada": 550,
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "AMD",
         "nombre":"Sapphire Pulse AMD Radeon RX 6700 XT 12GB GDDR6",
         "consumo": 230,
         "potenciaRecomendada": 650,
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Gigabyte",
         "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
         "consumo": null,
         "potenciaRecomendada": 750,
-        "gama": gamaMediaAlta
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -217,21 +332,36 @@ const ramList = [
         "nombre":"Corsair Vengeance LPX DDR4 3200MHz PC4-25600 32GB 2x16GB CL16",
         "tipo": "DDR4",
         "capacidad": 32, //gb
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Kingston",
         "nombre":"Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
         "tipo": "DDR4",
         "capacidad": 16,
-        "gama": gamaBajaMedia
+        "gama": gamaBajaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Corsair",
         "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
         "tipo": "DDR5",
         "capacidad": 32,
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -241,21 +371,36 @@ const discoList = [
         "nombre": "Samsung 870 QVO SSD 1TB SATA3",
         "capacidad": 1, //tb
         "tecnologia": "Sata",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Samsung",
         "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
         "capacidad": 1,
         "tecnologia": "m.2",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Seagate",
         "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
         "capacidad": 2,
         "tecnologia": "Sata",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -263,17 +408,32 @@ const monitorList = [
     {
         "marca": "ASUS",
         "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "AOC",
         "nombre": "AOC 24B2XHM2 23.8 LED FullHD",
-        "gama": gamaBaja
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "LG",
         "nombre": "LG 27GR95QE-B 26.5 OLED QHD 240Hz G-Sync/FreeSync Premium",
-        "gama": gamaPremium
+        "gama": gamaPremium,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -282,19 +442,34 @@ const disipadorList = [
         "marca": "Tempest",
         "nombre": "Tempest Cooler 4Pipes 120mm Ventilador CPU Negro",
         "tipo": "Ventilador",
-        "gama": gamaBaja
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Forgeon",
         "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
         "tipo": "Liquida",
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Forgeon",
         "nombre": "Forgeon Azoth 360 ARGB Kit de Refrigeración Líquida 360mm Negro",
         "tipo": "Liquida",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -302,17 +477,32 @@ const cajaList = [
     {
         "marca": "Forgeon",
         "nombre": "Forgeon Mithril ARGB Mesh Torre ATX Negra",
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Tempest",
         "nombre": "Tempest Umbra RGB Torre ATX Blanca",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Nox",
         "nombre": "Nox Hummer Void USB 3.0 Negro",
-        "gama": gamaBaja
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -322,21 +512,36 @@ const fuenteList = [
         "nombre": "Tempest PSU PRO 650W 80+ Bronze Fuente de Alimentación",
         "potencia": "650", //W
         "ochetaplus": true,
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Forgeon",
         "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
         "potencia": "850",
         "ochetaplus": true,
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Tempest",
         "nombre": "Tempest PSU PRO 650W 80+ Bronze Fuente de Alimentación",
         "potencia": "750",
         "ochetaplus": false,
-        "gama": gamaBaja
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -344,17 +549,32 @@ const ratonList = [
     {
         "marca": "Tempest",
         "nombre": "Tempest X8 Keeper RGB Ratón Gaming 10.000 DPI Negro",
-        "gama": gamaMedia
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Forgeon",
         "nombre": "Forgeon Vendetta Ratón Gaming RGB 16000DPI Negro",
-        "gama": gamaBaja
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Newskill",
         "nombre": "Newskill Eos Ivory Ratón Gaming Professional RGB 16000DPI Blanco",
-        "gama": gamaAlta
+        "gama": gamaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -363,19 +583,34 @@ const tecladoList = [
         "marca": "Tempest",
         "nombre": "Tempest Cataclysm Combo 3 en 1 Gaming Teclado",
         "gama": gamaMedia,
-        "mecanico": false
+        "mecanico": false,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Forgeon",
         "nombre": "Forgeon Clutch Teclado Gaming RGB 60% Switch Blue",
         "gama": gamaBaja,
-        "mecanico": true
+        "mecanico": true,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     },
     {
         "marca": "Newskill",
         "nombre": "Newskill Suiko Teclado Mecánico Gaming Full RGB Switch Kailh Blue",
         "gama": gamaAlta,
-        "mecanico": true
+        "mecanico": true,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        }
     }
 ]
 
@@ -393,6 +628,7 @@ const mapList = (lista)=>{
         return item
     }))
 }
+
 const mapGamas = (listas)=>{
     placasListMapeada = mapList(listas.placasList)
     cpuListMapeada = mapList(listas.cpuList)
@@ -557,6 +793,63 @@ const handleConfiguacion = (config)=>{
             ratonLista] = mapGamas(list)
     }
 }
+
+const creaBuildPorPrecio = (presupuesto) => {
+    let configuracionPorPrecio = {}
+    let costeBuild = 0;
+    for (let gamaBuild = gamaPremium; gamaBuild > 0; gamaBuild - 1) {
+        let [placasList, cpuList, disipadorList, ramList, discoList,
+            gpuList, fuenteList, cajaList, monitorList, tecladoList,
+            ratonList] = filtrarListasPorGama(gamaBuild)
+        [placasList, cpuList, disipadorList, ramList, discoList,
+            gpuList, fuenteList, cajaList, monitorList, tecladoList,
+            ratonList] = shortearListasPorPrecio()
+            
+
+        configuracionPorPrecio.forEach(element => {
+            costeBuild += element.precioAmazon
+        })
+        if (costeBuild <= presupuesto) {
+            return configuracionPorPrecio
+        } else {
+            gamaBuild--
+            configuracionPorPrecio = {}
+            costeBuild = 0
+        }
+    }
+    return configuracionPorPrecio
+}
+
+const shortearListasPorPrecio = () => {
+    placasListShorteada = filtroPorGama(gama, placasList)
+    cpuListShorteada = filtroPorGama(gama, cpuList)
+    disipadorListShorteada = filtroPorGama(gama, disipadorList)
+    ramListFiltrada = filtroPorGama(gama, ramList)
+    discoListFiltrada = filtroPorGama(gama, discoList)
+    gpuListFiltrada = filtroPorGama(gama, gpuList)
+    fuenteListFiltrada = filtroPorGama(gama, fuenteList)
+    cajaListFiltrada = filtroPorGama(gama, cajaList)
+    monitorListFiltrada = filtroPorGama(gama, monitorList)
+    tecladoListFiltrada = filtroPorGama(gama, tecladoList)
+    ratonListFiltrada = filtroPorGama(gama, ratonList)
+    let list = {
+        "placasList" : placasListFiltrada,
+        "cpuList" : cpuListFiltrada,
+        "disipadorList" : disipadorListFiltrada,
+        "ramList" : ramListFiltrada,
+        "discoList" : discoListFiltrada,
+        "gpuList" : gpuListFiltrada,
+        "fuenteList" : fuenteListFiltrada,
+        "cajaList" : cajaListFiltrada,
+        "monitorList" : monitorListFiltrada,
+        "tecladoList" : tecladoListFiltrada,
+        "ratonList" : ratonListFiltrada
+    }
+    return [placasListFiltrada, cpuListFiltrada, disipadorListFiltrada, ramListFiltrada, discoListFiltrada,
+            gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada]
+}
+
+
 
 pcBuilderRouter.get("/", async (req, res, next) => {
     const [placasList, cpuList, disipadorList, ramList, discoList,

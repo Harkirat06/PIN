@@ -1,17 +1,5 @@
 import axios from 'axios'
 
-export async function getImage(nombre){
-    const response = await axios.get("/image/" + nombre)
-    .then((response) => {console.log(response)
-        return new Blob([response.data])})
-      .then((imageBlob) => {
-        const imageUrl = URL.createObjectURL(imageBlob);
-        return imageUrl
-      });
-      console.log(response)
-      return response
-}
-
 export async function getListas(){
     const response = await axios.get("/api/pcbuilder")
     return response

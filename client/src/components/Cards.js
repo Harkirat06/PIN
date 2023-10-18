@@ -1,14 +1,9 @@
-import { useContext, useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { Alert } from 'react-bootstrap'
+import { useContext } from "react"
 import React from "react";
 import Cardd from "./Card";
-import { getImage } from "./Axios";
-import StateProvider from "./StateProvider";
-import imagen2 from "../images/imagen2.jpg"
 
 function Cards({ context }) {
-  const { list, setList, items, setItems, q, setQ,} = useContext(context);
+  const { list } = useContext(context);
 
       return (
         <div className="wrapper">
@@ -18,7 +13,7 @@ function Cards({ context }) {
               <li key={index}>
                 <Cardd
                   nombre= {item.nombre}
-                  imagen = {imagen2}
+                  imagen = {"imagen2.jpg"}
                 />
               </li>
             ))

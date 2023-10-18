@@ -6,7 +6,8 @@ function Cardd ({ nombre, imagen}) {
 
     return (
       <Card style={{ width: '18rem' }}>
-        {imagen && <Card.Img variant="top" src={imagen} />}
+        {
+        <Card.Img variant="top" src={"/image/" + imagen} />}
         <Card.Body>
           <Card.Title>{nombre}</Card.Title>
         </Card.Body>

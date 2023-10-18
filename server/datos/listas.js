@@ -819,7 +819,979 @@ const buildGamaBaja = {
     }
 }
 
+const buildGamaBaja1 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": gamaBaja,
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": gamaBaja,
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": gamaBajaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildGamaBaja2 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": gamaBaja,
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": gamaBaja,
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": gamaBajaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildGamaBaja3 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": gamaBaja,
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": gamaBaja,
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": gamaBaja,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": gamaBajaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": gamaBaja,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
 const buildGamaMedia = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": gamaMedia,
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": gamaMediaAlta,
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildGamaMedia1 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": gamaMedia,
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": gamaMediaAlta,
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildGamaMedia2 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": gamaMedia,
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": gamaMediaAlta,
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": gamaMedia,
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": gamaMedia,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": gamaMediaAlta,
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildGamaMedia3 = {
     "placaBase": {
         "type": "PlacaBase",
         "nombre": "ASUS PRIME Z790-P WIFI",
@@ -987,7 +1959,7 @@ const buildGamaAlta = {
         "nombre": "ASUS PRIME Z790-P WIFI",
         "tamaño": "ATX",
         "socket": "Intel LGA 1700",
-        "gama": gamaAlta,
+        "gama": "Alta",
         "numeroM2": 0,
         "numeroSata" : 1,
         "tipoRam": "DDR5",
@@ -1002,7 +1974,7 @@ const buildGamaAlta = {
         "type": "CPU",
         "marca": "Intel",
         "nombre": "Intel Core i3-13700K 3.4 GHz",
-        "gama": gamaMediaAlta,
+        "gama": "Alta",
         "socket": "Intel LGA 1700",
         "tipoRam": "DDR5",
         "ventilador": false,
@@ -1020,7 +1992,7 @@ const buildGamaAlta = {
         "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
         "tipo": "DDR5",
         "capacidad": 32,
-        "gama": gamaAlta,
+        "gama": "Alta",
         "precio": {
             "segundaMano": 100,
             "amazon": 150,
@@ -1033,7 +2005,7 @@ const buildGamaAlta = {
             "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
             "capacidad": 1,
             "tecnologia": "m.2",
-            "gama": gamaAlta,
+            "gama": "Alta",
             "precio": {
                 "segundaMano": 100,
                 "amazon": 150,
@@ -1046,7 +2018,7 @@ const buildGamaAlta = {
             "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
             "capacidad": 1,
             "tecnologia": "m.2",
-            "gama": gamaAlta,
+            "gama": "Alta",
             "precio": {
                 "segundaMano": 100,
                 "amazon": 150,
@@ -1061,7 +2033,7 @@ const buildGamaAlta = {
             "nombre": "Samsung 870 QVO SSD 1TB SATA3",
             "capacidad": 1, //tb
             "tecnologia": "Sata",
-            "gama": gamaAlta,
+            "gama": "Alta",
             "precio": {
                 "segundaMano": 100,
                 "amazon": 150,
@@ -1074,7 +2046,7 @@ const buildGamaAlta = {
             "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
             "capacidad": 2,
             "tecnologia": "Sata",
-            "gama": gamaAlta,
+            "gama": "Alta",
             "precio": {
                 "segundaMano": 100,
                 "amazon": 150,
@@ -1086,7 +2058,331 @@ const buildGamaAlta = {
     "gpu": {
         "marca": "Gigabyte",
         "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-        "gama": gamaAlta,
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildGamaAlta1 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": "Alta",
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": "Alta",
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildGamaAlta2 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": "Alta",
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": "Alta",
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": "Alta",
         "precio": {
             "segundaMano": 100,
             "amazon": 150,
@@ -1110,7 +2406,7 @@ const buildGamaAlta = {
     "monitor": {
         "marca": "ASUS",
         "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
-        "gama": gamaAlta,
+        "gama": "Alta",
         "precio": {
             "segundaMano": 100,
             "amazon": 150,
@@ -1121,7 +2417,7 @@ const buildGamaAlta = {
     "caja": {
         "marca": "Tempest",
         "nombre": "Tempest Umbra RGB Torre ATX Blanca",
-        "gama": gamaAlta,
+        "gama": "Alta",
         "precio": {
             "segundaMano": 100,
             "amazon": 150,
@@ -1133,7 +2429,7 @@ const buildGamaAlta = {
         "marca": "Forgeon",
         "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
         "tipo": "Liquida",
-        "gama": gamaAlta,
+        "gama": "Alta",
         "precio": {
             "segundaMano": 100,
             "amazon": 150,
@@ -1143,6 +2439,173 @@ const buildGamaAlta = {
     }
 }
 
-module.exports = {buildGamaBaja, buildGamaMedia, buildGamaAlta, emptyConfiguration, configuration, cpuList,
-                    placasList, ramList, cajaList, gpuList, disipadorList, discoList, monitorList, fuenteList,
-                        ratonList, tecladoList}
+const buildGamaAlta3 = {
+    "placaBase": {
+        "type": "PlacaBase",
+        "nombre": "ASUS PRIME Z790-P WIFI",
+        "tamaño": "ATX",
+        "socket": "Intel LGA 1700",
+        "gama": "Alta",
+        "numeroM2": 0,
+        "numeroSata" : 1,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "placaBase.jpg" 
+    },
+    "cpu": {
+        "type": "CPU",
+        "marca": "Intel",
+        "nombre": "Intel Core i3-13700K 3.4 GHz",
+        "gama": "Alta",
+        "socket": "Intel LGA 1700",
+        "tipoRam": "DDR5",
+        "ventilador": false,
+        "gpu": true,
+        "tipoRam": "DDR5",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "intel.jpg"
+    },
+    "ram": {
+        "marca": "Corsair",
+        "nombre":"Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
+        "tipo": "DDR5",
+        "capacidad": 32,
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "ram.jpg"
+    },
+    "m2": [{
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        },
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 980 Pro SSD 1TB PCIe NVMe M.2",
+            "capacidad": 1,
+            "tecnologia": "m.2",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "m2.jpg"
+        }
+    ],
+    "sata": [
+        {
+            "marca": "Samsung",
+            "nombre": "Samsung 870 QVO SSD 1TB SATA3",
+            "capacidad": 1, //tb
+            "tecnologia": "Sata",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        },
+        {
+            "marca": "Seagate",
+            "nombre": "Seagate BarraCuda 3.5 2TB SATA 3",
+            "capacidad": 2,
+            "tecnologia": "Sata",
+            "gama": "Alta",
+            "precio": {
+                "segundaMano": 100,
+                "amazon": 150,
+                "ebay": 200
+            },
+            "imagen": "sata.jpg"
+        }
+    ],
+    "gpu": {
+        "marca": "Gigabyte",
+        "nombre":"Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "gpu.jpg"
+    },
+    "fuenteAlimentacion": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
+        "potencia": "850",
+        "ochetaplus": true,
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "fuente.jpg"
+    },
+    "monitor": {
+        "marca": "ASUS",
+        "nombre": "ASUS TUF Gaming VG249Q1A 23.8 LED IPS FullHD 165Hz FreeSync Premium",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "monitor.jpg"
+    },
+    "caja": {
+        "marca": "Tempest",
+        "nombre": "Tempest Umbra RGB Torre ATX Blanca",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "caja.jpg"
+    },
+    "disipador": {
+        "marca": "Forgeon",
+        "nombre": "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
+        "tipo": "Liquida",
+        "gama": "Alta",
+        "precio": {
+            "segundaMano": 100,
+            "amazon": 150,
+            "ebay": 200
+        },
+        "imagen": "disipador.jpg"
+    }
+}
+
+const buildsGamaBaja = [buildGamaBaja, buildGamaBaja1, buildGamaBaja2, buildGamaBaja3]
+const buildsGamaMedia = [buildGamaMedia, buildGamaMedia1, buildGamaMedia2, buildGamaMedia3]
+const buildsGamaAlta = [buildGamaAlta, buildGamaAlta1, buildGamaAlta2, buildGamaAlta3]
+
+module.exports = {buildsGamaBaja, buildsGamaMedia, buildsGamaAlta,
+                    emptyConfiguration, configuration, cpuList,
+                        placasList, ramList, cajaList, gpuList, disipadorList, discoList, monitorList, fuenteList,
+                            ratonList, tecladoList}

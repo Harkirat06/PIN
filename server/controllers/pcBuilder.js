@@ -1,5 +1,5 @@
 const pcBuilderRouter = require("express").Router()
-const {buildGamaBaja, buildGamaMedia, buildGamaAlta, emptyConfiguration, configuration, cpuList,
+const {buildsGamaBaja, buildsGamaMedia, buildsGamaAlta, emptyConfiguration, configuration, cpuList,
         placasList, ramList, cajaList, gpuList, disipadorList, discoList, monitorList, fuenteList,
             ratonList, tecladoList} = require("../datos/listas")
 
@@ -157,7 +157,6 @@ const handleFuente = (lista, cpu, gpu) => {
 
 const handleConfiguacion = (config)=>{
     let configObjects = Object.values(config);
-    console.log(configObjects.length)
     if( configObjects.length !== 0){
         let gama = configObjects[0].gama
         let [placasList, cpuList, disipadorList, ramList, discoList,
@@ -239,11 +238,17 @@ const shortearListasPorPrecio = () => {
             gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada]
 }
 
+function getRandomNumberExclusive(min, max) {
+    const randomDecimal = Math.random();
+    const randomNumber = Math.floor(randomDecimal * (max - min)) + min;
+    return randomNumber;
+  }
+
 const buildPorGama =(gama)=>{
     switch (gama){
-        case "Baja": return buildGamaBaja
-        case "Media": return buildGamaMedia
-        case "Alta": return buildGamaAlta
+        case "baja": return buildsGamaBaja[getRandomNumberExclusive(0,buildsGamaBaja.length)]
+        case "media": return buildsGamaMedia[getRandomNumberExclusive(0,buildsGamaMedia.length)]
+        case "alta": return buildsGamaAlta[getRandomNumberExclusive(0,buildsGamaAlta.length)]
         default: return {}
     } 
 }
@@ -271,4 +276,12 @@ pcBuilderRouter.get("/", async (req, res, next) => {
         ratonList 
     })
 })
+
+pcBuilderRouter.get("/:gama", async (req, res, next) => {
+    const gama = req.params.gama
+    const conf = buildPorGama(gama)
+    res.json(conf)
+})
+
+
 module.exports = pcBuilderRouter

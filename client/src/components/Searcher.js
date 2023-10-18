@@ -12,6 +12,11 @@ function Searcher({context}) {
                 setList(array)
             })
         }, []);
+    useEffect(()=>{
+        if(q === ""){
+            setList(items)
+        }
+    },[q])
     
 
     const filter = (event) => {
@@ -48,10 +53,6 @@ function Searcher({context}) {
                             */
                             onChange={(e) => {
                                 setQ(e.target.value)
-                                console.log(q)
-                                if(q === ""){
-                                    setList(items)
-                                }
                             }
                                 }
                         />

@@ -7,23 +7,8 @@ import { getImage } from "./Axios";
 import StateProvider from "./StateProvider";
 
 function Cards({ context }) {
-  const ejemplo = [
-        {
-          nombre: "Producto 1",
-          imagen: "url_imagen_1.jpg",
-          precioAmazon: 100,
-          precioEbay: 90,
-          precioSegundaMano: 80,
-        },
-        {
-          nombre: "Producto 2",
-          imagen: "url_imagen_2.jpg",
-          precioAmazon: 120,
-          precioEbay: 110,
-          precioSegundaMano: 100,
-        },
-        // Agrega más cartas manualmente aquí
-      ];
+  const { list, setList, items, setItems, q, setQ,} = useContext(context);
+  console.log(list)
       /* items.forEach((item) => {
           useEffect(() => {
           getImage(item.nombre + ".jpg");
@@ -37,7 +22,7 @@ function Cards({ context }) {
       return (
         <div className="wrapper">
           <ul className="card-grid">
-            {ejemplo.map((item, index) => (
+            {list.map((item, index) => (
               <li key={index}>
                 <Cardd
                   nombre={item.nombre}

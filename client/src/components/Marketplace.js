@@ -4,8 +4,8 @@ import Cards from "./Cards";
 function Marketplace({context}) {
   return (
     <div>
-      <Searcher></Searcher>
-      <Cards></Cards>
+      <Searcher context={context}></Searcher>
+      <Cards context={context}></Cards>
     </div>
   );
 }

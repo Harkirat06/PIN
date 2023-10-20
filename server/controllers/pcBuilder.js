@@ -191,7 +191,7 @@ const handleConfiguacion = (config)=>{
     }
 }
 
-const creaBuildPorPrecio = (presupuesto) => {
+const creaBuildPorPrecio = (presupuesto, segundaMano = false) => {
     let configuracionPorPrecio = {}
     let costeBuild = 0;
     for (let gamaBuild = gamaPremium; gamaBuild > 0; gamaBuild - 1) {
@@ -200,42 +200,88 @@ const creaBuildPorPrecio = (presupuesto) => {
             ratonList] = filtrarListasPorGama(gamaBuild)
         [placasList, cpuList, disipadorList, ramList, discoList,
             gpuList, fuenteList, cajaList, monitorList, tecladoList,
-            ratonList] = shortearListasPorPrecio()
-            
-
-        configuracionPorPrecio.forEach(element => {
-            costeBuild += element.precioAmazon
-        })
-        if (costeBuild <= presupuesto) {
-            return configuracionPorPrecio
+            ratonList] = shortearListasPorPrecio(segundaMano)
+        configuracionPorPrecio.push(placasList[0])
+        cpuList = handleCPU(cpuList, configuracionPorPrecio.placaBase, configuracionPorPrecio,ram)
+        configuracionPorPrecio.push(cpuList[0])
+        disipadorList = handleDisipador(disipadorList, configuracionPorPrecio.cpu)
+        configuracionPorPrecio.push(disipadorList[0])
+        ramList = handleRam(ramList, configuracionPorPrecio.placaBase, configuracionPorPrecio.cpu)
+        configuracionPorPrecio.push(ramList[0])
+        discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, configuracionPorPrecio.m2, configuracionPorPrecio.sata)
+        configuracionPorPrecio.push(discoList[0])
+        configuracionPorPrecio.push(gpuList[0])
+        fuenteList = handleFuente(fuenteList, configuracionPorPrecio.cpu, configuracionPorPrecio.gpu)
+        configuracionPorPrecio.push(fuenteList[0])
+        configuracionPorPrecio.push(cajaList[0])
+        configuracionPorPrecio.push(monitorList[0])
+        configuracionPorPrecio.push(tecladoList[0])
+        configuracionPorPrecio.push(ratonList[0])
+        if (segundaMano) {
+            configuracionPorPrecio.forEach(element => {
+                costeBuild += Math.min(element.precioAmazon || Infinity, element.precioEbay || Infinity, element.precioSegundaMano || Infinity);
+            })
+            if (costeBuild <= presupuesto) {
+                return configuracionPorPrecio
+            } else {
+                configuracionPorPrecio = {}
+                costeBuild = 0
+            }
         } else {
-            gamaBuild--
-            configuracionPorPrecio = {}
-            costeBuild = 0
+            configuracionPorPrecio.forEach(element => {
+                costeBuild += Math.min(element.precioAmazon || Infinity, element.precioEbay || Infinity);
+            })
+            if (costeBuild <= presupuesto) {
+                return configuracionPorPrecio
+            } else {
+                configuracionPorPrecio = {}
+                costeBuild = 0
+            }
         }
     }
     return configuracionPorPrecio
 }
 
-const shortearListasPorPrecio = () => {
+const shortearListasPorPrecio = (segundaMano) => {
     let [placasList, cpuList, disipadorList, ramList, discoList,
         gpuList, fuenteList, cajaList, monitorList, tecladoList,
         ratonList] = filtrarListasPorGama(gama)
     let list = {
-        "placasList" : placasListFiltrada,
-        "cpuList" : cpuListFiltrada,
-        "disipadorList" : disipadorListFiltrada,
-        "ramList" : ramListFiltrada,
-        "discoList" : discoListFiltrada,
-        "gpuList" : gpuListFiltrada,
-        "fuenteList" : fuenteListFiltrada,
-        "cajaList" : cajaListFiltrada,
-        "monitorList" : monitorListFiltrada,
-        "tecladoList" : tecladoListFiltrada,
-        "ratonList" : ratonListFiltrada
+        "placasList" : placasListShorteada,
+        "cpuList" : cpuListShorteada,
+        "disipadorList" : disipadorListShorteada,
+        "ramList" : ramListShorteada,
+        "discoList" : discoListShorteada,
+        "gpuList" : gpuListShorteada,
+        "fuenteList" : fuenteListShorteada,
+        "cajaList" : cajaListShorteada,
+        "monitorList" : monitorListShorteada,
+        "tecladoList" : tecladoListShorteada,
+        "ratonList" : ratonListShorteada
     }
-    return [placasListFiltrada, cpuListFiltrada, disipadorListFiltrada, ramListFiltrada, discoListFiltrada,
-            gpuListFiltrada, fuenteListFiltrada, cajaListFiltrada, monitorListFiltrada, tecladoListFiltrada, ratonListFiltrada]
+    if (segundaMano) {
+        return [placasListShorteada, cpuListShorteada, disipadorListShorteada, ramListShorteada, discoListShorteada,
+            gpuListShorteada, fuenteListShorteada, cajaListShorteada, monitorListShorteada, tecladoListShorteada, ratonListShorteada] = shorByPrecioSegundaMano(lista)
+    } else {
+        return [placasListShorteada, cpuListShorteada, disipadorListShorteada, ramListShorteada, discoListShorteada,
+            gpuListShorteada, fuenteListShorteada, cajaListShorteada, monitorListShorteada, tecladoListShorteada, ratonListShorteada] = shorByPrecioPrimeraMano(lista)
+    }
+}
+
+const shorByPrecioPrimeraMano = (lista) => {
+    lista.sort((a, b) => {
+        const precioA = Math.min(a.precioAmazon || Infinity, a.precioEbay || Infinity);
+        const precioB = Math.min(b.precioAmazon || Infinity, b.precioEbay || Infinity);
+        return precioA - precioB;
+      })
+}
+
+const shorByPrecioSegundaMano = (lista) => {
+    lista.sort((a, b) => {
+        const precioA = Math.min(a.precioAmazon || Infinity, a.precioEbay || Infinity, a.precioSegundaMano || Infinity);
+        const precioB = Math.min(b.precioAmazon || Infinity, b.precioEbay || Infinity, b.precioSegundaMano || Infinity);
+        return precioA - precioB;
+      })
 }
 
 function getRandomNumberExclusive(min, max) {
@@ -280,6 +326,12 @@ pcBuilderRouter.get("/", async (req, res, next) => {
 pcBuilderRouter.get("/:gama", async (req, res, next) => {
     const gama = req.params.gama
     const conf = buildPorGama(gama)
+    res.json(conf)
+})
+
+pcBuilderRouter.get("/:precio", async (req, res, next) => {
+    const presupuesto = req.params.presupuesto
+    const conf = creaBuildPorPrecio(presupuesto, segundaMano)
     res.json(conf)
 })
 

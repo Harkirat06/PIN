@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+
+
 export async function getListas(){
     const response = await axios.get("/api/pcbuilder")
     return response

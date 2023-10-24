@@ -219,7 +219,7 @@ const creaBuildPorPrecio = (presupuesto, segundaMano = false) => {
         configuracionPorPrecio.push(ratonList[0])
         if (segundaMano) {
             configuracionPorPrecio.forEach(element => {
-                costeBuild += Math.min(element.precioAmazon || Infinity, element.precioEbay || Infinity, element.precioSegundaMano || Infinity);
+                costeBuild += Math.min(element.precio.amazon || Infinity, element.precio.ebay || Infinity, element.precio.segundaMano || Infinity);
             })
             if (costeBuild <= presupuesto) {
                 return configuracionPorPrecio
@@ -229,7 +229,7 @@ const creaBuildPorPrecio = (presupuesto, segundaMano = false) => {
             }
         } else {
             configuracionPorPrecio.forEach(element => {
-                costeBuild += Math.min(element.precioAmazon || Infinity, element.precioEbay || Infinity);
+                costeBuild += Math.min(element.precio.amazon || Infinity, element.precio.ebay || Infinity);
             })
             if (costeBuild <= presupuesto) {
                 return configuracionPorPrecio
@@ -270,16 +270,16 @@ const shortearListasPorPrecio = (segundaMano) => {
 
 const shorByPrecioPrimeraMano = (lista) => {
     lista.sort((a, b) => {
-        const precioA = Math.min(a.precioAmazon || Infinity, a.precioEbay || Infinity);
-        const precioB = Math.min(b.precioAmazon || Infinity, b.precioEbay || Infinity);
+        const precioA = Math.min(a.precio.amazon || Infinity, a.precio.ebay || Infinity);
+        const precioB = Math.min(b.precio.amazon || Infinity, b.precio.ebay || Infinity);
         return precioA - precioB;
       })
 }
 
 const shorByPrecioSegundaMano = (lista) => {
     lista.sort((a, b) => {
-        const precioA = Math.min(a.precioAmazon || Infinity, a.precioEbay || Infinity, a.precioSegundaMano || Infinity);
-        const precioB = Math.min(b.precioAmazon || Infinity, b.precioEbay || Infinity, b.precioSegundaMano || Infinity);
+        const precioA = Math.min(a.precio.amazon || Infinity, a.precio.ebay || Infinity, a.precio.segundaMano || Infinity);
+        const precioB = Math.min(b.precio.amazon || Infinity, b.precio.ebay || Infinity, b.precio.segundaMano || Infinity);
         return precioA - precioB;
       })
 }

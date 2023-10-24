@@ -1,10 +1,17 @@
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import React from "react";
 import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import imagen from '../images/imagen2.jpg'
+import imagen from '../images/COOLPC-Gold.jpg'
 
-function selectBuild(){
+function SelectBuild(){
+
+    const [sliderValue, setSliderValue] = useState(0);
+
+  // Función para manejar el cambio en el slider
+      const handleSliderChange = (event) => {
+      setSliderValue(event.target.value);
+      }
 
     return (
         <Container>
@@ -15,24 +22,29 @@ function selectBuild(){
               <Button>GamaMedia</Button>
               <Button>GamaAlta</Button>
             </Col>
-            <Col xs={6}>
+            <Col xs={1  }>
               {/* Zona principal con botón e imagen */}
               <div className="main-content">
-                <Button>Botón Principal</Button>
-                <Image src={imagen} alt="Imagen Principal" fluid />
+                <Button>Construye tu pc de cero
+                  <img src={imagen} />
+                </Button>
+                
               </div>
             </Col>
+            </Row>
+            <Row>
             <Col xs={3}>
-              {/* Zona con slider */}
-              <Form>
-                <Form.Group controlId="slider">
-                  <Form.Label>Slider</Form.Label>
-                  <Form.Control type="range" min="0" max="10000" />
-                </Form.Group>
-              </Form>
-            </Col>
-          </Row>
-        </Container>
+            {/* Zona con slider */}
+            <Form>
+            <Form.Group controlId="slider">
+              <Form.Label>BuildPrecio</Form.Label>
+              <Form.Control type="range" min="400" max="10000" value={sliderValue} onChange={handleSliderChange} />
+            </Form.Group>
+            <span>{sliderValue}</span> {/* Elemento para mostrar el valor actual */}
+          </Form>
+        </Col>
+      </Row>
+    </Container>
       );
 
 
@@ -40,4 +52,4 @@ function selectBuild(){
 
 
 }
-export default selectBuild;
+export default SelectBuild;

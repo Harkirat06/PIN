@@ -1,10 +1,10 @@
-import { getImage } from "./Axios";
-import { useEffect, useState } from "react"; // Asegúrate de importar useState
 import Card from 'react-bootstrap/Card'
+
 
 function Cardd ({ nombre, imagen}) {
 
     return (
+      <div>
       <Card style={{ width: '18rem' }}>
         {
         <Card.Img variant="top" src={"/image/" + imagen} />}
@@ -12,6 +12,7 @@ function Cardd ({ nombre, imagen}) {
           <Card.Title>{nombre}</Card.Title>
         </Card.Body>
       </Card>
+      </div>
     );
 }
 

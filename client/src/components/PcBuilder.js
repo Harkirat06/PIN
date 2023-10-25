@@ -1,11 +1,22 @@
-import React, { useState, useEffect, useContext } from "react";
-import Cards from "./Cards"; 
-import Cardd from "./Card"
-import { Container, Row, Col } from "react-bootstrap"; 
+import React, { useState, useEffect } from "react";
+import Cards from "./Cards";
+import Cardd from "./Card";
+import { Container, Row, Col } from "react-bootstrap";
+import { getListas } from "./Axios";
 
-function PcBuilder({ context }) {
-  const [selectedComponents, setSelectedComponents] = useContext(context);
-  const [computerImage, setComputerImage] = useContext(context); 
+function PcBuilder() {
+  const [selectedComponents, setSelectedComponents] = useState([]);
+  const [computerImage, setComputerImage] = useState(null);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    getListas().then((res) => {
+      let array = [];
+      let objects = Object.values(res.data);
+      objects.forEach((item) => (array = array.concat(item)));
+      setItems(array);
+    });
+  }, []);
 
   const handleSelectComponent = (component) => {
     setSelectedComponents((prevSelected) => [...prevSelected, component]);
@@ -17,36 +28,31 @@ function PcBuilder({ context }) {
     );
   };
 
-  // Función para ensamblar la imagen del ordenador
   useEffect(() => {
-    // Crea un lienzo para dibujar la imagen ensamblada
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = 800; // Ancho del lienzo
+    canvas.height = 600; // Alto del lienzo
 
-  // Establece el tamaño del lienzo
-  canvas.width = 800; // Ajusta el ancho según tus necesidades
-  canvas.height = 600; // Ajusta la altura según tus necesidades
+    selectedComponents.forEach((component, index) => {
+      const item = items.find((item) => item.nombre === component.nombre);
 
-  // Dibuja los componentes seleccionados en el lienzo
-  selectedComponents.forEach((component, index) => {
-    const image = new Image();
-    image.src = "/image/" + component.imagen;
+      if (item) {
+        const image = new Image();
+        image.src = "/image/" + item.imagen;
 
-    const x = index * 200; // Espaciado horizontal entre componentes (ajusta según tus necesidades)
-    const y = 0; // La posición vertical se mantiene en la parte superior
+        const x = index * 200; // Espaciado horizontal entre componentes
+        const y = 0; // La posición vertical se mantiene en la parte superior
 
-    // Dibuja la imagen del componente en el lienzo
-    image.onload = () => {
-      ctx.drawImage(image, x, y, 200, 300); // Ajusta el ancho y alto según tus necesidades
-    };
-  });
+        image.onload = () => {
+          ctx.drawImage(image, x, y, 200, 300); // Ajusta el ancho y alto según tus necesidades
+        };
+      }
+    });
 
-  // Convierte el lienzo a una imagen base64
-  const assembledImage = canvas.toDataURL("image/png");
-
-  // Actualiza el estado con la imagen ensamblada
-  setComputerImage(assembledImage);
-  }, [selectedComponents]);
+    const assembledImage = canvas.toDataURL("image/png");
+    setComputerImage(assembledImage);
+  }, [selectedComponents, items]);
 
   return (
     <Container>
@@ -59,7 +65,6 @@ function PcBuilder({ context }) {
           />
         </Col>
         <Col>
-          {/* Muestra las tarjetas de componentes seleccionadas en el lienzo */}
           <div className="computer-preview">
             {selectedComponents.map((component, index) => (
               <Cardd
@@ -72,7 +77,6 @@ function PcBuilder({ context }) {
         </Col>
       </Row>
       <div className="computer-preview">
-        {/* Muestra la imagen del ordenador ensamblado */}
         {computerImage && <img src={computerImage} alt="Ordenador ensamblado" />}
       </div>
     </Container>

@@ -4,10 +4,14 @@ import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagen from '../images/COOLPC-Gold.jpg'
 import './SelectBuild.css'
+import axios from "axios";
+import { buildPorGama, buildPorPrecio } from "./Axios";
+import { useNavigate } from "react-router-dom";
 
-function SelectBuild(){
+function SelectBuild({context}){
 
-    const [sliderValue , setSliderValue] = useState(0);
+    const [sliderValue ,  setSliderValue] = useState(0);
+    const {build, setBuild}= useContext(context);
 
   // Función para manejar el cambio en el slider
       const handleSliderChange = (event) => {
@@ -19,14 +23,17 @@ function SelectBuild(){
           <Row>
             <Col xs={3}>
               {/* Zona con 3 botones */}
-              <Button>GamaBaja </Button>
-              <Button>GamaMedia</Button>
-              <Button>GamaAlta</Button>
+              <Button onClick={()=>{
+                setBuild(buildPorGama("baja"))
+                //navigate
+            }}>GamaBaja </Button>
+              <Button onClick={()=>setBuild(buildPorGama("media"))}>GamaMedia</Button>
+              <Button onClick={()=>setBuild(buildPorGama("alta"))}>GamaAlta</Button>
             </Col>
             <Col xs={1  }>
               {/* Zona principal con botón e imagen */}
               <div className="main-content">
-                <Button>Construye tu pc de cero
+                <Button onClick={()=>setBuild([])}>Construye tu pc de cero
                   <img src={imagen} />
                 </Button>
                 
@@ -44,7 +51,7 @@ function SelectBuild(){
             <span className="white-text">{sliderValue}</span> {/* Elemento para mostrar el valor actual */}
           </Form>
           <Col>
-            <Button>Hacer Build</Button>
+            <Button onClick={()=>setBuild(buildPorPrecio(sliderValue))}>Hacer Build</Button>
           </Col>
         </Col>
       </Row>

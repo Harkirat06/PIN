@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Marketplace context={StateContext} />} />
             <Route exact path="/upload" element={<ImageUploader context={StateContext} />} />
-            <Route exact path="/selectBuild" element={<SelectBuild/>} />
+            <Route exact path="/selectBuild" element={<SelectBuild context={StateContext}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
       </StateProvider>

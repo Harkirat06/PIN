@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 
+
 export async function buildPorPrecio(precio){
     const response = await axios.get("/api/pcbuilder/:precio",{
         params: {
@@ -20,8 +21,16 @@ export async function buildPorGama(gama){
 
 }
 
-export async function getListas(){
-    const response = await axios.get("/api/pcbuilder")
+
+export async function getListas(config = {}){
+    const response = await axios.get("/api/pcbuilder",
+    {
+        params: {
+            config
+        }
+    }
+    )
+
     return response
 }
 

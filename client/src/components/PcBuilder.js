@@ -1,73 +1,80 @@
 import React, { useState, useEffect, useContext } from "react";
 import Cards from "./Cards"; 
+import Cardd from "./Card"
 import { Container, Row, Col } from "react-bootstrap"; 
-import { getListas } from "./Axios";
 
 function PcBuilder({ context }) {
   const [selectedComponents, setSelectedComponents] = useContext(context);
   const [computerImage, setComputerImage] = useContext(context); 
 
-  // Función para manejar la selección de componentes
-  const handleSelectComponent = (componentType, component) => {
-    setSelectedComponents((prevSelected) => ({
-      ...prevSelected,
-      [componentType]: component,
-    }));
+  const handleSelectComponent = (component) => {
+    setSelectedComponents((prevSelected) => [...prevSelected, component]);
+  };
+
+  const handleDeselectComponent = (component) => {
+    setSelectedComponents((prevSelected) =>
+      prevSelected.filter((c) => c !== component)
+    );
   };
 
   // Función para ensamblar la imagen del ordenador
   useEffect(() => {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
+    // Crea un lienzo para dibujar la imagen ensamblada
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
 
-    // Tamaño de la imagen y tamaño de cada tarjeta (ajusta según tus necesidades)
-    const imageWidth = 800;
-    const imageHeight = 600;
-    const cardWidth = 200;
-    const cardHeight = 300;
+  // Establece el tamaño del lienzo
+  canvas.width = 800; // Ajusta el ancho según tus necesidades
+  canvas.height = 600; // Ajusta la altura según tus necesidades
 
-    // Establece el tamaño del lienzo
-    canvas.width = imageWidth;
-    canvas.height = imageHeight;
+  // Dibuja los componentes seleccionados en el lienzo
+  selectedComponents.forEach((component, index) => {
+    const image = new Image();
+    image.src = "/image/" + component.imagen;
 
-    // Dibujar las imágenes de los componentes en el lienzo
-    let xOffset = 0;
-    for (const componentType in selectedComponents) {
-      const component = selectedComponents[componentType];
-      if (component && component.image) {
-        const image = new Image();
-        image.src = component.image;
+    const x = index * 200; // Espaciado horizontal entre componentes (ajusta según tus necesidades)
+    const y = 0; // La posición vertical se mantiene en la parte superior
 
-        // Dibuja la imagen en la posición actual (xOffset)
-        ctx.drawImage(image, xOffset, 0, cardWidth, cardHeight);
+    // Dibuja la imagen del componente en el lienzo
+    image.onload = () => {
+      ctx.drawImage(image, x, y, 200, 300); // Ajusta el ancho y alto según tus necesidades
+    };
+  });
 
-        // Incrementa la posición para la siguiente tarjeta
-        xOffset += cardWidth;
-      }
-    }
+  // Convierte el lienzo a una imagen base64
+  const assembledImage = canvas.toDataURL("image/png");
 
-    // Convertir el lienzo a una imagen base64
-    const assembledImage = canvas.toDataURL("image/png");
-    setComputerImage(assembledImage);
+  // Actualiza el estado con la imagen ensamblada
+  setComputerImage(assembledImage);
   }, [selectedComponents]);
 
   return (
     <Container>
       <h2>Selecciona tus componentes</h2>
       <Row>
-        {/* Muestra las tarjetas de componentes y pasa la función de selección */}
         <Col>
-        <Cards context={context}>
+          <Cards
             onSelect={handleSelectComponent}
-        </Cards>
-          {/* Repite este proceso para otros tipos de componentes (RAM, GPU, etc.) */}
+            onDeselect={handleDeselectComponent}
+          />
+        </Col>
+        <Col>
+          {/* Muestra las tarjetas de componentes seleccionadas en el lienzo */}
+          <div className="computer-preview">
+            {selectedComponents.map((component, index) => (
+              <Cardd
+                key={index}
+                nombre={component.nombre}
+                imagen={component.imagen}
+              />
+            ))}
+          </div>
         </Col>
       </Row>
       <div className="computer-preview">
         {/* Muestra la imagen del ordenador ensamblado */}
         {computerImage && <img src={computerImage} alt="Ordenador ensamblado" />}
       </div>
-      
     </Container>
   );
 }

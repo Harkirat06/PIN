@@ -1,7 +1,10 @@
 const pcBuilderRouter = require("express").Router()
-const {emptyConfiguration} = require("../datos/listas");
+const { emptyConfiguration } = require("../datos/listas");
 const { filtrarListasPorGama } = require("./filtrarListasPorGama");
 const { mapGamas } = require("./mapGamas");
+const {placasList, cpuList, disipadorList, ramList, discoList,
+    gpuList, fuenteList, cajaList, monitorList, tecladoList,
+    ratonList} = require("../datos/listas")
 
 const potenciaExtra = 50; //para calcular la potencia solo tengo en cuenta la cpu y la gpu. todo lo demas entra en este extra, un poco arbitrario.
 
@@ -127,7 +130,7 @@ const handleConfiguacion = (config)=>{
 pcBuilderRouter.get("/", async (req, res) => {
     const [placasList, cpuList, disipadorList, ramList, discoList,
         gpuList, fuenteList, cajaList, monitorList, tecladoList,
-        ratonList] = handleConfiguacion(req.params.config)
+        ratonList] = handleConfiguacion(emptyConfiguration)
     res.json({
         placasList,
         cpuList,

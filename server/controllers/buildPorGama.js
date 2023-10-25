@@ -1,5 +1,6 @@
 const { buildsGamaBaja, buildsGamaMedia, buildsGamaAlta } = require("../datos/listas");
-const { getRandomNumberExclusive } = require("./pcBuilder");
+const { getRandomNumberExclusive } = require("./getRandomNumberExclusive");
+const builderPorGamaRouter = require("express").Router()
 
 const buildPorGama = (gama) => {
     switch (gama) {
@@ -10,11 +11,12 @@ const buildPorGama = (gama) => {
     }
 };
 
-pcBuilderRouter.get("/", async (req, res) => {
+builderPorGamaRouter.get("/", async (req, res) => {
     const gama = req.params.gama
     const conf = buildPorGama(gama)
     res.json(conf)
 })
 
+exports.builderPorGamaRouter = builderPorGamaRouter;
 
 exports.buildPorGama = buildPorGama;

@@ -1,6 +1,5 @@
 const { cpuList, placasList, ramList, cajaList, gpuList, disipadorList, discoList, monitorList, fuenteList, ratonList, tecladoList } = require("../datos/listas");
 const { mapGamas } = require("./mapGamas");
-const { filtroPorGama } = require("./pcBuilder");
 
 const filtroPorGama = (gama, lista)=>{
     return lista.filter(item => item.gama === gama || item.gama === gama - 1 || item.gama === gama + 1)

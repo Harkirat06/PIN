@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Cards from "./Cards"; 
 import { Container, Row, Col } from "react-bootstrap"; 
 import { getListas } from "./Axios";
 
 function PcBuilder({ context }) {
-  const [selectedComponents, setSelectedComponents] = useState({});
-  const [computerImage, setComputerImage] = useState(null); // Utilizamos null en lugar de una cadena vacía
+  const [selectedComponents, setSelectedComponents] = useContext(context);
+  const [computerImage, setComputerImage] = useContext(context); 
 
   // Función para manejar la selección de componentes
   const handleSelectComponent = (componentType, component) => {

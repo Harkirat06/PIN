@@ -3,10 +3,11 @@ import React from "react";
 import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagen from '../images/COOLPC-Gold.jpg'
+import './SelectBuild.css'
 
 function SelectBuild(){
 
-    const [sliderValue, setSliderValue] = useState(0);
+    const [sliderValue , setSliderValue] = useState(0);
 
   // Función para manejar el cambio en el slider
       const handleSliderChange = (event) => {
@@ -18,7 +19,7 @@ function SelectBuild(){
           <Row>
             <Col xs={3}>
               {/* Zona con 3 botones */}
-              <Button>GamaBaja</Button>
+              <Button>GamaBaja </Button>
               <Button>GamaMedia</Button>
               <Button>GamaAlta</Button>
             </Col>
@@ -37,11 +38,14 @@ function SelectBuild(){
             {/* Zona con slider */}
             <Form>
             <Form.Group controlId="slider">
-              <Form.Label>BuildPrecio</Form.Label>
-              <Form.Control type="range" min="400" max="10000" value={sliderValue} onChange={handleSliderChange} />
+              <Form.Label className="white-text">BuildPrecio</Form.Label>
+              <Form.Control type="range" min="0" max="10000" value={sliderValue} onChange={handleSliderChange} />
             </Form.Group>
-            <span>{sliderValue}</span> {/* Elemento para mostrar el valor actual */}
+            <span className="white-text">{sliderValue}</span> {/* Elemento para mostrar el valor actual */}
           </Form>
+          <Col>
+            <Button>Hacer Build</Button>
+          </Col>
         </Col>
       </Row>
     </Container>

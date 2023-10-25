@@ -1,9 +1,13 @@
 import axios from 'axios'
 
-
-
-export async function getListas(){
-    const response = await axios.get("/api/pcbuilder")
+export async function getListas(config = {}){
+    const response = await axios.get("/api/pcbuilder",
+    {
+        params: {
+            config
+        }
+    }
+    )
     return response
 }
 

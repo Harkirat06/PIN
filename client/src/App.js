@@ -5,7 +5,8 @@ import NotFound from './components/NotFound'
 import StateProvider from './components/StateProvider'
 import Marketplace from './components/Marketplace'
 import ImageUploader from './components/ImageUploader'
-import SelectBuild from './components/SelectBuild'
+import SelectBuild from './components/selectBuild'
+import pcBuilder from './components/PcBuilder'
 
 function App() {
   const StateContext = createContext()
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/" element={<Marketplace context={StateContext} />} />
             <Route exact path="/upload" element={<ImageUploader context={StateContext} />} />
             <Route exact path="/selectBuild" element={<SelectBuild context={StateContext}/>} />
+            <Route exact path="/PcBuilder" element={<pcBuilder context={StateContext}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
       </StateProvider>

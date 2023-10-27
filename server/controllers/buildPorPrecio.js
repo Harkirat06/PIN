@@ -28,39 +28,45 @@ const buildPorPrecio = (presupuesto, segundaMano = false) => {
       tecladoList,
       ratonList,
     ] = shortearListasPorPrecio(gamaBuild, segundaMano);
-    configuracionPorPrecio.placasList = placasList[0];
+
     cpuList = handleCPU(
       cpuList,
       configuracionPorPrecio.placaBase,
       configuracionPorPrecio.ram
     );
-    configuracionPorPrecio.cpuList = cpuList[0];
+
     disipadorList = handleDisipador(disipadorList, configuracionPorPrecio.cpu);
-    configuracionPorPrecio.disipadorList = disipadorList[0];
+
     ramList = handleRam(
       ramList,
       configuracionPorPrecio.placaBase,
       configuracionPorPrecio.cpu
     );
-    configuracionPorPrecio.ramList = ramList[0];
+
     discoList = handleDisco(
       discoList,
       configuracionPorPrecio.placaBase,
       configuracionPorPrecio.m2,
       configuracionPorPrecio.sata
     );
-    configuracionPorPrecio.discoList = discoList[0];
-    configuracionPorPrecio.gpuList = gpuList[0];
+
     fuenteList = handleFuente(
       fuenteList,
       configuracionPorPrecio.cpu,
       configuracionPorPrecio.gpu
     );
-    configuracionPorPrecio.fuenteList = fuenteList[0];
-    configuracionPorPrecio.cajaList = cajaList[0];
-    configuracionPorPrecio.monitorList = monitorList[0];
-    configuracionPorPrecio.tecladoList = tecladoList[0];
-    configuracionPorPrecio.ratonList = ratonList[0];
+    
+    configuracionPorPrecio.placasList = placasList && placasList[0];
+    configuracionPorPrecio.cpuList = cpuList && cpuList[0];
+    configuracionPorPrecio.ramList = ramList && ramList[0];
+    configuracionPorPrecio.gpuList = gpuList && gpuList[0];
+    configuracionPorPrecio.discoList = discoList && discoList[0];
+    configuracionPorPrecio.disipadorList = disipadorList && disipadorList[0];
+    configuracionPorPrecio.fuenteList = fuenteList && fuenteList[0];
+    configuracionPorPrecio.cajaList = cajaList && cajaList[0];
+    configuracionPorPrecio.monitorList = monitorList && monitorList[0];
+    configuracionPorPrecio.tecladoList = tecladoList && tecladoList[0];
+    configuracionPorPrecio.ratonList = ratonList && ratonList[0];
     if (segundaMano) {
       configuracionPorPrecio.forEach((element) => {
         costeBuild += Math.min(

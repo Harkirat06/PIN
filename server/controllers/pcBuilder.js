@@ -57,6 +57,8 @@ const handleRam = (lista, placaBase, cpu) => {
   if (cpu) {
     lista = lista.filter((item) => item.tipo == cpu.tipoRam);
   }
+  
+  return lista
 };
 
 const handleDisco = (lista, placaBase, m2, sata) => {

@@ -9,7 +9,7 @@ import { buildPorGama, buildPorPrecio } from "./Axios";
 import { useNavigate } from "react-router-dom";
 
 function SelectBuild({context}){
-
+    const navigate = useNavigate()
     const [sliderValue ,  setSliderValue] = useState(0);
     const {build, setBuild}= useContext(context);
 
@@ -25,15 +25,24 @@ function SelectBuild({context}){
               {/* Zona con 3 botones */}
               <Button onClick={()=>{
                 setBuild(buildPorGama("baja"))
-                //navigate
+                navigate("/PcBuilder")
             }}>GamaBaja </Button>
-              <Button onClick={()=>setBuild(buildPorGama("media"))}>GamaMedia</Button>
-              <Button onClick={()=>setBuild(buildPorGama("alta"))}>GamaAlta</Button>
+              <Button onClick={()=>{
+                setBuild(buildPorGama("media"))
+                navigate("/PcBuilder")
+            }}>GamaMedia</Button>
+              <Button onClick={()=>{
+                setBuild(buildPorGama("alta"))
+                navigate("/PcBuilder")
+              }}>GamaAlta</Button>
             </Col>
             <Col xs={1  }>
               {/* Zona principal con botón e imagen */}
               <div className="main-content">
-                <Button onClick={()=>setBuild([])}>Construye tu pc de cero
+                <Button onClick={()=>{
+                  setBuild([])
+                  navigate("/PcBuilder")
+                  }}>Construye tu pc de cero
                   <img src={imagen} />
                 </Button>
                 
@@ -51,7 +60,10 @@ function SelectBuild({context}){
             <span className="white-text">{sliderValue}</span> {/* Elemento para mostrar el valor actual */}
           </Form>
           <Col>
-            <Button onClick={()=>setBuild(buildPorPrecio(sliderValue))}>Hacer Build</Button>
+            <Button onClick={()=>{
+              setBuild(buildPorPrecio(sliderValue))
+              navigate("/PcBuilder")
+              }}>Hacer Build</Button>
           </Col>
         </Col>
       </Row>

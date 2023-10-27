@@ -17,6 +17,4 @@ builderPorGamaRouter.get("/", async (req, res) => {
     res.json(conf)
 })
 
-exports.builderPorGamaRouter = builderPorGamaRouter;
-
-exports.buildPorGama = buildPorGama;
+module.exports = {builderPorGamaRouter, buildPorGama};

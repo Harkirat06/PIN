@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Cards from "./Cards";
 import Cardd from "./Card";
 import { Container, Row, Col } from "react-bootstrap";
 import { getListas } from "./Axios";
 
-function PcBuilder() {
+function PcBuilder({context}) {
   const [selectedComponents, setSelectedComponents] = useState([]);
   const [computerImage, setComputerImage] = useState(null);
   const [items, setItems] = useState([]);
@@ -59,7 +59,7 @@ function PcBuilder() {
       <h2>Selecciona tus componentes</h2>
       <Row>
         <Col>
-          <Cards
+          <Cards context={context}
             onSelect={handleSelectComponent}
             onDeselect={handleDeselectComponent}
           />

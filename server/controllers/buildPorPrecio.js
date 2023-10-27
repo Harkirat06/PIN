@@ -57,4 +57,4 @@ builderPorPrecioRouter.get("/", async (req, res) => {
     const conf = buildPorPrecio(presupuesto, segundaMano)
     res.json(conf)
 })
-exports.builderPorPrecioRouter = builderPorPrecioRouter;
+module.exports = {builderPorPrecioRouter, buildPorPrecio};

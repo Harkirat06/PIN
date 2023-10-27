@@ -1,6 +1,6 @@
 const { filtrarListasPorGama } = require("./filtrarListasPorGama");
 
-const shortearListasPorPrecio = (segundaMano) => {
+const shortearListasPorPrecio = (gama, segundaMano) => {
     let [placasList, cpuList, disipadorList, ramList, discoList, gpuList, fuenteList, cajaList, monitorList, tecladoList, ratonList] = filtrarListasPorGama(gama);
     let listas = {
         placasList,
@@ -17,14 +17,14 @@ const shortearListasPorPrecio = (segundaMano) => {
     };
     if (segundaMano) {
         return [placasListShorteada, cpuListShorteada, disipadorListShorteada, ramListShorteada, discoListShorteada,
-            gpuListShorteada, fuenteListShorteada, cajaListShorteada, monitorListShorteada, tecladoListShorteada, ratonListShorteada] = shorByPrecioSegundaMano(listas);
+            gpuListShorteada, fuenteListShorteada, cajaListShorteada, monitorListShorteada, tecladoListShorteada, ratonListShorteada] = shortByPrecioSegundaMano(listas);
     } else {
         return [placasListShorteada, cpuListShorteada, disipadorListShorteada, ramListShorteada, discoListShorteada,
-            gpuListShorteada, fuenteListShorteada, cajaListShorteada, monitorListShorteada, tecladoListShorteada, ratonListShorteada] = shorByPrecioPrimeraMano(listas);
+            gpuListShorteada, fuenteListShorteada, cajaListShorteada, monitorListShorteada, tecladoListShorteada, ratonListShorteada] = shortByPrecioPrimeraMano(listas);
     }
 };
 exports.shortearListasPorPrecio = shortearListasPorPrecio;
-const shorByPrecioPrimeraMano = (listas) => {
+const shortByPrecioPrimeraMano = (listas) => {
     for (i = 0; i < listas.length; i++) {
         listas[i].sort((a, b) => {
             const precioA = Math.min(a.precio.amazon || Infinity, a.precio.ebay || Infinity);
@@ -36,7 +36,7 @@ const shorByPrecioPrimeraMano = (listas) => {
     listas.gpuList, listas.fuenteList, listas.cajaList,
     listas.monitorList, listas.tecladoList, listas.ratonList];
 };
-const shorByPrecioSegundaMano = (listas) => {
+const shortByPrecioSegundaMano = (listas) => {
     for (i = 0; i < listas.length; i++) {
         listas[i].sort((a, b) => {
             const precioA = Math.min(a.precio.amazon || Infinity, a.precio.ebay || Infinity, a.precio.segundaMano || Infinity);

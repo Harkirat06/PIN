@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import Cards from "./Cards";
 import Cardd from "./Card";
 import { Container, Row, Col } from "react-bootstrap";
 import { getListas } from "./Axios";
@@ -8,8 +7,8 @@ function PcBuilder({context}) {
   const [selectedComponents, setSelectedComponents] = useState([]);
   const [computerImage, setComputerImage] = useState(null);
   const [items, setItems] = useState([]);
-
-  useEffect(() => {
+  const {build,setBuild} = useContext(context)
+  /*useEffect(() => {
     getListas().then((res) => {
       let array = [];
       let objects = Object.values(res.data);
@@ -52,33 +51,26 @@ function PcBuilder({context}) {
 
     const assembledImage = canvas.toDataURL("image/png");
     setComputerImage(assembledImage);
-  }, [selectedComponents, items]);
+  }, [selectedComponents, items]);*/
 
   return (
     <Container>
       <h2>Selecciona tus componentes</h2>
       <Row>
         <Col>
-          <Cards context={context}
-            onSelect={handleSelectComponent}
-            onDeselect={handleDeselectComponent}
-          />
-        </Col>
-        <Col>
           <div className="computer-preview">
-            {selectedComponents.map((component, index) => (
+          {Object.values(build).map((component, index) => (
               <Cardd
                 key={index}
                 nombre={component.nombre}
                 imagen={component.imagen}
               />
-            ))}
+              )             
+            )         
+          }
           </div>
         </Col>
       </Row>
-      <div className="computer-preview">
-        {computerImage && <img src={computerImage} alt="Ordenador ensamblado" />}
-      </div>
     </Container>
   );
 }

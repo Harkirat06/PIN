@@ -9,9 +9,9 @@ import { buildPorGama, buildPorPrecio } from "./Axios";
 import { useNavigate } from "react-router-dom";
 
 function SelectBuild({context}){
-    const navigate = useNavigate()
+    const navigate = useNavigate()  
     const [sliderValue ,  setSliderValue] = useState(0);
-    const {build, setBuild}= useContext(context);
+    const {build,setBuild}= useContext(context);
 
   // Función para manejar el cambio en el slider
       const handleSliderChange = (event) => {

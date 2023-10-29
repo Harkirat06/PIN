@@ -55,7 +55,7 @@ const buildPorPrecio = (presupuesto, segundaMano = false) => {
       configuracionPorPrecio.cpu,
       configuracionPorPrecio.gpu
     );
-    
+
     configuracionPorPrecio.placasList = placasList && placasList[0];
     configuracionPorPrecio.cpuList = cpuList && cpuList[0];
     configuracionPorPrecio.ramList = ramList && ramList[0];
@@ -67,33 +67,20 @@ const buildPorPrecio = (presupuesto, segundaMano = false) => {
     configuracionPorPrecio.monitorList = monitorList && monitorList[0];
     configuracionPorPrecio.tecladoList = tecladoList && tecladoList[0];
     configuracionPorPrecio.ratonList = ratonList && ratonList[0];
-    if (segundaMano) {
-      for(i=0; i < configuracionPorPrecio.length; i++){
-        costeBuild += Math.min(
-          configuracionPorPrecio[i].precio.amazon || Infinity,
-          configuracionPorPrecio[i].precio.ebay || Infinity,
-          configuracionPorPrecio[i].precio.segundaMano || Infinity
-        );
-      }
-      if (costeBuild <= presupuesto) {
-        return configuracionPorPrecio;
-      } else {
-        configuracionPorPrecio = {};
-        costeBuild = 0;
-      }
+    for (i = 0; i < configuracionPorPrecio.length; i++) {
+      costeBuild += Math.min(
+        configuracionPorPrecio[i].precio.amazon || Infinity,
+        configuracionPorPrecio[i].precio.ebay || Infinity,
+        segundaMano
+          ? configuracionPorPrecio[i].precio.segundaMano || Infinity
+          : Infinity
+      );
+    }
+    if (costeBuild <= presupuesto) {
+      return configuracionPorPrecio;
     } else {
-      for(i=0; i < configuracionPorPrecio.length; i++){
-        costeBuild += Math.min(
-          configuracionPorPrecio[i].precio.amazon || Infinity,
-          configuracionPorPrecio[i].precio.ebay || Infinity
-        );
-      }
-      if (costeBuild <= presupuesto) {
-        return configuracionPorPrecio;
-      } else {
-        configuracionPorPrecio = {};
-        costeBuild = 0;
-      }
+      configuracionPorPrecio = {};
+      costeBuild = 0;
     }
   }
   return configuracionPorPrecio;

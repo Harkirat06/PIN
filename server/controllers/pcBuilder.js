@@ -39,11 +39,11 @@ const handlePlacaBase = (lista, cpu, ram, m2, sata) => {
     lista = lista.filter((item) => item.tipoRam == ram.tipo);
   }
 
-  if (m2.length !== 0) {
+  if (m2) {
     lista = lista.filter((item) => item.numeroM2 >= m2.length);
   }
 
-  if (sata.length !== 0) {
+  if (sata) {
     lista = lista.filter((item) => item.numeroSata >= sata.length);
   }
   return lista;
@@ -57,19 +57,16 @@ const handleRam = (lista, placaBase, cpu) => {
   if (cpu) {
     lista = lista.filter((item) => item.tipo == cpu.tipoRam);
   }
-  
-  return lista
+
+  return lista;
 };
 
-const handleDisco = (lista, placaBase, m2, sata) => {
-  if (placaBase) {
-    if (m2.length >= placaBase.numeroM2) {
-      lista = lista.filter((item) => item.tipo == "Sata");
-    }
-    if (sata.length >= placaBase.numeroSata) {
-      lista = lista.filter((item) => item.tipo == "m.2");
-    }
-    return lista;
+const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
+  if (m2.length >= placaBase.numeroM2) {
+    lista = lista.filter((item) => item.tipo == "Sata");
+  }
+  if (sata.length >= placaBase.numeroSata) {
+    lista = lista.filter((item) => item.tipo == "m.2");
   }
 
   if (m2.length >= 2) {
@@ -81,15 +78,15 @@ const handleDisco = (lista, placaBase, m2, sata) => {
   return lista;
 };
 
-const handleDisipador = (lista, cpu) => {
-  if (cpu && !cpu.ventilador) {
+const handleDisipador = (lista, cpu = {}) => {
+  if (!cpu.ventilador) {
     return lista;
   } else {
     return [];
   }
 };
 
-const handleFuente = (lista, cpu, gpu) => {
+const handleFuente = (lista, cpu = {}, gpu = {}) => {
   if (gpu.potenciaRecomendada) {
     lista.filter((item) => item.potencia >= gpu.potenciaRecomendada);
   } else if (cpu && gpu) {
@@ -212,5 +209,5 @@ module.exports = {
   handleDisipador,
   handleDisco,
   handleRam,
-  handleCPU
+  handleCPU,
 };

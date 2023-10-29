@@ -68,13 +68,13 @@ const buildPorPrecio = (presupuesto, segundaMano = false) => {
     configuracionPorPrecio.tecladoList = tecladoList && tecladoList[0];
     configuracionPorPrecio.ratonList = ratonList && ratonList[0];
     if (segundaMano) {
-      configuracionPorPrecio.forEach((element) => {
+      for(i=0; i < configuracionPorPrecio.length; i++){
         costeBuild += Math.min(
-          element.precio.amazon || Infinity,
-          element.precio.ebay || Infinity,
-          element.precio.segundaMano || Infinity
+          configuracionPorPrecio[i].precio.amazon || Infinity,
+          configuracionPorPrecio[i].precio.ebay || Infinity,
+          configuracionPorPrecio[i].precio.segundaMano || Infinity
         );
-      });
+      }
       if (costeBuild <= presupuesto) {
         return configuracionPorPrecio;
       } else {
@@ -82,12 +82,12 @@ const buildPorPrecio = (presupuesto, segundaMano = false) => {
         costeBuild = 0;
       }
     } else {
-      configuracionPorPrecio.forEach((element) => {
+      for(i=0; i < configuracionPorPrecio.length; i++){
         costeBuild += Math.min(
-          element.precio.amazon || Infinity,
-          element.precio.ebay || Infinity
+          configuracionPorPrecio[i].precio.amazon || Infinity,
+          configuracionPorPrecio[i].precio.ebay || Infinity
         );
-      });
+      }
       if (costeBuild <= presupuesto) {
         return configuracionPorPrecio;
       } else {

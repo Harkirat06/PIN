@@ -86,11 +86,11 @@ const handleDisipador = (lista, cpu = {}) => {
   }
 };
 
-const handleFuente = (lista, cpu = {}, gpu = {}) => {
-  if (gpu.potenciaRecomendada) {
-    lista.filter((item) => item.potencia >= gpu.potenciaRecomendada);
+const handleFuente = (lista, cpu, gpu) => {
+  if (gpu && gpu.potenciaRecomendada) {
+    lista = lista.filter((item) => item.potencia >= gpu.potenciaRecomendada);
   } else if (cpu && gpu) {
-    lista.filter(
+    lista = lista.filter(
       (item) =>
         (item.potencia * 80) / 100 >= gpu.consumo + cpu.consumo + potenciaExtra
     );
@@ -210,4 +210,5 @@ module.exports = {
   handleDisco,
   handleRam,
   handleCPU,
+  handlePlacaBase
 };

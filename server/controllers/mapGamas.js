@@ -1,4 +1,4 @@
-const { gamaBaja, gamaBajaMedia, gamaMedia, gamaMediaAlta, gamaAlta, gamaPremium } = require("./pcBuilder");
+const { gamaBaja, gamaBajaMedia, gamaMedia, gamaMediaAlta, gamaAlta, gamaPremium } = require("./gamasEnum");
 
 const mapList = (lista) => {
     return lista.map((item => {
@@ -30,3 +30,4 @@ const mapGamas = (listas) => {
         gpuListMapeada, fuenteListMapeada, cajaListMapeada, monitorListMapeada, tecladoListMapeada, ratonListMapeada];
 };
 exports.mapGamas = mapGamas;
+exports.mapList = mapList

@@ -1,4 +1,3 @@
-const { filtrarListasPorGama } = require("./filtrarListasPorGama");
 const { gamaPremium } = require("./gamasEnum");
 const { shortearListasPorPrecio } = require("./shortearListasPorPrecio");
 const {
@@ -13,6 +12,10 @@ const builderPorPrecioRouter = require("express").Router();
 const buildPorPrecio = (presupuesto, segundaMano = false) => {
   let configuracionPorPrecio = {};
   let costeBuild = 0;
+
+  if (presupuesto <= 0) {
+    return {}; // Devolver un objeto vacío si el presupuesto es cero o negativo
+  }
 
   for (let gamaBuild = gamaPremium; gamaBuild > 0; gamaBuild - 1) {
     let [

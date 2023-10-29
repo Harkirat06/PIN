@@ -5,7 +5,7 @@ import NotFound from './components/NotFound'
 import StateProvider from './components/StateProvider'
 import Marketplace from './components/Marketplace'
 import ImageUploader from './components/ImageUploader'
-import SelectBuild from './components/SelectBuild'
+import SelectBuild from './components/selectBuild'
 import PcBuilder from './components/PcBuilder'
 
 function App() {

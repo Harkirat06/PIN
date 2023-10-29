@@ -95,7 +95,7 @@ const configuration = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
     {
       marca: "Seagate",
@@ -108,7 +108,7 @@ const configuration = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -766,7 +766,7 @@ const buildGamaBaja = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
     {
       marca: "Seagate",
@@ -779,7 +779,7 @@ const buildGamaBaja = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -932,7 +932,7 @@ const buildGamaBaja1 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
     {
       marca: "Seagate",
@@ -945,7 +945,7 @@ const buildGamaBaja1 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -1098,7 +1098,7 @@ const buildGamaBaja2 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
     {
       marca: "Seagate",
@@ -1111,7 +1111,7 @@ const buildGamaBaja2 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
   ],
   gpu: {
@@ -1264,7 +1264,7 @@ const buildGamaBaja3 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
     {
       marca: "Seagate",
@@ -1277,7 +1277,7 @@ const buildGamaBaja3 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -1430,7 +1430,7 @@ const buildGamaMedia = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
     {
       marca: "Seagate",
@@ -1443,7 +1443,7 @@ const buildGamaMedia = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
   ],
   gpu: {
@@ -1596,7 +1596,7 @@ const buildGamaMedia1 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
     {
       marca: "Seagate",
@@ -1609,7 +1609,7 @@ const buildGamaMedia1 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
   ],
   gpu: {
@@ -1762,7 +1762,7 @@ const buildGamaMedia2 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
     {
       marca: "Seagate",
@@ -1775,7 +1775,7 @@ const buildGamaMedia2 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
   ],
   gpu: {
@@ -1928,7 +1928,7 @@ const buildGamaMedia3 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
     {
       marca: "Seagate",
@@ -1941,7 +1941,7 @@ const buildGamaMedia3 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -2094,7 +2094,7 @@ const buildGamaAlta = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
     {
       marca: "Seagate",
@@ -2107,7 +2107,7 @@ const buildGamaAlta = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -2260,7 +2260,7 @@ const buildGamaAlta1 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
     {
       marca: "Seagate",
@@ -2273,7 +2273,7 @@ const buildGamaAlta1 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -2426,7 +2426,7 @@ const buildGamaAlta2 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
     {
       marca: "Seagate",
@@ -2439,7 +2439,7 @@ const buildGamaAlta2 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "ssd.jpg",
     },
   ],
   gpu: {
@@ -2592,7 +2592,7 @@ const buildGamaAlta3 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
     {
       marca: "Seagate",
@@ -2605,7 +2605,7 @@ const buildGamaAlta3 = {
         amazon: 150,
         ebay: 200,
       },
-      imagen: "sata.jpg",
+      imagen: "hdd.jpg",
     },
   ],
   gpu: {

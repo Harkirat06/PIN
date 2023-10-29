@@ -8,7 +8,7 @@ export async function buildPorPrecio(precio){
             precio
         }
     })
-    console.log("Gay :"+response.data)
+    console.log("Gay :"+ response)
     return response
 
 }
@@ -18,8 +18,9 @@ export async function buildPorGama(gama){
                 gama
             }
         })
-        console.log("Gay gama:"+response)
-        return response
+        const {data} = response
+        console.log(data)
+        return data
 
 }
 

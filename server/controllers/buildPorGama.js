@@ -12,7 +12,7 @@ const buildPorGama = (gama) => {
 };
 
 builderPorGamaRouter.get("/", async (req, res) => {
-    const gama = req.params.gama
+    const gama = req.query.gama
     const conf = buildPorGama(gama)
     res.json(conf)
 })

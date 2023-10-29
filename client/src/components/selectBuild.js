@@ -28,7 +28,7 @@ function SelectBuild({context}){
                 navigate("/PcBuilder")
             }}>GamaBaja </Button>
               <Button onClick={()=>{
-                setBuild(buildPorGama("media"))
+                buildPorGama("media").then(r => setBuild(r))
                 navigate("/PcBuilder")
             }}>GamaMedia</Button>
               <Button onClick={()=>{

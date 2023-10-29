@@ -90,7 +90,7 @@ const buildPorPrecio = (presupuesto, segundaMano = false) => {
 };
 
 builderPorPrecioRouter.get("/", async (req, res) => {
-  const presupuesto = req.params.presupuesto;
+  const presupuesto = req.query.presupuesto;
   const conf = buildPorPrecio(presupuesto, segundaMano);
   res.json(conf);
 });

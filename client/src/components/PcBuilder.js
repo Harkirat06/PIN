@@ -1,63 +1,53 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import Cardd from "./Card";
 import { Container, Row, Col } from "react-bootstrap";
 import { getListas } from "./Axios";
 
-function PcBuilder({context}) {
-  const [selectedComponents, setSelectedComponents] = useState([]);
-  const [computerImage, setComputerImage] = useState(null);
-  const [items, setItems] = useState([]);
-  const {build,setBuild} = useContext(context)
-  
-  const handleComponentSelect = (component) => {
-    if (!selectedComponents.includes(component)) {
-      setSelectedComponents([...selectedComponents, component]);
-    }
-  };
+function PcBuilder({ context }) {
+    const [compatibleComponents, setCompatibleComponents] = useState([]);
+    const { build } = useContext(context);
 
-  const handleComponentDeselect = (component) => {
-    setSelectedComponents(selectedComponents.filter((selected) => selected !== component));
-  };
-  
-  return (
-    <Container>
-      <h2>Selecciona tus componentes</h2>
-      <Row>
-        <Col>
-          <div className="computer-preview">
-            {Object.values(build).map((component, index) => (
-              <Cardd
-              key={index}
-              nombre={component.nombre}
-              imagen={component.imagen}
-              isSelected={selectedComponents.includes(component)}
-              onComponentSelect={() => handleComponentSelect(component)}
-              />
-            ))}
-          </div>
-        </Col>
-        <Col xs={4}>
-          <div className="selected-components">
-            <h2>Componentes Seleccionados</h2>
-            <ul>
-            {selectedComponents.map((component, index) => (
-              <li key={index}>
-                <Cardd
-                  
-                  nombre={component.nombre}
-                  imagen={component.imagen}
-                  isSelected={true} // Puedes establecer isSelected a true para indicar que está seleccionado
-                  onComponentSelect={() => handleComponentDeselect(component)} // Maneja la deselección
-                  // Puedes pasar otras propiedades del componente si es necesario
-                />
-              </li>
-            ))}
-          </ul>
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  );
+    // Función para cargar componentes compatibles
+    const loadCompatibleComponents = async () => {
+        try {
+            const response = await getListas({ config: build });
+      
+                setCompatibleComponents(response.data);
+           
+        } catch (error) {
+            console.error("Error al cargar componentes compatibles", error);
+        }
+    };
+
+    // Llama a la función para cargar componentes compatibles
+    loadCompatibleComponents();
+
+    return (
+        <Container>
+            <h2>Selecciona tus componentes</h2>
+            <Row>
+                <Col>
+                    <div className="computer-preview">
+                        {Object.values(build).map((component, index) => (
+                            <Cardd key={index} nombre={component.nombre} imagen={component.imagen} />
+                        ))}
+                    </div>
+                </Col>
+                <Col>
+                    <div className="compatible-components">
+                        <h3>Componentes Compatibles</h3>
+                        {compatibleComponents.map((componentList, listIndex) => (
+                            <div key={listIndex}>
+                                {componentList.map((component, index) => (
+                                    <Cardd key={index} nombre={component.nombre} imagen={component.imagen} />
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default PcBuilder;

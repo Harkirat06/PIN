@@ -12,6 +12,10 @@ function PcBuilder({context}) {
   const handleComponentSelect = (component) => {
     setSelectedComponents([...selectedComponents, component]);
   };
+
+  const handleComponentDeselect = (component) => {
+    setSelectedComponents(selectedComponents.filter((selected) => selected !== component));
+  };
   
   return (
     <Container>
@@ -24,8 +28,8 @@ function PcBuilder({context}) {
               key={index}
               nombre={component.nombre}
               imagen={component.imagen}
-              isSelected={selectedComponents.includes(component.nombre)}
-              onComponentSelect={handleComponentSelect}
+              isSelected={selectedComponents.includes(component)}
+              onComponentSelect={() => handleComponentSelect(component)}
               />
             ))}
           </div>
@@ -37,8 +41,11 @@ function PcBuilder({context}) {
             {selectedComponents.map((component, index) => (
               <li key={index}>
                 <Cardd
+                  
                   nombre={component.nombre}
                   imagen={component.imagen}
+                  isSelected={true} // Puedes establecer isSelected a true para indicar que está seleccionado
+                  onComponentSelect={() => handleComponentDeselect(component)} // Maneja la deselección
                   // Puedes pasar otras propiedades del componente si es necesario
                 />
               </li>

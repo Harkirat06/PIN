@@ -10,7 +10,9 @@ function PcBuilder({context}) {
   const {build,setBuild} = useContext(context)
   
   const handleComponentSelect = (component) => {
-    setSelectedComponents([...selectedComponents, component]);
+    if (!selectedComponents.includes(component)) {
+      setSelectedComponents([...selectedComponents, component]);
+    }
   };
 
   const handleComponentDeselect = (component) => {

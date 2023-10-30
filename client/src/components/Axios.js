@@ -2,13 +2,15 @@ import axios from 'axios'
 
 
 
-export async function buildPorPrecio(precio){
+export async function buildPorPrecio(precio, segundaMano){
     const response = await axios.get("/api/builder/precio",{
         params: {
-            precio
+            precio,
+            segundaMano
         }
     })
-    console.log("Gay :"+ response)
+    const {data} = response
+    console.log(data)
     return response
 
 }

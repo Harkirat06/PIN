@@ -24,7 +24,7 @@ function SelectBuild({context}){
             <Col xs={3}>
               {/* Zona con 3 botones */}
               <Button onClick={()=>{
-                setBuild(buildPorGama("baja"))
+                buildPorGama("baja").then(r => setBuild(r))
                 navigate("/PcBuilder")
             }}>GamaBaja </Button>
               <Button onClick={()=>{
@@ -32,7 +32,7 @@ function SelectBuild({context}){
                 navigate("/PcBuilder")
             }}>GamaMedia</Button>
               <Button onClick={()=>{
-                setBuild(buildPorGama("alta"))
+                buildPorGama("alta").then(r => setBuild(r))
                 navigate("/PcBuilder")
               }}>GamaAlta</Button>
             </Col>
@@ -61,7 +61,7 @@ function SelectBuild({context}){
           </Form>
           <Col>
             <Button onClick={()=>{
-              setBuild(buildPorPrecio(sliderValue))
+              buildPorPrecio(sliderValue,false).then(r => setBuild(r))
               navigate("/PcBuilder")
               }}>Hacer Build</Button>
           </Col>

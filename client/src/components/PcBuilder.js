@@ -8,7 +8,52 @@ function PcBuilder({context}) {
   const [computerImage, setComputerImage] = useState(null);
   const [items, setItems] = useState([]);
   const {build,setBuild} = useContext(context)
-  /*useEffect(() => {
+  
+  const handleComponentSelect = (component) => {
+    setSelectedComponents([...selectedComponents, component]);
+  };
+  
+  return (
+    <Container>
+      <h2>Selecciona tus componentes</h2>
+      <Row>
+        <Col>
+          <div className="computer-preview">
+            {Object.values(build).map((component, index) => (
+              <Cardd
+              key={index}
+              nombre={component.nombre}
+              imagen={component.imagen}
+              isSelected={selectedComponents.includes(component.nombre)}
+              onComponentSelect={handleComponentSelect}
+              />
+            ))}
+          </div>
+        </Col>
+        <Col xs={4}>
+          <div className="selected-components">
+            <h2>Componentes Seleccionados</h2>
+            <ul>
+            {selectedComponents.map((component, index) => (
+              <li key={index}>
+                <Cardd
+                  nombre={component.nombre}
+                  imagen={component.imagen}
+                  // Puedes pasar otras propiedades del componente si es necesario
+                />
+              </li>
+            ))}
+          </ul>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
+
+export default PcBuilder;
+
+/*useEffect(() => {
     getListas().then((res) => {
       let array = [];
       let objects = Object.values(res.data);
@@ -52,27 +97,3 @@ function PcBuilder({context}) {
     const assembledImage = canvas.toDataURL("image/png");
     setComputerImage(assembledImage);
   }, [selectedComponents, items]);*/
-
-  return (
-    <Container>
-      <h2>Selecciona tus componentes</h2>
-      <Row>
-        <Col>
-          <div className="computer-preview">
-          {Object.values(build).map((component, index) => (
-              <Cardd
-                key={index}
-                nombre={component.nombre}
-                imagen={component.imagen}
-              />
-              )             
-            )         
-          }
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  );
-}
-
-export default PcBuilder;

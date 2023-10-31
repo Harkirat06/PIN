@@ -1,19 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from 'react-bootstrap/Card';
 
-function Cardd({ nombre, imagen, isSelected, onComponentSelect }) {
-  const [selected, setSelected] = useState(isSelected);
-
-  const handleCardClick = () => {
-    setSelected(!selected);
-    onComponentSelect(nombre, !selected);
-  };
-
+function Cardd({ nombre, imagen, onClick }) {
   return (
     <Card
       style={{ width: '18rem' }}
-      className={selected ? "selected" : ""}
-      onClick={handleCardClick}
+      onClick={onClick}
     >
       <Card.Img variant="top" src={"/image/" + imagen} />
       <Card.Body>

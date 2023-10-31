@@ -4,23 +4,35 @@ import { Container, Row, Col } from "react-bootstrap";
 import { getListas } from "./Axios";
 
 function PcBuilder({ context }) {
-    const [compatibleComponents, setCompatibleComponents] = useState([]);
+    const [listaComponente, setListaComponente] = useState([]);
     const { build } = useContext(context);
+    var conf = {...build}
 
     // Función para cargar componentes compatibles
-    const loadCompatibleComponents = async () => {
-        try {
-            const response = await getListas({ config: build });
-      
-                setCompatibleComponents(response.data);
-           
-        } catch (error) {
-            console.error("Error al cargar componentes compatibles", error);
-        }
+    const loadCompatibleComponents = async (componentRemove) => {
+      console.log(componentRemove);
+    
+      if (componentRemove && typeof componentRemove === 'string') {
+        delete conf[componentRemove]; // Utiliza la notación de corchetes
+      } else {
+        console.log("componentRemove no es una cadena válida.");
+      }
+    
+      console.log(conf);
+    
+      try {
+        getListas(conf).then(r => setListaComponente(r))
+        console.log("Soy")
+        console.log(listaComponente)
+      } catch (error) {
+        console.error("Error al cargar componentes compatibles", error);
+      }
     };
+    const cambioComponente = async () =>{
 
-    // Llama a la función para cargar componentes compatibles
-    loadCompatibleComponents();
+
+    }
+    
 
     return (
         <Container>
@@ -28,23 +40,35 @@ function PcBuilder({ context }) {
             <Row>
                 <Col>
                     <div className="computer-preview">
-                        {Object.values(build).map((component, index) => (
-                            <Cardd key={index} nombre={component.nombre} imagen={component.imagen} />
+                        {Object.entries(build).map(([componentName,component], index) => (
+                           <Cardd
+                           key={index}
+                           nombre={component.nombre}
+                           imagen={component.imagen}
+                           onClick={() => loadCompatibleComponents(componentName)}
+                         />
+                         
                         ))}
                     </div>
                 </Col>
                 <Col>
-                    <div className="compatible-components">
-                        <h3>Componentes Compatibles</h3>
-                        {compatibleComponents.map((componentList, listIndex) => (
-                            <div key={listIndex}>
-                                {componentList.map((component, index) => (
-                                    <Cardd key={index} nombre={component.nombre} imagen={component.imagen} />
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </Col>
+  <div className="select-component">
+    {listaComponente.length > 0 ? (
+      Object.values(listaComponente).map((component, index) => (
+        <Cardd
+          key={index}
+          nombre={component.nombre}
+          imagen={component.imagen}
+          onClick={cambioComponente}
+        />
+      ))
+    ) : (
+      <p>No hay componentes disponibles</p>
+    )}
+  </div>
+</Col>
+
+             
             </Row>
         </Container>
     );

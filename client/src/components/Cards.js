@@ -5,16 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Cards({ context }) {
   const { list } = useContext(context);
-  const [selectedComponents, setSelectedComponents] = useState([]);
 
-  // Función para manejar la selección de componentes
-  const handleComponentSelect = (nombre, isSelected) => {
-    if (isSelected) {
-      setSelectedComponents([...selectedComponents, nombre]);
-    } else {
-      setSelectedComponents(selectedComponents.filter((component) => component !== nombre));
-    }
-  };
 
   let i = 0;
 
@@ -28,8 +19,6 @@ function Cards({ context }) {
                 context={context}
                 nombre={item.nombre}
                 imagen={item.imagen}
-                isSelected={selectedComponents.includes(item.nombre)}
-                onComponentSelect={handleComponentSelect}
               />
             </div>
           ))

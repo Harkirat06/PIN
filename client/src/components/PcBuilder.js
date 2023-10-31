@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Cardd from "./Card";
 import { Container, Row, Col } from "react-bootstrap";
 import { getListas } from "./Axios";
+import SelectBuild from "./selectBuild";
 
 function PcBuilder({ context }) {
     const [listaComponente, setListaComponente] = useState([]);
@@ -28,7 +29,11 @@ function PcBuilder({ context }) {
         console.error("Error al cargar componentes compatibles", error);
       }
     };
-    const cambioComponente = async () =>{
+    const cambioComponente = async (componentAdd,component) =>{
+      conf[componentAdd] = component
+      console.log("Soy bet")
+      console.log(conf)
+      SelectBuild(conf)
 
 
     }
@@ -54,12 +59,12 @@ function PcBuilder({ context }) {
                 <Col>
   <div className="select-component">
     {listaComponente.length > 0 ? (
-      Object.values(listaComponente).map((component, index) => (
+      Object.entries(listaComponente).map(([componentName,component], index) => (
         <Cardd
           key={index}
           nombre={component.nombre}
           imagen={component.imagen}
-          onClick={cambioComponente}
+          onClick={cambioComponente(componentName,component)}
         />
       ))
     ) : (

@@ -10,7 +10,6 @@ export async function buildPorPrecio(precio, segundaMano){
         }
     })
     const {data} = response
-    console.log(data)
     return response
 
 }
@@ -21,7 +20,6 @@ export async function buildPorGama(gama){
             }
         })
         const {data} = response
-        console.log(data)
         return data
 
 }
@@ -35,7 +33,7 @@ export async function getListas(config = {}){
         }
     }
     )
-
+    console.log(response)
     return response
 }
 

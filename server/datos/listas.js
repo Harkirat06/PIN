@@ -8,8 +8,7 @@ const gamaPremium = 6;
 const emptyConfiguration = {};
 
 const configuration = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -25,7 +24,6 @@ const configuration = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i7-13700K 3.4 GHz",
     gama: gamaAlta,
@@ -679,8 +677,7 @@ const tecladoList = [
 ];
 
 const buildGamaBaja = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -696,7 +693,6 @@ const buildGamaBaja = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaBaja,
@@ -845,8 +841,7 @@ const buildGamaBaja = {
 };
 
 const buildGamaBaja1 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -862,7 +857,6 @@ const buildGamaBaja1 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaBaja,
@@ -1011,8 +1005,7 @@ const buildGamaBaja1 = {
 };
 
 const buildGamaBaja2 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -1028,7 +1021,6 @@ const buildGamaBaja2 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaBaja,
@@ -1177,8 +1169,7 @@ const buildGamaBaja2 = {
 };
 
 const buildGamaBaja3 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -1194,7 +1185,6 @@ const buildGamaBaja3 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaBaja,
@@ -1343,8 +1333,7 @@ const buildGamaBaja3 = {
 };
 
 const buildGamaMedia = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -1360,7 +1349,6 @@ const buildGamaMedia = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaMediaAlta,
@@ -1509,8 +1497,7 @@ const buildGamaMedia = {
 };
 
 const buildGamaMedia1 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -1526,7 +1513,6 @@ const buildGamaMedia1 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaMediaAlta,
@@ -1675,8 +1661,7 @@ const buildGamaMedia1 = {
 };
 
 const buildGamaMedia2 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -1692,7 +1677,6 @@ const buildGamaMedia2 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaMediaAlta,
@@ -1841,8 +1825,7 @@ const buildGamaMedia2 = {
 };
 
 const buildGamaMedia3 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -1858,7 +1841,6 @@ const buildGamaMedia3 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: gamaMediaAlta,
@@ -2007,8 +1989,7 @@ const buildGamaMedia3 = {
 };
 
 const buildGamaAlta = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -2024,7 +2005,6 @@ const buildGamaAlta = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: "Alta",
@@ -2173,8 +2153,7 @@ const buildGamaAlta = {
 };
 
 const buildGamaAlta1 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -2190,7 +2169,6 @@ const buildGamaAlta1 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: "Alta",
@@ -2339,8 +2317,7 @@ const buildGamaAlta1 = {
 };
 
 const buildGamaAlta2 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -2356,7 +2333,6 @@ const buildGamaAlta2 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: "Alta",
@@ -2505,8 +2481,7 @@ const buildGamaAlta2 = {
 };
 
 const buildGamaAlta3 = {
-  placaBase: {
-    type: "PlacaBase",
+  placas: {
     nombre: "ASUS PRIME Z790-P WIFI",
     tamaño: "ATX",
     socket: "Intel LGA 1700",
@@ -2522,7 +2497,6 @@ const buildGamaAlta3 = {
     imagen: "placa.jpg",
   },
   cpu: {
-    type: "CPU",
     marca: "Intel",
     nombre: "Intel Core i3-13700K 3.4 GHz",
     gama: "Alta",

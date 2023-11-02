@@ -120,7 +120,7 @@ const configuration = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -789,7 +789,7 @@ const buildGamaBaja = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -953,7 +953,7 @@ const buildGamaBaja1 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -1117,7 +1117,7 @@ const buildGamaBaja2 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -1281,7 +1281,7 @@ const buildGamaBaja3 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -1445,7 +1445,7 @@ const buildGamaMedia = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -1609,7 +1609,7 @@ const buildGamaMedia1 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -1773,7 +1773,7 @@ const buildGamaMedia2 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -1937,7 +1937,7 @@ const buildGamaMedia3 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -2101,7 +2101,7 @@ const buildGamaAlta = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -2265,7 +2265,7 @@ const buildGamaAlta1 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -2429,7 +2429,7 @@ const buildGamaAlta2 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",
@@ -2593,7 +2593,7 @@ const buildGamaAlta3 = {
     },
     imagen: "gpu.jpg",
   },
-  fuenteAlimentacion: {
+  fuente: {
     marca: "Forgeon",
     nombre:
       "Forgeon Bolt PSU 850W 80+ Gold Full Modular Fuente de Alimentación",

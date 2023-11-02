@@ -55,7 +55,7 @@ function PcBuilder({context}) {
 
   return (
     <Container>
-      <h2>Selecciona tus componentes</h2>
+      <h2>PcBuilder</h2>
       <Row>
         <Col>
           <div className="computer-preview">

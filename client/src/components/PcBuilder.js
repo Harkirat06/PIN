@@ -1,81 +1,55 @@
-import React, { useState, useContext } from "react";
-import Cardd from "./Card";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useContext, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import { getListas } from "./Axios";
-import { responsivePropType } from "react-bootstrap/esm/createUtilityClasses";
+import Button from "react-bootstrap/Button";
+import "./PcBuilder.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import OffCanvasCustom from "./OffCanvasCustom";
+
 
 function PcBuilder({ context }) {
-    const [listaComponente, setListaComponente] = useState([]);
-    const [component,setComponent] = useState();
-    const { build,setBuild } = useContext(context);
-    var conf = {...build}
-    
+  const { listasComponentes, setListasComponentes, setShow} = useContext(context);
+  const [ listaComponente, setListaComponente] = useState([]);
+  const [ nombreLista, setNombreLista ] = useState("")
+  useEffect(() => {
+    getListas().then((r) => setListasComponentes(r.data));
+  }, []);
 
-    // Función para cargar componentes compatibles
-    const loadCompatibleComponents = async (componentRemove) => {
-      console.log(componentRemove);
-      setComponent(componentRemove)
-      if (componentRemove && typeof componentRemove === 'string') {
-        delete conf[componentRemove]; // Utiliza la notación de corchetes
-      } else {
-        console.log("componentRemove no es una cadena válida.");
-      }
-    
-      console.log(conf);
-    
-      try {
-        var lista = componentRemove +"List"
-        console.log(lista)
-        await getListas({conf}).then(r => setListaComponente(r.data[lista]))
-      } catch (error) {
-        console.error("Error al cargar componentes compatibles", error);
-      }
-    };
-    const cambioComponente = (componenteAñadir) => {
-      console.log(componenteAñadir)
-      
-    };
-    
-    
+  const handleBoton =(lista)=>{
+    setNombreLista(lista)
+    setListaComponente(listasComponentes[lista])
+    setShow(true)
+  }
+  let i = 0
 
-    return (
-        <Container>
-            <h2>Build</h2>
-            <Row>
-                <Col>
-                    <div className="computer-preview">
-                        {Object.entries(build).map(([componentName,component], index) => (
-                           <Cardd
-                           key={index}
-                           nombre={component.nombre}
-                           imagen={component.imagen}
-                           onClick={() => loadCompatibleComponents(componentName)}
-                         />
-                         
-                        ))}
-                    </div>
-                </Col>
-                <Col>
-                    <div className="select-component">
-                      {listaComponente ? (
-                        Object.values(listaComponente).map((component, index) => (
-                          <Cardd
-                            key={index}
-                            nombre={component.nombre}
-                            imagen={component.imagen}
-                            onClick={cambioComponente(component)}
-                          />
-                        ))
-                      ) : (
-                        <p>No hay componentes disponibles</p>
-                      )}
-                    </div>
-                  </Col>
-
-             
-            </Row>
-        </Container>
-    );
+  return (
+    <Container>
+      <Container>
+        <h1>Pc Builder</h1>
+      </Container>
+      <Container>
+      <div className="container justify-content-center align-items-center">
+          <div className="row g-4">
+        {listasComponentes &&
+          Object.keys(listasComponentes).map(lista=>{
+            return (
+              <div
+                  className="col-4 col-md-2 col-lg-2 d-flex align-items-stretch"
+                  key={i++}
+                >
+              <Button variant="primary" onClick={()=>handleBoton(lista)}>
+                {lista}
+              </Button>
+              </div>
+            )
+          })
+        }
+          </div>
+        </div>
+        <OffCanvasCustom context={context} list={listaComponente} nombreLista={nombreLista} />
+      </Container>
+    </Container>
+  );
 }
 
 export default PcBuilder;

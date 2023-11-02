@@ -33,7 +33,6 @@ export async function getListas(config = {}){
         }
     }
     )
-    console.log(response)
     return response
 }
 

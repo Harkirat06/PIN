@@ -22,7 +22,7 @@ const configuration = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -255,7 +255,7 @@ const placasList = [
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   {
     marca: "Asus",
@@ -271,7 +271,7 @@ const placasList = [
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   {
     marca: "Asus",
@@ -287,7 +287,7 @@ const placasList = [
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   {
     marca: "MSI",
@@ -303,7 +303,7 @@ const placasList = [
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
 ];
 
@@ -693,7 +693,7 @@ const buildGamaBaja = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -859,7 +859,7 @@ const buildGamaBaja1 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -1025,7 +1025,7 @@ const buildGamaBaja2 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -1191,7 +1191,7 @@ const buildGamaBaja3 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -1357,7 +1357,7 @@ const buildGamaMedia = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -1523,7 +1523,7 @@ const buildGamaMedia1 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -1689,7 +1689,7 @@ const buildGamaMedia2 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -1855,7 +1855,7 @@ const buildGamaMedia3 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -2021,7 +2021,7 @@ const buildGamaAlta = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -2187,7 +2187,7 @@ const buildGamaAlta1 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -2353,7 +2353,7 @@ const buildGamaAlta2 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",
@@ -2519,7 +2519,7 @@ const buildGamaAlta3 = {
       amazon: 150,
       ebay: 200,
     },
-    imagen: "placaBase.jpg",
+    imagen: "placa.jpg",
   },
   cpu: {
     type: "CPU",

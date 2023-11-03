@@ -5,15 +5,14 @@ import { useContext, useState } from "react";
 import { getListas } from "./Axios";
 
 function OffCanvasCustom({ list, context, nombreLista }) {
-  const { show, setShow, listasComponentes, setListasComponentes } =
+  const { show, setShow, listasComponentes, setListasComponentes, setBuild} =
     useContext(context);
   let i = 0;
-  const [newBuild, setNewBuild] = useState({});
   const handleClose = () => setShow(false);
   const handleBuild = (item) => {
     let propiedad = nombreLista.replace("List", "");
 
-    setNewBuild((prevBuild) => {
+    setBuild((prevBuild) => {
       let conf = { ...prevBuild };
 
       if (item.tecnologia) {

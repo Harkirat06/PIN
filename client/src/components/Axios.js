@@ -28,9 +28,7 @@ export async function buildPorGama(gama){
 export async function getListas(config = {}){
     const response = await axios.get("/api/pcbuilder",
     {
-        params: {
-            config
-        }
+        params: config
     }
     )
     return response

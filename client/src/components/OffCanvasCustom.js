@@ -1,20 +1,43 @@
 import Cardd from "./Card";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { getListas } from "./Axios";
 
 function OffCanvasCustom({ list, context, nombreLista }) {
-    const {show, setShow, listasComponentes, setListasComponentes, build, setBuild} = useContext(context)
-    let i = 0
-    const handleClose = () => setShow(false);
-    const handleBuild = (nombre) => {
-        var conf = {...build}
-        let propiedad = nombreLista.replace("List", "");
-        conf[propiedad] = nombre
-        setBuild(conf)
-        getListas(build).then(res=> setListasComponentes(res.data))
-    }
+  const { show, setShow, listasComponentes, setListasComponentes } =
+    useContext(context);
+  let i = 0;
+  const [newBuild, setNewBuild] = useState({});
+  const handleClose = () => setShow(false);
+  const handleBuild = (item) => {
+    let propiedad = nombreLista.replace("List", "");
+
+    setNewBuild((prevBuild) => {
+      let conf = { ...prevBuild };
+
+      if (item.tecnologia) {
+        item.tecnologia === "m.2" ? (propiedad = "m2") : (propiedad = "sata");
+
+        if (conf[propiedad]) {
+          conf[propiedad] = conf[propiedad].concat(item);
+        } else {
+          conf[propiedad] = [item];
+        }
+      } else {
+        conf[propiedad] = item;
+      }
+
+      getListas(conf).then((res) => {
+        console.log(res.data);
+        setListasComponentes(res.data);
+      });
+
+      handleClose();
+
+      return conf; // Devolver el nuevo objeto 'conf' como el nuevo estado 'newBuild'
+    });
+  };
 
   return (
     <Offcanvas
@@ -39,7 +62,7 @@ function OffCanvasCustom({ list, context, nombreLista }) {
                   <Cardd
                     nombre={item.nombre}
                     imagen={item.imagen}
-                    onClick={()=>handleBuild(item.nombre)}
+                    onClick={() => handleBuild(item)}
                   />
                 </div>
               ))

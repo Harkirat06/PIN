@@ -15,39 +15,28 @@ const { mapeo } = require("./gamasEnum");
 
 const filtroPorGama = (gama, lista) => {
   const gamaNumerica = mapeo[gama];
-  return lista.filter(
+  let newLista = lista.filter(
     (item) =>
-      item.gama === gamaNumerica ||
-      item.gama === gamaNumerica - 1 ||
-      item.gama === gamaNumerica + 1
+      mapeo[item.gama] == gamaNumerica ||
+      mapeo[item.gama] == gamaNumerica - 1 ||
+      mapeo[item.gama] == gamaNumerica + 1
   );
+  return newLista
 };
 
 const filtrarListasPorGama = (gama) => {
-  placasListFiltrada = filtroPorGama(gama, placasList);
-  cpuListFiltrada = filtroPorGama(gama, cpuList);
-  disipadorListFiltrada = filtroPorGama(gama, disipadorList);
-  ramListFiltrada = filtroPorGama(gama, ramList);
-  discoListFiltrada = filtroPorGama(gama, discoList);
-  gpuListFiltrada = filtroPorGama(gama, gpuList);
-  fuenteListFiltrada = filtroPorGama(gama, fuenteList);
-  cajaListFiltrada = filtroPorGama(gama, cajaList);
-  monitorListFiltrada = filtroPorGama(gama, monitorList);
-  tecladoListFiltrada = filtroPorGama(gama, tecladoList);
-  ratonListFiltrada = filtroPorGama(gama, ratonList);
-  let list = {
-    placasList: placasListFiltrada,
-    cpuList: cpuListFiltrada,
-    disipadorList: disipadorListFiltrada,
-    ramList: ramListFiltrada,
-    discoList: discoListFiltrada,
-    gpuList: gpuListFiltrada,
-    fuenteList: fuenteListFiltrada,
-    cajaList: cajaListFiltrada,
-    monitorList: monitorListFiltrada,
-    tecladoList: tecladoListFiltrada,
-    ratonList: ratonListFiltrada,
-  };
+  let placasListFiltrada = filtroPorGama(gama, placasList);
+  let cpuListFiltrada = filtroPorGama(gama, cpuList);
+  let disipadorListFiltrada = filtroPorGama(gama, disipadorList);
+  let ramListFiltrada = filtroPorGama(gama, ramList);
+  let discoListFiltrada = filtroPorGama(gama, discoList);
+  let gpuListFiltrada = filtroPorGama(gama, gpuList);
+  let fuenteListFiltrada = filtroPorGama(gama, fuenteList);
+  let cajaListFiltrada = filtroPorGama(gama, cajaList);
+  let monitorListFiltrada = filtroPorGama(gama, monitorList);
+  let tecladoListFiltrada = filtroPorGama(gama, tecladoList);
+  let ratonListFiltrada = filtroPorGama(gama, ratonList);
+
   return [
     placasListFiltrada,
     cpuListFiltrada,

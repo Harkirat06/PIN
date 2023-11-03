@@ -70,10 +70,10 @@ const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
   }
 
   if (m2.length >= 2) {
-    lista = lista.filter((item) => item.tipo == "Sata");
+    lista = lista.filter((item) => item.tecnologia == "Sata");
   }
   if (sata.length >= 2) {
-    lista = lista.filter((item) => item.tipo == "m.2");
+    lista = lista.filter((item) => item.tecnologia == "m.2");
   }
   return lista;
 };
@@ -101,7 +101,12 @@ const handleFuente = (lista, cpu, gpu) => {
 const handleConfiguacion = (config) => {
   let configObjects = Object.values(config);
   if (configObjects.length !== 0) {
-    let gama = configObjects[0].gama;
+    let gama
+    if(Array.isArray(configObjects[0])){
+      gama = configObjects[0][0].gama
+    }else{
+      gama = configObjects[0].gama;
+    }
     let [
       placasList,
       cpuList,
@@ -114,14 +119,14 @@ const handleConfiguacion = (config) => {
       monitorList,
       tecladoList,
       ratonList,
-    ] = filtrarListasPorGama(gama);
+     ] = filtrarListasPorGama(gama);
     placasList = handlePlacaBase(
       placasList,
       config.cpu,
       config.m2,
       config.sata
     );
-    cpuList = handleCPU(cpuList, config.placaBase, config, ram);
+    cpuList = handleCPU(cpuList, config.placaBase, config.ram);
     ramList = handleRam(ramList, config.placaBase, config.cpu);
     discoList = handleDisco(
       discoList,
@@ -175,6 +180,8 @@ const handleConfiguacion = (config) => {
 };
 
 pcBuilderRouter.get("/", async (req, res) => {
+  const config = req.query
+  console.log(config)
   const [
     placasList,
     cpuList,
@@ -187,7 +194,7 @@ pcBuilderRouter.get("/", async (req, res) => {
     monitorList,
     tecladoList,
     ratonList,
-  ] = handleConfiguacion(emptyConfiguration);
+  ] = handleConfiguacion(config);
   res.json({
     placasList,
     cpuList,

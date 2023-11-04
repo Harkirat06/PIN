@@ -24,6 +24,17 @@ function PcBuilder({ context }) {
   const handleNombre = (lista)=>{ return lista.replace("List", "");}
   let i = 0;
 
+  const handleDisco = (propiedad)=>{
+    //console.log(elementosSeleccionados)
+    if(Array.isArray(elementosSeleccionados[propiedad])){
+      elementosSeleccionados[propiedad].map((item)=>{
+        return <Card.Text>{item}</Card.Text>
+      })
+    }else{
+      return <Card.Text>{elementosSeleccionados[propiedad]}</Card.Text>
+    }
+  }
+
   return (
     <Container>
       <Container>
@@ -43,7 +54,7 @@ function PcBuilder({ context }) {
                     <Card>
                       <Card.Img variant="top" src={"/image/" + nombre + "Icon.png"} />
                       <Card.Body>
-                        <Card.Text>{elementosSeleccionados[nombre]}</Card.Text>
+                        {handleDisco(nombre)}
                       </Card.Body>
                     </Card>
                   </div>

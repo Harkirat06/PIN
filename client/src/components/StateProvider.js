@@ -9,19 +9,21 @@ function StateProvider({ context, children }) {
   const [build, setBuild] = useState({});
   const [listasComponentes, setListasComponentes] = useState({});
   const [show, setShow] = useState(false);
+  const [listaComponente, setListaComponente] = useState([]);
+  const [nombreLista, setNombreLista] = useState("");
   const [elementosSeleccionados, setElementosSeleccionados] = useState({
-    "placas": "Elemento no seleccionado",
-    "cpu": "Elemento no seleccionado",
-    "gpu": "Elemento no seleccionado",
-    "ram": "Elemento no seleccionado",
-    "disipador": "Elemento no seleccionado",
-    "fuente": "Elemento no seleccionado",
-    "disco": "Elemento no seleccionado",
-    "caja": "Elemento no seleccionado",
-    "monitor": "Elemento no seleccionado",
-    "teclado": "Elemento no seleccionado",
-    "raton": "Elemento no seleccionado",  
-  })
+    placas: "Elemento no seleccionado",
+    cpu: "Elemento no seleccionado",
+    gpu: "Elemento no seleccionado",
+    ram: "Elemento no seleccionado",
+    disipador: "Elemento no seleccionado",
+    fuente: "Elemento no seleccionado",
+    disco: "Elemento no seleccionado",
+    caja: "Elemento no seleccionado",
+    monitor: "Elemento no seleccionado",
+    teclado: "Elemento no seleccionado",
+    raton: "Elemento no seleccionado",
+  });
 
   const contextValue = useMemo(
     () => ({
@@ -37,9 +39,27 @@ function StateProvider({ context, children }) {
       setBuild,
       listasComponentes,
       setListasComponentes,
-      show, setShow, elementosSeleccionados, setElementosSeleccionados
+      show,
+      setShow,
+      elementosSeleccionados,
+      setElementosSeleccionados,
+      listaComponente,
+      setListaComponente,
+      nombreLista,
+      setNombreLista,
     }),
-    [nombre, items, q, list, build, listasComponentes, show, elementosSeleccionados]
+    [
+      nombre,
+      items,
+      q,
+      list,
+      build,
+      listasComponentes,
+      show,
+      elementosSeleccionados,
+      listaComponente,
+      nombreLista
+    ]
   );
 
   return (

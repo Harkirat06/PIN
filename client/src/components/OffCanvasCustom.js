@@ -4,15 +4,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext, useState } from "react";
 import { getListas } from "./Axios";
 
-function OffCanvasCustom({ list, context, nombreLista }) {
+function OffCanvasCustom({ context  }) {
   const {
     show,
     setShow,
-    listasComponentes,
+    listaComponente,
     setListasComponentes,
     setBuild,
     setElementosSeleccionados,
     elementosSeleccionados,
+    nombreLista,
+
   } = useContext(context);
   let i = 0;
   const handleClose = () => setShow(false);
@@ -23,7 +25,6 @@ function OffCanvasCustom({ list, context, nombreLista }) {
     setElementosSeleccionados(()=>{
       let elementos = {...elementosSeleccionados}
       if (item.tecnologia) {
-
         if (elementos[propiedad] == "Elemento no seleccionado") {
           elementos[propiedad] = []
         }
@@ -50,7 +51,6 @@ function OffCanvasCustom({ list, context, nombreLista }) {
       }
 
       getListas(conf).then((res) => {
-        console.log(res.data);
         setListasComponentes(res.data);
       });
 
@@ -74,8 +74,8 @@ function OffCanvasCustom({ list, context, nombreLista }) {
       <Offcanvas.Body className="bg-dark text-white">
         <div className="container justify-content-center align-items-center">
           <div className="row g-4">
-            {list ? (
-              list.map((item) => (
+            {listaComponente ? (
+              listaComponente.map((item) => (
                 <div
                   className="col-12 col-md-6 col-lg-3 d-flex align-items-stretch"
                   key={i++}

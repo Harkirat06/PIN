@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import OffCanvasCustom from "./OffCanvasCustom";
 
 function PcBuilder({ context }) {
-  const { listasComponentes, setListasComponentes, setShow, build } =
+  const { listasComponentes, setListasComponentes, setShow, build, elementosSeleccionados } =
     useContext(context);
   const [listaComponente, setListaComponente] = useState([]);
   const [nombreLista, setNombreLista] = useState("");
@@ -43,7 +43,7 @@ function PcBuilder({ context }) {
                     <Card>
                       <Card.Img variant="top" src={"/image/" + nombre + "Icon.png"} />
                       <Card.Body>
-                        <Card.Text>{"Elemento no Seleccionado"}</Card.Text>
+                        <Card.Text>{elementosSeleccionados[nombre]}</Card.Text>
                       </Card.Body>
                     </Card>
                   </div>

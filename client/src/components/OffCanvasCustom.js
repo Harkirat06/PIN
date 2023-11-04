@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { getListas } from "./Axios";
 
 function OffCanvasCustom({ list, context, nombreLista }) {
-  const { show, setShow, listasComponentes, setListasComponentes, setBuild} =
+  const { show, setShow, listasComponentes, setListasComponentes, setBuild, setElementosSeleccionados, elementosSeleccionados} =
     useContext(context);
   let i = 0;
   const handleClose = () => setShow(false);
@@ -36,6 +36,12 @@ function OffCanvasCustom({ list, context, nombreLista }) {
 
       return conf; // Devolver el nuevo objeto 'conf' como el nuevo estado 'newBuild'
     });
+
+    setElementosSeleccionados(()=>{
+      let elementos = {...elementosSeleccionados}
+      elementos[propiedad] = item.nombre
+      return elementos
+    })
   };
 
   return (

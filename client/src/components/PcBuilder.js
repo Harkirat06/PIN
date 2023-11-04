@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Card, Container } from "react-bootstrap";
 import { getListas } from "./Axios";
-import Button from "react-bootstrap/Button";
 import "./PcBuilder.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import OffCanvasCustom from "./OffCanvasCustom";
@@ -27,8 +26,9 @@ function PcBuilder({ context }) {
   const handleDisco = (propiedad)=>{
     //console.log(elementosSeleccionados)
     if(Array.isArray(elementosSeleccionados[propiedad])){
-      elementosSeleccionados[propiedad].map((item)=>{
-        return <Card.Text>{item}</Card.Text>
+      let i = 0
+      return elementosSeleccionados[propiedad].map((item)=>{
+        return <Card.Text key={i++}>{i + "." + " " + item}</Card.Text>
       })
     }else{
       return <Card.Text>{elementosSeleccionados[propiedad]}</Card.Text>
@@ -48,10 +48,10 @@ function PcBuilder({ context }) {
                 let nombre = handleNombre(lista)
                 return (
                   <div
-                    className="col-4 col-md-2 col-lg-2 d-flex align-items-stretch"
+                    className="col-4 col-md-2 col-lg-3 d-flex align-items-stretch"
                     key={i++}
                   >
-                    <Card>
+                    <Card onClick={() => handleBoton(lista)}>
                       <Card.Img variant="top" src={"/image/" + nombre + "Icon.png"} />
                       <Card.Body>
                         {handleDisco(nombre)}
@@ -65,26 +65,6 @@ function PcBuilder({ context }) {
       </Container>
       <br />
       <Container>
-        <div className="container justify-content-center align-items-center">
-          <div className="row g-4">
-            {listasComponentes &&
-              Object.keys(listasComponentes).map((lista) => {
-                return (
-                  <div
-                    className="col-4 col-md-2 col-lg-2 d-flex align-items-stretch"
-                    key={i++}
-                  >
-                    <Button
-                      variant="primary"
-                      onClick={() => handleBoton(lista)}
-                    >
-                      {lista}
-                    </Button>
-                  </div>
-                );
-              })}
-          </div>
-        </div>
         <OffCanvasCustom
           context={context}
           list={listaComponente}

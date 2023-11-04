@@ -25,7 +25,7 @@ function OffCanvasCustom({ list, context, nombreLista }) {
       if (item.tecnologia) {
 
         if (elementos[propiedad] == "Elemento no seleccionado") {
-          elementos[propiedad] = ""
+          elementos[propiedad] = []
         }
           elementos[propiedad] = elementos[propiedad].concat(item.nombre);
       } else {
@@ -58,7 +58,6 @@ function OffCanvasCustom({ list, context, nombreLista }) {
 
       return conf; // Devolver el nuevo objeto 'conf' como el nuevo estado 'newBuild'
     });
-
   };
 
   return (

@@ -41,7 +41,12 @@ function PcBuilder({ context }) {
     if (Array.isArray(elementosSeleccionados[0][propiedad])) {
       setElementosSeleccionados(() => {
         let elementos = { ...elementosSeleccionados[0] };
-        elementos[propiedad] = elementos[propiedad].filter((i) => i != item);
+        let element = elementos[propiedad].find(i=> i == item)
+        const index = elementos[propiedad].indexOf(element);
+        if (index !== -1) {
+          elementos[propiedad] = elementos[propiedad].splice(index, 1);
+        }
+
         if (elementos[propiedad].length == 0) {
           elementos[propiedad] = "Elemento no seleccionado";
         }
@@ -50,18 +55,25 @@ function PcBuilder({ context }) {
       setBuild(() => {
         let conf = { ...build[0] };
         if (conf["sata"] && Array.isArray(conf["sata"])) {
-          let element = conf["sata"].find(i=> i.nombre == item)
+          let element = conf["sata"].find((i) => i.nombre == item);
           const index = conf["sata"].indexOf(element);
-          conf["sata"] = conf["sata"].splice(index, 1);
-          if (conf["m2"] && Array.isArray(conf["m2"])) {
-            conf.m2.filter((i) => i.nombre != item);
+          if (index !== -1) {
+            conf["sata"] = conf["sata"].splice(index, 1);
           }
-          getListas(conf).then((res) => {
-            setListasComponentes(res.data);
-          });
-          setShow(false)
-          return [conf];
         }
+        if (conf["m2"] && Array.isArray(conf["m2"])) {
+          let element = conf["m2"].find((i) => i.nombre == item);
+          const index = conf["m2"].indexOf(element);
+          if (index !== -1) {
+            conf["m2"] = conf["m2"].splice(index, 1);
+          }
+        }
+        console.log(conf);
+        getListas(conf).then((res) => {
+          setListasComponentes(res.data);
+        });
+        setShow(false);
+        return [conf];
       });
     } else {
       setElementosSeleccionados(() => {
@@ -74,6 +86,7 @@ function PcBuilder({ context }) {
         delete conf[propiedad];
         getListas(conf).then((res) => {
           setListasComponentes(res.data);
+          console.log(res.data);
         });
         setShow(false);
         return [conf];

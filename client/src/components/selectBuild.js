@@ -4,7 +4,6 @@ import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagen from '../images/COOLPC-Gold.jpg';
 import './SelectBuild.css';
-import axios from "axios";
 import { buildPorGama, buildPorPrecio } from "./Axios";
 import { useNavigate } from "react-router-dom";
 
@@ -62,7 +61,6 @@ function SelectBuild({ context }) {
               {/* Zona principal con botón e imagen */}
               <div className="main-content">
                 <Button onClick={()=>{
-                  setBuild(() => [{}])
                   navigate("/PcBuilder")
                   }}>Construye tu pc de cero
                   <img src={imagen} />

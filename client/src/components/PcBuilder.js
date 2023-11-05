@@ -25,7 +25,7 @@ function PcBuilder({ context }) {
     getListas(build[0]).then((r) => {
       setListasComponentes(r.data);
     });
-  }, []);
+  }, [build, elementosSeleccionados]);
 
   const handleBoton = (lista) => {
     setNombreLista(lista);
@@ -39,55 +39,35 @@ function PcBuilder({ context }) {
 
   const deleteSelection = (propiedad, item) => {
     if (Array.isArray(elementosSeleccionados[0][propiedad])) {
-      setElementosSeleccionados(() => {
-        let elementos = { ...elementosSeleccionados[0] };
-        let element = elementos[propiedad].find(i=> i == item)
-        const index = elementos[propiedad].indexOf(element);
-        if (index !== -1) {
-          elementos[propiedad] = elementos[propiedad].splice(index, 1);
-        }
-
-        if (elementos[propiedad].length == 0) {
-          elementos[propiedad] = "Elemento no seleccionado";
-        }
+      setElementosSeleccionados((prevElementosSeleccionados) => {
+        let elementos = { ...prevElementosSeleccionados[0] };
+        const updatedArray = elementos[propiedad].filter((i) => i !== item);
+        elementos[propiedad] =
+          updatedArray.length > 0 ? updatedArray : "Elemento no seleccionado";
         return [elementos];
       });
-      setBuild(() => {
-        let conf = { ...build[0] };
+      setBuild((prevBuild) => {
+        let conf = { ...prevBuild[0] };
         if (conf["sata"] && Array.isArray(conf["sata"])) {
-          let element = conf["sata"].find((i) => i.nombre == item);
-          const index = conf["sata"].indexOf(element);
-          if (index !== -1) {
-            conf["sata"] = conf["sata"].splice(index, 1);
-          }
+          conf["sata"] = conf["sata"].filter((i) => i.nombre !== item);
         }
+
         if (conf["m2"] && Array.isArray(conf["m2"])) {
-          let element = conf["m2"].find((i) => i.nombre == item);
-          const index = conf["m2"].indexOf(element);
-          if (index !== -1) {
-            conf["m2"] = conf["m2"].splice(index, 1);
-          }
+          conf["m2"] = conf["m2"].filter((i) => i.nombre !== item);
         }
-        console.log(conf);
-        getListas(conf).then((res) => {
-          setListasComponentes(res.data);
-        });
+
         setShow(false);
         return [conf];
       });
     } else {
-      setElementosSeleccionados(() => {
-        let elementos = { ...elementosSeleccionados[0] };
+      setElementosSeleccionados((prevElementosSeleccionados) => {
+        let elementos = { ...prevElementosSeleccionados[0] };
         elementos[propiedad] = "Elemento no seleccionado";
         return [elementos];
       });
-      setBuild(() => {
-        let conf = { ...build[0] };
+      setBuild((prevBuild) => {
+        let conf = { ...prevBuild[0] };
         delete conf[propiedad];
-        getListas(conf).then((res) => {
-          setListasComponentes(res.data);
-          console.log(res.data);
-        });
         setShow(false);
         return [conf];
       });

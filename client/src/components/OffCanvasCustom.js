@@ -23,7 +23,7 @@ function OffCanvasCustom({ context  }) {
     let propiedad = nombreLista.replace("List", "");
 
     setElementosSeleccionados(()=>{
-      let elementos = {...elementosSeleccionados}
+      let elementos = {...elementosSeleccionados[0]}
       if (item.tecnologia) {
         if (elementos[propiedad] == "Elemento no seleccionado") {
           elementos[propiedad] = []
@@ -32,11 +32,11 @@ function OffCanvasCustom({ context  }) {
       } else {
         elementos[propiedad] = item.nombre;
       }
-      return elementos
+      return [elementos]
     })
 
     setBuild((prevBuild) => {
-      let conf = { ...prevBuild };
+      let conf = { ...prevBuild[0]};
 
       if (item.tecnologia) {
         item.tecnologia === "m.2" ? (propiedad = "m2") : (propiedad = "sata");
@@ -56,7 +56,7 @@ function OffCanvasCustom({ context  }) {
 
       handleClose();
 
-      return conf; // Devolver el nuevo objeto 'conf' como el nuevo estado 'newBuild'
+      return [conf]; // Devolver el nuevo objeto 'conf' como el nuevo estado 'newBuild'
     });
   };
 

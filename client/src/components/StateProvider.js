@@ -6,12 +6,12 @@ function StateProvider({ context, children }) {
   const [items, setItems] = useState([]);
   const [q, setQ] = useState("");
   const [list, setList] = useState([]);
-  const [build, setBuild] = useState({});
+  const [build, setBuild] = useState([{}])
   const [listasComponentes, setListasComponentes] = useState({});
   const [show, setShow] = useState(false);
   const [listaComponente, setListaComponente] = useState([]);
   const [nombreLista, setNombreLista] = useState("");
-  const [elementosSeleccionados, setElementosSeleccionados] = useState({
+  const [elementosSeleccionados, setElementosSeleccionados] = useState([{
     placas: "Elemento no seleccionado",
     cpu: "Elemento no seleccionado",
     gpu: "Elemento no seleccionado",
@@ -23,7 +23,7 @@ function StateProvider({ context, children }) {
     monitor: "Elemento no seleccionado",
     teclado: "Elemento no seleccionado",
     raton: "Elemento no seleccionado",
-  });
+  }]);
 
   const contextValue = useMemo(
     () => ({

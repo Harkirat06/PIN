@@ -52,7 +52,6 @@ function PcBuilder({ context }) {
         if (conf["sata"] && Array.isArray(conf["sata"])) {
           let element = conf["sata"].find(i=> i.nombre == item)
           const index = conf["sata"].indexOf(element);
-          console.log(element)
           conf["sata"] = conf["sata"].splice(index, 1);
           if (conf["m2"] && Array.isArray(conf["m2"])) {
             conf.m2.filter((i) => i.nombre != item);

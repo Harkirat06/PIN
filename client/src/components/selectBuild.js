@@ -28,7 +28,7 @@ function SelectBuild({ context }) {
           let elementos = {...elementosSeleccionados[0]}
           Object.keys(selectedBuild).forEach((propiedad)=>{
             if(propiedad == "sata" || propiedad == "m2"){
-              if (elementos[propiedad] == "Elemento no seleccionado") {
+              if (elementos["disco"] == "Elemento no seleccionado") {
                 elementos["disco"] = []
               }
               selectedBuild[propiedad].forEach((item)=>{

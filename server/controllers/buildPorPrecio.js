@@ -6,18 +6,23 @@ const {
   handleRam,
   handleDisco,
   handleFuente,
+  handlePlacaBase,
 } = require("./pcBuilder");
+const { config } = require("dotenv");
 const builderPorPrecioRouter = require("express").Router();
 
-const buildPorPrecio = (presupuesto, segundaMano = false) => {
+const buildPorPrecio = (build, presupuesto, segundaMano = false) => {
   let configuracionPorPrecio = {};
   let costeBuild = 0;
 
+  let listaGamas = ["Baja", "BajaMedia", "Media", "MediaAlta", "Alta", "Premium"]
+
   if (presupuesto <= 0) {
-    return {}; // Devolver un objeto vacío si el presupuesto es cero o negativo
+    return {"Error" : "El presupuesto es 0 o negativo"};
   }
 
   for (let gamaBuild = gamaPremium; gamaBuild > 0; gamaBuild - 1) {
+    configuracionPorPrecio = build;
     let [
       placasList,
       cpuList,
@@ -30,63 +35,77 @@ const buildPorPrecio = (presupuesto, segundaMano = false) => {
       monitorList,
       tecladoList,
       ratonList,
-    ] = shortearListasPorPrecio(gamaBuild, segundaMano);
+    ] = shortearListasPorPrecio(listaGamas[gamaBuild - 1], segundaMano);
 
-    cpuList = handleCPU(
-      cpuList,
-      configuracionPorPrecio.placaBase,
-      configuracionPorPrecio.ram
-    );
+    if (!configuracionPorPrecio.placaBase) {
+      placasList = handlePlacaBase(placasList, configuracionPorPrecio.cpu, configuracionPorPrecio.ram, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
+      configuracionPorPrecio.placaBase = placasList && placasList[0];
+    }
 
-    disipadorList = handleDisipador(disipadorList, configuracionPorPrecio.cpu);
+    if (!configuracionPorPrecio.cpu) {
+      cpuList = handleCPU(cpuList, configuracionPorPrecio.placaBase, configuracionPorPrecio.ram);
+      configuracionPorPrecio.cpu = cpuList && cpuList[0];
+    }
 
-    ramList = handleRam(
-      ramList,
-      configuracionPorPrecio.placaBase,
-      configuracionPorPrecio.cpu
-    );
+    if (!configuracionPorPrecio.ram) {
+      ramList = handleRam(ramList, configuracionPorPrecio.placaBase, configuracionPorPrecio.cpu);
+      configuracionPorPrecio.ram = ramList && ramList[0];
+    }
 
-    discoList = handleDisco(
-      discoList,
-      configuracionPorPrecio.placaBase,
-      configuracionPorPrecio.m2,
-      configuracionPorPrecio.sata
-    );
+    if (!configuracionPorPrecio.gpu) {
+      configuracionPorPrecio.gpu = gpuList && gpuList[0];
+    }
 
-    fuenteList = handleFuente(
-      fuenteList,
-      configuracionPorPrecio.cpu,
-      configuracionPorPrecio.gpu
-    );
+    if (!configuracionPorPrecio.m2) {
+      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, configuracionPorPrecio.m2, {disco1, disco2});
+      configuracionPorPrecio.m2= discoList && discoList[0];
+    }
 
-    configuracionPorPrecio.placasList = placasList && placasList[0];
-    configuracionPorPrecio.cpuList = cpuList && cpuList[0];
-    configuracionPorPrecio.ramList = ramList && ramList[0];
-    configuracionPorPrecio.gpuList = gpuList && gpuList[0];
-    configuracionPorPrecio.discoList = discoList && discoList[0];
-    configuracionPorPrecio.disipadorList = disipadorList && disipadorList[0];
-    configuracionPorPrecio.fuenteList = fuenteList && fuenteList[0];
-    configuracionPorPrecio.cajaList = cajaList && cajaList[0];
-    configuracionPorPrecio.monitorList = monitorList && monitorList[0];
-    configuracionPorPrecio.tecladoList = tecladoList && tecladoList[0];
-    configuracionPorPrecio.ratonList = ratonList && ratonList[0];
+    if (!configuracionPorPrecio.sata) {
+      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, {disco1, disco2}, configuracionPorPrecio.sata);
+      configuracionPorPrecio.sata= discoList && discoList[0];
+    }
+    
+    if (!configuracionPorPrecio.disipador) {
+      disipadorList = handleDisipador(disipadorList, configuracionPorPrecio.cpu);
+      configuracionPorPrecio.disipador = disipadorList && disipadorList[0];
+    }
+
+    if (!configuracionPorPrecio.fuente) {
+      fuenteList = handleFuente(fuenteList, configuracionPorPrecio.cpu, configuracionPorPrecio.gpu);
+      configuracionPorPrecio.fuente = fuenteList && fuenteList[0];
+    }
+    
+    if (!configuracionPorPrecio.caja) {
+      configuracionPorPrecio.caja = cajaList && cajaList[0];
+    }
+
+    if (!configuracionPorPrecio.monitor) {
+      configuracionPorPrecio.monitor = monitorList && monitorList[0];
+    }
+
+    if(!configuracionPorPrecio.teclado) {
+      configuracionPorPrecio.teclado = tecladoList && tecladoList[0];
+    }
+
+    if(!configuracionPorPrecio.raton) {
+      configuracionPorPrecio.ratonList = ratonList && ratonList[0];
+    }
+    
     for (i = 0; i < configuracionPorPrecio.length; i++) {
       costeBuild += Math.min(
         configuracionPorPrecio[i].precio.amazon || Infinity,
         configuracionPorPrecio[i].precio.ebay || Infinity,
-        segundaMano
-          ? configuracionPorPrecio[i].precio.segundaMano || Infinity
-          : Infinity
+        segundaMano ? configuracionPorPrecio[i].precio.segundaMano || Infinity : Infinity
       );
     }
     if (costeBuild <= presupuesto) {
       return configuracionPorPrecio;
     } else {
-      configuracionPorPrecio = {};
       costeBuild = 0;
     }
   }
-  return configuracionPorPrecio;
+  return {"Error" : "No se ha podido encontrar una build por el presupuesto especificado"};
 };
 
 builderPorPrecioRouter.get("/", async (req, res) => {

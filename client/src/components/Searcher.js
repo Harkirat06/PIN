@@ -1,5 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { getListas } from "./Axios";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function Searcher({context}) {
     const { list, setList, items, setItems, q, setQ,} = useContext(context);
@@ -18,7 +20,7 @@ function Searcher({context}) {
         }
     },[q])
     
-
+    const navigate = useNavigate()
     const filter = (event) => {
         let newList = [];
         list.forEach(item => {
@@ -59,6 +61,7 @@ function Searcher({context}) {
                     </form>
                 </label>
             </div>
+            <Button onClick={()=> navigate("/SelectBuild")}>Seleccionar Build</Button>
         </div>
     );
 }

@@ -109,71 +109,6 @@ function PcBuilder({ context }) {
           </Card.Text>
         );
       }
-<<<<<<< HEAD
-    
-      console.log(conf);
-    
-      try {
-        var lista = componentRemove +"List"
-        console.log(lista)
-        await getListas({conf}).then(r => setListaComponente(r.data[lista]))
-      } catch (error) {
-        console.error("Error al cargar componentes compatibles", error);
-      }
-    };
-    const cambioComponente = async (componentAdd,component) =>{
-      conf[componentAdd] = component
-      console.log("Soy bet")
-      console.log(conf)
-      SelectBuild(conf)
-
-
-    }
-
-
-    return (
-        <Container>
-            <h2>Build</h2>
-            <Row>
-                <Col>
-                    <div className="computer-preview">
-                        {Object.entries(build).map(([componentName,component], index) => (
-                           <Cardd
-                           key={index}
-                           nombre={component.nombre}
-                           imagen={component.imagen}
-                           onClick={() => loadCompatibleComponents(componentName)}
-                         />
-                         
-                        ))}
-                    </div>
-                </Col>
-                <Col>
-  <div className="select-component">
-    {listaComponente ? (
-      Object.entries(listaComponente).map(([componentName,component], index) => (
-        <Cardd
-          key={index}
-          nombre={component.nombre}
-          imagen={component.imagen}
-          onClick={cambioComponente(componentName,component)}
-        />
-      ))
-    ) : (
-      <p>No hay componentes disponibles</p>
-    )}
-  </div>
-</Col>
-
-             
-            </Row>
-        </Container>
-    );
-}
-
-export default PcBuilder;
-
-=======
     } else {
       return <Card.Text>{elementosSeleccionados[0][propiedad]}</Card.Text>;
     }
@@ -217,4 +152,3 @@ export default PcBuilder;
 }
 
 export default PcBuilder;
->>>>>>> 4623bd01010db3d435f9d410e23d6e7010de2d55

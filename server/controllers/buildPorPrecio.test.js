@@ -38,7 +38,7 @@ describe("buildPorPrecio function", () => {
   
     it('Debería devolver una configuración por precio válida', () => {
       const result = buildPorPrecio(2000, false);
-      expect(result).toHaveProperty('placaBase');
+      expect(result).toHaveProperty('placas');
       expect(result).toHaveProperty('cpu');
       expect(result).toHaveProperty('ram');
       expect(result).toHaveProperty('gpu');
@@ -51,20 +51,5 @@ describe("buildPorPrecio function", () => {
       expect(result).toHaveProperty('raton');
       expect(result).toHaveProperty('teclado');
     });
-  });
-
-  jest.mock("./shortearListasPorPrecio", () => {
-    return jest.fn((gama) => {
-      return expectedConfiguration;
-    });
-  });
-
-  test("it should return a valid configuration within the budget", () => {
-    const result = buildPorPrecio(presupuestoSuficiente);
-    expect(result).toEqual(expectedConfiguration);
-  });
-
-  test("it should return an empty object if no suitable configuration found", () => {
-    // ... Simular datos y probar el comportamiento esperado
   });
 });

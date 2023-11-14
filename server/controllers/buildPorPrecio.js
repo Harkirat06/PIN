@@ -39,7 +39,7 @@ const buildPorPrecio = (build, presupuesto, segundaMano = false) => {
 
     if (!configuracionPorPrecio.placaBase) {
       placasList = handlePlacaBase(placasList, configuracionPorPrecio.cpu, configuracionPorPrecio.ram, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
-      configuracionPorPrecio.placaBase = placasList && placasList[0];
+      configuracionPorPrecio.placas = placasList && placasList[0];
     }
 
     if (!configuracionPorPrecio.cpu) {
@@ -57,12 +57,14 @@ const buildPorPrecio = (build, presupuesto, segundaMano = false) => {
     }
 
     if (!configuracionPorPrecio.m2) {
-      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, configuracionPorPrecio.m2, {disco1, disco2});
+      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
+      discoList = discoList.filter((item)=> item.tipo == "Sata")
       configuracionPorPrecio.m2= discoList && discoList[0];
     }
 
     if (!configuracionPorPrecio.sata) {
-      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, {disco1, disco2}, configuracionPorPrecio.sata);
+      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
+      discoList = discoList.filter((item)=> item.tipo == "m2")
       configuracionPorPrecio.sata= discoList && discoList[0];
     }
     

@@ -32,7 +32,7 @@ const shortByPrecioPrimeraMano = (listas) => {
             return precioA - precioB;
         });
     }
-    return [listas.placasList, listas.cpuList, listas.disipadorList, listas.ramLista, listas.discoList,
+    return [listas.placasList, listas.cpuList, listas.disipadorList, listas.ramList, listas.discoList,
     listas.gpuList, listas.fuenteList, listas.cajaList,
     listas.monitorList, listas.tecladoList, listas.ratonList];
 };

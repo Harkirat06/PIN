@@ -70,10 +70,10 @@ const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
   }
 
   if (m2.length >= 2) {
-    lista = lista.filter((item) => item.tecnologia == "Sata");
+    lista = lista.filter((item) => item.tipo == "Sata");
   }
   if (sata.length >= 2) {
-    lista = lista.filter((item) => item.tecnologia == "m.2");
+    lista = lista.filter((item) => item.tipo == "m.2");
   }
   return lista;
 };

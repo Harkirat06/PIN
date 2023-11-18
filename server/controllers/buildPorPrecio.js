@@ -229,6 +229,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
 
   /*for (let gamaBuild = 2; 0 <= gamaBuild; gamaBuild - 1) {
     configuracionPorPrecio = build;
+    buildCompleta = true;
     let [
       placasList,
       cpuList,
@@ -249,12 +250,12 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
     }
 
     if (!configuracionPorPrecio.cpu) {
-      cpuList = handleCPU(cpuList, configuracionPorPrecio.placaBase, configuracionPorPrecio.ram);
+      cpuList = handleCPU(cpuList, configuracionPorPrecio.placas, configuracionPorPrecio.ram);
       configuracionPorPrecio.cpu = cpuList && cpuList[0];
     }
 
     if (!configuracionPorPrecio.ram) {
-      ramList = handleRam(ramList, configuracionPorPrecio.placaBase, configuracionPorPrecio.cpu);
+      ramList = handleRam(ramList, configuracionPorPrecio.placas, configuracionPorPrecio.cpu);
       configuracionPorPrecio.ram = ramList && ramList[0];
     }
 
@@ -263,13 +264,13 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
     }
 
     if (!configuracionPorPrecio.m2) {
-      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
+      discoList = handleDisco(discoList, configuracionPorPrecio.placas, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
       discoList = discoList.filter((item)=> item.tipo == "Sata")
       configuracionPorPrecio.m2= discoList && discoList[0];
     }
 
     if (!configuracionPorPrecio.sata) {
-      discoList = handleDisco(discoList, configuracionPorPrecio.placaBase, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
+      discoList = handleDisco(discoList, configuracionPorPrecio.placas, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
       discoList = discoList.filter((item)=> item.tipo == "m2")
       configuracionPorPrecio.sata= discoList && discoList[0];
     }
@@ -299,15 +300,19 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
     if(!configuracionPorPrecio.raton) {
       configuracionPorPrecio.ratonList = ratonList && ratonList[0];
     }
-    
-    for (i = 0; i < configuracionPorPrecio.length; i++) {
-      costeBuild += Math.min(
-        configuracionPorPrecio[i].precio.amazon || Infinity,
-        configuracionPorPrecio[i].precio.ebay || Infinity,
-        segundaMano ? configuracionPorPrecio[i].precio.segundaMano || Infinity : Infinity
-      );
+    for (let i = 0; i < Object.keys(configuracionPorPrecio).length; i++) {
+      if(configuracionPorPrecio[i]) {
+        costeBuild += Math.min(
+          configuracionPorPrecio[i].precio.amazon || Infinity,
+          configuracionPorPrecio[i].precio.ebay || Infinity,
+          segundaMano ? configuracionPorPrecio[i].precio.segundaMano || Infinity : Infinity
+        );
+      } else {
+        buildCompleta = false;
+      }
     }
-    if (costeBuild <= presupuesto) {
+    console.log(costeBuild)
+    if ((costeBuild <= presupuesto)) {
       return configuracionPorPrecio;
     } else {
       costeBuild = 0;

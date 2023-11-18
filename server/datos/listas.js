@@ -491,8 +491,8 @@ const disipadorList = [
   },
   {
     marca: "Forgeon",
-    nombre: "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
-    tipo: "Liquida",
+    nombre: "Forgeon Cooler 4Pipes 120mm Ventilador CPU Negro",
+    tipo: "Ventilador",
     gama: "Media",
     precio: {
       segundaMano: 100,
@@ -503,8 +503,8 @@ const disipadorList = [
   },
   {
     marca: "Forgeon",
-    nombre: "Forgeon Azoth 360 ARGB Kit de Refrigeración Líquida 360mm Negro",
-    tipo: "Liquida",
+    nombre: "Forgeon Cooler 4Pipes 120mm Ventilador CPU Negro",
+    tipo: "Ventilador",
     gama: "Alta",
     precio: {
       segundaMano: 100,

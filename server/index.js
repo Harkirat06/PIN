@@ -7,7 +7,6 @@ const { pcBuilderRouter } = require('./controllers/pcBuilder') // Gestion de pc 
 const imageRouter = require('./controllers/image') // Gestion de pc Builder
 const { builderPorGamaRouter } = require("./controllers/buildPorGama")
 const { builderPorPrecioRouter } = require("./controllers/buildPorPrecio")
-const { autocompletarBuildRouter } = require("./controllers/autocompletarBuild")
 const { builderPorNichoRouter } = require("./controllers/buildPorNicho")
 const PORT = process.env.PORT || 5000
 
@@ -20,7 +19,6 @@ server.use("/image", imageRouter)
 server.use("/api/pcbuilder", pcBuilderRouter)
 server.use("/api/builder/gama", builderPorGamaRouter)
 server.use("/api/builder/precio", builderPorPrecioRouter)
-server.use("/api/builder/autocomplete", autocompletarBuildRouter)
 server.use("/api/builder/nicho", builderPorNichoRouter)
 
 

@@ -45,10 +45,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       let placas = shortearListasPorPrecio(segundaMano, listaPlacas);
       if (placas.length != 0) {
         configuracionPorPrecio.placas = placas[0];
-        precioAmazon = placas[0].precio.amazon;
-        precioEbay = placas[0].precio.ebay;
-        precioSegundaMano = placas[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = placas[0].precio.amazon;
+          precioEbay = placas[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = placas[0].precio.amazon;
+          precioEbay = placas[0].precio.ebay;
+          precioSegundaMano = placas[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -62,10 +72,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       let CPUs = shortearListasPorPrecio(segundaMano, listaCPU);
       if (CPUs.length != 0) {
         configuracionPorPrecio.cpu = CPUs[0];
-        precioAmazon = CPUs[0].precio.amazon;
-        precioEbay = CPUs[0].precio.ebay;
-        precioSegundaMano = CPUs[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = CPUs[0].precio.amazon;
+          precioEbay = CPUs[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = CPUs[0].precio.amazon;
+          precioEbay = CPUs[0].precio.ebay;
+          precioSegundaMano = CPUs[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -79,10 +99,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       let rams = shortearListasPorPrecio(segundaMano, listaRam);
       if (rams.length != 0) {
         configuracionPorPrecio.ram = rams[0];
-        precioAmazon = rams[0].precio.amazon;
-        precioEbay = rams[0].precio.ebay;
-        precioSegundaMano = rams[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = rams[0].precio.amazon;
+          precioEbay = rams[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = rams[0].precio.amazon;
+          precioEbay = rams[0].precio.ebay;
+          precioSegundaMano = rams[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -91,10 +121,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       listaGPU = shortearListasPorPrecio(segundaMano, listaGPU);
       if (listaGPU.length != 0) {
         configuracionPorPrecio.gpu = listaGPU[0];
-        precioAmazon = listaGPU[0].precio.amazon;
-        precioEbay = listaGPU[0].precio.ebay;
-        precioSegundaMano = listaGPU[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = listaGPU[0].precio.amazon;
+          precioEbay = listaGPU[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = listaGPU[0].precio.amazon;
+          precioEbay = listaGPU[0].precio.ebay;
+          precioSegundaMano = listaGPU[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -110,10 +150,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       let m2s = shortearListasPorPrecio(segundaMano, listaDisco);
       if (m2s.length != 0) {
         configuracionPorPrecio.m2 = m2s && [m2s[0]];
-        precioAmazon = m2s[0].precio.amazon;
-        precioEbay = m2s[0].precio.ebay;
-        precioSegundaMano = m2s[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = m2s[0].precio.amazon;
+          precioEbay = m2s[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = m2s[0].precio.amazon;
+          precioEbay = m2s[0].precio.ebay;
+          precioSegundaMano = m2s[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -129,10 +179,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       let satas = shortearListasPorPrecio(segundaMano, listaDisco);
       if (satas.length != 0) {
         configuracionPorPrecio.sata = satas && [satas[0]];
-        precioAmazon = satas[0].precio.amazon;
-        precioEbay = satas[0].precio.ebay;
-        precioSegundaMano = satas[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = satas[0].precio.amazon;
+          precioEbay = satas[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = satas[0].precio.amazon;
+          precioEbay = satas[0].precio.ebay;
+          precioSegundaMano = satas[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -145,10 +205,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       let disipadores = shortearListasPorPrecio(segundaMano, listaDisipador);
       if (disipadores.length != 0) {
         configuracionPorPrecio.disipador = disipadores && disipadores[0];
-        precioAmazon = disipadores[0].precio.amazon;
-        precioEbay = disipadores[0].precio.ebay;
-        precioSegundaMano = disipadores[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = disipadores[0].precio.amazon;
+          precioEbay = disipadores[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = disipadores[0].precio.amazon;
+          precioEbay = disipadores[0].precio.ebay;
+          precioSegundaMano = disipadores[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -162,10 +232,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       let fuentes = shortearListasPorPrecio(segundaMano, listaFuentes);
       if (fuentes.length != 0) {
         configuracionPorPrecio.fuente = fuentes && fuentes[0];
-        precioAmazon = fuentes[0].precio.amazon;
-        precioEbay = fuentes[0].precio.ebay;
-        precioSegundaMano = fuentes[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = fuentes[0].precio.amazon;
+          precioEbay = fuentes[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = fuentes[0].precio.amazon;
+          precioEbay = fuentes[0].precio.ebay;
+          precioSegundaMano = fuentes[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -174,10 +254,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       listaCajas = shortearListasPorPrecio(segundaMano, listaCajas);
       if (listaCajas.length != 0) {
         configuracionPorPrecio.caja = listaCajas && listaCajas[0];
-        precioAmazon = listaCajas[0].precio.amazon;
-        precioEbay = listaCajas[0].precio.ebay;
-        precioSegundaMano = listaCajas[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = listaCajas[0].precio.amazon;
+          precioEbay = listaCajas[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = listaCajas[0].precio.amazon;
+          precioEbay = listaCajas[0].precio.ebay;
+          precioSegundaMano = listaCajas[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -186,10 +276,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       listaMonitor = shortearListasPorPrecio(segundaMano, listaMonitor);
       if (listaMonitor.length != 0) {
         configuracionPorPrecio.monitor = listaMonitor && listaMonitor[0];
-        precioAmazon = listaMonitor[0].precio.amazon;
-        precioEbay = listaMonitor[0].precio.ebay;
-        precioSegundaMano = listaMonitor[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = listaMonitor[0].precio.amazon;
+          precioEbay = listaMonitor[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = listaMonitor[0].precio.amazon;
+          precioEbay = listaMonitor[0].precio.ebay;
+          precioSegundaMano = listaMonitor[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -198,10 +298,20 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       listaTeclado = shortearListasPorPrecio(segundaMano, listaTeclado);
       if (listaTeclado.length != 0) {
         configuracionPorPrecio.teclado = listaTeclado && listaTeclado[0];
-        precioAmazon = listaTeclado[0].precio.amazon;
-        precioEbay = listaTeclado[0].precio.ebay;
-        precioSegundaMano = listaTeclado[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = listaTeclado[0].precio.amazon;
+          precioEbay = listaTeclado[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = listaTeclado[0].precio.amazon;
+          precioEbay = listaTeclado[0].precio.ebay;
+          precioSegundaMano = listaTeclado[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
 
@@ -210,116 +320,35 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       listaRaton = shortearListasPorPrecio(segundaMano, listaRaton);
       if (listaRaton.length != 0) {
         configuracionPorPrecio.raton = listaRaton && listaRaton[0];
-        precioAmazon = listaRaton[0].precio.amazon;
-        precioEbay = listaRaton[0].precio.ebay;
-        precioSegundaMano = listaRaton[0].precio.segundaMano;
-        auxPresupuesto -= Math.min(precioAmazon, precioEbay, precioSegundaMano);
+        if (!segundaMano) {
+          precioAmazon = listaRaton[0].precio.amazon;
+          precioEbay = listaRaton[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = listaRaton[0].precio.amazon;
+          precioEbay = listaRaton[0].precio.ebay;
+          precioSegundaMano = listaRaton[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
       }
     }
-    if (auxPresupuesto >= 0 && Object.keys(configuracionPorPrecio).length >= 10) {
-      console.log(`Build con ${auxPresupuesto}€ sobrante es: `)
-      console.log(configuracionPorPrecio)
+    if (
+      auxPresupuesto >= 0 &&
+      Object.keys(configuracionPorPrecio).length >= 10
+    ) {
+      console.log(`Build con ${auxPresupuesto}€ sobrante es: `);
+      console.log(configuracionPorPrecio);
       return configuracionPorPrecio;
     }
   }
   return {
-    "Error":
+    Error:
       "No se ha podido encontrar una build por el presupuesto especificado",
   };
-
-  /*for (let gamaBuild = 2; 0 <= gamaBuild; gamaBuild - 1) {
-    configuracionPorPrecio = build;
-    buildCompleta = true;
-    let [
-      placasList,
-      cpuList,
-      disipadorList,
-      ramList,
-      discoList,
-      gpuList,
-      fuenteList,
-      cajaList,
-      monitorList,
-      tecladoList,
-      ratonList,
-    ] = shortearListasPorPrecio(listaGamas[gamaBuild - 1], segundaMano);
-
-    if (!configuracionPorPrecio.placaBase) {
-      placasList = handlePlacaBase(placasList, configuracionPorPrecio.cpu, configuracionPorPrecio.ram, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
-      configuracionPorPrecio.placas = placasList && placasList[0];
-    }
-
-    if (!configuracionPorPrecio.cpu) {
-      cpuList = handleCPU(cpuList, configuracionPorPrecio.placas, configuracionPorPrecio.ram);
-      configuracionPorPrecio.cpu = cpuList && cpuList[0];
-    }
-
-    if (!configuracionPorPrecio.ram) {
-      ramList = handleRam(ramList, configuracionPorPrecio.placas, configuracionPorPrecio.cpu);
-      configuracionPorPrecio.ram = ramList && ramList[0];
-    }
-
-    if (!configuracionPorPrecio.gpu) {
-      configuracionPorPrecio.gpu = gpuList && gpuList[0];
-    }
-
-    if (!configuracionPorPrecio.m2) {
-      discoList = handleDisco(discoList, configuracionPorPrecio.placas, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
-      discoList = discoList.filter((item)=> item.tipo == "Sata")
-      configuracionPorPrecio.m2= discoList && discoList[0];
-    }
-
-    if (!configuracionPorPrecio.sata) {
-      discoList = handleDisco(discoList, configuracionPorPrecio.placas, configuracionPorPrecio.m2, configuracionPorPrecio.sata);
-      discoList = discoList.filter((item)=> item.tipo == "m2")
-      configuracionPorPrecio.sata= discoList && discoList[0];
-    }
-    
-    if (!configuracionPorPrecio.disipador) {
-      disipadorList = handleDisipador(disipadorList, configuracionPorPrecio.cpu);
-      configuracionPorPrecio.disipador = disipadorList && disipadorList[0];
-    }
-
-    if (!configuracionPorPrecio.fuente) {
-      fuenteList = handleFuente(fuenteList, configuracionPorPrecio.cpu, configuracionPorPrecio.gpu);
-      configuracionPorPrecio.fuente = fuenteList && fuenteList[0];
-    }
-    
-    if (!configuracionPorPrecio.caja) {
-      configuracionPorPrecio.caja = cajaList && cajaList[0];
-    }
-
-    if (!configuracionPorPrecio.monitor) {
-      configuracionPorPrecio.monitor = monitorList && monitorList[0];
-    }
-
-    if(!configuracionPorPrecio.teclado) {
-      configuracionPorPrecio.teclado = tecladoList && tecladoList[0];
-    }
-
-    if(!configuracionPorPrecio.raton) {
-      configuracionPorPrecio.ratonList = ratonList && ratonList[0];
-    }
-    for (let i = 0; i < Object.keys(configuracionPorPrecio).length; i++) {
-      if(configuracionPorPrecio[i]) {
-        costeBuild += Math.min(
-          configuracionPorPrecio[i].precio.amazon || Infinity,
-          configuracionPorPrecio[i].precio.ebay || Infinity,
-          segundaMano ? configuracionPorPrecio[i].precio.segundaMano || Infinity : Infinity
-        );
-      } else {
-        buildCompleta = false;
-      }
-    }
-    console.log(costeBuild)
-    if ((costeBuild <= presupuesto)) {
-      return configuracionPorPrecio;
-    } else {
-      costeBuild = 0;
-    }
-  }
-  return {"Error" : "No se ha podido encontrar una build por el presupuesto especificado"};
-  */
 };
 
 builderPorPrecioRouter.get("/", async (req, res) => {

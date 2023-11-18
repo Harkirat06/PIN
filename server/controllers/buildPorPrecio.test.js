@@ -26,7 +26,7 @@ describe("buildPorPrecio function", () => {
           precio: { segundaMano: 100, amazon: 150, ebay: 200 }, 
           imagen: 'placa.jpg'                                   
         },
-      }, 2000, false);
+      }, 2000, true);
       expect(result).toHaveProperty('placas');
       expect(result).toHaveProperty('cpu');
       expect(result).toHaveProperty('ram');

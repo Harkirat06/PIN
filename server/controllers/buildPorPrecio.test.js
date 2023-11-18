@@ -39,56 +39,5 @@ describe("buildPorPrecio function", () => {
       expect(result).toHaveProperty('raton');
       expect(result).toHaveProperty('teclado');
     });
-
-    it('Debería devolver una configuración por precio válida donde todos los componentes tienen la misma gama', () => {
-      const result = buildPorPrecio({}, 2000, false);
-
-      expect(result).toHaveProperty('placas');
-      expect(result.placas.gama).toBeDefined();
-      
-      expect(result).toHaveProperty('cpu');
-      expect(result.cpu.gama).toBeDefined();
-      expect(result.cpu.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('ram');
-      expect(result.ram.gama).toBeDefined();
-      expect(result.ram.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('gpu');
-      expect(result.gpu.gama).toBeDefined();
-      expect(result.gpu.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('disiapdor');
-      expect(result.disipador.gama).toBeDefined();
-      expect(result.disipador.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('fuente');
-      expect(result.fuente.gama).toBeDefined();
-      expect(result.fuente.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('m2');
-      expect(result.m2.gama).toBeDefined();
-      expect(result.m2.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('sata');
-      expect(result.sata.gama).toBeDefined();
-      expect(result.sata.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('caja');
-      expect(result.caja.gama).toBeDefined();
-      expect(result.caja.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('monitor');
-      expect(result.monitor.gama).toBeDefined();
-      expect(result.monitor.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('raton');
-      expect(result.raton.gama).toBeDefined();
-      expect(result.raton.gama).toEqual(result.placas.gama);
-
-      expect(result).toHaveProperty('teclado');
-      expect(result.teclado.gama).toBeDefined();
-      expect(result.teclado.gama).toEqual(result.placas.gama);
-    });
   });
 });

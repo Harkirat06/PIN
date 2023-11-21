@@ -6,6 +6,7 @@ const cors = require('cors') // Control de acceso
 const { pcBuilderRouter } = require('./controllers/pcBuilder') // Gestion de pc Builder
 const imageRouter = require('./controllers/image') // Gestion de pc Builder
 const { builderPorGamaRouter } = require("./controllers/buildPorGama")
+const { builderPorNichoRouter } = require("./controllers/buildPorNicho")
 const { builderPorPrecioRouter } = require("./controllers/buildPorPrecio")
 const { autocompletarBuildRouter } = require("./controllers/autocompletarBuild")
 const PORT = process.env.PORT || 5000
@@ -18,6 +19,7 @@ server.use(cors())
 server.use("/image", imageRouter)
 server.use("/api/pcbuilder", pcBuilderRouter)
 server.use("/api/builder/gama", builderPorGamaRouter)
+server.use("/api/builder/nicho", builderPorNichoRouter)
 server.use("/api/builder/precio", builderPorPrecioRouter)
 server.use("/api/builder/autocomplete", autocompletarBuildRouter)
 

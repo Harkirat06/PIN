@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-
-
 export async function buildPorPrecio(precio, segundaMano){
     const response = await axios.get("/api/builder/precio",{
         params: {
@@ -11,26 +9,32 @@ export async function buildPorPrecio(precio, segundaMano){
     })
     const {data} = response
     return response
-
 }
+
 export async function buildPorGama(gama){
-        const response = await axios.get("/api/builder/gama",{
-            params: {
-                gama
-            }
-        })
-        const {data} = response
-        return data
-
+    const response = await axios.get("/api/builder/gama",{
+        params: {
+            gama
+        }
+    })
+    const {data} = response
+    return data
 }
 
+export async function buildPorNicho(nicho) {
+    const response = await axios.get("/api/builder/nicho", {
+        params: {
+            nicho
+        }
+    })
+    const { data } = response
+    return data
+}
 
 export async function getListas(config = {}){
-    const response = await axios.get("/api/pcbuilder",
-    {
+    const response = await axios.get("/api/pcbuilder", {
         params: config
-    }
-    )
+    })
     return response
 }
 
@@ -70,5 +74,3 @@ export async function loginUser(user) {
     })
     return res
 }
-
-

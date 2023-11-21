@@ -1,7 +1,5 @@
 const pcBuilderRouter = require("express").Router();
-const { emptyConfiguration } = require("../datos/listas");
 const { filtrarListasPorGama } = require("./filtrarListasPorGama");
-const { mapGamas } = require("./mapGamas");
 const {
   placasList,
   cpuList,
@@ -70,16 +68,16 @@ const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
   }
 
   if (m2.length >= 2) {
-    lista = lista.filter((item) => item.tecnologia == "Sata");
+    lista = lista.filter((item) => item.tipo == "Sata");
   }
   if (sata.length >= 2) {
-    lista = lista.filter((item) => item.tecnologia == "m.2");
+    lista = lista.filter((item) => item.tipo == "m.2");
   }
   return lista;
 };
 
 const handleDisipador = (lista, cpu = {}) => {
-  if (!cpu.ventilador) {
+  if (cpu.ventilador) {
     return lista;
   } else {
     return [];
@@ -101,10 +99,10 @@ const handleFuente = (lista, cpu, gpu) => {
 const handleConfiguacion = (config) => {
   let configObjects = Object.values(config);
   if (configObjects.length !== 0) {
-    let gama
-    if(Array.isArray(configObjects[0])){
-      gama = configObjects[0][0].gama
-    }else{
+    let gama;
+    if (Array.isArray(configObjects[0])) {
+      gama = configObjects[0][0].gama;
+    } else {
       gama = configObjects[0].gama;
     }
     let [
@@ -119,7 +117,7 @@ const handleConfiguacion = (config) => {
       monitorList,
       tecladoList,
       ratonList,
-     ] = filtrarListasPorGama(gama);
+    ] = filtrarListasPorGama(gama);
     placasList = handlePlacaBase(
       placasList,
       config.cpu,
@@ -150,7 +148,7 @@ const handleConfiguacion = (config) => {
       ratonList,
     ];
   } else {
-    let list = {
+    return [
       placasList,
       cpuList,
       disipadorList,
@@ -162,26 +160,13 @@ const handleConfiguacion = (config) => {
       monitorList,
       tecladoList,
       ratonList,
-    };
-    return ([
-      placasLista,
-      cpuLista,
-      disipadorLista,
-      ramLista,
-      discoLista,
-      gpuLista,
-      fuenteLista,
-      cajaLista,
-      monitorLista,
-      tecladoLista,
-      ratonLista,
-    ] = mapGamas(list));
+    ];
   }
 };
 
 pcBuilderRouter.get("/", async (req, res) => {
-  const config = req.query
-  console.log(config)
+  const config = req.query;
+  console.log(config);
   const [
     placasList,
     cpuList,
@@ -217,5 +202,6 @@ module.exports = {
   handleDisco,
   handleRam,
   handleCPU,
-  handlePlacaBase
+  handlePlacaBase,
+  handleConfiguacion
 };

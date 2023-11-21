@@ -264,10 +264,10 @@ describe('handleDisipador function', () => {
 
   test('it should handle disipador lists based on CPU', () => {
     const filteredListWithVentiladorCPU = handleDisipador(disipadorList, mockedCPUWithVentilador);
-    expect(filteredListWithVentiladorCPU).toEqual([]);
+    expect(filteredListWithVentiladorCPU).toEqual(disipadorList);
 
     const filteredListWithoutVentiladorCPU = handleDisipador(disipadorList, mockedCPUWithoutVentilador);
-    expect(filteredListWithoutVentiladorCPU).toEqual(disipadorList);
+    expect(filteredListWithoutVentiladorCPU).toEqual([]);
   });
 });
 

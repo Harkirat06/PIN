@@ -19,6 +19,7 @@ function Cards({ context }) {
                 context={context}
                 nombre={item.nombre}
                 imagen={item.imagen}
+                precio={item.precio}
               />
             </div>
           ))

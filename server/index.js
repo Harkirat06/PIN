@@ -18,6 +18,7 @@ server.use(cors())
 server.use("/image", imageRouter)
 server.use("/api/pcbuilder", pcBuilderRouter)
 server.use("/api/builder/gama", builderPorGamaRouter)
+server.use("/api/builder/nicho", builderPorNichoRouter)
 server.use("/api/builder/precio", builderPorPrecioRouter)
 server.use("/api/builder/nicho", builderPorNichoRouter)
 

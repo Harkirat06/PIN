@@ -13,13 +13,16 @@ const cpuListSchema = new Schema({
       amazon: Number,
       ebay: Number,
     },
+    link: {
+      amazon: String,
+      ebay: String,
+    },
     imagen: String
 })
 
 const placasListSchema = new Schema({
     marca: String,
     nombre: String,
-    tamaño: String,
     socket: String,
     tipoRam: String,
     gama: Number,
@@ -29,6 +32,10 @@ const placasListSchema = new Schema({
       segundaMano: Number,
       amazon: Number,
       ebay: Number,
+    },
+    link: {
+      amazon: String,
+      ebay: String,
     },
     imagen: String
 })
@@ -44,6 +51,10 @@ const gpuListSchema = new Schema({
       amazon: Number,
       ebay: Number,
     },
+    link: {
+      amazon: String,
+      ebay: String,
+    },
     imagen: String
 })
 
@@ -57,6 +68,10 @@ const ramListSchema = new Schema({
       segundaMano: Number,
       amazon: Number,
       ebay: Number,
+    },
+    link: {
+      amazon: String,
+      ebay: String,
     },
     imagen: String
 })
@@ -72,6 +87,10 @@ const discoListSchema = new Schema({
       amazon: Number,
       ebay: Number,
     },
+    link: {
+      amazon: String,
+      ebay: String,
+    },
     imagen: String
 })
 
@@ -84,20 +103,107 @@ const monitorListSchema = new Schema({
       amazon: Number,
       ebay: Number,
     },
+    link: {
+      amazon: String,
+      ebay: String,
+    },
     imagen: String,
 })
 
 const disipadorListSchema = new Schema({
     marca: String,
     nombre: String,
-    tipo: String,
     gama: Number,
     precio: {
       segundaMano: Number,
       amazon: Number,
       ebay: Number,
     },
+    link: {
+      amazon: String,
+      ebay: String,
+    },
     imagen: String,
+})
+
+const cajaListSchema = new Schema({
+  marca: String,
+  nombre: String,
+  gama: Number,
+  precio: {
+    segundaMano: Number,
+    amazon: Number,
+    ebay: Number,
+  },
+  link: {
+    amazon: String,
+    ebay: String,
+  },
+  imagen: String,
+})
+
+const fuenteListSchema = new Schema({
+  marca: String,
+  nombre: String,
+  potencia: String,
+  ochentaplus: String,
+  gama: Number,
+  precio: {
+    segundaMano: Number,
+    amazon: Number,
+    ebay: Number,
+  },
+  link: {
+    amazon: String,
+    ebay: String,
+  },
+  imagen: String,
+})
+
+const ratonListSchema = new Schema({
+  marca: String,
+  nombre: String,
+  gama: Number,
+  precio: {
+    segundaMano: Number,
+    amazon: Number,
+    ebay: Number,
+  },
+  link: {
+    amazon: String,
+    ebay: String,
+  },
+  imagen: String,
+})
+
+const tecladoListSchema = new Schema({
+  marca: String,
+  nombre: String,
+  gama: Number,
+  precio: {
+    segundaMano: Number,
+    amazon: Number,
+    ebay: Number,
+  },
+  link: {
+    amazon: String,
+    ebay: String,
+  },
+  imagen: String,
+})
+
+const buildListSchema = new Schema({
+  tipo: String,
+  placas: placasListSchema,
+  cpu: cpuListSchema,
+  ram: ramListSchema,
+  m2: discoListSchema,
+  sata: discoListSchema,
+  gpu: gpuListSchema,
+  fuente: fuenteListSchema,
+  monitor: monitorListSchema,
+  caja: cajaListSchema,
+  disipador: disipadorListSchema,
 })
 
 cpuListSchema.set("toJSON",{
@@ -108,6 +214,116 @@ cpuListSchema.set("toJSON",{
    }
 })
 
- const cpuList = model("cpuList", cpuListSchema)
- 
- module.exports = cpuList
+placasListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+gpuListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+ramListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+discoListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+monitorListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+disipadorListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+cajaListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+fuenteListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+ratonListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+tecladoListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+buildListSchema.set("toJSON",{
+  transform: (document, returnedObject) => {
+     returnedObject.id = returnedObject._id
+     delete returnedObject._id
+     delete returnedObject.__v
+  }
+})
+
+const cpu = model("cpuList", cpuListSchema)
+
+const placas = model("placasList", placasListSchema)
+
+const gpu = model("gpuList", gpuListSchema)
+
+const ram = model("ramList", ramListSchema)
+
+const disco = model("discoList", discoListSchema)
+
+const monitor = model("monitorList", monitorListSchema)
+
+const disipador = model("disipadorList", disipadorListSchema)
+
+const caja = model("cajaList", cajaListSchema)
+
+const fuente = model("fuenteList", fuenteListSchema)
+
+const raton = model("ratonList", ratonListSchema)
+
+const teclado = model("tecladoList", tecladoListSchema)
+
+const build = model("buildList", buildListSchema)
+
+module.exports = {cpu, placas, gpu, ram, disco, monitor, disipador, caja, fuente, raton, teclado, build}

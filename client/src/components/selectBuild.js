@@ -4,7 +4,7 @@ import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagen from '../images/COOLPC-Gold.jpg';
 import './SelectBuild.css';
-import { buildPorGama, buildPorPrecio } from "./Axios";
+import { buildPorGama, buildPorPrecio, buildPorNicho } from "./Axios";
 import { useNavigate } from "react-router-dom";
 
 function SelectBuild({ context }) {
@@ -46,28 +46,42 @@ function SelectBuild({ context }) {
         <Container>
             <Row>
                 <Col xs={3}>
-                    {/* Zona con 3 botones */}
+                    {/* Zona con 3 botones de gamas */}
+                    <Button onClick={() => {
+                        buildPorNicho("Gamers").then(r => selectBuild(r));
+                    }}>Gamers</Button>
+                    <Button onClick={() => {
+                        buildPorNicho("Profesionales").then(r => selectBuild(r));
+                    }}>Profesionales</Button>
+                    <Button onClick={() => {
+                        buildPorNicho("Estudiantes").then(r => selectBuild(r));
+                    }}>Estudiantes</Button>
+                    <Button onClick={() => {
+                        buildPorNicho("Uso Basico").then(r => selectBuild(r));
+                    }}>Uso Basico</Button>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={3}>
+                    {/* Zona con 3 botones de gamas */}
                     <Button onClick={() => {
                         buildPorGama("baja").then(r => selectBuild(r));
-                    }}>GamaBaja </Button>
+                    }}>Gama Baja </Button>
                     <Button onClick={() => {
                         buildPorGama("media").then(r => selectBuild(r));
-                    }}>GamaMedia</Button>
+                    }}>Gama Media</Button>
                     <Button onClick={() => {
                         buildPorGama("alta").then(r => selectBuild(r));
-                    }}>GamaAlta</Button>
+                    }}>Gama Alta</Button>
                 </Col>
-            <Col xs={1  }>
-              {/* Zona principal con botón e imagen */}
-              <div className="main-content">
-                <Button onClick={()=>{
-                  navigate("/PcBuilder")
-                  }}>Construye tu pc de cero
-                  <img src={imagen} />
-                </Button>
-                
-              </div>
-            </Col>
+                <Col xs={1}>
+                    {/* Zona principal con botón e imagen */}
+                    <div className="main-content">
+                        <Button onClick={()=>{navigate("/PcBuilder")}}>Construye tu pc de cero
+                            <img src={imagen} />
+                        </Button>
+                    </div>
+                 </Col>
             </Row>
             <Row>
             <Col xs={3}>

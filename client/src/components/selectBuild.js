@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import React from "react";
 import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +10,13 @@ import { useNavigate } from "react-router-dom";
 function SelectBuild({ context }) {
     const navigate = useNavigate();
     const [sliderValue, setSliderValue] = useState(0);
-    const { build, setBuild, setElementosSeleccionados, elementosSeleccionados } = useContext(context);
+    const { build, setBuild, setElementosSeleccionados, elementosSeleccionados, user } = useContext(context);
+
+    useEffect(()=>{
+      if(!user){
+        navigate("/")
+      }
+    },[])
 
     // Función para manejar el cambio en el slider
     const handleSliderChange = (event) => {

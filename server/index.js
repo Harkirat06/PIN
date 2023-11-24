@@ -8,6 +8,8 @@ const imageRouter = require('./controllers/image') // Gestion de pc Builder
 const { builderPorGamaRouter } = require("./controllers/buildPorGama")
 const { builderPorPrecioRouter } = require("./controllers/buildPorPrecio")
 const { builderPorNichoRouter } = require("./controllers/buildPorNicho")
+const usersRouter = require("./controllers/users")
+const loginRouter = require("./controllers/login")
 const PORT = process.env.PORT || 5000
 
 const server = express()
@@ -16,6 +18,8 @@ server.use(compression())
 server.use(cors())
 
 server.use("/image", imageRouter)
+server.use("/users", usersRouter)
+server.use("/login", loginRouter)
 server.use("/api/pcbuilder", pcBuilderRouter)
 server.use("/api/builder/gama", builderPorGamaRouter)
 server.use("/api/builder/nicho", builderPorNichoRouter)

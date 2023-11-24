@@ -1,7 +1,7 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 
-function Cardd({ nombre, imagen, onClick }) {
+function Cardd({ nombre, imagen,  }) {
   return (
     <Card
       className="w-100 col-lg-6 col-md-8 col-sm-10"

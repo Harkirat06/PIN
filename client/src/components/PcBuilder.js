@@ -4,6 +4,7 @@ import { getListas } from "./Axios";
 import "./PcBuilder.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import OffCanvasCustom from "./OffCanvasCustom";
+import { useNavigate } from "react-router-dom";
 
 
 function PcBuilder({ context }) {
@@ -20,9 +21,15 @@ function PcBuilder({ context }) {
     nombreLista,
     setNombreLista,
     show,
+    user 
   } = useContext(context);
+  
+  const navigate = useNavigate()
 
   useEffect(() => {
+      if(!user){
+        navigate("/")
+      }
     getListas(build[0]).then((r) => {
       setListasComponentes(r.data);
     });

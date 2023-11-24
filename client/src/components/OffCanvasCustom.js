@@ -83,6 +83,7 @@ function OffCanvasCustom({ context  }) {
                   <Cardd
                     nombre={item.nombre}
                     imagen={item.imagen}
+                    item = {item}
                     onClick={() => handleBuild(item)}
                   />
                 </div>

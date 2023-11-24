@@ -7,6 +7,8 @@ import Marketplace from './components/Marketplace'
 import ImageUploader from './components/ImageUploader'
 import SelectBuild from './components/selectBuild'
 import PcBuilder from './components/PcBuilder'
+import Login from './components/Login';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function App() {
   const StateContext = createContext()
@@ -14,13 +16,16 @@ function App() {
   return (
     <BrowserRouter id="App">
       <StateProvider context={StateContext}>
+      <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT}>
           <Routes>
-            <Route exact path="/" element={<Marketplace context={StateContext} />} />
+            <Route exact path="/" element={<Login context={StateContext} />} />
+            <Route exact path="/marketplace" element={<Marketplace context={StateContext} />} />
             <Route exact path="/upload" element={<ImageUploader context={StateContext} />} />
             <Route exact path="/selectBuild" element={<SelectBuild context={StateContext}/>} />
             <Route exact path="/PcBuilder" element={<PcBuilder context={StateContext}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </GoogleOAuthProvider>
       </StateProvider>
     </BrowserRouter>
   );

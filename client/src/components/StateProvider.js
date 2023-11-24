@@ -11,6 +11,9 @@ function StateProvider({ context, children }) {
   const [show, setShow] = useState(false);
   const [listaComponente, setListaComponente] = useState([]);
   const [nombreLista, setNombreLista] = useState("");
+  const [login, setLogin] = useState(true);
+  const [user, setUser] = useState(false);
+
   const [elementosSeleccionados, setElementosSeleccionados] = useState([
     {
       placas: "Elemento no seleccionado",
@@ -26,19 +29,21 @@ function StateProvider({ context, children }) {
       raton: "Elemento no seleccionado",
     },
   ]);
-  const [precioSeleccionado, setPrecioSeleccionado] = useState([{
-    placas: "",
-    cpu: "",
-    gpu: "",
-    ram: "",
-    disipador: "",
-    fuente: "",
-    disco: "",
-    caja: "",
-    monitor: "",
-    teclado: "",
-    raton: "",
-  }]);
+  const [precioSeleccionado, setPrecioSeleccionado] = useState([
+    {
+      placas: "",
+      cpu: "",
+      gpu: "",
+      ram: "",
+      disipador: "",
+      fuente: "",
+      disco: "",
+      caja: "",
+      monitor: "",
+      teclado: "",
+      raton: "",
+    },
+  ]);
 
   const contextValue = useMemo(
     () => ({
@@ -64,6 +69,10 @@ function StateProvider({ context, children }) {
       setNombreLista,
       precioSeleccionado,
       setPrecioSeleccionado,
+      login,
+      setLogin,
+      user,
+      setUser,
     }),
     [
       nombre,
@@ -77,6 +86,8 @@ function StateProvider({ context, children }) {
       listaComponente,
       nombreLista,
       precioSeleccionado,
+      login,
+      user,
     ]
   );
 

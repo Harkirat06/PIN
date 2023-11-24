@@ -84,6 +84,7 @@ function OffCanvasCustom({ context  }) {
                     nombre={item.nombre}
                     imagen={item.imagen}
                     precio = {item.precio}
+                    esMarketing={false}
                     onClick={() => handleBuild(item)}
                   />
                 </div>

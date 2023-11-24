@@ -20,6 +20,7 @@ function Cards({ context }) {
                 nombre={item.nombre}
                 imagen={item.imagen}
                 precio={item.precio}
+                esMarketing={true}
               />
             </div>
           ))

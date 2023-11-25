@@ -21,6 +21,7 @@ function PcBuilder({ context }) {
     setNombreLista,
     show,
     user,
+    setPrecioSeleccionado
   } = useContext(context);
 
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ function PcBuilder({ context }) {
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
-  const [presupuesto, setPresupuesto] = useState(0)
+  const [presupuesto, setPresupuesto] = useState(0);
 
   const handleBoton = (lista) => {
     setNombreLista(lista);
@@ -46,29 +47,29 @@ function PcBuilder({ context }) {
     setShow(true);
   };
   const handleAutocomplete = () => {
-    buildPorPrecio(presupuesto, false, build).then((selectedBuild)=>{
-      setBuild(()=>{
-        let conf = {...selectedBuild}
-        return [conf]
+    buildPorPrecio(presupuesto, false, build).then((selectedBuild) => {
+      setBuild(() => {
+        let conf = { ...selectedBuild };
+        return [conf];
       });
-      setElementosSeleccionados(()=>{
-        let elementos = {...elementosSeleccionados[0]}
-        Object.keys(selectedBuild).forEach((propiedad)=>{
-          if(propiedad == "sata" || propiedad == "m2"){
+      setElementosSeleccionados(() => {
+        let elementos = { ...elementosSeleccionados[0] };
+        Object.keys(selectedBuild).forEach((propiedad) => {
+          if (propiedad == "sata" || propiedad == "m2") {
             if (elementos["disco"] == "Elemento no seleccionado") {
-              elementos["disco"] = []
+              elementos["disco"] = [];
             }
-            selectedBuild[propiedad].forEach((item)=>{
-                elementos["disco"] = elementos["disco"].concat(item.nombre);
-            })
-          }else{
-            elementos[propiedad] = selectedBuild[propiedad].nombre
+            selectedBuild[propiedad].forEach((item) => {
+              elementos["disco"] = elementos["disco"].concat(item.nombre);
+            });
+          } else {
+            elementos[propiedad] = selectedBuild[propiedad].nombre;
           }
-        })
-        return [elementos]
-      })
-    })
-    handleClose()
+        });
+        return [elementos];
+      });
+    });
+    handleClose();
   };
 
   const handleNombre = (lista) => {
@@ -83,7 +84,16 @@ function PcBuilder({ context }) {
         elementos[propiedad] =
           updatedArray.length > 0 ? updatedArray : "Elemento no seleccionado";
         return [elementos];
-      });
+      });/*
+      setPrecioSeleccionado((prevSeleccionado)=>{
+        let elementos = { ...prevSeleccionado[0] };
+        const updatedArray = elementos[propiedad].filter((i) => i !== item);
+        elementos[propiedad] =
+          updatedArray.length > 0 ? updatedArray : "";
+        console.log(elementos)
+        return [elementos];
+      })
+      */
       setBuild((prevBuild) => {
         let conf = { ...prevBuild[0] };
         if (conf["sata"] && Array.isArray(conf["sata"])) {
@@ -163,7 +173,9 @@ function PcBuilder({ context }) {
             type="text"
             placeholder="ej: 1000"
             value={presupuesto}
-            onChange={(e)=>{setPresupuesto(e.target.value)}}
+            onChange={(e) => {
+              setPresupuesto(e.target.value);
+            }}
           />
         </Modal.Body>
         <Modal.Footer>
@@ -210,6 +222,10 @@ function PcBuilder({ context }) {
       <Container>
         <OffCanvasCustom context={context} />
       </Container>
+      <Container className="centered">
+        <Button size="large">Finalizar Montaje</Button>
+      </Container>
+      <br/>
     </Container>
   );
 }

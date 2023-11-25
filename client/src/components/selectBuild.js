@@ -151,7 +151,6 @@ function SelectBuild({ context }) {
               }}
             >
               Construye tu pc de cero
-              <Button />
             </Button>
           </div>
         </Col>

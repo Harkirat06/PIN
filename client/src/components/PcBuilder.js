@@ -1,11 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Button, Card, Container } from "react-bootstrap";
-import { getListas } from "./Axios";
+import { Button, Card, Container, Modal, Form } from "react-bootstrap";
+import { buildPorPrecio, getListas } from "./Axios";
 import "./PcBuilder.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import OffCanvasCustom from "./OffCanvasCustom";
 import { useNavigate } from "react-router-dom";
-
 
 function PcBuilder({ context }) {
   const {
@@ -21,24 +20,55 @@ function PcBuilder({ context }) {
     nombreLista,
     setNombreLista,
     show,
-    user 
+    user,
   } = useContext(context);
-  
-  const navigate = useNavigate()
+
+  const navigate = useNavigate();
 
   useEffect(() => {
-      if(!user){
-        navigate("/")
-      }
+    if (!user) {
+      navigate("/");
+    }
     getListas(build[0]).then((r) => {
       setListasComponentes(r.data);
     });
   }, [build, elementosSeleccionados]);
 
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+
+  const [presupuesto, setPresupuesto] = useState(0)
+
   const handleBoton = (lista) => {
     setNombreLista(lista);
     setListaComponente(listasComponentes[lista]);
     setShow(true);
+  };
+  const handleAutocomplete = () => {
+    buildPorPrecio(presupuesto, false, build).then((selectedBuild)=>{
+      setBuild(()=>{
+        let conf = {...selectedBuild}
+        return [conf]
+      });
+      setElementosSeleccionados(()=>{
+        let elementos = {...elementosSeleccionados[0]}
+        Object.keys(selectedBuild).forEach((propiedad)=>{
+          if(propiedad == "sata" || propiedad == "m2"){
+            if (elementos["disco"] == "Elemento no seleccionado") {
+              elementos["disco"] = []
+            }
+            selectedBuild[propiedad].forEach((item)=>{
+                elementos["disco"] = elementos["disco"].concat(item.nombre);
+            })
+          }else{
+            elementos[propiedad] = selectedBuild[propiedad].nombre
+          }
+        })
+        return [elementos]
+      })
+    })
+    handleClose()
   };
 
   const handleNombre = (lista) => {
@@ -123,9 +153,35 @@ function PcBuilder({ context }) {
 
   return (
     <Container>
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Presupuesto para completar la build</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form.Label>Presupuesto</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="ej: 1000"
+            value={presupuesto}
+            onChange={(e)=>{setPresupuesto(e.target.value)}}
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleAutocomplete}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <Container>
         <h1>Pc Builder</h1>
       </Container>
+      <Container className="centered">
+        <Button onClick={handleShow}>Autocompletar</Button>
+      </Container>
+      <br />
       <Container>
         <div className="container justify-content-center align-items-center">
           <div className="row g-4">

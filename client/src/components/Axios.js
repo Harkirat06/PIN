@@ -1,14 +1,15 @@
 import axios from 'axios'
 
-export async function buildPorPrecio(precio, segundaMano){
+export async function buildPorPrecio(presupuesto = 0, segundaMano = false, build = {}){
     const response = await axios.get("/api/builder/precio",{
         params: {
-            precio,
-            segundaMano
+            presupuesto,
+            segundaMano,
+            build
         }
     })
     const {data} = response
-    return response
+    return data
 }
 
 export async function buildPorGama(gama){
@@ -38,14 +39,6 @@ export async function getListas(config = {}){
     return response
 }
 
-export async function deleteFiles(path, token) {
-    return axios.delete("/delete", {
-        headers: {"Authorization" : `Bearer ${token}`},
-        params: {
-            path: path
-        }
-    })
-}
 
 export async function registerUser(user) {
     const res = await axios.post("/users", user).catch((e) => {

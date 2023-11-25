@@ -16,6 +16,27 @@ function SelectBuild({ context }) {
       if(!user){
         navigate("/")
       }
+      setBuild(() => {
+        return [{}];
+      });
+      setElementosSeleccionados(() => {
+        let elementos = [
+          {
+            placas: "Elemento no seleccionado",
+            cpu: "Elemento no seleccionado",
+            gpu: "Elemento no seleccionado",
+            ram: "Elemento no seleccionado",
+            disipador: "Elemento no seleccionado",
+            fuente: "Elemento no seleccionado",
+            disco: "Elemento no seleccionado",
+            caja: "Elemento no seleccionado",
+            monitor: "Elemento no seleccionado",
+            teclado: "Elemento no seleccionado",
+            raton: "Elemento no seleccionado",
+          },
+        ];
+        return elementos;
+      });
     },[])
 
     // Función para manejar el cambio en el slider

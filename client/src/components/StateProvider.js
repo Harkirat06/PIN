@@ -13,6 +13,7 @@ function StateProvider({ context, children }) {
   const [nombreLista, setNombreLista] = useState("");
   const [login, setLogin] = useState(true);
   const [user, setUser] = useState(false);
+  const [checkboxState, setCheckboxState] = useState(false);
 
   const [elementosSeleccionados, setElementosSeleccionados] = useState([
     {
@@ -73,6 +74,8 @@ function StateProvider({ context, children }) {
       setLogin,
       user,
       setUser,
+      checkboxState,
+      setCheckboxState
     }),
     [
       nombre,

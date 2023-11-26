@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 function Searcher({ context }) {
-  const { list, setList, items, setItems, q, setQ } = useContext(context);
+  const { list, setList, items, setItems, q, setQ, checkboxState } = useContext(context);
   useEffect(() => {
     getListas().then((res) => {
       let array = [];
@@ -17,6 +17,8 @@ function Searcher({ context }) {
   useEffect(() => {
     if (q === "") {
       setList(items);
+      let lista = filterSegundaMano(list)
+      setList(lista)
     }
   }, [q]);
 
@@ -35,9 +37,24 @@ function Searcher({ context }) {
         newList = newList.concat(item);
       }
     });
+    newList = filterSegundaMano(newList)
     setList(newList);
     event.preventDefault();
   };
+  const filterSegundaMano = (lista) =>{
+    if (checkboxState){
+      let newLista = lista.filter(
+        (item) =>
+          item.precio.segundaMano
+      );
+    return newLista
+    }
+    else{
+      return lista
+    }
+
+
+  }
 
   return (
     <div className="wrapper">

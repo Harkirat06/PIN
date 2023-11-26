@@ -16,8 +16,7 @@ describe("buildPorPrecio function", () => {
       const result = buildPorPrecio({
         placas: {                                               
           marca: 'Asus',                                        
-          nombre: 'Prueba de que le he pasado cosas antes',                     
-          'tamaño': 'ATX',                                      
+          nombre: 'Prueba de que le he pasado cosas antes',                                                           
           socket: 'Intel LGA 1700',                             
           tipoRam: 'DDR5',                                      
           gama: 'Alta',                                         

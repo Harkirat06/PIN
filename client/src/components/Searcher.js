@@ -25,7 +25,7 @@ function Searcher({ context }) {
   const navigate = useNavigate();
   const filter = (event) => {
     let newList = [];
-    list.forEach((item) => {
+    items.forEach((item) => {
       let words = q.toLocaleLowerCase().split(" ");
       let containsAll = true;
       words.forEach((word) => {

@@ -340,8 +340,8 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       auxPresupuesto >= 0 &&
       Object.keys(configuracionPorPrecio).length >= 10
     ) {
-      console.log(`Build con ${auxPresupuesto}€ sobrante es: `);
-      console.log(configuracionPorPrecio);
+      /*console.log(`Build con ${auxPresupuesto}€ sobrante es: `);
+      console.log(configuracionPorPrecio);*/
       return configuracionPorPrecio;
     }
   }

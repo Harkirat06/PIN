@@ -57,18 +57,26 @@ function PcBuilder({ context }) {
       setElementosSeleccionados(() => {
         let elementos = { ...elementosSeleccionados[0] };
         Object.keys(selectedBuild).forEach((propiedad) => {
-          if (propiedad == "sata" || propiedad == "m2") {
-            if (elementos["disco"] == "Elemento no seleccionado") {
-              elementos["disco"] = [];
-            }
-            selectedBuild[propiedad].forEach((item) => {
+          console.log(propiedad)
+        })
+        Object.keys(selectedBuild).forEach((propiedad) => {
+          if (propiedad != "0") {
+            if (propiedad == "sata" || propiedad == "m2") {
+              if (elementos["disco"] == "Elemento no seleccionado") {
+                elementos["disco"] = [];
+              }
+              selectedBuild[propiedad].forEach((item) => {
+                if (!item.price) {console.log("ERROR: " + item + " of type " + propiedad + " does not have price!")}
+                const selectedType = getPriceType(item, secondHand);
+                elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]});
+              });
+            } else {
+              const item = selectedBuild[propiedad];
+  
+              if (!item.price) {console.log("ERROR: " + item + " of type " + propiedad + " does not have price!")}
               const selectedType = getPriceType(item, secondHand);
-              elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]});
-            });
-          } else {
-            const item = selectedBuild[propiedad];
-            const selectedType = getPriceType(item, secondHand);
-            elementos[propiedad] = {nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]};
+              elementos[propiedad] = {nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]};
+            }
           }
         });
         return [elementos];
@@ -80,7 +88,7 @@ function PcBuilder({ context }) {
 
   const getPriceType = (item, secondHand) => {
     let minPrice = 0;
-    if (secondHand) {
+    if (secondHand && item.precio.segundaMano) {
       minPrice = Math.min(
         item.precio.amazon,
         item.precio.ebay,

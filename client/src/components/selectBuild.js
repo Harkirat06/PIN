@@ -83,7 +83,7 @@ function SelectBuild({ context }) {
 
   const getPriceType = (item, secondHand) => {
     let minPrice = 0;
-    if (secondHand) {
+    if (secondHand && item.precio.segundaMano) {
       minPrice = Math.min(
         item.precio.amazon,
         item.precio.ebay,

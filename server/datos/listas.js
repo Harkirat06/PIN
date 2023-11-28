@@ -1342,13 +1342,13 @@ const buildGamaMedia = {
   },
   cpu: {
     marca: "Intel",
-    nombre: "Intel Core i3-13700K 3.4 GHz",
-    gama: "MediaAlta",
+    nombre: "Intel Core i7-13700K 3.4 GHz",
+    gama: "Alta",
     socket: "Intel LGA 1700",
-    tipoRam: "DDR5",
+    consumo: 253,
+    tipoRam: "DDR4",
     ventilador: false,
     gpu: true,
-    tipoRam: "DDR5",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -1506,13 +1506,13 @@ const buildGamaMedia1 = {
   },
   cpu: {
     marca: "Intel",
-    nombre: "Intel Core i3-13700K 3.4 GHz",
-    gama: "MediaAlta",
+    nombre: "Intel Core i7-13700K 3.4 GHz",
+    gama: "Alta",
     socket: "Intel LGA 1700",
-    tipoRam: "DDR5",
+    consumo: 253,
+    tipoRam: "DDR4",
     ventilador: false,
     gpu: true,
-    tipoRam: "DDR5",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -1670,13 +1670,13 @@ const buildGamaMedia2 = {
   },
   cpu: {
     marca: "Intel",
-    nombre: "Intel Core i3-13700K 3.4 GHz",
-    gama: "MediaAlta",
+    nombre: "Intel Core i7-13700K 3.4 GHz",
+    gama: "Alta",
     socket: "Intel LGA 1700",
-    tipoRam: "DDR5",
+    consumo: 253,
+    tipoRam: "DDR4",
     ventilador: false,
     gpu: true,
-    tipoRam: "DDR5",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -1834,13 +1834,13 @@ const buildGamaMedia3 = {
   },
   cpu: {
     marca: "Intel",
-    nombre: "Intel Core i3-13700K 3.4 GHz",
-    gama: "MediaAlta",
+    nombre: "Intel Core i7-13700K 3.4 GHz",
+    gama: "Alta",
     socket: "Intel LGA 1700",
-    tipoRam: "DDR5",
+    consumo: 253,
+    tipoRam: "DDR4",
     ventilador: false,
     gpu: true,
-    tipoRam: "DDR5",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -2083,9 +2083,11 @@ const buildGamaAlta = {
     },
   ],
   gpu: {
-    marca: "Gigabyte",
-    nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Alta",
+    marca: "AMD",
+    nombre: "Sapphire Pulse AMD Radeon RX 6700 XT 12GB GDDR6",
+    consumo: 230,
+    potenciaRecomendada: 650,
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -2247,9 +2249,11 @@ const buildGamaAlta1 = {
     },
   ],
   gpu: {
-    marca: "Gigabyte",
-    nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Alta",
+    marca: "AMD",
+    nombre: "Sapphire Pulse AMD Radeon RX 6700 XT 12GB GDDR6",
+    consumo: 230,
+    potenciaRecomendada: 650,
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -2411,9 +2415,11 @@ const buildGamaAlta2 = {
     },
   ],
   gpu: {
-    marca: "Gigabyte",
-    nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Alta",
+    marca: "AMD",
+    nombre: "Sapphire Pulse AMD Radeon RX 6700 XT 12GB GDDR6",
+    consumo: 230,
+    potenciaRecomendada: 650,
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -2575,9 +2581,11 @@ const buildGamaAlta3 = {
     },
   ],
   gpu: {
-    marca: "Gigabyte",
-    nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Alta",
+    marca: "AMD",
+    nombre: "Sapphire Pulse AMD Radeon RX 6700 XT 12GB GDDR6",
+    consumo: 230,
+    potenciaRecomendada: 650,
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -2638,13 +2646,14 @@ const buildGamaAlta3 = {
 
 const buildParaGamers = {
   placas: {
-    nombre: "ASUS PRIME Z790-P WIFI",
+    marca: "MSI",
+    nombre: "MSI MAG Z790 TOMAHAWK WIFI",
     tamaño: "ATX",
-    socket: "Intel LGA 1700",
-    gama: "Baja",
-    numeroM2: 0,
-    numeroSata: 1,
+    socket: "Intel LGA 1200",
     tipoRam: "DDR5",
+    gama: "Baja",
+    numeroM2: 1,
+    numeroSata: 2,
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -2802,13 +2811,14 @@ const buildParaGamers = {
 
 const buildParaGamers2 = {
   placas: {
-    nombre: "ASUS PRIME Z790-P WIFI",
+    marca: "MSI",
+    nombre: "MSI MAG Z790 TOMAHAWK WIFI",
     tamaño: "ATX",
-    socket: "Intel LGA 1700",
-    gama: "Baja",
-    numeroM2: 0,
-    numeroSata: 1,
+    socket: "Intel LGA 1200",
     tipoRam: "DDR5",
+    gama: "Baja",
+    numeroM2: 1,
+    numeroSata: 2,
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -2966,13 +2976,14 @@ const buildParaGamers2 = {
 
 const buildParaGamers3 = {
   placas: {
-    nombre: "ASUS PRIME Z790-P WIFI",
+    marca: "MSI",
+    nombre: "MSI MAG Z790 TOMAHAWK WIFI",
     tamaño: "ATX",
-    socket: "Intel LGA 1700",
-    gama: "Baja",
-    numeroM2: 0,
-    numeroSata: 1,
+    socket: "Intel LGA 1200",
     tipoRam: "DDR5",
+    gama: "Baja",
+    numeroM2: 1,
+    numeroSata: 2,
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -3130,13 +3141,14 @@ const buildParaGamers3 = {
 
 const buildParaGamers4 = {
   placas: {
-    nombre: "ASUS PRIME Z790-P WIFI",
+    marca: "MSI",
+    nombre: "MSI MAG Z790 TOMAHAWK WIFI",
     tamaño: "ATX",
-    socket: "Intel LGA 1700",
-    gama: "Baja",
-    numeroM2: 0,
-    numeroSata: 1,
+    socket: "Intel LGA 1200",
     tipoRam: "DDR5",
+    gama: "Baja",
+    numeroM2: 1,
+    numeroSata: 2,
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -3325,12 +3337,11 @@ const buildParaProfesionales = {
     imagen: "intel.jpg",
   },
   ram: {
-    marca: "Corsair",
-    nombre:
-      "Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
-    tipo: "DDR5",
-    capacidad: 32,
-    gama: "Baja",
+    marca: "Kingston",
+    nombre: "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
+    tipo: "DDR4",
+    capacidad: 16,
+    gama: "BajaMedia",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -3489,12 +3500,11 @@ const buildParaProfesionales2 = {
     imagen: "intel.jpg",
   },
   ram: {
-    marca: "Corsair",
-    nombre:
-      "Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
-    tipo: "DDR5",
-    capacidad: 32,
-    gama: "Baja",
+    marca: "Kingston",
+    nombre: "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
+    tipo: "DDR4",
+    capacidad: 16,
+    gama: "BajaMedia",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -3653,12 +3663,11 @@ const buildParaProfesionales3 = {
     imagen: "intel.jpg",
   },
   ram: {
-    marca: "Corsair",
-    nombre:
-      "Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
-    tipo: "DDR5",
-    capacidad: 32,
-    gama: "Baja",
+    marca: "Kingston",
+    nombre: "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
+    tipo: "DDR4",
+    capacidad: 16,
+    gama: "BajaMedia",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -3817,12 +3826,11 @@ const buildParaProfesionales4 = {
     imagen: "intel.jpg",
   },
   ram: {
-    marca: "Corsair",
-    nombre:
-      "Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB 2x16GB CL36 Negra",
-    tipo: "DDR5",
-    capacidad: 32,
-    gama: "Baja",
+    marca: "Kingston",
+    nombre: "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
+    tipo: "DDR4",
+    capacidad: 16,
+    gama: "BajaMedia",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -4100,9 +4108,9 @@ const buildParaEstudiantes = {
   },
   disipador: {
     marca: "Forgeon",
-    nombre: "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
-    tipo: "Liquida",
-    gama: "Baja",
+    nombre: "Forgeon Cooler 4Pipes 120mm Ventilador CPU Negro",
+    tipo: "Ventilador",
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -4264,9 +4272,9 @@ const buildParaEstudiantes2 = {
   },
   disipador: {
     marca: "Forgeon",
-    nombre: "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
-    tipo: "Liquida",
-    gama: "Baja",
+    nombre: "Forgeon Cooler 4Pipes 120mm Ventilador CPU Negro",
+    tipo: "Ventilador",
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -4428,9 +4436,9 @@ const buildParaEstudiantes3 = {
   },
   disipador: {
     marca: "Forgeon",
-    nombre: "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
-    tipo: "Liquida",
-    gama: "Baja",
+    nombre: "Forgeon Cooler 4Pipes 120mm Ventilador CPU Negro",
+    tipo: "Ventilador",
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -4592,9 +4600,9 @@ const buildParaEstudiantes4 = {
   },
   disipador: {
     marca: "Forgeon",
-    nombre: "Forgeon Azoth 240 ARGB Kit de Refrigeración Líquida 240mm Negro",
-    tipo: "Liquida",
-    gama: "Baja",
+    nombre: "Forgeon Cooler 4Pipes 120mm Ventilador CPU Negro",
+    tipo: "Ventilador",
+    gama: "Media",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -4709,7 +4717,9 @@ const buildParaUsoBasico = {
   gpu: {
     marca: "Gigabyte",
     nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Baja",
+    consumo: null,
+    potenciaRecomendada: 750,
+    gama: "MediaAlta",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -4873,7 +4883,9 @@ const buildParaUsoBasico2 = {
   gpu: {
     marca: "Gigabyte",
     nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Baja",
+    consumo: null,
+    potenciaRecomendada: 750,
+    gama: "MediaAlta",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -5037,7 +5049,9 @@ const buildParaUsoBasico3 = {
   gpu: {
     marca: "Gigabyte",
     nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Baja",
+    consumo: null,
+    potenciaRecomendada: 750,
+    gama: "MediaAlta",
     precio: {
       segundaMano: 100,
       amazon: 150,
@@ -5201,7 +5215,9 @@ const buildParaUsoBasico4 = {
   gpu: {
     marca: "Gigabyte",
     nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
-    gama: "Baja",
+    consumo: null,
+    potenciaRecomendada: 750,
+    gama: "MediaAlta",
     precio: {
       segundaMano: 100,
       amazon: 150,

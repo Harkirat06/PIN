@@ -39,6 +39,8 @@ function PcBuilder({ context }) {
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
+  let secondHand = false;
+
   const [presupuesto, setPresupuesto] = useState(0);
 
   const handleBoton = (lista) => {
@@ -60,10 +62,13 @@ function PcBuilder({ context }) {
               elementos["disco"] = [];
             }
             selectedBuild[propiedad].forEach((item) => {
-              elementos["disco"] = elementos["disco"].concat(item.nombre);
+              const selectedPrice = getPriceType(item, secondHand);
+              elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]});
             });
           } else {
-            elementos[propiedad] = selectedBuild[propiedad].nombre;
+            const item = selectedBuild[propiedad];
+            const selectedPrice = getPriceType(item, secondHand);
+            elementos[propiedad] = {nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]};
           }
         });
         return [elementos];
@@ -71,6 +76,27 @@ function PcBuilder({ context }) {
     });
     handleClose();
   };
+
+  const getPriceType = (item, secondHand) => {
+    let minPrice = 0;
+    if (secondHand) {
+      minPrice = Math.min(
+        item.precio.amazon,
+        item.precio.ebay,
+        item.precio.segundaMano
+      );
+    } else {
+      minPrice = Math.min(
+        item.precio.amazon,
+        item.precio.ebay
+      );
+    }
+    if (minPrice == item.precio.amazon) {
+      return "amazon";
+    } else if (minPrice == item.precio.ebay) {
+      return "ebay";
+    } else {return "segundaMano"}
+  }
 
   const handleNombre = (lista) => {
     return lista.replace("List", "");
@@ -80,7 +106,7 @@ function PcBuilder({ context }) {
     if (Array.isArray(elementosSeleccionados[0][propiedad])) {
       setElementosSeleccionados((prevElementosSeleccionados) => {
         let elementos = { ...prevElementosSeleccionados[0] };
-        const updatedArray = elementos[propiedad].filter((i) => i !== item);
+        const updatedArray = elementos[propiedad].filter((i) => i.nombre !== item);
         elementos[propiedad] =
           updatedArray.length > 0 ? updatedArray : "Elemento no seleccionado";
         return [elementos];
@@ -131,11 +157,11 @@ function PcBuilder({ context }) {
         return elementosSeleccionados[0][propiedad].map((item) => {
           return (
             <Card.Text key={i++}>
-              {i + "." + " " + item}
+              {i + "." + " " + item.nombre}
               <Button
                 variant="danger"
                 size="sm"
-                onClick={() => deleteSelection(propiedad, item)}
+                onClick={() => deleteSelection(propiedad, item.nombre)}
               >
                 X
               </Button>
@@ -145,7 +171,7 @@ function PcBuilder({ context }) {
       } else {
         return (
           <Card.Text>
-            {elementosSeleccionados[0][propiedad]}
+            {elementosSeleccionados[0][propiedad].nombre}
             <Button
               variant="danger"
               size="sm"
@@ -157,7 +183,7 @@ function PcBuilder({ context }) {
         );
       }
     } else {
-      return <Card.Text>{elementosSeleccionados[0][propiedad]}</Card.Text>;
+      return <Card.Text>{"Elemento no seleccionado"}</Card.Text>;
     }
   };
 
@@ -223,7 +249,7 @@ function PcBuilder({ context }) {
         <OffCanvasCustom context={context} />
       </Container>
       <Container className="centered">
-        <Button size="large">Finalizar Montaje</Button>
+        <Button size="large" onClick={() => navigate("/paginaPagar")} >Finalizar Montaje</Button>
       </Container>
       <br/>
     </Container>

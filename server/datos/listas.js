@@ -15,6 +15,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -31,6 +35,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -45,6 +53,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -59,6 +71,10 @@ const configuration = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -72,6 +88,10 @@ const configuration = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -87,6 +107,10 @@ const configuration = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -100,6 +124,10 @@ const configuration = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -112,6 +140,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -126,6 +158,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -138,6 +174,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -149,6 +189,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -161,6 +205,10 @@ const configuration = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -180,6 +228,10 @@ const cpuList = [
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Intel",
@@ -196,6 +248,10 @@ const cpuList = [
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Intel",
@@ -212,6 +268,10 @@ const cpuList = [
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Intel",
@@ -228,6 +288,10 @@ const cpuList = [
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -247,6 +311,10 @@ const placasList = [
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Asus",
@@ -263,6 +331,10 @@ const placasList = [
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Asus",
@@ -279,6 +351,10 @@ const placasList = [
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "MSI",
@@ -295,6 +371,10 @@ const placasList = [
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -311,6 +391,10 @@ const gpuList = [
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "AMD",
@@ -324,6 +408,10 @@ const gpuList = [
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Gigabyte",
@@ -337,6 +425,10 @@ const gpuList = [
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -353,6 +445,10 @@ const ramList = [
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Kingston",
@@ -366,6 +462,10 @@ const ramList = [
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Corsair",
@@ -380,6 +480,10 @@ const ramList = [
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Corsair",
@@ -394,6 +498,10 @@ const ramList = [
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -410,6 +518,10 @@ const discoList = [
       ebay: 200,
     },
     imagen: "hdd.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Samsung",
@@ -423,6 +535,10 @@ const discoList = [
       ebay: 200,
     },
     imagen: "m2.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Seagate",
@@ -436,6 +552,10 @@ const discoList = [
       ebay: 200,
     },
     imagen: "hdd.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -451,6 +571,10 @@ const monitorList = [
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "AOC",
@@ -462,6 +586,10 @@ const monitorList = [
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "LG",
@@ -473,6 +601,10 @@ const monitorList = [
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -488,6 +620,10 @@ const disipadorList = [
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Forgeon",
@@ -500,6 +636,10 @@ const disipadorList = [
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Forgeon",
@@ -512,6 +652,10 @@ const disipadorList = [
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -526,6 +670,10 @@ const cajaList = [
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Tempest",
@@ -537,6 +685,10 @@ const cajaList = [
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Nox",
@@ -548,6 +700,10 @@ const cajaList = [
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -564,6 +720,10 @@ const fuenteList = [
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Forgeon",
@@ -578,6 +738,10 @@ const fuenteList = [
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Tempest",
@@ -591,6 +755,10 @@ const fuenteList = [
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -605,6 +773,10 @@ const ratonList = [
       ebay: 200,
     },
     imagen: "raton.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Forgeon",
@@ -616,6 +788,10 @@ const ratonList = [
       ebay: 200,
     },
     imagen: "raton.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Newskill",
@@ -627,6 +803,10 @@ const ratonList = [
       ebay: 200,
     },
     imagen: "raton.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -642,6 +822,10 @@ const tecladoList = [
       ebay: 200,
     },
     imagen: "teclado.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Forgeon",
@@ -654,6 +838,10 @@ const tecladoList = [
       ebay: 200,
     },
     imagen: "teclado.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   {
     marca: "Newskill",
@@ -666,6 +854,10 @@ const tecladoList = [
       ebay: 200,
     },
     imagen: "teclado.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 ];
 
@@ -684,6 +876,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -700,6 +896,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -714,6 +914,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -728,6 +932,10 @@ const buildGamaBaja = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -741,6 +949,10 @@ const buildGamaBaja = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -756,6 +968,10 @@ const buildGamaBaja = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -769,6 +985,10 @@ const buildGamaBaja = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -781,6 +1001,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -795,6 +1019,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -807,6 +1035,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -818,6 +1050,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -830,6 +1066,10 @@ const buildGamaBaja = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -848,6 +1088,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -864,6 +1108,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -878,6 +1126,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -892,6 +1144,10 @@ const buildGamaBaja1 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -905,6 +1161,10 @@ const buildGamaBaja1 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -920,6 +1180,10 @@ const buildGamaBaja1 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -933,6 +1197,10 @@ const buildGamaBaja1 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -945,6 +1213,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -959,6 +1231,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -971,6 +1247,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -982,6 +1262,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -994,6 +1278,10 @@ const buildGamaBaja1 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -1012,6 +1300,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -1028,6 +1320,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -1042,6 +1338,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -1056,6 +1356,10 @@ const buildGamaBaja2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -1069,6 +1373,10 @@ const buildGamaBaja2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -1084,6 +1392,10 @@ const buildGamaBaja2 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -1097,6 +1409,10 @@ const buildGamaBaja2 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -1109,6 +1425,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -1123,6 +1443,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -1135,6 +1459,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -1146,6 +1474,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -1158,6 +1490,10 @@ const buildGamaBaja2 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -1176,6 +1512,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -1192,6 +1532,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -1206,6 +1550,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -1220,6 +1568,10 @@ const buildGamaBaja3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -1233,6 +1585,10 @@ const buildGamaBaja3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -1248,6 +1604,10 @@ const buildGamaBaja3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -1261,6 +1621,10 @@ const buildGamaBaja3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -1273,6 +1637,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -1287,6 +1655,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -1299,6 +1671,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -1310,6 +1686,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -1322,6 +1702,10 @@ const buildGamaBaja3 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -1340,6 +1724,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -1356,6 +1744,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -1370,6 +1762,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -1384,6 +1780,10 @@ const buildGamaMedia = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -1397,6 +1797,10 @@ const buildGamaMedia = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -1412,6 +1816,10 @@ const buildGamaMedia = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -1425,6 +1833,10 @@ const buildGamaMedia = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -1437,6 +1849,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -1451,6 +1867,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -1463,6 +1883,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -1474,6 +1898,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -1486,6 +1914,10 @@ const buildGamaMedia = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -1504,6 +1936,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -1520,6 +1956,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -1534,6 +1974,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -1548,6 +1992,10 @@ const buildGamaMedia1 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -1561,6 +2009,10 @@ const buildGamaMedia1 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -1576,6 +2028,10 @@ const buildGamaMedia1 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -1589,6 +2045,10 @@ const buildGamaMedia1 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -1601,6 +2061,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -1615,6 +2079,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -1627,6 +2095,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -1638,6 +2110,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -1650,6 +2126,10 @@ const buildGamaMedia1 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -1668,6 +2148,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -1684,6 +2168,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -1698,6 +2186,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -1712,6 +2204,10 @@ const buildGamaMedia2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -1725,6 +2221,10 @@ const buildGamaMedia2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -1740,6 +2240,10 @@ const buildGamaMedia2 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -1753,6 +2257,10 @@ const buildGamaMedia2 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -1765,6 +2273,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -1779,6 +2291,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -1791,6 +2307,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -1802,6 +2322,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -1814,6 +2338,10 @@ const buildGamaMedia2 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -1832,6 +2360,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -1848,6 +2380,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -1862,6 +2398,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -1876,6 +2416,10 @@ const buildGamaMedia3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -1889,6 +2433,10 @@ const buildGamaMedia3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -1904,6 +2452,10 @@ const buildGamaMedia3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -1917,6 +2469,10 @@ const buildGamaMedia3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -1929,6 +2485,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -1943,6 +2503,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -1955,6 +2519,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -1966,6 +2534,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -1978,6 +2550,10 @@ const buildGamaMedia3 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -1996,6 +2572,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -2012,6 +2592,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -2026,6 +2610,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -2040,6 +2628,10 @@ const buildGamaAlta = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -2053,6 +2645,10 @@ const buildGamaAlta = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -2068,6 +2664,10 @@ const buildGamaAlta = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -2081,6 +2681,10 @@ const buildGamaAlta = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -2093,6 +2697,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -2107,6 +2715,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -2119,6 +2731,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -2130,6 +2746,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -2142,6 +2762,10 @@ const buildGamaAlta = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -2160,6 +2784,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -2176,6 +2804,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -2190,6 +2822,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -2204,6 +2840,10 @@ const buildGamaAlta1 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -2217,6 +2857,10 @@ const buildGamaAlta1 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -2232,6 +2876,10 @@ const buildGamaAlta1 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -2245,6 +2893,10 @@ const buildGamaAlta1 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -2257,6 +2909,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -2271,6 +2927,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -2283,6 +2943,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -2294,6 +2958,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -2306,6 +2974,10 @@ const buildGamaAlta1 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -2324,6 +2996,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -2340,6 +3016,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -2354,6 +3034,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -2368,6 +3052,10 @@ const buildGamaAlta2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -2381,6 +3069,10 @@ const buildGamaAlta2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -2396,6 +3088,10 @@ const buildGamaAlta2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -2409,6 +3105,10 @@ const buildGamaAlta2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -2421,6 +3121,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -2435,6 +3139,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -2447,6 +3155,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -2458,6 +3170,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -2470,6 +3186,10 @@ const buildGamaAlta2 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -2488,6 +3208,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -2504,6 +3228,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -2518,6 +3246,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -2532,6 +3264,10 @@ const buildGamaAlta3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -2545,6 +3281,10 @@ const buildGamaAlta3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -2560,6 +3300,10 @@ const buildGamaAlta3 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -2573,6 +3317,10 @@ const buildGamaAlta3 = {
         ebay: 200,
       },
       imagen: "hdd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -2585,6 +3333,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -2599,6 +3351,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -2611,6 +3367,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -2622,6 +3382,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -2634,6 +3398,10 @@ const buildGamaAlta3 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -2652,6 +3420,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -2668,6 +3440,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -2682,6 +3458,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -2696,6 +3476,10 @@ const buildParaGamers = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -2709,6 +3493,10 @@ const buildParaGamers = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -2724,6 +3512,10 @@ const buildParaGamers = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -2737,6 +3529,10 @@ const buildParaGamers = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -2749,6 +3545,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -2763,6 +3563,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -2775,6 +3579,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -2786,6 +3594,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -2798,6 +3610,10 @@ const buildParaGamers = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -2816,6 +3632,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -2832,6 +3652,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -2846,6 +3670,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -2860,6 +3688,10 @@ const buildParaGamers2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -2873,6 +3705,10 @@ const buildParaGamers2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -2888,6 +3724,10 @@ const buildParaGamers2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -2901,6 +3741,10 @@ const buildParaGamers2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -2913,6 +3757,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -2927,6 +3775,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -2939,6 +3791,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -2950,6 +3806,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -2962,6 +3822,10 @@ const buildParaGamers2 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -2980,6 +3844,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -2996,6 +3864,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -3010,6 +3882,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -3024,6 +3900,10 @@ const buildParaGamers3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -3037,6 +3917,10 @@ const buildParaGamers3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -3052,6 +3936,10 @@ const buildParaGamers3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -3065,6 +3953,10 @@ const buildParaGamers3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -3077,6 +3969,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -3091,6 +3987,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -3103,6 +4003,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -3114,6 +4018,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -3126,6 +4034,10 @@ const buildParaGamers3 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -3144,6 +4056,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -3160,6 +4076,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -3174,6 +4094,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -3188,6 +4112,10 @@ const buildParaGamers4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -3201,6 +4129,10 @@ const buildParaGamers4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -3216,6 +4148,10 @@ const buildParaGamers4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -3229,6 +4165,10 @@ const buildParaGamers4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -3241,6 +4181,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -3255,6 +4199,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -3267,6 +4215,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -3278,6 +4230,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -3290,6 +4246,10 @@ const buildParaGamers4 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -3308,6 +4268,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -3324,6 +4288,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -3338,6 +4306,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -3352,6 +4324,10 @@ const buildParaProfesionales = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -3365,6 +4341,10 @@ const buildParaProfesionales = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -3380,6 +4360,10 @@ const buildParaProfesionales = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -3393,6 +4377,10 @@ const buildParaProfesionales = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -3405,6 +4393,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -3419,6 +4411,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -3431,6 +4427,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -3442,6 +4442,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -3454,6 +4458,10 @@ const buildParaProfesionales = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -3472,6 +4480,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -3488,6 +4500,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -3502,6 +4518,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -3516,6 +4536,10 @@ const buildParaProfesionales2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -3529,6 +4553,10 @@ const buildParaProfesionales2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -3544,6 +4572,10 @@ const buildParaProfesionales2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -3557,6 +4589,10 @@ const buildParaProfesionales2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -3569,6 +4605,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -3583,6 +4623,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -3595,6 +4639,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -3606,6 +4654,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -3618,6 +4670,10 @@ const buildParaProfesionales2 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -3636,6 +4692,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -3652,6 +4712,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -3666,6 +4730,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -3680,6 +4748,10 @@ const buildParaProfesionales3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -3693,6 +4765,10 @@ const buildParaProfesionales3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -3708,6 +4784,10 @@ const buildParaProfesionales3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -3721,6 +4801,10 @@ const buildParaProfesionales3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -3733,6 +4817,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -3747,6 +4835,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -3759,6 +4851,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -3770,6 +4866,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -3782,6 +4882,10 @@ const buildParaProfesionales3 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -3800,6 +4904,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -3816,6 +4924,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -3830,6 +4942,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -3844,6 +4960,10 @@ const buildParaProfesionales4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -3857,6 +4977,10 @@ const buildParaProfesionales4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -3872,6 +4996,10 @@ const buildParaProfesionales4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -3885,6 +5013,10 @@ const buildParaProfesionales4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -3897,6 +5029,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -3911,6 +5047,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -3923,6 +5063,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -3934,6 +5078,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -3946,6 +5094,10 @@ const buildParaProfesionales4 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -3964,6 +5116,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -3980,6 +5136,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -3994,6 +5154,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -4008,6 +5172,10 @@ const buildParaEstudiantes = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -4021,6 +5189,10 @@ const buildParaEstudiantes = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -4036,6 +5208,10 @@ const buildParaEstudiantes = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -4049,6 +5225,10 @@ const buildParaEstudiantes = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -4061,6 +5241,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -4075,6 +5259,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -4087,6 +5275,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -4098,6 +5290,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -4110,6 +5306,10 @@ const buildParaEstudiantes = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -4128,6 +5328,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -4144,6 +5348,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -4158,6 +5366,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -4172,6 +5384,10 @@ const buildParaEstudiantes2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -4185,6 +5401,10 @@ const buildParaEstudiantes2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -4200,6 +5420,10 @@ const buildParaEstudiantes2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -4213,6 +5437,10 @@ const buildParaEstudiantes2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -4225,6 +5453,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -4239,6 +5471,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -4251,6 +5487,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -4262,6 +5502,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -4274,6 +5518,10 @@ const buildParaEstudiantes2 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -4292,6 +5540,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -4308,6 +5560,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -4322,6 +5578,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -4336,6 +5596,10 @@ const buildParaEstudiantes3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -4349,6 +5613,10 @@ const buildParaEstudiantes3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -4364,6 +5632,10 @@ const buildParaEstudiantes3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -4377,6 +5649,10 @@ const buildParaEstudiantes3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -4389,6 +5665,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -4403,6 +5683,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -4415,6 +5699,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -4426,6 +5714,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -4438,6 +5730,10 @@ const buildParaEstudiantes3 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -4456,6 +5752,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -4472,6 +5772,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -4486,6 +5790,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -4500,6 +5808,10 @@ const buildParaEstudiantes4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -4513,6 +5825,10 @@ const buildParaEstudiantes4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -4528,6 +5844,10 @@ const buildParaEstudiantes4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -4541,6 +5861,10 @@ const buildParaEstudiantes4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -4553,6 +5877,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -4567,6 +5895,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -4579,6 +5911,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -4590,6 +5926,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -4602,6 +5942,10 @@ const buildParaEstudiantes4 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -4620,6 +5964,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -4636,6 +5984,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -4650,6 +6002,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -4664,6 +6020,10 @@ const buildParaUsoBasico = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -4677,6 +6037,10 @@ const buildParaUsoBasico = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -4692,6 +6056,10 @@ const buildParaUsoBasico = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -4705,6 +6073,10 @@ const buildParaUsoBasico = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -4717,6 +6089,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -4731,6 +6107,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -4743,6 +6123,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -4754,6 +6138,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -4766,6 +6154,10 @@ const buildParaUsoBasico = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -4784,6 +6176,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -4800,6 +6196,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -4814,6 +6214,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -4828,6 +6232,10 @@ const buildParaUsoBasico2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -4841,6 +6249,10 @@ const buildParaUsoBasico2 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -4856,6 +6268,10 @@ const buildParaUsoBasico2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -4869,6 +6285,10 @@ const buildParaUsoBasico2 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -4881,6 +6301,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -4895,6 +6319,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -4907,6 +6335,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -4918,6 +6350,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -4930,6 +6366,10 @@ const buildParaUsoBasico2 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -4948,6 +6388,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -4964,6 +6408,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -4978,6 +6426,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -4992,6 +6444,10 @@ const buildParaUsoBasico3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -5005,6 +6461,10 @@ const buildParaUsoBasico3 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -5020,6 +6480,10 @@ const buildParaUsoBasico3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -5033,6 +6497,10 @@ const buildParaUsoBasico3 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -5045,6 +6513,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -5059,6 +6531,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -5071,6 +6547,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -5082,6 +6562,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -5094,6 +6578,10 @@ const buildParaUsoBasico3 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 
@@ -5112,6 +6600,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "placa.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   cpu: {
     marca: "Intel",
@@ -5128,6 +6620,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "intel.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   ram: {
     marca: "Corsair",
@@ -5142,6 +6638,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "ram.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   m2: [
     {
@@ -5156,6 +6656,10 @@ const buildParaUsoBasico4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Samsung",
@@ -5169,6 +6673,10 @@ const buildParaUsoBasico4 = {
         ebay: 200,
       },
       imagen: "m2.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   sata: [
@@ -5184,6 +6692,10 @@ const buildParaUsoBasico4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
     {
       marca: "Seagate",
@@ -5197,6 +6709,10 @@ const buildParaUsoBasico4 = {
         ebay: 200,
       },
       imagen: "ssd.jpg",
+      link: {
+        amazon: "https://www.amazon.es",
+        ebay: "https://www.ebay.es",
+      },
     },
   ],
   gpu: {
@@ -5209,6 +6725,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "gpu.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   fuente: {
     marca: "Forgeon",
@@ -5223,6 +6743,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "fuente.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   monitor: {
     marca: "ASUS",
@@ -5235,6 +6759,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "monitor.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   caja: {
     marca: "Tempest",
@@ -5246,6 +6774,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "caja.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
   disipador: {
     marca: "Forgeon",
@@ -5258,6 +6790,10 @@ const buildParaUsoBasico4 = {
       ebay: 200,
     },
     imagen: "disipador.jpg",
+    link: {
+      amazon: "https://www.amazon.es",
+      ebay: "https://www.ebay.es",
+    },
   },
 };
 

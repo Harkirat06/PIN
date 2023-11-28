@@ -9,6 +9,8 @@ import SelectBuild from './components/selectBuild'
 import PcBuilder from './components/PcBuilder'
 import Login from './components/Login';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import PaginaPagar from './components/PaginaPagar';
+import PagarNuestro from './components/PagarNuestro';
 
 function App() {
   const StateContext = createContext()
@@ -23,6 +25,8 @@ function App() {
             <Route exact path="/upload" element={<ImageUploader context={StateContext} />} />
             <Route exact path="/selectBuild" element={<SelectBuild context={StateContext}/>} />
             <Route exact path="/PcBuilder" element={<PcBuilder context={StateContext}/>} />
+            <Route exact path="/paginaPagar" element={<PaginaPagar context={StateContext}/>} />
+            <Route exact path="/pagarNuestro" element={<PagarNuestro context={StateContext}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           </GoogleOAuthProvider>

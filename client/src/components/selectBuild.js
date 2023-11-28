@@ -19,6 +19,8 @@ function SelectBuild({ context }) {
   } = useContext(context);
   const [presupuesto, setPresupuesto] = useState(0)
 
+  let secondHand = false;
+
   useEffect(() => {
     if (!user) {
       navigate("/");
@@ -52,7 +54,7 @@ function SelectBuild({ context }) {
   };
 
   // Al seleccionar una build, establece la build en el contexto
-  const selectBuild = (selectedBuild) => {
+  const selectBuild = (selectedBuild, secondHand) => {
     setBuild(() => {
       let conf = { ...selectedBuild };
       return [conf];
@@ -65,16 +67,40 @@ function SelectBuild({ context }) {
             elementos["disco"] = [];
           }
           selectedBuild[propiedad].forEach((item) => {
-            elementos["disco"] = elementos["disco"].concat(item.nombre);
+            const selectedPrice = getPriceType(item, secondHand);
+            elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]});
           });
         } else {
-          elementos[propiedad] = selectedBuild[propiedad].nombre;
+          const item = selectedBuild[propiedad];
+          const selectedPrice = getPriceType(item, secondHand);
+          elementos[propiedad] = {nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]};
         }
       });
       return [elementos];
     });
     navigate("/PcBuilder");
   };
+
+  const getPriceType = (item, secondHand) => {
+    let minPrice = 0;
+    if (secondHand) {
+      minPrice = Math.min(
+        item.precio.amazon,
+        item.precio.ebay,
+        item.precio.segundaMano
+      );
+    } else {
+      minPrice = Math.min(
+        item.precio.amazon,
+        item.precio.ebay
+      );
+    }
+    if (minPrice == item.precio.amazon) {
+      return "amazon";
+    } else if (minPrice == item.precio.ebay) {
+      return "ebay";
+    } else {return "segundaMano"}
+  }
 
   return (
     <Container>
@@ -84,28 +110,28 @@ function SelectBuild({ context }) {
           {/* Zona con 3 botones de gamas */}
           <Button
             onClick={() => {
-              buildPorNicho("Gamers").then((r) => selectBuild(r));
+              buildPorNicho("Gamers").then((r) => selectBuild(r, false));
             }}
           >
             Gamers
           </Button>
           <Button
             onClick={() => {
-              buildPorNicho("Profesionales").then((r) => selectBuild(r));
+              buildPorNicho("Profesionales").then((r) => selectBuild(r, false));
             }}
           >
             Profesionales
           </Button>
           <Button
             onClick={() => {
-              buildPorNicho("Estudiantes").then((r) => selectBuild(r));
+              buildPorNicho("Estudiantes").then((r) => selectBuild(r, false));
             }}
           >
             Estudiantes
           </Button>
           <Button
             onClick={() => {
-              buildPorNicho("Uso Basico").then((r) => selectBuild(r));
+              buildPorNicho("Uso Basico").then((r) => selectBuild(r, false));
             }}
           >
             Uso Basico
@@ -119,21 +145,21 @@ function SelectBuild({ context }) {
           {/* Zona con 3 botones de gamas */}
           <Button
             onClick={() => {
-              buildPorGama("baja").then((r) => selectBuild(r));
+              buildPorGama("baja").then((r) => selectBuild(r, false));
             }}
           >
             Gama Baja{" "}
           </Button>
           <Button
             onClick={() => {
-              buildPorGama("media").then((r) => selectBuild(r));
+              buildPorGama("media").then((r) => selectBuild(r, false));
             }}
           >
             Gama Media
           </Button>
           <Button
             onClick={() => {
-              buildPorGama("alta").then((r) => selectBuild(r));
+              buildPorGama("alta").then((r) => selectBuild(r, false));
             }}
           >
             Gama Alta
@@ -173,8 +199,7 @@ function SelectBuild({ context }) {
           <Col>
             <Button
               onClick={() => {
-                buildPorPrecio(presupuesto).then((r) => selectBuild(r));
-                navigate("/PcBuilder");
+                buildPorPrecio(presupuesto).then((r) => selectBuild(r, secondHand));
               }}
             >
               Hacer Build

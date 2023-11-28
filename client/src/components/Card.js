@@ -10,6 +10,7 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
       let elementos = { ...precioSeleccionado[0] };
       let propiedad = nombreLista.replace("List", "");
       console.log(propiedad)
+      console.log(tipo)
       if (propiedad === "disco") {
         if (elementos[propiedad] === "") {
           elementos[propiedad] = [tipo];
@@ -66,8 +67,8 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
               size="sm"
               onClick={() => {
                 if(onClick !== undefined){
-                onClick();
-                handlePrecio("segundaMano");
+                  onClick();
+                  handlePrecio("segundaMano");
                 }
               }}
             >

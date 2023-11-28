@@ -14,13 +14,14 @@ function OffCanvasCustom({ context  }) {
     setElementosSeleccionados,
     elementosSeleccionados,
     nombreLista,
-
+    precioSeleccionado
   } = useContext(context);
   let i = 0;
   const handleClose = () => setShow(false);
 
   const handleBuild = (item) => {
     let propiedad = nombreLista.replace("List", "");
+    console.log(propiedad)
 
     setElementosSeleccionados(()=>{
       let elementos = {...elementosSeleccionados[0]}
@@ -28,9 +29,13 @@ function OffCanvasCustom({ context  }) {
         if (elementos[propiedad] == "Elemento no seleccionado") {
           elementos[propiedad] = []
         }
-          elementos[propiedad] = elementos[propiedad].concat(item.nombre);
+        let selectedPrice = precioSeleccionado[0][propiedad].slice(-1)[0];
+        elementos[propiedad] = elementos[propiedad].concat({nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]});
+        console.log(selectedPrice);
       } else {
-        elementos[propiedad] = item.nombre;
+        let selectedPrice = precioSeleccionado[0][propiedad];
+        elementos[propiedad] = {nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]};
+        console.log(precioSeleccionado[0][propiedad])
       }
       return [elementos]
     })

@@ -91,6 +91,7 @@ function StateProvider({ context, children }) {
       precioSeleccionado,
       login,
       user,
+      checkboxState
     ]
   );
 

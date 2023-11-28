@@ -21,7 +21,6 @@ function PcBuilder({ context }) {
     setNombreLista,
     show,
     user,
-    setPrecioSeleccionado
   } = useContext(context);
 
   const navigate = useNavigate();
@@ -32,8 +31,9 @@ function PcBuilder({ context }) {
     }
     getListas(build[0]).then((r) => {
       setListasComponentes(r.data);
+      console.log("Actualizada listas")
     });
-  }, [build, elementosSeleccionados]);
+  }, [build]);
 
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
@@ -74,6 +74,7 @@ function PcBuilder({ context }) {
         return [elementos];
       });
     });
+
     handleClose();
   };
 
@@ -110,16 +111,7 @@ function PcBuilder({ context }) {
         elementos[propiedad] =
           updatedArray.length > 0 ? updatedArray : "Elemento no seleccionado";
         return [elementos];
-      });/*
-      setPrecioSeleccionado((prevSeleccionado)=>{
-        let elementos = { ...prevSeleccionado[0] };
-        const updatedArray = elementos[propiedad].filter((i) => i !== item);
-        elementos[propiedad] =
-          updatedArray.length > 0 ? updatedArray : "";
-        console.log(elementos)
-        return [elementos];
-      })
-      */
+      });
       setBuild((prevBuild) => {
         let conf = { ...prevBuild[0] };
         if (conf["sata"] && Array.isArray(conf["sata"])) {

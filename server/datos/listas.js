@@ -306,7 +306,6 @@ const placasList = [
     numeroM2: 2,
     numeroSata: 2,
     precio: {
-      segundaMano: 100,
       amazon: 150,
       ebay: 200,
     },

@@ -77,9 +77,10 @@ const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
 };
 
 const handleDisipador = (lista, cpu = {}) => {
-  if (cpu.ventilador) {
+  if (cpu.ventilador === true) {
     return lista;
   } else {
+    console.log("Ventilador falso")
     return [];
   }
 };
@@ -166,7 +167,7 @@ const handleConfiguacion = (config) => {
 
 pcBuilderRouter.get("/", async (req, res) => {
   const config = req.query;
-  console.log(config);
+  console.log(config)
   const [
     placasList,
     cpuList,
@@ -180,6 +181,7 @@ pcBuilderRouter.get("/", async (req, res) => {
     tecladoList,
     ratonList,
   ] = handleConfiguacion(config);
+  console.log(disipadorList)
   res.json({
     placasList,
     cpuList,

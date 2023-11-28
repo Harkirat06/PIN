@@ -12,7 +12,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 653.00,
             ebay: 644.95,
         },
@@ -32,7 +32,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 470.31,
             ebay: 419.99,
         },
@@ -52,7 +52,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 327.36,
             ebay: 309.99,
         },
@@ -72,7 +72,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 549.90,
             ebay: 649.99,
         },
@@ -92,7 +92,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 381.99,
             ebay: 456.79,
         },
@@ -112,7 +112,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 289.90,
             ebay: 374.35,
         },
@@ -132,7 +132,7 @@ let cpuACargar = [
         ventilador: true,
         gpu: true,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 121.40,
             ebay: 157.30,
         },
@@ -152,7 +152,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 639.90,
             ebay: 559.90,
         },
@@ -172,7 +172,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 385.00,
             ebay: 399.99,
         },
@@ -192,7 +192,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 218.90,
             ebay: 191.66,
         },
@@ -212,7 +212,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 479.90,
             ebay: 449.95,
         },
@@ -232,7 +232,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 190.00,
             ebay: 338.80,
         },
@@ -252,7 +252,7 @@ let cpuACargar = [
         ventilador: false,
         gpu: false,
         precio: {
-            segundaMano: Infinity,
+            segundaMano: null,
             amazon: 141.72,
             ebay: 163.34,
         },
@@ -272,7 +272,7 @@ let gpuACargar = [
         potenciaRecomendada: 850,
         gama: "Premium",
         precio: {
-          segundaMano: Infinity,
+          segundaMano: null,
             amazon: 2126.05,
             ebay: 2994.99,
         },
@@ -289,7 +289,7 @@ let gpuACargar = [
         potenciaRecomendada: 750,
         gama: "Alta",
         precio: {
-          segundaMano: Infinity,
+          segundaMano: null,
             amazon: 1397.90,
             ebay: 1771.00,
         },

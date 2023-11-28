@@ -62,7 +62,7 @@ function PaginaPagar({ context }) {
         }
     }
 
-    const finalizarPago = () => {
+    const openLinks = () => {
         Object.keys(productList).map((propiedad) => {
             if (propiedad == "disco") {
                 productList[propiedad].map((item) => {
@@ -81,7 +81,8 @@ function PaginaPagar({ context }) {
                 handleSeleccion(propiedad)
             ))}
 
-            <Button onClick={() => finalizarPago()}>Pagar</Button>
+            <Button onClick={() => openLinks()}>Abrir Links</Button>
+            <Button>Pagar</Button>
         </Container>
     );
 }

@@ -35,8 +35,8 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
               size="sm"
               onClick={() => {
                 if(onClick !== undefined){
-                  onClick();
                   handlePrecio("amazon");
+                  onClick();
                 }
               }}
             >
@@ -51,8 +51,8 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
               size="sm"
               onClick={() => {
                 if(onClick !== undefined){
-                onClick();
-                handlePrecio("ebay");
+                  handlePrecio("ebay");
+                  onClick();
                 }
               }}
             >
@@ -67,8 +67,8 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
               size="sm"
               onClick={() => {
                 if(onClick !== undefined){
-                  onClick();
                   handlePrecio("segundaMano");
+                  onClick();
                 }
               }}
             >

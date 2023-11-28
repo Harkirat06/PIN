@@ -32,10 +32,12 @@ function OffCanvasCustom({ context  }) {
         let selectedType = precioSeleccionado[0][propiedad].slice(-1)[0];
         elementos[propiedad] = elementos[propiedad].concat({nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]});
         console.log(selectedType);
+        console.log("product of type " + propiedad + " stored: " + elementos[propiedad].slice(-1)[0].nombre + " " + elementos[propiedad].slice(-1)[0].selectedType + " " + elementos[propiedad].slice(-1)[0].selectedPrice)
       } else {
         let selectedType = precioSeleccionado[0][propiedad];
         elementos[propiedad] = {nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]};
         console.log(selectedType)
+        console.log("product of type " + propiedad + " stored: " + elementos[propiedad].nombre + " " + elementos[propiedad].selectedType + " " + elementos[propiedad].selectedPrice)
       }
       return [elementos]
     })

@@ -3,7 +3,9 @@ import { Container, Row, Button, Col } from 'react-bootstrap';
 
 function PagarNuestro({ context }) {
     return (
-        <Container></Container>
+        <Container>
+            <h1>Buy our product second hand!</h1>
+        </Container>
     );
 }
 

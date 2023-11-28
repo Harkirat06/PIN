@@ -67,13 +67,13 @@ function SelectBuild({ context }) {
             elementos["disco"] = [];
           }
           selectedBuild[propiedad].forEach((item) => {
-            const selectedPrice = getPriceType(item, secondHand);
-            elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]});
+            const selectedType = getPriceType(item, secondHand);
+            elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]});
           });
         } else {
           const item = selectedBuild[propiedad];
-          const selectedPrice = getPriceType(item, secondHand);
-          elementos[propiedad] = {nombre: item.nombre, selectedPrice: selectedPrice, link: item.link[selectedPrice]};
+          const selectedType = getPriceType(item, secondHand);
+          elementos[propiedad] = {nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]};
         }
       });
       return [elementos];

@@ -5,7 +5,7 @@ import "./PaginaPagar.css"
 
 function PaginaPagar({ context }) {
     const { elementosSeleccionados } = useContext(context);
-    
+
     const productList = elementosSeleccionados[0];
     //const productList = Object.values(elementosSeleccionados[0]);
 
@@ -13,7 +13,7 @@ function PaginaPagar({ context }) {
 
     const handleLink = (item) => {
         if (item !== "Elemento no seleccionado") {
-            if (item.selectedPrice == "segundaMano") {
+            if (item.selectedType == "segundaMano") {
                 navigate("/pagarNuestro")
 
             } else {
@@ -35,7 +35,8 @@ function PaginaPagar({ context }) {
                     <Row>
                         <Col>{propiedad + " " + i++}</Col>
                         <Col>{item.nombre}</Col>
-                        <Col onClick={() => handleLink(item,i-1)}>{item.selectedPrice}</Col>
+                        <Col onClick={() => handleLink(item)}>{item.selectedType}</Col>
+                        <Col>{item.selectedPrice} €</Col>
                     </Row>
                 );
             });
@@ -44,7 +45,8 @@ function PaginaPagar({ context }) {
                 <Row>
                     <Col>{propiedad}</Col>
                     <Col>{productList[propiedad].nombre}</Col>
-                    <Col onClick={() => handleLink(productList[propiedad])}>{productList[propiedad].selectedPrice}</Col>
+                    <Col onClick={() => handleLink(productList[propiedad])}>{productList[propiedad].selectedType}</Col>
+                    <Col>{productList[propiedad].selectedPrice} €</Col>
                 </Row>
             );
           }
@@ -53,6 +55,7 @@ function PaginaPagar({ context }) {
             <Row>
                 <Col>{propiedad}</Col>
                 <Col>{"Elemento no seleccionado"}</Col>
+                <Col></Col>
                 <Col></Col>
             </Row>
           );

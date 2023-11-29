@@ -559,56 +559,311 @@ const placasList = [
 
 const gpuList = [
   {
-    marca: "MSI",
-    nombre: "MSI GeForce RTX 3060 VENTUS 2X OC LHR 12GB GDDR6",
-    consumo: 170,
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 4090",
+    consumo: 450,
+    potenciaRecomendada: 850,
+    gama: "Premium",
+    precio: {
+      segundaMano: null,
+        amazon: 2126.05,
+        ebay: 2008.73,
+    },
+    link: {
+        amazon: "https://www.amazon.es/MSI-GeForce-GAMING-Tarjeta-Gr%C3%A1fica/dp/B09YCLG5PB/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=171LY0HEIVS1U&keywords=rtx%2B4090&qid=1701169195&sprefix=rtx%2B4090%2Caps%2C116&sr=8-5&th=1",
+        ebay: "https://www.ebay.es/itm/134776095022?hash=item1f6148012e%3Ag%3AaaIAAOSwi8FlMyCd&amdata=enc%3AAQAIAAAA4I8YIMYPdD7GWSImTRJOwYlZX5dYFJ5E28vL9rK5zwUU9kYLHLmU0ZB5mHV9yQymn2EOJ89mrO1p%2Bw%2F4bZKlWxjbwCjhlgNOU%2F4%2FQW8I8aUuaKrrepF9Ykxi4Bat4d4jnMBklrJCcnCHhPHp3ck4ZV1D7e2H4DbwChH4P78uxSw0O06m%2F%2FiXFSW%2Bey%2BArliOdErfvL8FoNH%2FlQRGK2rpkoqt4g26cQa8Lynn6W6IeliS4b2dCG446GFkUCOHyqeGOU6dnQIKOJbBRSmAKlRUDQZVHNpE75glvU7Oeo6m3nST%7Ctkp%3ABFBMgoe82YJj&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 4080",
+    consumo: 320,
+    potenciaRecomendada: 750,
+    gama: "Alta",
+    precio: {
+      segundaMano: null,
+        amazon: 1397.90,
+        ebay: 1771.00,
+    },
+    link: {
+        amazon: "https://www.amazon.es/Gigabyte-Tarjeta-gr%C3%A1fica-GeForce-Gaming/dp/B0BLT45YZ1/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AND6U64QVCUO&keywords=rtx+4080&qid=1701169474&sprefix=rtx+4080%2Caps%2C99&sr=8-5",
+        ebay: "https://www.ebay.es/itm/364345236792?hash=item54d4ab1d38%3Ag%3AjuMAAOSw-EJktSVd&amdata=enc%3AAQAIAAAA4KvubXjCXPIf%2Bnkgb%2BA%2Bz8M5JKvdVWGQr5IrqpgO7u7PCtmZFpnXf5%2FSYRdsHo%2BhANnpA90C%2B1YhlIdSZIaGsKHPupEfH5y4oNQ2yZjp%2F5%2B%2FR5yRDeJgktIrHu9fXXzC7V5JsywhIWp8V8EYdaGJW4kQMkdpFnsCquAlNCBED7WqhNe62LpIEjm5ohCXlobBTtnVJLVSY0hqpq01jBrAgf5pnQWOZMkI8D8X0cPsZg9nLIi8nmAZdDbRARIqAOIH7VKp0t6fXSo1cxSog%2FXzEHaKK7xDHhZUVLtdq7kCGQI4%7Ctkp%3ABk9SR_j31dmCYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 4070",
+    consumo: 200,
+    potenciaRecomendada: 650,
+    gama: "MediaAlta",
+    precio: {
+      segundaMano: null,
+        amazon: 659.90,
+        ebay: 619.00,
+    },
+    link: {
+        amazon: "https://www.amazon.es/GIGABYTE-GeForce-WINDFORCE-Targeta-gr%C3%A1fica/dp/B0BZDYZ4V5/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TA2I8DTXBX0E&keywords=rtx%2B4070&qid=1701175754&sprefix=rtx%2B4070%2Caps%2C105&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b&th=1",
+        ebay: "https://www.ebay.es/itm/145464737014?hash=item21de5fbcf6%3Ag%3AR4YAAOSw-u5lWNlG&amdata=enc%3AAQAIAAAA4BpG5oPrnCYVek3t3hzB9MKL5Pud0AQF3bHa%2BYkTWSIkQlcCAIq9SHaIpGtNS6VImSkzcA2dbzpdqTXacHlOsOJ2%2BOJtZpM8k%2FJjA%2FymKLARmYeoxL1waKoR425eQ8hH63gxT%2BrRwhIB7mu0iHqQcHsIfpG7JAQBxhXIePV54QjSWEdlZVfY2Pa5UxqvfOZZOuP3lOUIe2YqGihTC3j0DP7PCd3m97%2FJrWBWd7FfQCCfgao5hGy9hh6E6WsrFIkyRWA%2B7eieFwo2KwpIfYeVy86089wetr9nqw%2BnoaW2QCh4%7Ctkp%3ABk9SR-ad1N-CYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 4060",
+    consumo: 115,
     potenciaRecomendada: 550,
     gama: "Media",
     precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
+      segundaMano: null,
+        amazon: 349.90,
+        ebay: 359.99,
     },
-    imagen: "gpu.jpg",
     link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
+        amazon: "https://www.amazon.es/ASUS-Dual-GeForce-White-DUAL-RTX4060-O8G-WHITE/dp/B0C9TM6568/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=5W2YN90SS56G&keywords=rtx+4060&qid=1701175857&sprefix=rtx+4060%2Caps%2C101&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/256319669310?hash=item3badd7c43e%3Ag%3Ad3sAAOSwdJZlZMvG&amdata=enc%3AAQAIAAAAwGLi4TAQpPQfCba2hzE1%2F%2BDLvQHWTkNkuAn1lrK9lSoMeyTi7ZxLvuB1tm2OTbqJTnuwcB%2BpaBg%2Bu5wmmor%2FpalnULcz4mVU88ZYQRQX6%2FOjDqjyj35f7vDOUKHP0YPhlxRCxgXClTklafhpcanp86HAO5WnW8bp30JTH6LQqnVGn4FlFTzwS%2BvMezSkeyC0Zq8TKUFmRlKMaotkPcuAb0tTWNV0cZLDIX0zRjqcRUsu3oC2LANqKV%2Bc6%2F5JXrgpWQ%3D%3D%7Ctkp%3ABk9SR5zE39-CYw&LH_ItemCondition=3",
     },
-  },
-  {
-    marca: "AMD",
-    nombre: "Sapphire Pulse AMD Radeon RX 6700 XT 12GB GDDR6",
-    consumo: 230,
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 3090",
+    consumo: null,
+    potenciaRecomendada: 750,
+    gama: "Premium",
+    precio: {
+      segundaMano: null,
+        amazon: 1849.00,
+        ebay: 1920.79,
+    },
+    link: {
+        amazon: "https://www.amazon.es/NVIDIA-GeForce-RTX-3090-Founders/dp/B08HR6ZBYJ/ref=sr_1_7?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3PVE8Q7WZFSP7&keywords=rtx+3090&qid=1701176129&sprefix=rtx+3090%2Caps%2C102&sr=8-7",
+        ebay: "https://www.ebay.es/itm/375079870918?hash=item575480a1c6%3Ag%3AgisAAOSwbcxlYbOw&amdata=enc%3AAQAIAAAA4Opq%2BDuGYUlV41FJWgscoFcMES9SUTZVrVrtNugyUDk96DDMiedJn4LKta4ZQcNb9ow1XvKtCuRwOPVbZHprDu6nvRxsGobpyElobG02muBKibm9LDrZzuoC4hTjj5ubuFua%2FMR4DS44Uaazk9eFL1od2pFrij5hayeXub6XpUaYDrLNI22m%2Ftfx2YfX%2FuHdCjUYBNYalwxTENFx2oQsAgEyfez%2FHfL3hxRO1z3IQucQoexX45U6lJsra6WJP0odGhySRsXJioujPyrtFROp%2FTp%2F8eLjTbCalYE8AGMv5hTt%7Ctkp%3ABFBMuKSC4IJj&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 3080",
+    consumo: null,
+    potenciaRecomendada: 850,
+    gama: "Alta",
+    precio: {
+      segundaMano: null,
+        amazon: 1123.59,
+        ebay: 550.00,
+    },
+    link: {
+        amazon: "https://www.amazon.es/PNY-GeForce-Tarjeta-gr%C3%A1fica-RevelTM/dp/B09VMMRWHM/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1COE1ACYP2M38&keywords=rtx%2B3080&qid=1701176550&sprefix=rtx%2B3080%2Caps%2C138&sr=8-5&th=1",
+        ebay: "https://www.ebay.es/itm/126186161552?hash=item1d61480590%3Ag%3Ad0cAAOSwwthlDZMu&amdata=enc%3AAQAIAAAAwCHyp6f2Ya85mRuHx%2F3PyvyPMscqDQJcdc0lB6tvbHX7MguNRdaAClauwYo1hvv2gUQWW39HqVP%2FNhC9PQU4eD0TIaSccHsLVYgTOhCk0W94vgTTAmtEFO1qiF4T9YkFEo5%2FrgTFYDrOB12JVBr9%2BFAFP%2F0xPJ1VWVpEoKgskDutapgZDQoXFg7bVakk89LD0Lq6BATO9bCo1gmC5TdZ63cqc6vDwfRnuYksLB6SSGcqd3Bz%2BmaTYb5DNHE5k%2F4RaA%3D%3D%7Ctkp%3ABk9SR-qhteCCYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 3070",
+    consumo: null,
     potenciaRecomendada: 650,
     gama: "Media",
     precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
+      segundaMano: null,
+        amazon: 561.93,
+        ebay: 492.49,
     },
-    imagen: "gpu.jpg",
     link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
+        amazon: "https://www.amazon.es/Gigabyte-Technology-GV-N3070GAMING-OC-8GD-V2/dp/B096Y2NLV4/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3S84MNT1FUARW&keywords=rtx+3070&qid=1701176683&sprefix=rtx+3070%2Caps%2C95&sr=8-5&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/166398645108?hash=item26be21d374%3Ag%3AmCoAAOSwsINlOtOp&amdata=enc%3AAQAIAAAA4Gt7snwgY%2FsKfmY3LsmzGk0ZEpX6QocAYQSOU8miuceryk4VzsRT8loicHxDkle%2FiY6O7bGLsvmxgwpx%2FqrsTgV6UEG4iRBkPmd%2B2zOdFt6L4a7xzYMj%2FUUXFjL2VDvheU8bSk3ZDM2udguP2pQytPTb4Rea3Z8w5Te9UFretWQA2K9r73WDA4cfWnq0lvroXMo%2FNnjC0RMrHZRvekHSbryUUvDzUjaLaD3scloIc8nXubDLFCN2vJx28zCwu35romEel94Xo4vssHZxoW60z4FlYDGQVnTN2HiwK1tWBiiI%7Ctkp%3ABFBM-OXF4IJj&LH_ItemCondition=1000",
     },
-  },
-  {
-    marca: "Gigabyte",
-    nombre: "Gigabyte GeForce RTX 4070 Windforce OC 12 GB GDDR6X DLSS3",
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 3060",
+    consumo: 170,
+    potenciaRecomendada: 600,
+    gama: "MediaBaja",
+    precio: {
+      segundaMano: null,
+        amazon: 299.90,
+        ebay: 309.90,
+    },
+    link: {
+        amazon: "https://www.amazon.es/ASUS-GeForce-DisplayPort-Ventiladores-Axial-Tech/dp/B096658ZWP/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2RD746XZ59OHK&keywords=rtx+3060&qid=1701176960&sprefix=rtx+3060%2Caps%2C103&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/196092642442?hash=item2da808448a:g:yWEAAOSw4WdlXdNt&amdata=enc%3AAQAIAAAAwLWX%2BBRSTyNmE3VNrbDz3dxc61VdmcDM9G2tlvrR053D0dik1Zz7RUAfFqSS4hctv8tvvrY%2BYnFKuyPqLEYWekuDBihqQSqq3mCxCdARDwWOqgzr9%2B%2F7edGMsd6K2lMU0HeqJeorZODCYwGP9x7pRu1xUQqb60QsiZiS50F%2Fb0kL1tX6G7XdC9TlgMI3LN5ogCnn9WZZoLSXTrwSlYtKSx5%2BrVErWhgJZJvNVobDHgUKgO4rXFItHc0PSKBOVfyDjA%3D%3D%7Ctkp%3ABk9SR9rb-6CDYw",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "Nvidia",
+    nombre: "Nvidia RTX 3050",
+    consumo: 115,
+    potenciaRecomendada: 500,
+    gama: "Baja",
+    precio: {
+      segundaMano: null,
+        amazon: 239.90,
+        ebay: 213.20,
+    },
+    link: {
+        amazon: "https://www.amazon.es/MSI-GeForce-RTX-3050-Ventus/dp/B09Y57F1HL/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=262MFVN5QKJA3&keywords=rtx%2B3050&qid=1701244342&sprefix=rtx%2B3050%2Caps%2C95&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b&th=1",
+        ebay: "https://www.ebay.es/itm/296075779404?hash=item44ef7ddd4c%3Ag%3A5EoAAOSwWA5lXs-%7E&amdata=enc%3AAQAIAAAA4H7UiH5HPGLmsMvy5HjrWar%2B9AaSQMcTC%2B4tdaeDksaW34aPFPDD6MHLu9i7Ba4fPKntnq5oG4J3LNtQOuvrYvvaO4zusAwA457DtZiHJwYcY0TR5b4KtRKpulNmhbtzZlSUKj1ZCX%2FfAoCNB5lDrIw%2B61NgOj88ggn4PCDQaKEF3T07pfDI7EoiRDbNkYqRcGfbViLJm3Ho3Fp2tLqiAXSG6ZbJK0WKGIlZmLtLCe2CirZGpGKsoyDIWyTTe1loznUnTXBu0KiUil3dLKCvq5kzQaMhFIhpMU2sTusUWm25%7Ctkp%3ABk9SR7iKiaGDYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 7900 XTX",
+    consumo: 420,
+    potenciaRecomendada: 800,
+    gama: "Alta",
+    precio: {
+      segundaMano: null,
+        amazon: 1069.00,
+        ebay: 998.99,
+    },
+    link: {
+        amazon: "https://www.amazon.es/SAPPHIRE-Pulse-Radeon-7900-GDDR6/dp/B0BQNCSW3X/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=384HK2HNK47HD&keywords=rx+7900+xt&qid=1701245245&sprefix=rx+7900+xtx%2Caps%2C188&sr=8-2",
+        ebay: "https://www.ebay.es/itm/266491008764?hash=item3e0c1a16fc%3Ag%3AAd0AAOSwsMtlR1zW&amdata=enc%3AAQAIAAAA4FfoJz0qVuqsVyf6PXyJndTkKALc0OHtwR%2F41q5LpkczVWLbKfbqoyUEGKaBoVg9BOlXA%2Fb0iNJc44fgslvGXhxzy332KrGSvq1mUpQIg1YxitiZ74B26V98bRtx5szByMtRoBZhPrHyrEZAOvYGGu8cKfUtGPkyd2xVxGw1wBK%2BmYtNus8fxRjFnbNi0WONd%2Br3FGv%2FRxoWLq0xNZu6MApSztzguGJOiXLK9jYYu4nqF%2FdLGl7818ncB8meND1mMFqiy6FfRh0PbedCFOht1AHg6LI6tXzHp6%2BkxiQfuEOh%7Ctkp%3ABk9SR5bOiKKDYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 7800 XT",
+    consumo: 266,
+    potenciaRecomendada: 700,
+    gama: "MediaAlta",
+    precio: {
+      segundaMano: null,
+        amazon: 599.90,
+        ebay: 500.00,
+    },
+    link: {
+        amazon: "https://www.amazon.es/SAPPHIRE-Radeon-Gaming-RX7800XT-Ventiladores/dp/B0CGLYWWKX/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2WT4JITINIBEV&keywords=rx+7800+xt&qid=1701245669&sprefix=rx+7800+xt%2Caps%2C102&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/404633964638?hash=item5e3610505e%3Ag%3AP48AAOSw2JRlW0aB&amdata=enc%3AAQAIAAAA4O5hTI8F2yQSUAaIjZDt%2B69xwBznYd7q2ZC97zIkIVmew51x1DYvsFD4%2F1zBp%2Be7%2B70CVG9SQfOWhUXVHCpr%2FoUyPci63PoAFRLLc8WpuwKtleH32nt3WPL3eFRNEp7WqO3SaYVGRdbogGUBZiRnar9UWmyahmj0odxdScE2Da61RdrND9rAFZFoWxzkF6JJoSghuUp%2Fsx2qkZ1KMYgWg2JC2UJf8dA7zQ9DXtYzMgqhgePknf8smnEHIV2odOTVzhJmobIvsTVtqJGjHybfPgueeOXzYDWBaAmCKv3zTPuS%7Ctkp%3ABk9SR4ToqaKDYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 7700 XT",
     consumo: null,
     potenciaRecomendada: 750,
     gama: "MediaAlta",
     precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
+        segundaMano: null,
+          amazon: 540.41,
+          ebay: 554.81,
+      },
+      link: {
+          amazon: "https://www.amazon.es/SAPPHIRE-Radeon-Gaming-RX7700XT-Ventiladores/dp/B0CGLYPBHS/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=13KW7AJKOW43A&keywords=rx+7700+xt&qid=1701245793&sprefix=rx+7700+xt%2Caps%2C95&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+          ebay: "https://www.ebay.es/itm/235294245582?hash=item36c8a142ce%3Ag%3AwysAAOSwal1lUDI8&amdata=enc%3AAQAIAAAAwMcCPbiSqThwHFsoTryd0cFXw3bk5lMdKW4OnYAFXSE9eQ7K6zMzo9%2BY705JBTDhpLJVjNjF%2FlM3eZTGC3rbwiUbFbR6EUSsL5WIUMYK0upA61bhnJLoOWjhop3zk%2FZfJEDIcXB8IFVlTa2pTS4wu9aQyHIb2vLGqmijYKicQ71mDmmZexnQZZUqsWDRoz6jjsSOwkoo9xYjz3nP356dM%2BfQICyQ2m7N6rJ8LDPOyDXR9MU0UGWe%2BBauWcmR3AQ6gg%3D%3D%7Ctkp%3ABk9SR8rCwKKDYw&LH_ItemCondition=3",
+      },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 7600",
+    consumo: 165,
+    potenciaRecomendada: null,
+    gama: "Media",
+    precio: {
+      segundaMano: null,
+        amazon: 299.90,
+        ebay: 398.88,
     },
-    imagen: "gpu.jpg",
     link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
+        amazon: "https://www.amazon.es/Sapphire-Pulse-11324-01-20G-Radeon-7600/dp/B0C49S5R55/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=8G6CE8MDXPQX&keywords=rx+7600+xt&qid=1701246039&sprefix=rx+7600+xt%2Caps%2C87&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/325900863602?hash=item4be1348872%3Ag%3ATmMAAOSw1ORlYfuQ&amdata=enc%3AAQAIAAAA4ETW%2FKFSTs7a1tRhmOZCrYgiUSskuXcpPv9O%2FxphIyB2gDUvDbxHvR4ciXS2nFK%2B2DEIoceDfF4D3fKiPtzHhaHg0ExXslbhpVtdBU64ZoMWpoORUBtzlOh1jdu6wnc6qBnqvfJLZWAAMAy5EERzey6Iu%2FEBBypyjSLEMgQ8AZ3prS07VvEj3YRXRyKsveNqrSdwKcUVDItWN%2BYPOq2XGyMrUrQ7eLMbsMtxPtF3Ki83DWiviISMx7syX9vMx%2BL%2BWwsLyty9%2FxxRvrFSf52pZYnUTGSgPqbD0LdT1IQRYBzz%7Ctkp%3ABFBMktDXooNj&LH_ItemCondition=1000",
     },
-  },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 6900 XT",
+    consumo: null,
+    potenciaRecomendada: 900,
+    gama: "Alta",
+    precio: {
+      segundaMano: null,
+        amazon: 1024.88,
+        ebay: 898.00,
+    },
+    link: {
+        amazon: "https://www.amazon.es/PowerColor-Radeon-Ultimate-Memoria-Alimentado/dp/B09258PCFS/ref=sr_1_3?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2GO9XKM6571RI&keywords=rx+6900+xt&qid=1701246488&sprefix=rx+6900+xt%2Caps%2C112&sr=8-3",
+        ebay: "https://www.ebay.es/itm/125140333526?hash=item1d22f1f3d6%3Ag%3AtD4AAOSw9r9iA9zT&amdata=enc%3AAQAIAAAA4HOb9p2XeTFMilDmRdwxIUaxicwYbOdDQx2yh%2FCoB0u4RMTBl63GDHzTFjqV5bvq66PvumeGOELkClHS%2BruFWBtYVV%2B53WkO6VgXkOikMPPb2toAHJq9LAjl3hO4bNAGECiXlXh21SHgj3Pl5rgVrYX3MR1T7cmFPqP9vbI5MgPqHErcz3%2FS241wQ2JiU3a0Fuo4Wf4C6TyumwYAAUy3pKgZFXnSOCZdWmIId76m1phrk%2F3Lc9nxK6aiIh585WghEnEXWhU1QCZihfZDk3sxMP4hsq06WQ5kXD3jMhcTFpQc%7Ctkp%3ABk9SR9rEjqODYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 6800 XT",
+    consumo: null,
+    potenciaRecomendada: 800,
+    gama: "Alta",
+    precio: {
+      segundaMano: null,
+        amazon: 524.00,
+        ebay: 578.50,
+    },
+    link: {
+        amazon: "https://www.amazon.es/XFX-Speedster-MERC319-Radeon-6800/dp/B08TJ2BHCQ/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=34W3045IR4URE&keywords=rx+6800+xt&qid=1701246675&sprefix=rx+6800+xt%2Caps%2C87&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/235237270409?hash=item36c53be389%3Ag%3ANdcAAOSwCyllGiH4&amdata=enc%3AAQAIAAAA4AiEVEc5RAIUuEGqplljCkMwLCwASd24ak4nGFkbHuQdS0Tc%2B5GRwHK2Jkv7j8EodWimNB2pVDvDDsXOUiXyQUnhd0TYlrurCEjKF4piMK6gg8lmB9v%2FKch5WH%2F7McuxkRoDntP4gBQGfzDTnTW9OSbdjv5jigmAdcj0X5CY05iJxvt4qvNy%2F%2BTPqOTGmny3eUfsA6vvZC1wwvnooJGcB9k3BeEqqJUGY2YPU0BSsZY9NB4C1UPm%2Fv3sJUwILB%2F03PkbmXIZfI8a6rqkkQCPGcKZeOUX%2B32BsvNMRv4RFjpF%7Ctkp%3ABk9SR6DSpqODYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 6700 XT",
+    consumo: null,
+    potenciaRecomendada: 650,
+    gama: "Media",
+    precio: {
+      segundaMano: null,
+        amazon: 376.84,
+        ebay: 339.88,
+    },
+    link: {
+        amazon: "https://www.amazon.es/PowerColor-Fighter-AMD-Radeon-6700/dp/B08Y91QVG8/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=28IFIRL4XCDR1&keywords=rx+6700+xt&qid=1701246795&sprefix=rx+6700+xt%2Caps%2C109&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/126191450628?hash=item1d6198ba04%3Ag%3AFCsAAOSw11tlV31l&amdata=enc%3AAQAIAAAAwIo2xc3wth0jlrnph%2FsIZgoJdM6Qsw6dDt5xVgcB5EVAzf41XZCV0ql%2FVKjgxBv%2BpJN2Rb2YSWWAGSRB4Y5TGUmFOqObbBoalI3NREH%2F8GsXubI9RqgFjSqG5bOcxjlCctpH0bXLPyLceicx6dZD7U9XljXdzBylr0SdoDSV50xuCiAYgDYM5ev9roa4zn0hFd17wODQYDoh4pBjxXMnHfpRcGPpZKwccWcK8avBh1qhJHk6fMVAlAD0qNrNPHVZ6Q%3D%3D%7Ctkp%3ABk9SR8ros6ODYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 6600",
+    consumo: null,
+    potenciaRecomendada: 500,
+    gama: "MediaBaja",
+    precio: {
+      segundaMano: null,
+        amazon: 237.76,
+        ebay: 209.35,
+    },
+    link: {
+        amazon: "https://www.amazon.es/Gigabyte-Technology-Radeon-6600-Eagle/dp/B09JCKJ2G9/ref=sr_1_2_mod_primary_new?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=QRP3VDGNCZI6&keywords=rx+6600+xt&qid=1701246994&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=rx+600+xt%2Caps%2C141&sr=8-2",
+        ebay: "https://www.ebay.es/itm/296018655401?hash=item44ec1638a9%3Ag%3AZqwAAOSwpE5lYpUU&amdata=enc%3AAQAIAAAAwPOXqPd6H2hXogZk0DeVYutPfCM45r6HG3ngpCM9sMOI1k%2BpAzOQG2t9sJHPsDm4etNOsJk5iR5TVc%2B8sHKtdE3TPsSR5ToHm6Yl%2BDMLUjgBpXESk%2BOPDMLRRvAvRWkK84wJ3I8euTnQs0s8I30x%2Bfq6D5AL%2BPD6rXX8xmKz2pj7j%2FeSJSHnQST1oqjG%2FcgfCQKwPiQKNV15L46UJHmlPD3tNF9tRAW48RqsucVdcU1p9%2Fhm2Q%2Fi7keGVilrtnBIww%3D%3D%7Ctkp%3ABk9SR4bg2KODYw&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
+{
+    marca: "AMD",
+    nombre: "AMD Radeon RX 6500 XT",
+    consumo: null,
+    potenciaRecomendada: 400,
+    gama: "Baja",
+    precio: {
+      segundaMano: null,
+        amazon: 165.90,
+        ebay: 176.30,
+    },
+    link: {
+        amazon: "https://www.amazon.es/MSI-2825Mhz-tarjeta-gr%C3%A1fica-4719072929985/dp/B09R1RVN3R/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=222QR235RF8SF&keywords=rx+6500+xt&qid=1701247387&sprefix=rx+6500+xt%2Caps%2C143&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+        ebay: "https://www.ebay.es/itm/225881626060?hash=item34979815cc%3Ag%3ArjgAAOSwHZxlXOIZ&amdata=enc%3AAQAIAAAA4GsZWXJ1aknBC0Q48n4qeQEf%2FayLar4AdYk5qnNHrp4Kiq7RGEZEdv4wnJINVwgAdGL9LaBKzF%2Bp26saUHbAEtajgqh2cYyZcSAhnoOEPvdtrfkKsfPrQeZTFE8Efrg0xHQEOrtaaCkXqbJ0JQTB4KLvEsP9mKtiyVRzq841O3xoU7HtE1DZ2BBX0r5Db0WxcSYyS7OiksFyzVG8IpumHJr7ui4GdgpLmeyoGu32aSVhQ6AnJZ%2F2%2F0P3fiHxXRHTpz4t5Vz957NhP8tWTwEgGLA67GLFoInB2YIGcMT7rSzW%7Ctkp%3ABFBMruqNpINj&LH_ItemCondition=1000",
+    },
+    imagen: "gpu.jpg"
+},
 ];
 
 const ramList = [

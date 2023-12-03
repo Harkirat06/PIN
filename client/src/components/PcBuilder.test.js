@@ -5,5 +5,5 @@ import {prettyDOM, render, fireEvent} from "@testing-library/react"
 test("",()=>{
     const componente = render(<h1>Hola Mundo</h1>)
     const h1 = componente.getByText("Hola Mundo")
-    console.log(prettyDOM(h1) + "")
+    console.log(prettyDOM(h1))
 })

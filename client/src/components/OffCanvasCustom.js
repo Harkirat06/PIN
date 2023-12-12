@@ -13,13 +13,12 @@ function OffCanvasCustom({ context  }) {
     setBuild,
     setElementosSeleccionados,
     elementosSeleccionados,
-    nombreLista,
-    precioSeleccionado
+    nombreLista
   } = useContext(context);
   let i = 0;
   const handleClose = () => setShow(false);
 
-  const handleBuild = (item) => {
+  const handleBuild = (item, selectedType) => {
     let propiedad = nombreLista.replace("List", "");
     console.log(propiedad)
 
@@ -30,12 +29,10 @@ function OffCanvasCustom({ context  }) {
         if (elementos[propiedad] == "Elemento no seleccionado") {
           elementos[propiedad] = []
         }
-        let selectedType = precioSeleccionado[0][propiedad].slice(-1)[0];
         elementos[propiedad] = elementos[propiedad].concat({nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]});
         console.log(selectedType);
         console.log("product of type " + propiedad + " stored: " + elementos[propiedad].slice(-1)[0].nombre + " " + elementos[propiedad].slice(-1)[0].selectedType + " " + elementos[propiedad].slice(-1)[0].selectedPrice)
       } else {
-        let selectedType = precioSeleccionado[0][propiedad];
         elementos[propiedad] = {nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]};
         console.log(selectedType)
         console.log("product of type " + propiedad + " stored: " + elementos[propiedad].nombre + " " + elementos[propiedad].selectedType + " " + elementos[propiedad].selectedPrice)
@@ -94,7 +91,7 @@ function OffCanvasCustom({ context  }) {
                     precio = {item.precio}
                     esMarketing={false}
                     context={context}
-                    onClick={(precioSeleccionado) => handleBuild(item, precioSeleccionado)}
+                    onClick={(selectedType) => handleBuild(item, selectedType)}
                   />
                 </div>
               ))

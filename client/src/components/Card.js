@@ -3,27 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 
 function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
-  const { precioSeleccionado, setPrecioSeleccionado, nombreLista } =
-    useContext(context);
-  const handlePrecio = (tipo) => {
-    setPrecioSeleccionado(() => {
-      let elementos = { ...precioSeleccionado[0] };
-      let propiedad = nombreLista.replace("List", "");
-      console.log(propiedad)
-      console.log(tipo)
-      if (propiedad === "disco") {
-        if (elementos[propiedad] === "") {
-          elementos[propiedad] = [tipo];
-        } else {
-          elementos[propiedad] = elementos[propiedad].concat(tipo);
-        }
-      }else{
-        elementos[propiedad] = tipo;
-      }
-      console.log(precioSeleccionado);
-      return [elementos];
-    });
-  };
+  
   return (
     <Card className="w-100 col-lg-6 col-md-8 col-sm-10">
       <Card.Img variant="top" src={"/image/" + imagen} className="productImg" />
@@ -37,8 +17,7 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
               size="sm"
               onClick={() => {
                 if(onClick !== undefined){
-                  handlePrecio("amazon");
-                  onClick();
+                  onClick("amazon");
                 }
               }}
             >
@@ -54,8 +33,7 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
               size="sm"
               onClick={() => {
                 if(onClick !== undefined){
-                  handlePrecio("ebay");
-                  onClick();
+                  onClick("ebay");
                 }
               }}
             >
@@ -71,9 +49,7 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
               size="sm"
               onClick={() => {
                 if(onClick !== undefined){
-                  handlePrecio("segundaMano");
-                  console.log(precioSeleccionado);
-                  onClick();
+                  onClick("segundaMano");
                 }
               }}
             >

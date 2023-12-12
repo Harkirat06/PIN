@@ -30,21 +30,6 @@ function StateProvider({ context, children }) {
       raton: "Elemento no seleccionado",
     },
   ]);
-  const [precioSeleccionado, setPrecioSeleccionado] = useState([
-    {
-      placas: "",
-      cpu: "",
-      gpu: "",
-      ram: "",
-      disipador: "",
-      fuente: "",
-      disco: "",
-      caja: "",
-      monitor: "",
-      teclado: "",
-      raton: "",
-    },
-  ]);
 
   const contextValue = useMemo(
     () => ({
@@ -68,8 +53,6 @@ function StateProvider({ context, children }) {
       setListaComponente,
       nombreLista,
       setNombreLista,
-      precioSeleccionado,
-      setPrecioSeleccionado,
       login,
       setLogin,
       user,
@@ -88,7 +71,6 @@ function StateProvider({ context, children }) {
       elementosSeleccionados,
       listaComponente,
       nombreLista,
-      precioSeleccionado,
       login,
       user,
       checkboxState

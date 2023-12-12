@@ -25,7 +25,7 @@ function Cards({ context }) {
             </div>
           ))
         ) : (
-          <h1 className="noRes">No hay resultados</h1>
+          <h1 className="noRes">No Results</h1>
         )}
       </div>
     </div>

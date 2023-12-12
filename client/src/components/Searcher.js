@@ -41,8 +41,8 @@ function Searcher({ context }) {
 
   return (
     <div className="search-wrapper">
-        <label htmlFor="search-form">
-          <form onSubmit={filter}>
+        <label htmlFor="search-form"/>
+          <form onSubmit={filter} className="search-form">
             <input
               type="search"
               name="search-form"
@@ -55,7 +55,6 @@ function Searcher({ context }) {
               }}
             />
           </form>
-        </label>
       </div>
   );
 }

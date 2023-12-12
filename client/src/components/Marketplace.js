@@ -56,9 +56,9 @@ function Marketplace({context}) {
         {/*<Button onClick={() => navigate("/SelectBuild")} className="selectBtn">
           Select Build
   </Button>*/}
-        <Searcher context={context}></Searcher>
+        <Searcher context={context} className="searcher"></Searcher>
         <Form>
-          <div key={`default-${'checkbox'}`} className="mb-3">
+          <span key={`default-${'checkbox'}`} className="mb-3">
             <span>Second-hand only</span>
             <input // prettier-ignore
               type="checkbox"
@@ -67,7 +67,7 @@ function Marketplace({context}) {
               onChange={handleCheckboxChange}
               className="checkBox"
               />
-          </div>
+          </span>
         </Form>
       </div>
       <Row className="productsList"><Cards context={context}></Cards></Row>

@@ -9,6 +9,8 @@ function PaginaPagar({ context }) {
     const productList = elementosSeleccionados[0];
     //const productList = Object.values(elementosSeleccionados[0]);
 
+    let total = 0;
+
     const navigate = useNavigate();
 
     const handleLink = (item) => {
@@ -28,6 +30,7 @@ function PaginaPagar({ context }) {
           if (Array.isArray(productList[propiedad])) {
             let i = 1;
             return productList[propiedad].map((item) => {
+                total += item.selectedPrice;
                 return (
                     <Row>
                         <Col>{propiedad + " " + i++}</Col>
@@ -38,6 +41,7 @@ function PaginaPagar({ context }) {
                 );
             });
           } else {
+            total += productList[propiedad].selectedPrice;
             return (
                 <Row>
                     <Col>{propiedad}</Col>
@@ -77,6 +81,12 @@ function PaginaPagar({ context }) {
             {Object.keys(productList).map((propiedad) => (
                 handleSeleccion(propiedad)
             ))}
+            <Row>
+                <Col/>
+                <Col/>
+                <Col/>
+                <Col>{total} €</Col>
+            </Row>
 
             <Button onClick={() => openLinks()}>Abrir Links</Button>
             <Button>Pagar</Button>

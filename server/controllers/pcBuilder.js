@@ -76,13 +76,21 @@ const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
   return lista;
 };
 
-const handleDisipador = (lista, cpu = {}) => {
-  if (cpu.ventilador === true) {
+const handleDisipador = (lista, cpu) => {
+  console.log("Soy LA LISTA"+lista)
+  console.log("Soy LA CPU" + cpu)
+  if(cpu){
+  if (cpu.ventilador === false) {
     return lista;
   } else {
     console.log("Ventilador falso")
     return [];
   }
+}
+else{
+  console.log("Else")
+  return lista
+}
 };
 
 const handleFuente = (lista, cpu, gpu) => {

@@ -2,7 +2,7 @@ const {Schema, model} = require("mongoose")
 const cpuListSchema = new Schema({
     marca: String,
     nombre: String,
-    gama: Number,
+    gama: String,
     socket: String,
     consumo: Number,
     tipoRam: String,
@@ -25,7 +25,7 @@ const placasListSchema = new Schema({
     nombre: String,
     socket: String,
     tipoRam: String,
-    gama: Number,
+    gama: String,
     numeroM2: Number,
     numeroSata: Number,
     precio: {
@@ -45,7 +45,7 @@ const gpuListSchema = new Schema({
     nombre: String,
     consumo: Number,
     potenciaRecomendada: Number,
-    gama: Number,
+    gama: String,
     precio: {
       segundaMano: Number,
       amazon: Number,
@@ -63,7 +63,7 @@ const ramListSchema = new Schema({
     nombre: String,
     tipo: String,
     capacidad: Number,
-    gama: Number,
+    gama: String,
     precio: {
       segundaMano: Number,
       amazon: Number,
@@ -81,7 +81,7 @@ const discoListSchema = new Schema({
     nombre: String,
     capacidad: Number,
     tecnologia: String,
-    gama: Number,
+    gama: String,
     precio: {
       segundaMano: Number,
       amazon: Number,
@@ -97,7 +97,7 @@ const discoListSchema = new Schema({
 const monitorListSchema = new Schema({
     marca: String,
     nombre: String,
-    gama: Number,
+    gama: String,
     precio: {
       segundaMano: Number,
       amazon: Number,
@@ -113,7 +113,7 @@ const monitorListSchema = new Schema({
 const disipadorListSchema = new Schema({
     marca: String,
     nombre: String,
-    gama: Number,
+    gama: String,
     precio: {
       segundaMano: Number,
       amazon: Number,
@@ -129,7 +129,7 @@ const disipadorListSchema = new Schema({
 const cajaListSchema = new Schema({
   marca: String,
   nombre: String,
-  gama: Number,
+  gama: String,
   precio: {
     segundaMano: Number,
     amazon: Number,
@@ -145,9 +145,8 @@ const cajaListSchema = new Schema({
 const fuenteListSchema = new Schema({
   marca: String,
   nombre: String,
-  potencia: String,
-  ochentaplus: String,
-  gama: Number,
+  potencia: Number,
+  gama: String,
   precio: {
     segundaMano: Number,
     amazon: Number,
@@ -163,7 +162,7 @@ const fuenteListSchema = new Schema({
 const ratonListSchema = new Schema({
   marca: String,
   nombre: String,
-  gama: Number,
+  gama: String,
   precio: {
     segundaMano: Number,
     amazon: Number,
@@ -179,7 +178,7 @@ const ratonListSchema = new Schema({
 const tecladoListSchema = new Schema({
   marca: String,
   nombre: String,
-  gama: Number,
+  gama: String,
   precio: {
     segundaMano: Number,
     amazon: Number,

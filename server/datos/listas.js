@@ -485,7 +485,7 @@ const placasList = [
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 86.98,
           ebay: 89.50,
       },
@@ -504,7 +504,7 @@ const placasList = [
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 192.90,
           ebay: 132.77,
       },
@@ -523,7 +523,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 241.99,
           ebay: 326.59,
       },
@@ -542,7 +542,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 456.90,
           ebay: 452.99,
       },
@@ -561,7 +561,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 491.20,
           ebay: 405.93,
       },
@@ -580,7 +580,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 1270.45,
           ebay: 1212.89,
       },
@@ -599,7 +599,7 @@ const placasList = [
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 88.65,
           ebay: 78.82,
       },
@@ -618,7 +618,7 @@ const placasList = [
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 88.65,
           ebay: 78.82,
       },
@@ -637,7 +637,7 @@ const placasList = [
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 209.80,
           ebay: 236.49,
       },
@@ -656,7 +656,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 315.31,
           ebay: 239.50,
       },
@@ -675,7 +675,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 315.31,
           ebay: 239.50,
       },
@@ -694,7 +694,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 370.99,
           ebay: 331.39,
       },
@@ -713,7 +713,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 458.90,
           ebay: 448.99,
       },
@@ -732,7 +732,7 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 833.82,
           ebay: 719.33,
       },
@@ -1061,7 +1061,7 @@ let ramList = [
       capacidad: 8,
       gama: "Baja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 25.50,
           ebay: 30.00,
       },
@@ -1078,7 +1078,7 @@ let ramList = [
       capacidad: 16,
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 47.81,
           ebay: 60.20,
       },
@@ -1095,7 +1095,7 @@ let ramList = [
       capacidad: 8,
       gama: "Baja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 27.99,
           ebay: 35.73,
       },
@@ -1112,7 +1112,7 @@ let ramList = [
       capacidad: 16,
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 25.50,
           ebay: 30.00,
       },
@@ -1129,7 +1129,7 @@ let ramList = [
       capacidad: 16,
       gama: "MediaBaja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 133.99,
           ebay: 140.16,
       },
@@ -1146,7 +1146,7 @@ let ramList = [
       capacidad: 32,
       gama: "MediaAlta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 134.99,
           ebay: 172.58,
       },
@@ -1163,7 +1163,7 @@ let ramList = [
       capacidad: 64,
       gama: "Alta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 240.99,
           ebay: 286.31,
       },
@@ -1180,7 +1180,7 @@ let ramList = [
       capacidad: 128,
       gama: "Premium",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 621.35,
           ebay: 515.61,
       },
@@ -1200,7 +1200,7 @@ const discoList = [
       tecnologia: "Sata",
       gama: "Baja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 33.90,
           ebay: 49.90,
       },
@@ -1217,7 +1217,7 @@ const discoList = [
       tecnologia: "Sata",
       gama: "MediaBaja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 25.63,
           ebay: 32.55,
       },
@@ -1234,7 +1234,7 @@ const discoList = [
       tecnologia: "Sata",
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 71.46,
           ebay: 56.52,
       },
@@ -1251,7 +1251,7 @@ const discoList = [
       tecnologia: "Sata",
       gama: "MediaAlta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 57.75,
           ebay: 55.04,
       },
@@ -1268,7 +1268,7 @@ const discoList = [
       tecnologia: "Sata",
       gama: "Alta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 65.50,
           ebay: 78.49,
       },
@@ -1285,7 +1285,7 @@ const discoList = [
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -1302,7 +1302,7 @@ const discoList = [
       tecnologia: "m2",
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 45.94,
           ebay: 71.20,
       },
@@ -1319,7 +1319,7 @@ const discoList = [
       tecnologia: "m2",
       gama: "MediaAlta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 52.99,
           ebay: 60.80,
       },
@@ -1336,7 +1336,7 @@ const discoList = [
       tecnologia: "m2",
       gama: "Alta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 109.99,
           ebay: 99.28,
       },
@@ -1353,7 +1353,7 @@ const discoList = [
       tecnologia: "m2",
       gama: "Premium",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 280.99,
           ebay: 331.39,
       },
@@ -1371,7 +1371,7 @@ const monitorList = [
       nombre: "AOC 24B2XH 23.8 LED IPS FullHD 75Hz",
       gama: "Baja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 79.90,
           ebay: 144.37,
       },
@@ -1386,7 +1386,7 @@ const monitorList = [
       nombre: "Lenovo G24e-20 23.8 LED FullHD 120Hz FreeSync",
       gama: "MediaBaja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 147.96,
           ebay: 182.51,
       },
@@ -1401,7 +1401,7 @@ const monitorList = [
       nombre: "AOC Q27G2E 27 LED QHD 155Hz FreeSync Premium",
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 189.90,
           ebay: 332.03,
       },
@@ -1416,7 +1416,7 @@ const monitorList = [
       nombre: "AOC C27G2ZE/BK 27 LED FullHD 240Hz FreeSync Premium Curva",
       gama: "MediaAlta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 193.91,
           ebay: 378.16,
       },
@@ -1431,7 +1431,7 @@ const monitorList = [
       nombre: "BenQ PD2705U 27 LED IPS UltraHD 4K FreeSync USB-C",
       gama: "Alta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 399.99,
           ebay: 427.44,
       },
@@ -1446,7 +1446,7 @@ const monitorList = [
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -1464,7 +1464,7 @@ const disipadorList = [
       nombre: "Cooler Master Hyper 212 Halo White Ventilador CPU 120mm",
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 44.99,
           ebay: 34.51,
       },
@@ -1479,7 +1479,7 @@ const disipadorList = [
       nombre: "Noctua NH-U9TR4-SP3",
       gama: "MediaAlta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 89.90,
           ebay: 153.34,
       },
@@ -1494,7 +1494,7 @@ const disipadorList = [
       nombre: "Cooler Master MasterLiquid Lite 240",
       gama: "Alta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 59.89,
           ebay: 110.71,
       },
@@ -1509,7 +1509,7 @@ const disipadorList = [
       nombre: "Corsair iCUE H170i ELITE LCD XT",
       gama: "Premium",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 382.99,
           ebay: 208.34,
       },
@@ -1527,7 +1527,7 @@ const cajaList = [
       nombre: "Cooler Master MasterBox MB600L V2",
       gama: "Baja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 81.02,
           ebay: 106.99,
       },
@@ -1542,7 +1542,7 @@ const cajaList = [
       nombre: "Cooler Master CMP 520",
       gama: "MediaBaja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 83.36,
           ebay: 87.57,
       },
@@ -1557,7 +1557,7 @@ const cajaList = [
       nombre: "Cooler Master Silencio S400",
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 110.93,
           ebay: 119.83,
       },
@@ -1572,7 +1572,7 @@ const cajaList = [
       nombre: "Cooler Master MasterCase H500",
       gama: "MediaAlta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 116.90,
           ebay: 146.39,
       },
@@ -1587,7 +1587,7 @@ const cajaList = [
       nombre: "Cooler Master HAF 700",
       gama: "Alta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 426.95,
           ebay: 385.50,
       },
@@ -1602,7 +1602,7 @@ const cajaList = [
       nombre: "Cooler Master Cosmos C700M",
       gama: "Baja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 511.46,
           ebay: 504.94,
       },
@@ -1621,7 +1621,7 @@ const fuenteList = [
       potencia: 500,
       gama: "Baja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 18.49,
           ebay: 15.95,
       },
@@ -1637,7 +1637,7 @@ const fuenteList = [
       potencia: 700,
       gama: "MediaBaja",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 31.94,
           ebay: 39.90,
       },
@@ -1653,7 +1653,7 @@ const fuenteList = [
       potencia: 650,
       gama: "Media",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 43.44,
           ebay: 85.84,
       },
@@ -1669,7 +1669,7 @@ const fuenteList = [
       potencia: 850,
       gama: "MediaAlta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 74.89,
           ebay: 49.99,
       },
@@ -1685,7 +1685,7 @@ const fuenteList = [
       potencia: 1000,
       gama: "Alta",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 89.90,
           ebay: 69.98,
       },
@@ -1701,7 +1701,7 @@ const fuenteList = [
       potencia: 1200,
       gama: "Premium",
       precio: {
-          segundaMano: Null,
+          segundaMano: null,
           amazon: 357.36,
           ebay: 520.00,
       },
@@ -1715,102 +1715,189 @@ const fuenteList = [
 
 const ratonList = [
   {
-    marca: "Tempest",
-    nombre: "Tempest X8 Keeper RGB Ratón Gaming 10.000 DPI Negro",
-    gama: "Media",
-    precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
-    },
-    imagen: "raton.jpg",
-    link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
-    },
+      marca: "UNYKAch",
+      nombre: "UNYKAch Ratón Láser UK G5",
+      gama: "Baja",
+      precio: {
+          segundaMano: null,
+          amazon: 12.48,
+          ebay: 6.99,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Unykach-Botones-Seguimiento-2200DPI-Velocidad/dp/B00CLATGAM/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3NIVCOJGTO1ME&keywords=UNYKAch+Rat%C3%B3n+L%C3%A1ser+UK+G5&qid=1702384745&sprefix=unykach+rat%C3%B3n+l%C3%A1ser+uk+g5%2Caps%2C111&sr=8-1",
+          ebay: "https://www.ebay.es/itm/334864993159?hash=item4df7824b87:g:WBcAAOSwc-5kWPn3&amdata=enc%3AAQAIAAAA8KJluxuqTJrqVKv4G0CvgJyHiDo3XkDo9C%2FN4FdASkXB11KWsVmpbBZDSwvcCUhImGlPe%2FG5q%2BnGUfWSsW2b%2FWwhRkNTHNz51AGh8sedlIHI%2FSMdTlzWOhP2v0FtPaArrgDSU80RWBA8dGH2E7h9F%2FMu9yD5%2FdLWOMRSlvDbQNDCbtBAp0V3xmm%2Ft3B9c0KBPip%2B1OVMzpCwC5iRWdeyZFLYrvGdWjcUYhPX3MGfoY6TNaHZ0eFtMJJdUjkBaBcHV8B71GhVjQwNgcc2nDWLh33XQ1Av%2B6pZNu2rUeGX5bgp5lqOKcTpOl0Wdwa11qr6%2Bw%3D%3D%7Ctkp%3ABFBMxN7O4Itj",
+        },
+      imagen: "raton.jpg",
   },
   {
-    marca: "Forgeon",
-    nombre: "Forgeon Vendetta Ratón Gaming RGB 16000DPI Negro",
-    gama: "Baja",
-    precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
-    },
-    imagen: "raton.jpg",
-    link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
-    },
-  },
+      marca: "Gigabyte",
+      nombre: "Gigabyte Aorus M2 Ratón Gaming 6200DPI",
+      gama: "MediaBaja",
+      precio: {
+          segundaMano: null,
+          amazon: 17.47,
+          ebay: 26.61,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Gigabyte-Technology-AORUS-M2-Aorus/dp/B07P9XX6K1/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3DR7ZFRT049BS&keywords=gigabyte+aorus+m2+rat%C3%B3n+gaming+6200+dpi&qid=1702384895&sprefix=gigabyte+aorus+m2+rat%C3%B3n+gaming+6200dpi%2Caps%2C96&sr=8-2",
+          ebay: "https://www.ebay.es/itm/165429268862?hash=item26845a517e:g:3K0AAOSwB7ZhjJlZ&amdata=enc%3AAQAIAAAAwNzqxEOMcHtBVWPK72BgOVXUKxWZFCXAQPKiTlRRX1t9%2BAUuyBk9Gwaym7wWVB%2FEyRSf2LFFfPMBtRFbTv9OFR0%2F6bdodzsa7EreUJ%2FlihFRopNPzsLzs9XssO2ih8VdboYkbGWlHrQMvED8bYyddIJnrPQ%2BH%2BD9ztcSqsXfqiAzK4FDfHv7yXfCDsYBwRgYd3ReyUPVWMC9NLJot%2Fa0OqR0BSgtTJ5cLsvvUTIgR1%2BabTWo0tME6RxuXoADQIKDDg%3D%3D%7Ctkp%3ABk9SR6rr5eCLYw",
+        },
+      imagen: "raton.jpg",
+  }, 
   {
-    marca: "Newskill",
-    nombre: "Newskill Eos Ivory Ratón Gaming Professional RGB 16000DPI Blanco",
-    gama: "Alta",
-    precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
-    },
-    imagen: "raton.jpg",
-    link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
-    },
-  },
-];
+      marca: "Razer",
+      nombre: "Razer Deathadder Essential Ratón Gaming 6400 DPI",
+      gama: "Media",
+      precio: {
+          segundaMano: null,
+          amazon: 24.99,
+          ebay: 32.15,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Razer-DeathAdder-Essential-programables-interruptores/dp/B092R71V77/ref=sr_1_3?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2CWI3JZK2DFY6&keywords=Razer+Deathadder+Essential+Rat%C3%B3n+Gaming+6400+DPI+Blanco&qid=1702385105&sprefix=razer+deathadder+essential+rat%C3%B3n+gaming+6400+dpi+blanco%2Caps%2C99&sr=8-3",
+          ebay: "https://www.ebay.es/itm/314973111932?var=613464414601&hash=item4955dc467c:g:ihQAAOSwbyRlCZMg&amdata=enc%3AAQAIAAABEO4eMS74DyZm3qbibCAAakSPnTrpk5GzERWm061Qnt%2B%2BK9Dgi%2B5pjW0jKQ77lW6K7MxbbKUutT6sDAfxgpxnWWI7D2D675%2B3tgV6V96OQDlxxo%2FLKOAQ2XqzjOFliMXiHwMzQEfmj71EpG4Gptlo5rHnraM7tOOHukWyJp8d0ypi63kn5uCzEThDd8a7lPcXk59sm9YREDs%2FvXrZOzRkTXR8%2F81%2FhYgJ2p6oeAmjs7kLyTZikLK%2FcDZbIae7KUGyhJ%2FF4tV6aaNcI4pxvjmFzBjOX%2BaGryoScViceoXJrdm0u%2BQuXSsQsEOjcARsdh5kyiuzEZhGeyZvMAZzFGn%2BJmqrTs8UPTPLOUwmObIJES%2Bn%7Ctkp%3ABFBMvsr84Itj",
+        },
+      imagen: "raton.jpg",
+  }, 
+  {
+      marca: "Razer",
+      nombre: "Razer Viper Mini Ratón Gaming RGB 8500DPI",
+      gama: "MediaAlta",
+      precio: {
+          segundaMano: null,
+          amazon: 49.80,
+          ebay: 40.29,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Razer-Gaming-ambidiestro-Speedflex-Iluminaci%C3%B3n/dp/B084W6W9WB/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1KI572ILK66QQ&keywords=Razer+Viper+Mini+Rat%C3%B3n+Gaming+RGB+8500DPI&qid=1702385246&sprefix=razer+viper+mini+rat%C3%B3n+gaming+rgb+8500dpi%2Caps%2C89&sr=8-5",
+          ebay: "https://www.ebay.es/itm/176039201950?hash=item28fcc10c9e:g:joIAAOSwBOFlV6Qm&amdata=enc%3AAQAIAAABAExhU89%2B6%2BCB2LhPj3H6AdwbuMCqPY548ILr%2F2pSyVMIzsUCNQJPiVXpTjehF07WoRP8ZJZWUlXQaVYGRkH7DLXGjL6%2FDqPv4kTPSEN9IEEkyo59LjAHsInivEw3DeuwFQb3FA%2BSLtKUFSah7ICli6CQClw80ct6cnjUakDeWb%2BSPhtmf8ZlPx5NysO3vr2Rv3M6nwRskg0Oe9jiqQwGpgF1wnt6dfgKHfWiCNK%2BMKYCUqcLajt%2FDxqW%2FQYktwX1IqA%2F7kGWGxm%2FMZ4t5fSfWi9Two0HVGyPeeTyYP2WrJ1sc6KEbhamoBs5MNCqmQR2ToAwaPfWLXJlCl%2BEfVdLgWs%3D%7Ctkp%3ABFBMusSM4Ytj",
+        },
+      imagen: "raton.jpg",
+  }, 
+  {
+      marca: "Razer",
+      nombre: "Razer DeathAdder V3 Ratón Gaming Óptico 30000 DPI",
+      gama: "Alta",
+      precio: {
+          segundaMano: null,
+          amazon: 72.99,
+          ebay: 87.59,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Razer-DeathAdder-ergon%C3%B3mico-interruptores-HyperPolling/dp/B09ZLTV8B3/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=252V4N874Y1OR&keywords=Razer+DeathAdder+V3+Rat%C3%B3n+Gaming+%C3%93ptico+30000+DPI+Negro&qid=1702385335&sprefix=razer+deathadder+v3+rat%C3%B3n+gaming+%C3%B3ptico+30000+dpi+negro%2Caps%2C115&sr=8-1",
+          ebay: "https://www.ebay.es/itm/134847444159?hash=item1f6588b4bf:g:HIsAAOSwMZNldgxB&amdata=enc%3AAQAIAAAA8GItQEsCKJRTmD4vcnab%2F8MwVs4OFhLFR0jLRHrrfo6pu7xjJYVmzlyvbfW%2Fp%2FwgvuPlMKsEJ%2Fs6wnbvfm65bmO2SzP0YGTT3L1bnwJyJBpjdIcFPNmdT3AG1aEr0ElzBTEvSE5Q3zRUspvepTtckSj%2BpsYM9l5LDTp1euIyLgWwaG9PCGJQdampR3tR8i4HJVZVLmMiZ3aEno5g%2F%2FovbDVbOMTzMp83kRcKr%2F0iZQWcv%2B0KUyyUOrB1jhNPZlOdpuG6o32wJnd0MiVzeLMVef2oP5%2FE2LkMd02rbZJeKDrvidElHrcRcGEyb8Op4xtoCw%3D%3D%7Ctkp%3ABk9SR87WluGLYw",
+        },
+      imagen: "raton.jpg",
+  }, 
+  {
+      marca: "Razer",
+      nombre: "Razer Viper V2 Pro Ratón Óptico Gaming Inalámbrico 30000 DPI",
+      gama: "Premium",
+      precio: {
+          segundaMano: null,
+          amazon: 159.00,
+          ebay: 135.15,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Inal%C3%A1mbrico-Deportes-Electr%C3%B3nicos-HyperSpeed-Interruptores/dp/B09QG4F5GZ/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1A32BSVTLY0J8&keywords=Razer+Viper+V2+Pro+Rat%C3%B3n+%C3%93ptico+Gaming+Inal%C3%A1mbrico+30000+DPI&qid=1702385417&sprefix=razer+viper+v2+pro+rat%C3%B3n+%C3%B3ptico+gaming+inal%C3%A1mbrico+30000+dpi%2Caps%2C101&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
+          ebay: "https://www.ebay.es/itm/186154813415?hash=item2b57b107e7:g:f6sAAOSwoV1lSke6&amdata=enc%3AAQAIAAABEJDovAfP%2BKKyCZWYHwFL2sk%2BcRRhDnls2vXUukFmZSS3EyoyF%2BpLnyq9gJuId1Z%2FIvJG3a3bPBSvjAqhZZE7iYO2S%2FWNm3Tj%2BOk3orzS9nyIwyfaHe7uCAeSi2YiAJl747mV0qCPz8kAh0%2FWxPY9Br%2BK%2FkuS8OhuQ6FL3tapiABX0aU9o4IWTDT%2FmEnppi6e0AM2isTUMTd6Ispgy%2FRahuHxLmP56r2RfkckPhD0n12tKmvnthRr5mQiZvkx%2FHHHIqNFe2L4736NAe49uAyPV2dyYdXuba%2Fd1%2BL2iaRGN0VBlUn9PwDX6de8p5WuuI6ac9NCg2Nl7h46NzbXdfwtmFOyG248PA39QKKUDrlKqcuL%7Ctkp%3ABk9SR8rqoOGLYw",
+        },
+      imagen: "raton.jpg",
+  }, 
+]
 
 const tecladoList = [
   {
-    marca: "Tempest",
-    nombre: "Tempest Cataclysm Combo 3 en 1 Gaming Teclado",
-    gama: "Media",
-    mecanico: false,
-    precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
-    },
-    imagen: "teclado.jpg",
-    link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
-    },
+      marca: "Mars Gaming",
+      nombre: "Mars Gaming MK120 Teclado Gaming FRGB",
+      gama: "Baja",
+      precio: {
+          segundaMano: null,
+          amazon: 15.98,
+          ebay: 11.90,
+      },
+      link: {
+          amazon: "https://www.amazon.es/MARSGAMING-MK120PT-Antighosting-Smartphone-Portugu%C3%A9s/dp/B099ZJJ9CN/ref=sr_1_4?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2Q8VCPBEHGXXO&keywords=mars+gaming+mk120+teclado+gaming+rgb&qid=1702385640&sprefix=mars+gaming+mk120+teclado+gaming+frgb+%2Caps%2C93&sr=8-4",
+          ebay: "https://www.ebay.es/itm/115926504867?hash=item1afdc215a3:g:ul0AAOSwuOdlFDWu&amdata=enc%3AAQAIAAAA4PY54k%2BQcQChzSAB%2B6PpLaaqvf2aNwTmS1jzZitd6I%2BgpYmUlOHtDdx6Aa6IGFzzHgH%2FEWe1Ulu7x5IyK2Xq%2By4cXGuxRVwNF1VoKgz%2Bu42QC9b4Cp%2B4pb%2Bvk2jB9e5NOIAn7P1DIP92l0fbProVTOS02okLtJVbafv3EXEBrFdVDcIwXDL3O8eWjsJAnucPf3OfGl8HKdXftsSW6hbZAvVHI%2BWdsQ09a6FkQsr6eeSS20H2GqV5GCmFuhE3DPohnnAKqxyTkuAdvxXOe28tUm7W3AtBCE0dEfJGGJwHDYep%7Ctkp%3ABk9SR7revOGLYw",
+      },
+      imagen: "teclado.jpg",
   },
   {
-    marca: "Forgeon",
-    nombre: "Forgeon Clutch Teclado Gaming RGB 60% Switch Blue",
-    gama: "Baja",
-    mecanico: true,
-    precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
-    },
-    imagen: "teclado.jpg",
-    link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
-    },
+      marca: "Mars Gaming",
+      nombre: "Mars Gaming MK80 Teclado Mecánico Negro FRGB Switch Marrón Layout Español",
+      gama: "MediaBaja",
+      precio: {
+          segundaMano: null,
+          amazon: 24.49,
+          ebay: 34.50,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Gaming-Teclado-Mec%C3%A1nico-Antighosting-Espa%C3%B1ol/dp/B0BGLF8TS3/ref=sr_1_1_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=25DHSGHLWM287&keywords=Mars+Gaming+MK80&qid=1702386005&sprefix=mars+gaming+mk80%2Caps%2C176&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+          ebay: "https://www.ebay.es/itm/404674990717?hash=item5e3882527d:g:syEAAOSwiyBldt30&amdata=enc%3AAQAIAAAAwNywXcCW7s4DV7YGDpK7OzoeKFXcY%2Fx3d1GIT4uiSJseVEqWFDSGC5KtsralDJDM%2FNob2YeBBKHhgs56c45owr28Briw32OtijRwNux%2FE0jJsWEXJxNW1HJCl9osYm4t87IxWSmSGS%2Fvjoj65CTrxRsND3eMTV2swwkcAf72yaFXdSGxRq8Ob90NLqCVpL57xz7lj0hy4Mm5iGN%2BxSjnbicSoNw83n7%2FEAeQ3eHpgrxOggzUbBIXqtL7AtIHsixKzw%3D%3D%7Ctkp%3ABk9SR-y06OGLYw",
+      },
+      imagen: "teclado.jpg",
   },
   {
-    marca: "Newskill",
-    nombre: "Newskill Suiko Teclado Mecánico Gaming Full RGB Switch Kailh Blue",
-    gama: "Alta",
-    mecanico: true,
-    precio: {
-      segundaMano: 100,
-      amazon: 150,
-      ebay: 200,
-    },
-    imagen: "teclado.jpg",
-    link: {
-      amazon: "https://www.amazon.es",
-      ebay: "https://www.ebay.es",
-    },
+      marca: "Mars Gaming",
+      nombre: "Mars Gaming MKULTRA Teclado Mecánico Blanco Switch Azul",
+      gama: "Media",
+      precio: {
+          segundaMano: null,
+          amazon: 55.65,
+          ebay: 34.50,
+      },
+      link: {
+          amazon: "https://www.amazon.es/MKULTRA-Teclado-Mec%C3%A1nico-Compacto-Espa%C3%B1ol/dp/B09MJBR6VW/ref=sr_1_2_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PUZ5QK45UG4N&keywords=Mars+Gaming+MKULTRA&qid=1702386139&sprefix=mars+gaming+mkultra%2Caps%2C100&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+          ebay: "https://www.ebay.es/itm/404674990717?hash=item5e3882527d:g:syEAAOSwiyBldt30&amdata=enc%3AAQAIAAAA4CvMOEoSPdeENPQv%2BOQw3BVVx%2BAvNHJIYhbcfEnE82e%2FMFqdX4tzxyiohm4QspWLOP%2FCqPsnKehFp3XxbIVMM9K2dQ4Yqyoucgw3j7ZjC3ft3GG73UAdZkREXNAITuCwu%2FlGqcp7Wiz96XEIbnaoNEUoApFgj3tNnRAJpQJRfwj2KTI%2BPPUjRvetZTQoNWwHvQZZDqITJaUsIcZeSLhQtjPOIMQs5%2FDuLHP08eDSjnxmalIupAhkJ2mq7jXZwSAqxG8htCllLPMfRFF%2FihxnlNj7Uympm8L%2F961mq%2BWkGtaU%7Ctkp%3ABk9SR5iy-uGLYw",
+      },
+      imagen: "teclado.jpg",
   },
-];
+  {
+      marca: "SteelSeries",
+      nombre: "SteelSeries Apex 3 TKL Teclado Gaming RGB",
+      gama: "MediaAlta",
+      precio: {
+          segundaMano: null,
+          amazon: 54.99,
+          ebay: 64.24,
+      },
+      link: {
+          amazon: "https://www.amazon.es/SteelSeries-Apex-TKL-tenkeyless-Iluminaci%C3%B3n/dp/B09FQ98HRT/ref=sr_1_3?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=SD2IUINWCVXE&keywords=SteelSeries+Apex+3+TKL&qid=1702386260&sprefix=steelseries+apex+3+tkl%2Caps%2C102&sr=8-3",
+          ebay: "https://www.ebay.es/itm/364147418147?hash=item54c8e0a423:g:vUIAAOSwmq5j67ls&amdata=enc%3AAQAIAAAA8LH1CK%2B8UahEcRfYKe9Ix7gnYs5k06dfRLSBHjhbZL60xRKktEUBxBJsalJgWs9C5omdNIqW4ITiWkYNj%2BGlYicu38cDsGzRW2%2BgDSTQ3kIbw4fFCQfzRmXgfrY%2F8aYcWSvA187qxq8vmLwx%2FpRXPYh2JaTq5Y115RiNEsR0Nb0V8p9Wrq11gZFiw28mHykBGh0zsyolx6TvrKMmZcMF3P7uy5VgKoOjmD6L3bc%2BAUg9KlSGDH1GRBXCHTHd0vlLsSNYQstKDM6H58wSZBDMbMXP2ANDU6Xqvtta3u2MsHowTctVXDwyZ%2B6%2BndvXayltSw%3D%3D%7Ctkp%3ABk9SR6yZiOKLYw",
+      },
+      imagen: "teclado.jpg",
+  },
+  {
+      marca: "Razer",
+      nombre: "Razer BlackWidow V3 Tenkeyless Teclado Gaming Retroiluminado Green Switch",
+      gama: "Alta",
+      precio: {
+          segundaMano: null,
+          amazon: 89.99,
+          ebay: 117.00,
+      },
+      link: {
+          amazon: "https://www.amazon.es/Razer-BlackWidow-Tenkeyless-interruptores-iluminaci%C3%B3n/dp/B097F5QSTB/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3TBHWSANEA01N&keywords=Razer%2BBlackWidow%2BV3%2BTenkeyless%2BTeclado%2BGaming%2BRetroiluminado%2BGreen%2BSwitch&qid=1702386516&sprefix=razer%2Bblackwidow%2Bv3%2Btenkeyless%2Bteclado%2Bgaming%2Bretroiluminado%2Bgreen%2Bswitch%2Caps%2C108&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b&th=1",
+          ebay: "https://www.ebay.es/itm/395048275294?hash=item5bfab64d5e:g:n-4AAOSw-A1lcaG2&amdata=enc%3AAQAIAAABAOqfImSIGnBPemBdW6fPzXA1QDOdpBaKnevkM5q8RISs30A8ugbBxHKWlvDWh%2BPixIxBt5icsHqoHBfbwE9%2FbJ0aWo7ZIMgNxLQq%2F2SH8z9iqG12QFTFy2ur9a9%2BV5s%2B2khbrK3jEL0KfXWo20kQoSP4tAneIgVf%2FTVKXQXIyc56NJX25yk5aFLKAUqqkN6K9mIT%2BlnkOLswXtM1j7t7db21SGFVT3DvWPQvrQoK9DVqJ%2FqVuQr3BVxGQyDfWAskQxM8ygdmkIxFbtz6bFfAr7EaLHPY01Wjn%2FLqh6JzGmtocGeo8VNvGrjLX4sX06d02mDgVoceY1KeLc6U8st6Yj0%3D%7Ctkp%3ABk9SR4KsqOKLYw",
+      },
+      imagen: "teclado.jpg",
+  },
+  {
+      marca: "Razer",
+      nombre: "Razer DeathStalker V2 Pro Tenkeyless",
+      gama: "Premium",
+      precio: {
+          segundaMano: null,
+          amazon: 219.99,
+          ebay: 260.14,
+      },
+      link: {
+          amazon: "https://www.amazon.es/DeathStalker-Tenkeyless-teclado-Wireless-Bluetooth/dp/B0BHF1QMGK/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=PMFKCBKCAH42&keywords=Razer%2BDeathStalker%2BV2%2BPro%2BTenkeyless&qid=1702386629&sprefix=razer%2Bdeathstalker%2Bv2%2Bpro%2Btenkeyless%2Caps%2C95&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b&th=1",
+          ebay: "https://www.ebay.es/itm/145480166170?hash=item21df4b2b1a:g:XMQAAOSwlv5lbhoR&amdata=enc%3AAQAIAAAA4O7bGeQKRdzYLmkd2vyRPtLmK8TIhYyxldnhjb1YeD8C7gq2kONp6aQCywj6%2FEukBIrYB%2Fq3%2BPop88OxoSz%2FVudi4%2FtEnpPO%2BBqD8m8zBLm9ZjZxmF%2BHHrKigEwvEaxwXLly9y%2BqLR%2BQXY0epSJSutwsPDF8drV865O7mVmhxCXfYcde%2F8Mu1YSJrhgYDa9XbNU8YfBIrI9NJSM3wMJ4GQf822dDg%2B7VlbQ2wTNjXA0aLRAnfkCEAHlwhwd%2F2J4mOmZDEXJgNP2mR00zdQSutQ4H2Exsy7ZNVRl4FMTLp1%2BV%7Ctkp%3ABk9SR5aQteKLYw",
+      },
+      imagen: "teclado.jpg",
+  },
+]
 
 const buildGamaBaja = {
   placas: {

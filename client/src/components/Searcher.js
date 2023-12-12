@@ -40,8 +40,7 @@ function Searcher({ context }) {
   };
 
   return (
-    <div className="wrapper">
-      <div className="search-wrapper">
+    <div className="search-wrapper">
         <label htmlFor="search-form">
           <form onSubmit={filter}>
             <input
@@ -49,7 +48,7 @@ function Searcher({ context }) {
               name="search-form"
               id="search-form"
               className="search-input"
-              placeholder="Buscar componentes"
+              placeholder="search..."
               value={q}
               onChange={(e) => {
                 setQ(e.target.value);
@@ -58,12 +57,6 @@ function Searcher({ context }) {
           </form>
         </label>
       </div>
-      <div>
-        <Button onClick={() => navigate("/SelectBuild")}>
-          Seleccionar Build
-        </Button>
-      </div>
-    </div>
   );
 }
 

@@ -20,12 +20,12 @@ function Cards({ context }) {
                 nombre={item.nombre}
                 imagen={item.imagen}
                 precio={item.precio}
-                esMarketing={true}
+                esMarketing={false}
               />
             </div>
           ))
         ) : (
-          <h1>No hay resultados</h1>
+          <h1 className="noRes">No hay resultados</h1>
         )}
       </div>
     </div>

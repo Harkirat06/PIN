@@ -25,6 +25,7 @@ function OffCanvasCustom({ context  }) {
 
     setElementosSeleccionados(()=>{
       let elementos = {...elementosSeleccionados[0]}
+      
       if (item.tecnologia) {
         if (elementos[propiedad] == "Elemento no seleccionado") {
           elementos[propiedad] = []
@@ -93,7 +94,7 @@ function OffCanvasCustom({ context  }) {
                     precio = {item.precio}
                     esMarketing={false}
                     context={context}
-                    onClick={() => handleBuild(item)}
+                    onClick={(precioSeleccionado) => handleBuild(item, precioSeleccionado)}
                   />
                 </div>
               ))

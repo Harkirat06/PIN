@@ -13,10 +13,7 @@ function PaginaPagar({ context }) {
 
     const handleLink = (item) => {
         if (item !== "Elemento no seleccionado") {
-            if (item.selectedType == "segundaMano") {
-                navigate("/pagarNuestro")
-
-            } else {
+            if (item.selectedType != "segundaMano") {
                 openInNewTab(item.link)
             }
         }
@@ -75,7 +72,7 @@ function PaginaPagar({ context }) {
     }
 
     return (
-        <Container>
+        <Container className="PaginaPagar">
             <h1>Your selected Products</h1>
             {Object.keys(productList).map((propiedad) => (
                 handleSeleccion(propiedad)

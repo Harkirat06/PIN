@@ -4,6 +4,8 @@ import Form from 'react-bootstrap/Form';
 import {Row,Col} from 'react-bootstrap'
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom'
+import { Button } from "react-bootstrap";
+import './Marketplace.css'
 
 
 function Marketplace({context}) {
@@ -40,27 +42,36 @@ function Marketplace({context}) {
     }
   }
   return (
-    <Row>
-      <Col>
-      <Searcher context={context}></Searcher>
-      <br/>
-      </Col>
-      <Col>
-      <Form>
-        <div key={`default-${'checkbox'}`} className="mb-3">
-          <Form.Check // prettier-ignore
-            type={'checkbox'}
-            id={`default-${'checkbox'}`}
-            label={`Solo Segunda Mano`}
-            checked={checkboxState} 
-            onChange={handleCheckboxChange}
-            style={{color: "white"}}
-          />
-        </div>
-    </Form>
-    </Col>
-      <Cards context={context}></Cards>
-    </Row>
+    <div className="Marketplace">
+      <div className="header">
+        <a>
+          <img className="logo"/>
+        </a>
+        <a onClick={() => navigate("/SelectBuild")} className="selectBtn">Select Build</a>
+        <a>
+          <img className="userProfile"/>
+        </a>
+      </div>
+      <div className="search-header">
+        {/*<Button onClick={() => navigate("/SelectBuild")} className="selectBtn">
+          Select Build
+  </Button>*/}
+        <Searcher context={context}></Searcher>
+        <Form>
+          <div key={`default-${'checkbox'}`} className="mb-3">
+            <span>Second-hand only</span>
+            <input // prettier-ignore
+              type="checkbox"
+              id={`default-${'checkbox'}`}
+              checked={checkboxState} 
+              onChange={handleCheckboxChange}
+              className="checkBox"
+              />
+          </div>
+        </Form>
+      </div>
+      <Row className="productsList"><Cards context={context}></Cards></Row>
+    </div>
   );
 }
 

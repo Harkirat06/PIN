@@ -78,9 +78,9 @@ const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
 
 const handleDisipador = (lista, cpu) => {
   console.log("Soy LA LISTA"+lista)
-  console.log("Soy LA CPU" + cpu)
+  console.log("Soy LA CPU" + cpu.ventilador)
   if(cpu){
-  if (cpu.ventilador === false) {
+  if (cpu.ventilador == "false") {
     return lista;
   } else {
     console.log("Ventilador falso")

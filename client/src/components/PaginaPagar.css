@@ -24,6 +24,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
 
 .PaginaPagar .mainWrapper {
     padding: 25px 150px 100px;
+    background-image: url("./grid.svg");
 }
 
 .PaginaPagar .title {

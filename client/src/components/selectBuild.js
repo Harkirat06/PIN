@@ -196,7 +196,15 @@ function SelectBuild({ context }) {
           <Col>
             <Button
               onClick={() => {
-                buildPorPrecio(presupuesto).then((r) => selectBuild(r, secondHand));
+                buildPorPrecio(presupuesto).then((result) => {
+                  if (result && result.Error) {
+                    // Si buildPorPrecio devuelve un objeto Error, muestra un pop-up con el mensaje de error
+                    window.alert(result.Error);
+                  } else {
+                    // Si no es un error, ejecuta selectBuild con el resultado
+                    selectBuild(result, secondHand);
+                  }
+                });
               }}
             >
               Hacer Build

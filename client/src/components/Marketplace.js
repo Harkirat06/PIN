@@ -47,7 +47,7 @@ function Marketplace({context}) {
         <a>
           <img className="logo"/>
         </a>
-        <a onClick={() => navigate("/SelectBuild")} className="selectBtn">Select Build</a>
+        <a onClick={() => navigate("/SelectBuild")} className="selectBtn">Seleccionar build</a>
         <a>
           <img className="userProfile"/>
         </a>
@@ -59,7 +59,7 @@ function Marketplace({context}) {
         <Searcher context={context} className="searcher"></Searcher>
         <Form>
           <span key={`default-${'checkbox'}`} className="mb-3">
-            <span>Second-hand only</span>
+            <span>Solo de segunda mano</span>
             <input // prettier-ignore
               type="checkbox"
               id={`default-${'checkbox'}`}

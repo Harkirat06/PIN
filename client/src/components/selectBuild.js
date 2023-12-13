@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import React from "react";
-import { Container, Row, Col, Button, Image, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Image, Form, Alert } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import imagen from "../images/COOLPC-Gold.jpg";
 import "./SelectBuild.css";
@@ -17,6 +17,8 @@ function SelectBuild({ context }) {
     user,
   } = useContext(context);
   const [presupuesto, setPresupuesto] = useState(0)
+  const [show, setShow] = useState(false);
+  const [mensaje, setMensaje] = useState("");
 
   let secondHand = false;
 
@@ -101,6 +103,11 @@ function SelectBuild({ context }) {
 
   return (
     <Container>
+      {show && (
+        <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+          {mensaje}
+        </Alert>
+      )}
       <h1>Builds por nichos</h1>
       <Row>
         <Col xs={3}>
@@ -199,7 +206,8 @@ function SelectBuild({ context }) {
                 buildPorPrecio(presupuesto).then((result) => {
                   if (result && result.Error) {
                     // Si buildPorPrecio devuelve un objeto Error, muestra un pop-up con el mensaje de error
-                    window.alert(result.Error);
+                    setMensaje(result.Error)
+                    setShow(true)
                   } else {
                     // Si no es un error, ejecuta selectBuild con el resultado
                     selectBuild(result, secondHand);

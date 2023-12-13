@@ -243,7 +243,6 @@ const cpuList = [
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 470.31,
         ebay: 419.99,
     },
@@ -263,7 +262,6 @@ const cpuList = [
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 327.36,
         ebay: 309.99,
     },
@@ -343,7 +341,6 @@ const cpuList = [
     ventilador: true,
     gpu: true,
     precio: {
-        segundaMano: null,
         amazon: 121.40,
         ebay: 157.30,
     },
@@ -363,7 +360,6 @@ const cpuList = [
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 639.90,
         ebay: 559.90,
     },
@@ -403,7 +399,6 @@ const cpuList = [
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 218.90,
         ebay: 191.66,
     },
@@ -523,7 +518,6 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 241.99,
           ebay: 326.59,
       },
@@ -561,7 +555,6 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 491.20,
           ebay: 405.93,
       },
@@ -599,7 +592,6 @@ const placasList = [
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 88.65,
           ebay: 78.82,
       },
@@ -637,7 +629,6 @@ const placasList = [
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 209.80,
           ebay: 236.49,
       },
@@ -675,7 +666,6 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 315.31,
           ebay: 239.50,
       },
@@ -713,7 +703,6 @@ const placasList = [
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 458.90,
           ebay: 448.99,
       },
@@ -752,7 +741,6 @@ const gpuList = [
     potenciaRecomendada: 850,
     gama: "Premium",
     precio: {
-      segundaMano: null,
         amazon: 2126.05,
         ebay: 2008.73,
     },
@@ -837,7 +825,6 @@ const gpuList = [
     potenciaRecomendada: 850,
     gama: "Alta",
     precio: {
-      segundaMano: null,
         amazon: 1123.59,
         ebay: 550.00,
     },
@@ -871,7 +858,6 @@ const gpuList = [
     potenciaRecomendada: 600,
     gama: "MediaBaja",
     precio: {
-      segundaMano: null,
         amazon: 299.90,
         ebay: 309.90,
     },
@@ -939,7 +925,6 @@ const gpuList = [
     potenciaRecomendada: 750,
     gama: "MediaAlta",
     precio: {
-        segundaMano: null,
           amazon: 540.41,
           ebay: 554.81,
       },
@@ -973,7 +958,6 @@ const gpuList = [
     potenciaRecomendada: 900,
     gama: "Alta",
     precio: {
-      segundaMano: null,
         amazon: 1024.88,
         ebay: 898.00,
     },
@@ -1024,7 +1008,6 @@ const gpuList = [
     potenciaRecomendada: 500,
     gama: "MediaBaja",
     precio: {
-      segundaMano: null,
         amazon: 237.76,
         ebay: 209.35,
     },
@@ -1095,7 +1078,6 @@ let ramList = [
       capacidad: 8,
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 27.99,
           ebay: 35.73,
       },
@@ -1112,7 +1094,6 @@ let ramList = [
       capacidad: 16,
       gama: "Media",
       precio: {
-          segundaMano: null,
           amazon: 25.50,
           ebay: 30.00,
       },
@@ -1146,7 +1127,6 @@ let ramList = [
       capacidad: 32,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 134.99,
           ebay: 172.58,
       },
@@ -1268,7 +1248,6 @@ const discoList = [
       tecnologia: "Sata",
       gama: "Alta",
       precio: {
-          segundaMano: null,
           amazon: 65.50,
           ebay: 78.49,
       },
@@ -1285,7 +1264,6 @@ const discoList = [
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -1302,7 +1280,6 @@ const discoList = [
       tecnologia: "m2",
       gama: "Media",
       precio: {
-          segundaMano: null,
           amazon: 45.94,
           ebay: 71.20,
       },
@@ -1386,7 +1363,6 @@ const monitorList = [
       nombre: "Lenovo G24e-20 23.8 LED FullHD 120Hz FreeSync",
       gama: "MediaBaja",
       precio: {
-          segundaMano: null,
           amazon: 147.96,
           ebay: 182.51,
       },
@@ -1416,7 +1392,6 @@ const monitorList = [
       nombre: "AOC C27G2ZE/BK 27 LED FullHD 240Hz FreeSync Premium Curva",
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 193.91,
           ebay: 378.16,
       },
@@ -1446,7 +1421,6 @@ const monitorList = [
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -1464,7 +1438,6 @@ const disipadorList = [
       nombre: "Cooler Master Hyper 212 Halo White Ventilador CPU 120mm",
       gama: "Media",
       precio: {
-          segundaMano: null,
           amazon: 44.99,
           ebay: 34.51,
       },
@@ -1494,7 +1467,6 @@ const disipadorList = [
       nombre: "Cooler Master MasterLiquid Lite 240",
       gama: "Alta",
       precio: {
-          segundaMano: null,
           amazon: 59.89,
           ebay: 110.71,
       },
@@ -1527,7 +1499,6 @@ const cajaList = [
       nombre: "Cooler Master MasterBox MB600L V2",
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 81.02,
           ebay: 106.99,
       },
@@ -1572,7 +1543,6 @@ const cajaList = [
       nombre: "Cooler Master MasterCase H500",
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 116.90,
           ebay: 146.39,
       },
@@ -1621,7 +1591,6 @@ const fuenteList = [
       potencia: 500,
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 18.49,
           ebay: 15.95,
       },
@@ -1669,7 +1638,6 @@ const fuenteList = [
       potencia: 850,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 74.89,
           ebay: 49.99,
       },
@@ -1734,7 +1702,6 @@ const ratonList = [
       nombre: "Gigabyte Aorus M2 Ratón Gaming 6200DPI",
       gama: "MediaBaja",
       precio: {
-          segundaMano: null,
           amazon: 17.47,
           ebay: 26.61,
       },
@@ -1764,7 +1731,6 @@ const ratonList = [
       nombre: "Razer Viper Mini Ratón Gaming RGB 8500DPI",
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 49.80,
           ebay: 40.29,
       },
@@ -1812,7 +1778,6 @@ const tecladoList = [
       nombre: "Mars Gaming MK120 Teclado Gaming FRGB",
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 15.98,
           ebay: 11.90,
       },
@@ -1857,7 +1822,6 @@ const tecladoList = [
       nombre: "SteelSeries Apex 3 TKL Teclado Gaming RGB",
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 54.99,
           ebay: 64.24,
       },
@@ -1929,7 +1893,6 @@ const buildGamaBaja = {
     ventilador: true,
     gpu: true,
     precio: {
-        segundaMano: null,
         amazon: 121.40,
         ebay: 157.30,
     },
@@ -1946,7 +1909,6 @@ const buildGamaBaja = {
     capacidad: 8,
     gama: "Baja",
     precio: {
-        segundaMano: null,
         amazon: 27.99,
         ebay: 35.73,
     },
@@ -1998,7 +1960,6 @@ const buildGamaBaja = {
       potencia: 500,
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 18.49,
           ebay: 15.95,
       },
@@ -2028,7 +1989,6 @@ const buildGamaBaja = {
       nombre: "Cooler Master MasterBox MB600L V2",
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 81.02,
           ebay: 106.99,
       },
@@ -2050,7 +2010,6 @@ const buildGamaBaja2 = {
       numeroM2: 0,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 88.65,
           ebay: 78.82,
       },
@@ -2139,7 +2098,6 @@ const buildGamaBaja2 = {
       potencia: 500,
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 18.49,
           ebay: 15.95,
       },
@@ -2169,7 +2127,6 @@ const buildGamaBaja2 = {
       nombre: "Cooler Master MasterBox MB600L V2",
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 81.02,
           ebay: 106.99,
       },
@@ -2191,7 +2148,6 @@ const buildGamaMedia = {
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 241.99,
           ebay: 326.59,
       },
@@ -2211,7 +2167,6 @@ const buildGamaMedia = {
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 327.36,
         ebay: 309.99,
     },
@@ -2228,7 +2183,6 @@ const buildGamaMedia = {
       capacidad: 32,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 134.99,
           ebay: 172.58,
       },
@@ -2342,7 +2296,6 @@ const buildGamaMedia = {
       nombre: "Cooler Master Hyper 212 Halo White Ventilador CPU 120mm",
       gama: "Media",
       precio: {
-          segundaMano: null,
           amazon: 44.99,
           ebay: 34.51,
       },
@@ -2364,7 +2317,6 @@ const buildGamaMedia2 = {
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 315.31,
           ebay: 239.50,
       },
@@ -2384,7 +2336,6 @@ const buildGamaMedia2 = {
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 218.90,
         ebay: 191.66,
     },
@@ -2401,7 +2352,6 @@ const buildGamaMedia2 = {
       capacidad: 32,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 134.99,
           ebay: 172.58,
       },
@@ -2470,7 +2420,6 @@ const buildGamaMedia2 = {
       potencia: 850,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 74.89,
           ebay: 49.99,
       },
@@ -2515,7 +2464,6 @@ const buildGamaMedia2 = {
       nombre: "Cooler Master Hyper 212 Halo White Ventilador CPU 120mm",
       gama: "Media",
       precio: {
-          segundaMano: null,
           amazon: 44.99,
           ebay: 34.51,
       },
@@ -2557,7 +2505,6 @@ const buildGamaAlta = {
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 470.31,
         ebay: 419.99,
     },
@@ -2574,7 +2521,6 @@ const buildGamaAlta = {
       capacidad: 32,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 134.99,
           ebay: 172.58,
       },
@@ -2628,7 +2574,6 @@ const buildGamaAlta = {
       tecnologia: "Sata",
       gama: "Alta",
       precio: {
-          segundaMano: null,
           amazon: 65.50,
           ebay: 78.49,
       },
@@ -2645,7 +2590,6 @@ const buildGamaAlta = {
       tecnologia: "Sata",
       gama: "Alta",
       precio: {
-          segundaMano: null,
           amazon: 65.50,
           ebay: 78.49,
       },
@@ -2694,7 +2638,6 @@ const buildGamaAlta = {
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -2709,7 +2652,6 @@ const buildGamaAlta = {
       nombre: "Cooler Master MasterCase H500",
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 116.90,
           ebay: 146.39,
       },
@@ -2837,7 +2779,6 @@ const buildGamaAlta2 = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -2854,7 +2795,6 @@ const buildGamaAlta2 = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -2872,7 +2812,6 @@ const buildGamaAlta2 = {
     potenciaRecomendada: 850,
     gama: "Premium",
     precio: {
-      segundaMano: null,
         amazon: 2126.05,
         ebay: 2008.73,
     },
@@ -2903,7 +2842,6 @@ const buildGamaAlta2 = {
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -2975,7 +2913,6 @@ const buildParaGamers = {
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 470.31,
         ebay: 419.99,
     },
@@ -2992,7 +2929,6 @@ const buildParaGamers = {
       capacidad: 32,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 134.99,
           ebay: 172.58,
       },
@@ -3046,7 +2982,6 @@ const buildParaGamers = {
       tecnologia: "Sata",
       gama: "Alta",
       precio: {
-          segundaMano: null,
           amazon: 65.50,
           ebay: 78.49,
       },
@@ -3063,7 +2998,6 @@ const buildParaGamers = {
       tecnologia: "Sata",
       gama: "Alta",
       precio: {
-          segundaMano: null,
           amazon: 65.50,
           ebay: 78.49,
       },
@@ -3112,7 +3046,6 @@ const buildParaGamers = {
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -3127,7 +3060,6 @@ const buildParaGamers = {
       nombre: "Cooler Master MasterCase H500",
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 116.90,
           ebay: 146.39,
       },
@@ -3255,7 +3187,6 @@ const buildParaGamers2 = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -3272,7 +3203,6 @@ const buildParaGamers2 = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -3290,7 +3220,6 @@ const buildParaGamers2 = {
     potenciaRecomendada: 850,
     gama: "Premium",
     precio: {
-      segundaMano: null,
         amazon: 2126.05,
         ebay: 2008.73,
     },
@@ -3321,7 +3250,6 @@ const buildParaGamers2 = {
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -3464,7 +3392,6 @@ const buildParaProfesionales = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -3481,7 +3408,6 @@ const buildParaProfesionales = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -3499,7 +3425,6 @@ const buildParaProfesionales = {
     potenciaRecomendada: 850,
     gama: "Premium",
     precio: {
-      segundaMano: null,
         amazon: 2126.05,
         ebay: 2008.73,
     },
@@ -3530,7 +3455,6 @@ const buildParaProfesionales = {
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -3602,7 +3526,6 @@ const buildParaProfesionales2 = {
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 639.90,
         ebay: 559.90,
     },
@@ -3673,7 +3596,6 @@ const buildParaProfesionales2 = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -3690,7 +3612,6 @@ const buildParaProfesionales2 = {
       tecnologia: "Sata",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 142.79,
           ebay: 179.90,
       },
@@ -3739,7 +3660,6 @@ const buildParaProfesionales2 = {
       nombre: "Asus TUF Gaming VG28UQL1A 28 LED IPS UltraHD 4K 144Hz G-SYNC",
       gama: "Premium",
       precio: {
-          segundaMano: null,
           amazon: 628.90,
           ebay: 835.29,
       },
@@ -3811,7 +3731,6 @@ const buildParaEstudiantes = {
     ventilador: true,
     gpu: true,
     precio: {
-        segundaMano: null,
         amazon: 121.40,
         ebay: 157.30,
     },
@@ -3828,7 +3747,6 @@ const buildParaEstudiantes = {
     capacidad: 8,
     gama: "Baja",
     precio: {
-        segundaMano: null,
         amazon: 27.99,
         ebay: 35.73,
     },
@@ -3880,7 +3798,6 @@ const buildParaEstudiantes = {
       potencia: 500,
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 18.49,
           ebay: 15.95,
       },
@@ -3910,7 +3827,6 @@ const buildParaEstudiantes = {
       nombre: "Cooler Master MasterBox MB600L V2",
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 81.02,
           ebay: 106.99,
       },
@@ -3932,7 +3848,6 @@ const buildParaEstudiantes2 = {
       numeroM2: 2,
       numeroSata: 2,
       precio: {
-          segundaMano: null,
           amazon: 241.99,
           ebay: 326.59,
       },
@@ -3952,7 +3867,6 @@ const buildParaEstudiantes2 = {
     ventilador: false,
     gpu: false,
     precio: {
-        segundaMano: null,
         amazon: 327.36,
         ebay: 309.99,
     },
@@ -3969,7 +3883,6 @@ const buildParaEstudiantes2 = {
       capacidad: 32,
       gama: "MediaAlta",
       precio: {
-          segundaMano: null,
           amazon: 134.99,
           ebay: 172.58,
       },
@@ -4083,7 +3996,6 @@ const buildParaEstudiantes2 = {
       nombre: "Cooler Master Hyper 212 Halo White Ventilador CPU 120mm",
       gama: "Media",
       precio: {
-          segundaMano: null,
           amazon: 44.99,
           ebay: 34.51,
       },
@@ -4125,7 +4037,6 @@ const buildParaUsoBasico = {
     ventilador: true,
     gpu: true,
     precio: {
-        segundaMano: null,
         amazon: 121.40,
         ebay: 157.30,
     },
@@ -4142,7 +4053,6 @@ const buildParaUsoBasico = {
     capacidad: 8,
     gama: "Baja",
     precio: {
-        segundaMano: null,
         amazon: 27.99,
         ebay: 35.73,
     },
@@ -4194,7 +4104,6 @@ const buildParaUsoBasico = {
       potencia: 500,
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 18.49,
           ebay: 15.95,
       },
@@ -4223,8 +4132,7 @@ const buildParaUsoBasico = {
     marca: "Cooler Master",
       nombre: "Cooler Master MasterBox MB600L V2",
       gama: "Baja",
-      precio: {
-          segundaMano: null,
+      precio: { 
           amazon: 81.02,
           ebay: 106.99,
       },
@@ -4245,8 +4153,7 @@ const buildParaUsoBasico2 = {
       gama: "Baja",
       numeroM2: 0,
       numeroSata: 2,
-      precio: {
-          segundaMano: null,
+      precio: {  
           amazon: 88.65,
           ebay: 78.82,
       },
@@ -4335,7 +4242,6 @@ const buildParaUsoBasico2 = {
       potencia: 500,
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 18.49,
           ebay: 15.95,
       },
@@ -4365,7 +4271,6 @@ const buildParaUsoBasico2 = {
       nombre: "Cooler Master MasterBox MB600L V2",
       gama: "Baja",
       precio: {
-          segundaMano: null,
           amazon: 81.02,
           ebay: 106.99,
       },

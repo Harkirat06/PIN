@@ -1,60 +1,21 @@
-Marketplace {
-    height: 100%;
-}
-
-.Marketplace {
+html:has(.Marketplace), body:has(.Marketplace) {
     background-color: #e9eaea;
-    height: 100%;
 }
 
-.Marketplace .productName {
-    font-family: 'Mukta', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: #222225;
-}
-
-.Marketplace .mb-2 {
-    font-family: 'Mukta', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: #222225;
-    margin: 0px;
-    padding: 0px;
-}
-
-.Marketplace .w-100.col-lg-6.col-md-8.col-sm-10 {
-    background-color: transparent;
-    border-radius: 0%;
-    overflow: hidden;
-    border: none;
-}
-
-.Marketplace .price {
+.Marketplace .header {
     background-color: #222225;
-    font-family: 'Mukta', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    color: #ffffff;
-    border: none;
-    margin: 0px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
-.Marketplace .price:hover {
-    background-color: #20f299;
+.Marketplace .logo {
+    content: url(./logo.svg);
 }
 
-.Marketplace .price:active {
-    background-color: #ffffff;
-    color: #222225;
-}
-
-.Marketplace .productImg {
-    border-radius: 0%;
+.Marketplace .userProfile {
+    content: url(./profile.svg)
 }
 
 .Marketplace .selectBtn {
@@ -136,6 +97,56 @@ Marketplace {
     height: 25px;
 }
 
+.Marketplace .productName {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #222225;
+}
+
+.Marketplace .mb-2 {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #222225;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Marketplace .w-100.col-lg-6.col-md-8.col-sm-10 {
+    background-color: transparent;
+    border-radius: 0%;
+    overflow: hidden;
+    border: none;
+}
+
+.Marketplace .price {
+    background-color: #222225;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+    border: none;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Marketplace .price:hover {
+    background-color: #20f299;
+}
+
+.Marketplace .price:active {
+    background-color: #ffffff;
+    color: #222225;
+}
+
+.Marketplace .productImg {
+    border-radius: 0%;
+}
+
 .Marketplace .productsList {
     padding: 20px;
 }
@@ -143,21 +154,5 @@ Marketplace {
 .Marketplace .noRes {
     font-family: 'Mukta', sans-serif;
     color: #222225;
-}
-
-.Marketplace .header {
-    background-color: #222225;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Marketplace .logo {
-    content: url(./logo.svg);
-}
-
-.Marketplace .userProfile {
-    content: url(./profile.svg)
 }
 

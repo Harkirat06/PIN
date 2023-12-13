@@ -1,3 +1,97 @@
-.PaginaPagar {
-    color: #faf6f6;
+html:has(.PaginaPagar), :has(.PaginaPagar) {
+    background-color: #ffffff;
 }
+
+.PaginaPagar {
+    align-items: center;
+    justify-content: center;
+}
+
+.PaginaPagar .header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PaginaPagar .logo {
+    content: url(./logo.svg);
+}
+
+.PaginaPagar .userProfile {
+    content: url(./profile.svg)
+}
+
+.PaginaPagar .mainWrapper {
+    padding: 25px 150px 100px;
+}
+
+.PaginaPagar .title {
+    color: #222225;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.PaginaPagar .listWrapper {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   margin-top: 25px;
+}
+
+.PaginaPagar .list {
+    background-color: #e9eaea;
+    color: #222225;
+    padding: 50px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.PaginaPagar .propiedad {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.PaginaPagar .productName {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.PaginaPagar .priceType {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.PaginaPagar .priceType:hover {
+    color: #20f299;
+}
+
+.PaginaPagar .priceType:active {
+    color: #ffffff;
+}
+
+.PaginaPagar .price {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.PaginaPagar .total {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.PaginaPagar .horizontalLine {
+    margin: 0px 50px;
+    color: #ffffff;
+    height: 1px;
+}
+
+
+

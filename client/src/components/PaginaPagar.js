@@ -109,9 +109,8 @@ function PaginaPagar({ context }) {
                     </div>
                 </div>
                 <div className="btnWrapper">
-                    <Button className="navBtn" onClick={() => openLinks()}>Abrir Links</Button>
-                    <br/>
                     <Button className="navBtn" onClick={()=>navigate("/marketplace")}>Volver al inicio</Button>
+                    <Button className="navBtn" onClick={() => openLinks()}>Abrir Links</Button>
                 </div>
             </div>
         </div>

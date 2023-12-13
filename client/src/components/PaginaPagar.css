@@ -23,7 +23,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
 }
 
 .PaginaPagar .mainWrapper {
-    padding: 25px 150px 100px;
+    padding: 20px 150px 50px;
     background-image: url("./grid.svg");
 }
 
@@ -37,14 +37,14 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
 .PaginaPagar .listWrapper {
    display: flex;
    align-items: center;
-   width: 100%;
-   margin-top: 25px;
+   margin-top: 20px;
 }
 
 .PaginaPagar .list {
+    margin: auto;
     background-color: #e9eaea;
     color: #222225;
-    padding: 25px 50px;
+    padding: 25px 50px 15px;
     border-radius: 20px;
     width: 100%;
 }
@@ -54,6 +54,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     font-weight: 400;
     font-size: 32px;
     margin: auto;
+    max-width: 180px;
 }
 
 .PaginaPagar .productName {
@@ -71,6 +72,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     text-decoration: underline;
     text-align: right;
     margin: auto;
+    max-width: 105px;
 }
 
 .PaginaPagar .priceType:hover {
@@ -87,6 +89,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     font-size: 20px;
     text-align: right;
     margin: auto;
+    max-width: 150px;
 }
 
 .PaginaPagar .totalRow {
@@ -107,20 +110,102 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     height: 1px;
 }
 
-.PaginaPagar .navBtn {
+.PaginaPagar .btnWrapper {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    float: right;
+.PaginaPagar .navBtn {
     font-family: 'Mukta', sans-serif;
     font-weight: 400;
     font-size: 25px;
     color: #222225;
     background-color: #ffffff;
     border: 2.5px solid #20f299;
+    box-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff;
 }
 
 .PaginaPagar .navBtn:active {
     opacity: 100%;
     background-color: #20f299;
     border-color: #20f299;
+}
+
+@media (min-width: 1500px) {
+
+.PaginaPagar .mainWrapper {
+    padding: 25px 200px 50px;
+}
+
+}
+
+@media (max-width: 1200px) {
+
+    .PaginaPagar .mainWrapper {
+        padding: 15px 50px 50px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .PaginaPagar .title {
+        font-size: 36px;
+    }
+
+    .PaginaPagar .propiedad {
+        font-size: 24px;
+        max-width: 125px;
+    }
+
+    .PaginaPagar .productName, .PaginaPagar .total {
+        font-size: 16px;
+    }
+
+    .PaginaPagar .priceType {
+        max-width: 90px;
+        font-size: 16px;
+    }
+
+    .PaginaPagar .price {
+        max-width: 125px;
+        font-size: 16px;
+    }
+
+    .PaginaPagar .btnWrapper {
+        margin-top: 20px;
+    }
+
+    .PaginaPagar .navBtn {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .PaginaPagar .mainWrapper {
+        padding: 0px 0px 10px;
+    }
+
+    .PaginaPagar .title {
+        margin-left: 20px;
+    }
+
+    .PaginaPagar .listWrapper {
+        margin-top: 10px;
+    }
+
+    .PaginaPagar .list {
+        border-radius: 0px;
+        padding: 15px 20px 10px;
+    }
+
+    .PaginaPagar .btnWrapper {
+        margin: 20px 20px 10px;
+    }
+
 }
 

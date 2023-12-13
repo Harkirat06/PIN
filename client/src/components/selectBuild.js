@@ -176,7 +176,7 @@ function SelectBuild({ context }) {
                 navigate("/PcBuilder");
               }}
             >
-              Construye tu pc de cero
+              Construye tu PC desde cero
             </Button>
           </div>
         </Col>

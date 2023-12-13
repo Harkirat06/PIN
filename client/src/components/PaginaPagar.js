@@ -98,16 +98,21 @@ function PaginaPagar({ context }) {
                         {Object.keys(productList).map((propiedad) => (
                             handleSeleccion(propiedad)
                         ))}
-                        <Row>
-                            <Col/>
-                            <Col/>
-                            <Col/>
-                            <Col className="total">{total} €</Col>
-                        </Row>
+                        <div>
+                            <Row className="totalRow">
+                                <Col className="propiedad"/>
+                                <Col className="productName"/>
+                                <Col className="priceType"/>
+                                <Col className="total">{total} €</Col>
+                            </Row>
+                        </div>
                     </div>
                 </div>
-                <Button onClick={() => openLinks()}>Abrir Links</Button>
-                <Button onClick={()=>navigate("/marketplace")}>Volver al inicio</Button>
+                <div className="btnWrapper">
+                    <Button className="navBtn" onClick={() => openLinks()}>Abrir Links</Button>
+                    <br/>
+                    <Button className="navBtn" onClick={()=>navigate("/marketplace")}>Volver al inicio</Button>
+                </div>
             </div>
         </div>
     );

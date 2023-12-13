@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Button, Card, Container, Modal, Form } from "react-bootstrap";
+import { Button, Card, Container, Modal, Form, Alert } from "react-bootstrap";
 import { buildPorPrecio, getListas } from "./Axios";
 import "./PcBuilder.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,6 +24,8 @@ function PcBuilder({ context }) {
   } = useContext(context);
 
   const navigate = useNavigate();
+  const [showError, setShowError] = useState(false);
+  const [mensaje, setMensaje] = useState("");
 
   useEffect(() => {
     if (!user) {
@@ -189,6 +191,11 @@ function PcBuilder({ context }) {
 
   return (
     <Container>
+      {show && (
+        <Alert variant="danger" onClose={() => setShowError(false)} dismissible>
+          {mensaje}
+        </Alert>
+      )}
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Presupuesto para completar la build</Modal.Title>

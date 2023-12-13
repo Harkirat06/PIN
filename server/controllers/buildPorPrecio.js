@@ -345,10 +345,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       return configuracionPorPrecio;
     }
   }
-  return {
-    Error:
-      "No se ha podido encontrar una build por el presupuesto especificado",
-  };
+  return {Error: "No se ha podido encontrar una build por el presupuesto especificado"};
 };
 
 builderPorPrecioRouter.get("/", async (req, res) => {

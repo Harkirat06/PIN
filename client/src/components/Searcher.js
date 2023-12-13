@@ -48,7 +48,7 @@ function Searcher({ context }) {
               name="search-form"
               id="search-form"
               className="search-input"
-              placeholder="search..."
+              placeholder="Buscar..."
               value={q}
               onChange={(e) => {
                 setQ(e.target.value);

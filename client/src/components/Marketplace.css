@@ -107,6 +107,7 @@ Marketplace {
 
 .Marketplace .searchLabel {
     line-height: 0;
+    display: none;
 }
 
 .Marketplace .checkForm {

@@ -16,6 +16,7 @@ function Cards({ context }) {
           list.map((item) => (
             <div className="col-12 col-md-6 col-lg-3 d-flex align-items-stretch" key={i++}>
               <Cardd
+                item = {item}
                 context={context}
                 nombre={item.nombre}
                 imagen={item.imagen}

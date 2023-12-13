@@ -89,7 +89,7 @@ function PaginaPagar({ context }) {
             </Row>
 
             <Button onClick={() => openLinks()}>Abrir Links</Button>
-            <Button>Pagar</Button>
+            <Button onClick={()=>navigate("/marketplace")}>Volver al inicio</Button>
         </Container>
     );
 }

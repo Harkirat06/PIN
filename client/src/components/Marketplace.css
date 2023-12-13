@@ -57,9 +57,35 @@ Marketplace {
     border-radius: 0%;
 }
 
+.Marketplace .selectBtn {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    text-decoration: none;
+    border-radius: 0%;
+    border: none;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.Marketplace .selectBtn:hover {
+    color: #20f299;
+}
+
+.Marketplace .selectBtn:active {
+    color: #ffffff;
+}
+
+.Marketplace .search-header {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .Marketplace .searcher, .search-wrapper, .search-form {
     width: 100%;
-    max-width: none;
+    align-self: flex-start;
 }
 
 .Marketplace .search-input {
@@ -68,43 +94,23 @@ Marketplace {
     font-family: 'Mukta', sans-serif;
     font-weight: 300;
     font-size: 28px;
-    display: flex;
     width: 100%;
     min-width: 250px;
-    max-width: none;
     border-top-left-radius: 999px;
     border-bottom-left-radius: 999px;
+    outline-color: #20f299;
 }
 
-.Marketplace .selectBtn {
-    font-family: 'Mukta', sans-serif;
-    font-weight: 300;
-    font-size: 28px;
-    border-radius: 0%;
-    border: none;
-    color: #ffffff;
-    white-space: nowrap;
-    margin: 10px;
-    padding: 5px 10px;
+.Marketplace .search-input:focus {
+    outline-color: #20f299;
 }
 
-.Marketplace .selectBtn:active {
-    color: #20f299;
+.Marketplace .searchLabel {
+    line-height: 0;
 }
 
-.Marketplace .search-header {
-    display: flex;
-    width: 100%;
-    margin: 20px;
-}
-
-.Marketplace .productsList {
-    padding: 20px;
-}
-
-.Marketplace .noRes {
-    font-family: 'Mukta', sans-serif;
-    color: #222225;
+.Marketplace .checkForm {
+    height: 100%;
 }
 
 .Marketplace .mb-3 {
@@ -114,12 +120,10 @@ Marketplace {
     color: #ffffff;
     font-weight: 300;
     font-size: 28px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     accent-color: #20f299;
     justify-content: center;
     align-items: center;
-    vertical-align: middle;
-    margin-right: 40px;
     border-top-right-radius: 999px;
     border-bottom-right-radius: 999px;
 }
@@ -129,6 +133,15 @@ Marketplace {
     vertical-align: middle;
     width: 25px;
     height: 25px;
+}
+
+.Marketplace .productsList {
+    padding: 20px;
+}
+
+.Marketplace .noRes {
+    font-family: 'Mukta', sans-serif;
+    color: #222225;
 }
 
 .Marketplace .header {

@@ -41,20 +41,21 @@ function Searcher({ context }) {
 
   return (
     <div className="search-wrapper">
-        <label htmlFor="search-form"/>
-          <form onSubmit={filter} className="search-form">
-            <input
-              type="search"
-              name="search-form"
-              id="search-form"
-              className="search-input"
-              placeholder="search..."
-              value={q}
-              onChange={(e) => {
-                setQ(e.target.value);
-              }}
-            />
-          </form>
+        
+        <form onSubmit={filter} className="search-form">
+          <input
+            type="search"
+            name="search-form"
+            id="search-form"
+            className="search-input"
+            placeholder="Buscar..."
+            value={q}
+            onChange={(e) => {
+              setQ(e.target.value);
+            }}
+          />
+          <label htmlFor="search-form" className="searchLabel"/>
+        </form>
       </div>
   );
 }

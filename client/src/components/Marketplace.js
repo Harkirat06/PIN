@@ -47,19 +47,16 @@ function Marketplace({context}) {
         <a>
           <img className="logo"/>
         </a>
-        <a onClick={() => navigate("/SelectBuild")} className="selectBtn">Select Build</a>
+        <a onClick={() => navigate("/SelectBuild")} className="selectBtn">Seleccionar Build</a>
         <a>
           <img className="userProfile"/>
         </a>
       </div>
-      <div className="search-header">
-        {/*<Button onClick={() => navigate("/SelectBuild")} className="selectBtn">
-          Select Build
-  </Button>*/}
+      <span className="search-header">
         <Searcher context={context} className="searcher"></Searcher>
-        <Form>
+        <Form className="checkForm">
           <span key={`default-${'checkbox'}`} className="mb-3">
-            <span>Second-hand only</span>
+            <span>Solo segunda mano</span>
             <input // prettier-ignore
               type="checkbox"
               id={`default-${'checkbox'}`}
@@ -69,7 +66,7 @@ function Marketplace({context}) {
               />
           </span>
         </Form>
-      </div>
+      </span>
       <Row className="productsList"><Cards context={context}></Cards></Row>
     </div>
   );

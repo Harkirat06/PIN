@@ -53,7 +53,7 @@ function Cardd({ nombre, imagen, onClick, precio, esMarketing, context }) {
                 }
               }}
             >
-              <div>Second-hand:</div><div> {precio.segundaMano} €</div>
+              <div>Segunda mano:</div><div> {precio.segundaMano} €</div>
             </Button>
           )}
         </Card.Text>

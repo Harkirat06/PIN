@@ -191,7 +191,7 @@ function PcBuilder({ context }) {
 
   return (
     <Container>
-      {show && (
+      {showError && (
         <Alert variant="danger" onClose={() => setShowError(false)} dismissible>
           {mensaje}
         </Alert>

@@ -37,7 +37,7 @@ function PaginaPagar({ context }) {
                             <Col className="propiedad">{propiedad + " " + i++}</Col>
                             <Col className="productName">{item.nombre}</Col>
                             <Col className="priceType" onClick={() => handleLink(item)}>{item.selectedType}</Col>
-                            <Col className="price">{item.selectedPrice} €</Col>
+                            <Col className="price">{item.selectedPrice.toFixed(2)} €</Col>
                         </Row>
                         <hr className="horizontalLine"/>
                     </div>
@@ -52,7 +52,7 @@ function PaginaPagar({ context }) {
                         <Col className="propiedad">{propiedad}</Col>
                         <Col className="productName">{productList[propiedad].nombre}</Col>
                         <Col className="priceType" onClick={() => handleLink(productList[propiedad])}>{productList[propiedad].selectedType}</Col>
-                        <Col className="price">{productList[propiedad].selectedPrice} €</Col>
+                        <Col className="price">{productList[propiedad].selectedPrice.toFixed(2)} €</Col>
                     </Row>
                     <hr className="horizontalLine"/>
                 </div>
@@ -103,7 +103,7 @@ function PaginaPagar({ context }) {
                                 <Col className="propiedad"/>
                                 <Col className="productName"/>
                                 <Col className="priceType"/>
-                                <Col className="total">{total} €</Col>
+                                <Col className="total">{total.toFixed(2)} €</Col>
                             </Row>
                         </div>
                     </div>

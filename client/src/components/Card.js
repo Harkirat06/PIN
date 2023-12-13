@@ -27,7 +27,7 @@ function Cardd({ item, nombre, imagen, onClick, precio, esMarketing, context }) 
                 }
               }}
             >
-              <div>Amazon:</div><div> {precio.amazon} €</div>
+              <div>Amazon:</div><div> {precio.amazon.toFixed(2)} €</div>
             </Button>
           )}
         </Card.Text>
@@ -41,11 +41,11 @@ function Cardd({ item, nombre, imagen, onClick, precio, esMarketing, context }) 
                 if(onClick !== undefined){
                   onClick("ebay");
                 } else {
-                  openInNewTab(item.link.ebay);
+                  openInNewTab(item.link.ebay.toFixed(2));
                 }
               }}
             >
-              <div>Ebay:</div><div> {precio.ebay} €</div>
+              <div>Ebay:</div><div> {precio.ebay.toFixed(2)} €</div>
             </Button>
           )}
         </Card.Text>
@@ -61,7 +61,7 @@ function Cardd({ item, nombre, imagen, onClick, precio, esMarketing, context }) 
                 }
               }}
             >
-              <div>Segunda mano:</div><div> {precio.segundaMano} €</div>
+              <div>Segunda mano:</div><div> {precio.segundaMano.toFixed(2)} €</div>
             </Button>
           )}
         </Card.Text>

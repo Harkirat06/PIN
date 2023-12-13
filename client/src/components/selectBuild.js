@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 
 function SelectBuild({ context }) {
   const navigate = useNavigate();
-  const [sliderValue, setSliderValue] = useState(0);
   const {
     build,
     setBuild,
@@ -49,9 +48,7 @@ function SelectBuild({ context }) {
   }, []);
 
   // Función para manejar el cambio en el slider
-  const handleSliderChange = (event) => {
-    setSliderValue(event.target.value);
-  };
+
 
   // Al seleccionar una build, establece la build en el contexto
   const selectBuild = (selectedBuild, secondHand) => {

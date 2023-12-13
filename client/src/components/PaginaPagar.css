@@ -8,6 +8,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
 }
 
 .PaginaPagar .header {
+    background-color: #222225;
     padding: 20px;
     display: flex;
     justify-content: space-between;

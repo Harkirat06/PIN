@@ -78,7 +78,7 @@ const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
 
 const handleDisipador = (lista, cpu) => {
   if(cpu){
-  if (cpu.ventilador == false) {
+  if (cpu.ventilador == "false") {
     return lista;
   } else {
     return [];

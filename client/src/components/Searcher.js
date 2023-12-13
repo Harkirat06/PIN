@@ -47,7 +47,7 @@ function Searcher({ context }) {
             name="search-form"
             id="search-form"
             className="search-input"
-            placeholder="Buscar..."
+            placeholder="Buscar componente..."
             value={q}
             onChange={(e) => {
               setQ(e.target.value);

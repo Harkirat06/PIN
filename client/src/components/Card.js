@@ -2,12 +2,9 @@ import React, { useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 
-function Cardd({ item,nombre, imagen, onClick, precio, esMarketing, context }) {
-  const handleLink = (link) => {
-            openInNewTab(link)
-}
+function Cardd({ item, nombre, imagen, onClick, precio, esMarketing, context }) {
 
-const openInNewTab = (url) => {
+  const openInNewTab = (url) => {
     window.open(url, "_blank", "noreferrer");
   };
   
@@ -23,9 +20,11 @@ const openInNewTab = (url) => {
               className="price"
               size="sm"
               onClick={() => {
-                
-                  handleLink(item.link.amazon);
-                
+                if(onClick !== undefined){
+                  onClick("amazon");
+                } else {
+                  openInNewTab(item.link.amazon);
+                }
               }}
             >
               <div>Amazon:</div><div> {precio.amazon} €</div>
@@ -39,9 +38,11 @@ const openInNewTab = (url) => {
               className="price"
               size="sm"
               onClick={() => {
-                
-                  handleLink(item.link.ebay);
-                
+                if(onClick !== undefined){
+                  onClick("ebay");
+                } else {
+                  openInNewTab(item.link.ebay);
+                }
               }}
             >
               <div>Ebay:</div><div> {precio.ebay} €</div>

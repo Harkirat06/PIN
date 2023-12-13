@@ -32,33 +32,43 @@ function PaginaPagar({ context }) {
             return productList[propiedad].map((item) => {
                 total += item.selectedPrice;
                 return (
-                    <Row>
-                        <Col>{propiedad + " " + i++}</Col>
-                        <Col>{item.nombre}</Col>
-                        <Col onClick={() => handleLink(item)}>{item.selectedType}</Col>
-                        <Col>{item.selectedPrice} €</Col>
-                    </Row>
+                    <div>
+                        <Row>
+                            <Col className="propiedad">{propiedad + " " + i++}</Col>
+                            <Col className="productName">{item.nombre}</Col>
+                            <Col className="priceType" onClick={() => handleLink(item)}>{item.selectedType}</Col>
+                            <Col className="price">{item.selectedPrice} €</Col>
+                        </Row>
+                        <hr className="horizontalLine"/>
+                    </div>
+                    
                 );
             });
           } else {
             total += productList[propiedad].selectedPrice;
             return (
-                <Row>
-                    <Col>{propiedad}</Col>
-                    <Col>{productList[propiedad].nombre}</Col>
-                    <Col onClick={() => handleLink(productList[propiedad])}>{productList[propiedad].selectedType}</Col>
-                    <Col>{productList[propiedad].selectedPrice} €</Col>
-                </Row>
+                <div>
+                    <Row>
+                        <Col className="propiedad">{propiedad}</Col>
+                        <Col className="productName">{productList[propiedad].nombre}</Col>
+                        <Col className="priceType" onClick={() => handleLink(productList[propiedad])}>{productList[propiedad].selectedType}</Col>
+                        <Col className="price">{productList[propiedad].selectedPrice} €</Col>
+                    </Row>
+                    <hr className="horizontalLine"/>
+                </div>
             );
           }
         } else {
             return (
-            <Row>
-                <Col>{propiedad}</Col>
-                <Col>{"Elemento no seleccionado"}</Col>
-                <Col></Col>
-                <Col></Col>
-            </Row>
+            <div>
+                <Row>
+                    <Col className="propiedad">{propiedad}</Col>
+                    <Col className="productName">{"Elemento no seleccionado"}</Col>
+                    <Col className="priceType"></Col>
+                    <Col className="price"></Col>
+                </Row>
+                <hr className="horizontalLine"/>
+            </div>
           );
         }
     }
@@ -76,21 +86,30 @@ function PaginaPagar({ context }) {
     }
 
     return (
-        <Container className="PaginaPagar">
-            <h1>Your selected Products</h1>
-            {Object.keys(productList).map((propiedad) => (
-                handleSeleccion(propiedad)
-            ))}
-            <Row>
-                <Col/>
-                <Col/>
-                <Col/>
-                <Col>{total} €</Col>
-            </Row>
-
-            <Button onClick={() => openLinks()}>Abrir Links</Button>
-            <Button onClick={()=>navigate("/marketplace")}>Volver al inicio</Button>
-        </Container>
+        <div className="PaginaPagar">
+            <div className="header">
+                <a><img className="logo"/></a>
+                <a><img className="userProfile"/></a>
+            </div>
+            <div className="mainWrapper">
+                <span className="title">tus productos seleccionados</span>
+                <div className="listWrapper">
+                    <div className="list">
+                        {Object.keys(productList).map((propiedad) => (
+                            handleSeleccion(propiedad)
+                        ))}
+                        <Row>
+                            <Col/>
+                            <Col/>
+                            <Col/>
+                            <Col className="total">{total} €</Col>
+                        </Row>
+                    </div>
+                </div>
+                <Button onClick={() => openLinks()}>Abrir Links</Button>
+                <Button onClick={()=>navigate("/marketplace")}>Volver al inicio</Button>
+            </div>
+        </div>
     );
 }
 

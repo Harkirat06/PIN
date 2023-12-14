@@ -259,8 +259,8 @@ describe('handleDisipador function', () => {
     // Mocked disipador data
   ];
 
-  const mockedCPUWithVentilador = { ventilador: true };
-  const mockedCPUWithoutVentilador = { ventilador: false };
+  const mockedCPUWithVentilador = { ventilador: "true" };
+  const mockedCPUWithoutVentilador = { ventilador: "false" };
 
   test('it should handle disipador lists based on CPU', () => {
     const filteredListWithVentiladorCPU = handleDisipador(disipadorList, mockedCPUWithVentilador);

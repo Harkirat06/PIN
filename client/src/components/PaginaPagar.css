@@ -72,7 +72,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     text-decoration: underline;
     text-align: right;
     margin: auto;
-    max-width: 105px;
+    max-width: 150px;
 }
 
 .PaginaPagar .priceType:hover {
@@ -89,7 +89,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     font-size: 20px;
     text-align: right;
     margin: auto;
-    max-width: 150px;
+    max-width: 125px;
 }
 
 .PaginaPagar .totalRow {
@@ -165,12 +165,12 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     }
 
     .PaginaPagar .priceType {
-        max-width: 90px;
+        max-width: 125px;
         font-size: 16px;
     }
 
     .PaginaPagar .price {
-        max-width: 125px;
+        max-width: 115px;
         font-size: 16px;
     }
 

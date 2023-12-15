@@ -11,10 +11,6 @@
     align-items: center;
   }
 
-.container-with-bg {
-    background-color:rgb(40, 45, 54); /* Puedes cambiar el color a tu preferencia */
-}
-
 /* Combina las clases de Bootstrap con tu clase personalizada */
 .container-with-bg.w-75 {
     width: 75%;

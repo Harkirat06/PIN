@@ -18,23 +18,21 @@ html:has(.Marketplace), body:has(.Marketplace) {
     content: url(./profile.svg)
 }
 
-.Marketplace .selectBtn {
-    font-family: 'Mukta', sans-serif;
-    font-weight: 300;
-    font-size: 28px;
-    text-decoration: none;
-    border-radius: 0%;
-    border: none;
-    color: #ffffff;
-    white-space: nowrap;
+.btn-custom-color {
+    border-color: #20f299 !important;
+    color: #ffffff !important;
+    font-family: 'Mukta', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 26px !important;
+    white-space: nowrap !important;
 }
 
-.Marketplace .selectBtn:hover {
-    color: #20f299;
-}
-
-.Marketplace .selectBtn:active {
-    color: #ffffff;
+/* Estilos adicionales para hover o focus si lo deseas */
+.btn-custom-color:hover,
+.btn-custom-color:focus {
+    background-color: #20f299 !important; /* Puedes ajustar el color al hacer hover o focus */
+    border-color: #20f299 !important;
+    color: #ffffff !important;
 }
 
 .Marketplace .search-header {

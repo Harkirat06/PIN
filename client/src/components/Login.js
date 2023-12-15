@@ -108,7 +108,7 @@ function Login({ context }) {
   };
 
   return (
-    <Container className="w-75 rounded shadow mt-3">
+    <Container className="container-with-bg w-75 rounded shadow mt-3">
       {show && (
         <Alert variant="danger" onClose={() => setShow(false)} dismissible>
           {mensaje}
@@ -120,7 +120,7 @@ function Login({ context }) {
           <div className="text-end">
             <img src="/public/logo.png" width="48" alt="" />
           </div>
-          <h2 className="fw-bold text-center py-5" style={{ color: "#0d6efd" }}>
+          <h2 className="fw-bold text-center py-5" style={{ color: "#20f299" }}>
             {login ? "Bienvenidos" : "Crea una nueva cuenta"}
           </h2>
           {login ? (
@@ -164,14 +164,14 @@ function Login({ context }) {
                 )}
               </div>
               <div className="d-grid">
-                <Button type="submit" variant="primary">
+                <Button className="btn btn-custom-color" type="submit" variant="outline-primary">
                   Login
                 </Button>
               </div>
               <div className="my-3">
                 <span style={white}>
                   ¿No tienes cuenta?{" "}
-                  <Link onClick={registrar} to="/" style={{ color: "#198754" }}>
+                  <Link onClick={registrar} to="/" style={{ color: "#007bff" }}>
                     Sign Up
                   </Link>
                 </span>
@@ -264,14 +264,14 @@ function Login({ context }) {
                 )}
               </div>
               <div className="d-grid">
-                <Button type="submit" variant="primary">
+                <Button type="submit" variant="outline-primary" className="btn btn-custom-color">
                   Sign Up
                 </Button>
               </div>
               <div className="my-3">
                 <span style={white}>
                   ¿Ya tienes cuenta?{" "}
-                  <Link onClick={registrar} to="/" style={{ color: "#198754" }}>
+                  <Link onClick={registrar} to="/" style={{ color: "#007bff" }}>
                     Login
                   </Link>
                 </span>

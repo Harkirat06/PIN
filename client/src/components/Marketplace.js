@@ -2,6 +2,7 @@ import Searcher from "./Searcher";
 import Cards from "./Cards";
 import Form from 'react-bootstrap/Form';
 import {Row,Col} from 'react-bootstrap'
+import { getListas } from "./Axios";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import { Button } from "react-bootstrap";
@@ -9,7 +10,7 @@ import './Marketplace.css'
 
 
 function Marketplace({context}) {
-  const {user, checkboxState, setCheckboxState, list, setList, items} = useContext(context)
+  const {user, checkboxState, setCheckboxState, list, setList, items, setItems} = useContext(context)
 
   const navigate = useNavigate()
   useEffect(()=>{
@@ -17,6 +18,16 @@ function Marketplace({context}) {
       navigate("/")
     }
   },[])
+
+  useEffect(() => {
+    getListas().then((res) => {
+      let array = [];
+      let objects = Object.values(res.data);
+      objects.forEach((item) => (array = array.concat(item)));
+      setItems(array);
+      setList(array);
+    });
+  }, []);
   useEffect(() => {
     if (!checkboxState) {
       setList(items);
@@ -25,7 +36,6 @@ function Marketplace({context}) {
 
   const handleCheckboxChange = () => {
     let newList = filterSegundaMano(list)
-    console.log(newList)
     setList(newList)
     setCheckboxState((prev)=>!prev);
   };

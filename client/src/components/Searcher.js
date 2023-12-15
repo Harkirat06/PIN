@@ -1,26 +1,27 @@
 import { useEffect, useContext } from "react";
-import { getListas } from "./Axios";
-import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
-function Searcher({ context }) {
-  const { list, setList, items, setItems, q, setQ } = useContext(context);
-  useEffect(() => {
-    getListas().then((res) => {
-      let array = [];
-      let objects = Object.values(res.data);
-      objects.forEach((item) => (array = array.concat(item)));
-      setItems(array);
-      setList(array);
-    });
-  }, []);
+function Searcher({ context}) {
+  const { list, setList, items, setItems, q, setQ, checkboxState} = useContext(context);
   useEffect(() => {
     if (q === "") {
-      setList(items);
+      let newList = filterSegundaMano(items)
+      setList(newList)
     }
   }, [q]);
 
-  const navigate = useNavigate();
+  const filterSegundaMano = (lista) =>{
+    if (checkboxState){
+      let newLista = lista.filter(
+        (item) =>
+          item.precio.segundaMano
+      );
+    return newLista
+    }
+    else{
+      return lista
+    }
+  }
+
   const filter = (event) => {
     let newList = [];
     items.forEach((item) => {
@@ -35,6 +36,7 @@ function Searcher({ context }) {
         newList = newList.concat(item);
       }
     });
+    newList = filterSegundaMano(newList)
     setList(newList);
     event.preventDefault();
   };

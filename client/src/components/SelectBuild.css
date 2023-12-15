@@ -1,6 +1,9 @@
 html:has(.SelectBuild), body:has(.SelectBuild) {
     background-color: #fff;
 }
+.verde{
+    color: #20f299;
+}
 .header {
     background-color: #222225;
     padding: 20px;
@@ -28,3 +31,37 @@ h2{
     margin-top: 5%;
     margin-bottom: 12%;
 }
+
+/* Cambia el color de los botones de navegación del slider */
+.slick-arrow.slick-next {
+  color: #20f299 !important; /* Cambia el color a negro o al color que prefieras */
+  background-color: #20f299 !important;
+}
+
+.slick-arrow.slick-next:hover {
+    color: black !important; /* Cambia el color a negro o al color que prefieras */
+    background-color: black !important;
+  }
+
+  /* Cambia el color de los botones de navegación del slider */
+.slick-arrow.slick-prev {
+    color: #20f299 !important; /* Cambia el color a negro o al color que prefieras */
+    background-color: #20f299 !important;
+  }
+  
+.slick-arrow.slick-prev:hover {
+      color: black !important; /* Cambia el color a negro o al color que prefieras */
+      background-color: black !important;
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%; /* Estilo de rombo para los puntos */
+  }
+  
+  /* Estilo personalizado para el punto activo del slider */
+  .slick-dots li.slick-active button {
+    background-color: #2ecc71; /* Cambia el color del punto activo */
+  }

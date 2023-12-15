@@ -47,7 +47,7 @@ function Marketplace({context}) {
         <a>
           <img className="logo"/>
         </a>
-        <Button onClick={() => navigate("/SelectBuild")} className="btn-custom-color" variant="outline-primary">Seleccionar build</Button> 
+        <Button onClick={() => navigate("/SelectBuild")} className="custom-color" variant="outline-primary">Seleccionar build</Button> 
       </div>
       <span className="search-header">
         <Searcher context={context} className="searcher"></Searcher>

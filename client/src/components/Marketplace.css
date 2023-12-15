@@ -18,7 +18,7 @@ html:has(.Marketplace), body:has(.Marketplace) {
     content: url(./profile.svg)
 }
 
-.btn-custom-color {
+.custom-color {
     border-color: #20f299 !important;
     color: #ffffff !important;
     font-family: 'Mukta', sans-serif !important;
@@ -28,8 +28,8 @@ html:has(.Marketplace), body:has(.Marketplace) {
 }
 
 /* Estilos adicionales para hover o focus si lo deseas */
-.btn-custom-color:hover,
-.btn-custom-color:focus {
+.custom-color:hover,
+.custom-color:focus {
     background-color: #20f299 !important; /* Puedes ajustar el color al hacer hover o focus */
     border-color: #20f299 !important;
     color: #ffffff !important;

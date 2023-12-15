@@ -1,11 +1,22 @@
 import { useContext, useEffect, useState } from "react";
 import React from "react";
-import { Container, Row, Col, Button, Image, Form, Alert } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Image,
+  Form,
+  Alert,
+} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import imagen from "../images/COOLPC-Gold.jpg";
+import pc from "./PcPequeño.png";
 import "./SelectBuild.css";
 import { buildPorGama, buildPorPrecio, buildPorNicho } from "./Axios";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function SelectBuild({ context }) {
   const navigate = useNavigate();
@@ -16,9 +27,18 @@ function SelectBuild({ context }) {
     elementosSeleccionados,
     user,
   } = useContext(context);
-  const [presupuesto, setPresupuesto] = useState(0)
+  const [presupuesto, setPresupuesto] = useState(0);
   const [show, setShow] = useState(false);
   const [mensaje, setMensaje] = useState("");
+  const [mostrarSlider, setMostrarSlider] = useState(false);
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   let secondHand = false;
 
@@ -51,7 +71,6 @@ function SelectBuild({ context }) {
 
   // Función para manejar el cambio en el slider
 
-
   // Al seleccionar una build, establece la build en el contexto
   const selectBuild = (selectedBuild, secondHand) => {
     setBuild(() => {
@@ -67,12 +86,22 @@ function SelectBuild({ context }) {
           }
           selectedBuild[propiedad].forEach((item) => {
             const selectedType = getPriceType(item, secondHand);
-            elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]});
+            elementos["disco"] = elementos["disco"].concat({
+              nombre: item.nombre,
+              selectedType: selectedType,
+              link: item.link[selectedType],
+              selectedPrice: item.precio[selectedType],
+            });
           });
         } else {
           const item = selectedBuild[propiedad];
           const selectedType = getPriceType(item, secondHand);
-          elementos[propiedad] = {nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]};
+          elementos[propiedad] = {
+            nombre: item.nombre,
+            selectedType: selectedType,
+            link: item.link[selectedType],
+            selectedPrice: item.precio[selectedType],
+          };
         }
       });
       return [elementos];
@@ -89,138 +118,221 @@ function SelectBuild({ context }) {
         item.precio.segundaMano
       );
     } else {
-      minPrice = Math.min(
-        item.precio.amazon,
-        item.precio.ebay
-      );
+      minPrice = Math.min(item.precio.amazon, item.precio.ebay);
     }
     if (minPrice == item.precio.amazon) {
       return "amazon";
     } else if (minPrice == item.precio.ebay) {
       return "ebay";
-    } else {return "segundaMano"}
-  }
+    } else {
+      return "segundaMano";
+    }
+  };
+
+  const handleOpcionSeleccionada = (opcion) => {
+    if (opcion === "opcion1") {
+      setMostrarSlider(true);
+    } else {
+      setMostrarSlider(false);
+    }
+  };
 
   return (
-    <Container>
+    <div className="SelectBuild">
+      <div className="header">
+        <a>
+          <img className="logo" />
+        </a>
+        <Button
+          onClick={() => navigate("/Marketplace")}
+          className="custom-color"
+          variant="outline-primary"
+        >
+          Marketplace
+        </Button>
+      </div>
       {show && (
         <Alert variant="danger" onClose={() => setShow(false)} dismissible>
           {mensaje}
         </Alert>
       )}
-      <h1>Builds por nichos</h1>
-      <Row>
-        <Col xs={3}>
-          {/* Zona con 3 botones de gamas */}
-          <Button
-            onClick={() => {
-              buildPorNicho("Gamers").then((r) => selectBuild(r, false));
-            }}
-          >
-            Gamers
-          </Button>
-          <Button
-            onClick={() => {
-              buildPorNicho("Profesionales").then((r) => selectBuild(r, false));
-            }}
-          >
-            Profesionales
-          </Button>
-          <Button
-            onClick={() => {
-              buildPorNicho("Estudiantes").then((r) => selectBuild(r, false));
-            }}
-          >
-            Estudiantes
-          </Button>
-          <Button
-            onClick={() => {
-              buildPorNicho("Uso Basico").then((r) => selectBuild(r, false));
-            }}
-          >
-            Uso Basico
-          </Button>
-        </Col>
-      </Row>
-      <h1>Builds por gama</h1>
-      <br />
-      <Row>
-        <Col xs={3}>
-          {/* Zona con 3 botones de gamas */}
-          <Button
-            onClick={() => {
-              buildPorGama("baja").then((r) => selectBuild(r, false));
-            }}
-          >
-            Gama Baja{" "}
-          </Button>
-          <Button
-            onClick={() => {
-              buildPorGama("media").then((r) => selectBuild(r, false));
-            }}
-          >
-            Gama Media
-          </Button>
-          <Button
-            onClick={() => {
-              buildPorGama("alta").then((r) => selectBuild(r, false));
-            }}
-          >
-            Gama Alta
-          </Button>
-        </Col>
-      </Row>
-      <br />
-      <h1>Build desde cero</h1>
-      <Row>
-        <Col xs={1}>
-          <div className="main-content">
-            <Button
-              onClick={() => {
-                navigate("/PcBuilder");
-              }}
-            >
-              Construye tu PC desde cero
-            </Button>
+      <div className="container-fluid">
+        <div className="row">
+          {/* Parte izquierda */}
+          <div className="col-md-6">
+            <div>
+              <h2>Let's get started</h2>
+              <div className="imagen">
+                <img
+                  src={pc} // Coloca la URL de tu imagen
+                  alt="Imagen"
+                  className="img-fluid"
+                />
+              </div>
+            </div>
           </div>
-        </Col>
-      </Row>
-      <br />
-      <h1>Build por precio</h1>
-      <Row>
-        <Col xs={3}>
-          <Form>
-            <Form.Label style={{ color: "white" }}>Presupuesto</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="ej: 1000"
-              value={presupuesto}
-              onChange={(e) => {
-                setPresupuesto(e.target.value);
-              }}
-            />
-          </Form>
-          <Col>
+
+          {/* Parte derecha */}
+          {/* Parte derecha */}
+          <div className="col-md-6">
+            <div className="d-flex align-items-center justify-content-center h-100">
+              <div className="rounded p-3 w-100 h-100 d-flex flex-column">
+                {/* Contenido para elegir entre dos opciones */}
+                {!mostrarSlider ? (
+                  <div>
+                    <h3>Elige una opción:</h3>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => handleOpcionSeleccionada("opcion1")}
+                    >
+                      Opción 1
+                    </button>
+                    <button
+                      className="btn btn-secondary"
+                      onClick={() => handleOpcionSeleccionada("opcion2")}
+                    >
+                      Opción 2
+                    </button>
+                  </div>
+                ) : (
+                  /* Contenido del slider si se elige la Opción 1 */
+                  <Slider {...sliderSettings} className="flex-grow-1">
+                    <div>
+                      <h3>Slide 1</h3>
+                      <p>Contenido del slide 1</p>
+                    </div>
+                    <div>
+                      <h3>Slide 2</h3>
+                      <p>Contenido del slide 2</p>
+                    </div>
+                    <div>
+                      <h3>Slide 3</h3>
+                      <p>Contenido del slide 3</p>
+                    </div>
+                  </Slider>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Container>
+        <h1>Builds por nichos</h1>
+        <Row>
+          <Col xs={3}>
+            {/* Zona con 3 botones de gamas */}
             <Button
               onClick={() => {
-                buildPorPrecio(presupuesto).then((result) => {
-                  if (result && result.Error) {
-                    // Si buildPorPrecio devuelve un objeto Error, muestra un pop-up con el mensaje de error
-                    setMensaje(result.Error)
-                    setShow(true)
-                  } else {
-                    // Si no es un error, ejecuta selectBuild con el resultado
-                    selectBuild(result, secondHand);
-                  }
-                });
+                buildPorNicho("Gamers").then((r) => selectBuild(r, false));
               }}
             >
-              Hacer Build
+              Gamers
+            </Button>
+            <Button
+              onClick={() => {
+                buildPorNicho("Profesionales").then((r) =>
+                  selectBuild(r, false)
+                );
+              }}
+            >
+              Profesionales
+            </Button>
+            <Button
+              onClick={() => {
+                buildPorNicho("Estudiantes").then((r) => selectBuild(r, false));
+              }}
+            >
+              Estudiantes
+            </Button>
+            <Button
+              onClick={() => {
+                buildPorNicho("Uso Basico").then((r) => selectBuild(r, false));
+              }}
+            >
+              Uso Basico
             </Button>
           </Col>
-        </Col>
-      </Row>
-    </Container>
+        </Row>
+        <h1>Builds por gama</h1>
+        <br />
+        <Row>
+          <Col xs={3}>
+            {/* Zona con 3 botones de gamas */}
+            <Button
+              onClick={() => {
+                buildPorGama("baja").then((r) => selectBuild(r, false));
+              }}
+            >
+              Gama Baja{" "}
+            </Button>
+            <Button
+              onClick={() => {
+                buildPorGama("media").then((r) => selectBuild(r, false));
+              }}
+            >
+              Gama Media
+            </Button>
+            <Button
+              onClick={() => {
+                buildPorGama("alta").then((r) => selectBuild(r, false));
+              }}
+            >
+              Gama Alta
+            </Button>
+          </Col>
+        </Row>
+        <br />
+        <h1>Build desde cero</h1>
+        <Row>
+          <Col xs={1}>
+            <div className="main-content">
+              <Button
+                onClick={() => {
+                  navigate("/PcBuilder");
+                }}
+              >
+                Construye tu PC desde cero
+              </Button>
+            </div>
+          </Col>
+        </Row>
+        <br />
+        <h1>Build por precio</h1>
+        <Row>
+          <Col xs={3}>
+            <Form>
+              <Form.Label style={{ color: "white" }}>Presupuesto</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="ej: 1000"
+                value={presupuesto}
+                onChange={(e) => {
+                  setPresupuesto(e.target.value);
+                }}
+              />
+            </Form>
+            <Col>
+              <Button
+                onClick={() => {
+                  buildPorPrecio(presupuesto).then((result) => {
+                    if (result && result.Error) {
+                      // Si buildPorPrecio devuelve un objeto Error, muestra un pop-up con el mensaje de error
+                      setMensaje(result.Error);
+                      setShow(true);
+                    } else {
+                      // Si no es un error, ejecuta selectBuild con el resultado
+                      selectBuild(result, secondHand);
+                    }
+                  });
+                }}
+              >
+                Hacer Build
+              </Button>
+            </Col>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 export default SelectBuild;

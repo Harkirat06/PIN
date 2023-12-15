@@ -14,10 +14,6 @@ html:has(.Marketplace), body:has(.Marketplace) {
     content: url(./logo.svg);
 }
 
-.Marketplace .userProfile {
-    content: url(./profile.svg)
-}
-
 .custom-color {
     border-color: #20f299 !important;
     color: #ffffff !important;

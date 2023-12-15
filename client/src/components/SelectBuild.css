@@ -1,3 +1,30 @@
-.white-text{
-    color: aliceblue;
+html:has(.SelectBuild), body:has(.SelectBuild) {
+    background-color: #fff;
+}
+.header {
+    background-color: #222225;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    content: url(./logo.svg);
+}
+h2{
+    font: "Nohemi";
+    font-weight: 400;
+    margin-left: 2%;
+    font-size: 48px;
+}
+.imagen{
+    margin: 12%;
+}
+
+.container-fluid{
+    margin-top: 1%;
+}
+.flex-grow-1{
+    margin-top: 5%;
+    margin-bottom: 12%;
 }

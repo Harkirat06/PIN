@@ -257,7 +257,7 @@ function PcBuilder({ context }) {
           className="custom-color"
           variant="outline-primary"
         >
-          Return to selection
+          Volver a Selección
         </Button>
       </div>
       {showError && (
@@ -315,7 +315,7 @@ function PcBuilder({ context }) {
                         onClick={() => navigate("/paginaPagar")}
                         className="autocomplete"
                       >
-                        Finalizar Montaje
+                        Finalizar build
                       </Button>
                     </Container>
                   </div>
@@ -343,15 +343,15 @@ function PcBuilder({ context }) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Cerrar
           </Button>
           <Button variant="primary" onClick={handleAutocomplete}>
-            Save Changes
+            Guardar cambios
           </Button>
         </Modal.Footer>
       </Modal>
       <Container>
-        <h1>Pc Builder</h1>
+        <h1>PC Builder</h1>
       </Container>
       <Container className="centered"></Container>
       <br />

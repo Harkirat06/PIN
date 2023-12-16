@@ -85,7 +85,6 @@ const handleDisipador = (lista, cpu) => {
   }
 }
 else{
-  console.log("Else")
   return lista
 }
 };

@@ -21,10 +21,20 @@ const {
   tecladoList,
   ratonList,
 } = require("../datos/listas");
-const { filtroPorGama } = require("./filtrarListasPorGama");
+const { mapeo } = require("./gamasEnum");
 
-const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
-  let listaGamas = ["Alta", "Media", "Baja"];
+const filtroPorGama = (gama, lista) => {
+  const gamaNumerica = mapeo[gama];
+  let newLista = lista.filter(
+    (item) =>
+      mapeo[item.gama] == gamaNumerica
+  );
+  return newLista
+};
+
+
+const buildPorPrecio = (build = {}, presupuesto = 0) => {
+  let listaGamas = ["Premium","Alta", "MediaAlta",  "Media", "BajaMedia",  "Baja"];
 
   if (presupuesto <= 0) {
     return { Error: "El presupuesto es 0 o negativo" };
@@ -42,10 +52,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
         configuracionPorPrecio.m2,
         configuracionPorPrecio.sata
       );
-      let placas = shortearListasPorPrecio(segundaMano, listaPlacas);
+      let placas = shortearListasPorPrecio( listaPlacas);
       if (placas.length != 0) {
         configuracionPorPrecio.placas = placas[0];
-        if (!segundaMano) {
+        if (!placas[0].precio.segundaMano) {
           precioAmazon = placas[0].precio.amazon;
           precioEbay = placas[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -69,10 +79,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
         configuracionPorPrecio.placas,
         configuracionPorPrecio.ram
       );
-      let CPUs = shortearListasPorPrecio(segundaMano, listaCPU);
+      let CPUs = shortearListasPorPrecio( listaCPU);
       if (CPUs.length != 0) {
         configuracionPorPrecio.cpu = CPUs[0];
-        if (!segundaMano) {
+        if (!CPUs[0].precio.segundaMano) {
           precioAmazon = CPUs[0].precio.amazon;
           precioEbay = CPUs[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -96,10 +106,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
         configuracionPorPrecio.placas,
         configuracionPorPrecio.cpu
       );
-      let rams = shortearListasPorPrecio(segundaMano, listaRam);
+      let rams = shortearListasPorPrecio( listaRam);
       if (rams.length != 0) {
         configuracionPorPrecio.ram = rams[0];
-        if (!segundaMano) {
+        if (!rams[0].precio.segundaMano) {
           precioAmazon = rams[0].precio.amazon;
           precioEbay = rams[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -118,10 +128,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
 
     if (!configuracionPorPrecio.gpu) {
       let listaGPU = filtroPorGama(listaGamas[gamaBuild], gpuList);
-      listaGPU = shortearListasPorPrecio(segundaMano, listaGPU);
+      listaGPU = shortearListasPorPrecio( listaGPU);
       if (listaGPU.length != 0) {
         configuracionPorPrecio.gpu = listaGPU[0];
-        if (!segundaMano) {
+        if (!listaGPU[0].precio.segundaMano) {
           precioAmazon = listaGPU[0].precio.amazon;
           precioEbay = listaGPU[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -147,10 +157,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
         configuracionPorPrecio.sata
       );
       listaDisco.filter((item) => item.tecnologia == "m.2");
-      let m2s = shortearListasPorPrecio(segundaMano, listaDisco);
+      let m2s = shortearListasPorPrecio( listaDisco);
       if (m2s.length != 0) {
         configuracionPorPrecio.m2 = m2s && [m2s[0]];
-        if (!segundaMano) {
+        if (!m2s[0].precio.segundaMano) {
           precioAmazon = m2s[0].precio.amazon;
           precioEbay = m2s[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -176,10 +186,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
         configuracionPorPrecio.sata
       );
       listaDisco.filter((item) => item.tecnologia == "Sata");
-      let satas = shortearListasPorPrecio(segundaMano, listaDisco);
+      let satas = shortearListasPorPrecio( listaDisco);
       if (satas.length != 0) {
         configuracionPorPrecio.sata = satas && [satas[0]];
-        if (!segundaMano) {
+        if (!satas[0].precio.segundaMano) {
           precioAmazon = satas[0].precio.amazon;
           precioEbay = satas[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -202,10 +212,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
         listaDisipador,
         configuracionPorPrecio.cpu
       );
-      let disipadores = shortearListasPorPrecio(segundaMano, listaDisipador);
+      let disipadores = shortearListasPorPrecio( listaDisipador);
       if (disipadores.length != 0) {
         configuracionPorPrecio.disipador = disipadores && disipadores[0];
-        if (!segundaMano) {
+        if (!disipadores[0].precio.segundaMano) {
           precioAmazon = disipadores[0].precio.amazon;
           precioEbay = disipadores[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -229,10 +239,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
         configuracionPorPrecio.cpu,
         configuracionPorPrecio.gpu
       );
-      let fuentes = shortearListasPorPrecio(segundaMano, listaFuentes);
+      let fuentes = shortearListasPorPrecio( listaFuentes);
       if (fuentes.length != 0) {
         configuracionPorPrecio.fuente = fuentes && fuentes[0];
-        if (!segundaMano) {
+        if (!fuentes[0].precio.segundaMano) {
           precioAmazon = fuentes[0].precio.amazon;
           precioEbay = fuentes[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -251,10 +261,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
 
     if (!configuracionPorPrecio.caja) {
       let listaCajas = filtroPorGama(listaGamas[gamaBuild], cajaList);
-      listaCajas = shortearListasPorPrecio(segundaMano, listaCajas);
+      listaCajas = shortearListasPorPrecio( listaCajas);
       if (listaCajas.length != 0) {
         configuracionPorPrecio.caja = listaCajas && listaCajas[0];
-        if (!segundaMano) {
+        if (!listaCajas[0].precio.segundaMano) {
           precioAmazon = listaCajas[0].precio.amazon;
           precioEbay = listaCajas[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -273,10 +283,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
 
     if (!configuracionPorPrecio.monitor) {
       let listaMonitor = filtroPorGama(listaGamas[gamaBuild], monitorList);
-      listaMonitor = shortearListasPorPrecio(segundaMano, listaMonitor);
+      listaMonitor = shortearListasPorPrecio( listaMonitor);
       if (listaMonitor.length != 0) {
         configuracionPorPrecio.monitor = listaMonitor && listaMonitor[0];
-        if (!segundaMano) {
+        if (!listaMonitor[0].precio.segundaMano) {
           precioAmazon = listaMonitor[0].precio.amazon;
           precioEbay = listaMonitor[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -295,10 +305,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
 
     if (!configuracionPorPrecio.teclado) {
       let listaTeclado = filtroPorGama(listaGamas[gamaBuild], tecladoList);
-      listaTeclado = shortearListasPorPrecio(segundaMano, listaTeclado);
+      listaTeclado = shortearListasPorPrecio( listaTeclado);
       if (listaTeclado.length != 0) {
         configuracionPorPrecio.teclado = listaTeclado && listaTeclado[0];
-        if (!segundaMano) {
+        if (!listaTeclado[0].precio.segundaMano) {
           precioAmazon = listaTeclado[0].precio.amazon;
           precioEbay = listaTeclado[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -317,10 +327,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
 
     if (!configuracionPorPrecio.raton) {
       let listaRaton = filtroPorGama(listaGamas[gamaBuild], ratonList);
-      listaRaton = shortearListasPorPrecio(segundaMano, listaRaton);
+      listaRaton = shortearListasPorPrecio(listaRaton);
       if (listaRaton.length != 0) {
         configuracionPorPrecio.raton = listaRaton && listaRaton[0];
-        if (!segundaMano) {
+        if (!listaRaton[0].precio.segundaMano) {
           precioAmazon = listaRaton[0].precio.amazon;
           precioEbay = listaRaton[0].precio.ebay;
           auxPresupuesto -= Math.min(precioAmazon, precioEbay);
@@ -337,11 +347,10 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
       }
     }
     if (
-      auxPresupuesto >= 0 &&
-      Object.keys(configuracionPorPrecio).length >= 10
+      auxPresupuesto >= 0
     ) {
-      /*console.log(`Build con ${auxPresupuesto}€ sobrante es: `);
-      console.log(configuracionPorPrecio);*/
+      console.log(`Build con ${auxPresupuesto}€ sobrante es: `);
+      //console.log(configuracionPorPrecio);
       return configuracionPorPrecio;
     }
   }
@@ -350,9 +359,8 @@ const buildPorPrecio = (build = {}, presupuesto = 0, segundaMano = false) => {
 
 builderPorPrecioRouter.get("/", async (req, res) => {
   const presupuesto = req.query.presupuesto;
-  const segundaMano = req.query.segundaMano;
   const build = req.query.build;
-  const conf = buildPorPrecio(build, presupuesto, segundaMano);
+  const conf = buildPorPrecio(build, presupuesto);
   res.json(conf);
 });
 module.exports = { builderPorPrecioRouter, buildPorPrecio };

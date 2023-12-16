@@ -314,7 +314,7 @@ const cpuList = [
 {
     marca: "Intel",
     nombre: "Intel Core i5-13600KF",
-    gama: "MediaBaja",
+    gama: "BajaMedia",
     socket: "LGA1700",
     consumo: 181,
     tipoRam: "DDR5",
@@ -495,7 +495,7 @@ const placasList = [
       nombre: "MSI PRO B660M-E",
       socket: "LGA1700",
       tipoRam: "DDR5",
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       numeroM2: 0,
       numeroSata: 2,
       precio: {
@@ -625,7 +625,7 @@ const placasList = [
       nombre: "Gigabyte B650 GAMING X AX",
       socket: "AM5",
       tipoRam: "DDR5",
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       numeroM2: 0,
       numeroSata: 2,
       precio: {
@@ -856,7 +856,7 @@ const gpuList = [
     nombre: "Nvidia RTX 3060",
     consumo: 170,
     potenciaRecomendada: 600,
-    gama: "MediaBaja",
+    gama: "BajaMedia",
     precio: {
         amazon: 299.90,
         ebay: 309.90,
@@ -1006,7 +1006,7 @@ const gpuList = [
     nombre: "AMD Radeon RX 6600",
     consumo: null,
     potenciaRecomendada: 500,
-    gama: "MediaBaja",
+    gama: "BajaMedia",
     precio: {
         amazon: 237.76,
         ebay: 209.35,
@@ -1036,7 +1036,7 @@ const gpuList = [
 },
 ]
 
-let ramList = [
+const ramList = [
   {
       marca: "Kingstone",
       nombre: "Kingston FURY Beast DDR4 3200 MHz 8GB CL16",
@@ -1108,7 +1108,7 @@ let ramList = [
       nombre: "Kingston FURY Beast DDR5 4800MHz 16GB CL38",
       tipo: "DDR5",
       capacidad: 16,
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       precio: {
           segundaMano: 110.00,
           amazon: 133.99,
@@ -1195,7 +1195,7 @@ const discoList = [
       nombre: "Gigabyte Solid State Drive 256GB SSD SATA3",
       capacidad: 0.25,
       tecnologia: "Sata",
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       precio: {
           segundaMano: 20.00,
           amazon: 25.63,
@@ -1361,7 +1361,7 @@ const monitorList = [
   {
       marca: "Lenovo",
       nombre: "Lenovo G24e-20 23.8 LED FullHD 120Hz FreeSync",
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       precio: {
           amazon: 147.96,
           ebay: 182.51,
@@ -1511,7 +1511,7 @@ const cajaList = [
   {
       marca: "Cooler Master",
       nombre: "Cooler Master CMP 520",
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       precio: {
           segundaMano: 60.00,
           amazon: 83.36,
@@ -1604,7 +1604,7 @@ const fuenteList = [
       marca: "UNYKAch",
       nombre: "UNYKAch Fuente de Alimentación Gaming 700W",
       potencia: 700,
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       precio: {
           segundaMano: 25.00,
           amazon: 31.94,
@@ -1700,7 +1700,7 @@ const ratonList = [
   {
       marca: "Gigabyte",
       nombre: "Gigabyte Aorus M2 Ratón Gaming 6200DPI",
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       precio: {
           amazon: 17.47,
           ebay: 26.61,
@@ -1790,7 +1790,7 @@ const tecladoList = [
   {
       marca: "Mars Gaming",
       nombre: "Mars Gaming MK80 Teclado Mecánico Negro FRGB Switch Marrón Layout Español",
-      gama: "MediaBaja",
+      gama: "BajaMedia",
       precio: {
           segundaMano: 20.00,
           amazon: 24.49,

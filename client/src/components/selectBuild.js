@@ -161,7 +161,7 @@ function SelectBuild({ context }) {
           {/* Parte izquierda */}
           <div className="col-md-6">
             <div>
-              <h2>Let's get started</h2>
+              <h2>¡Empecemos!</h2>
               <div className="imagen">
                 <img
                   src={pc} // Coloca la URL de tu imagen
@@ -185,20 +185,20 @@ function SelectBuild({ context }) {
                         navigate("/PcBuilder");
                       }}
                     >
-                      Build from scratch
+                      Build desde cero
                     </Button>
                     <button
                       className="btn btn-secondary"
                       onClick={() => handleOpcionSeleccionada("opcion1")}
                     >
-                      Pre-Made Build
+                      Build prefabricada
                     </button>
                   </div>
                 ) : (
                   /* Contenido del slider si se elige la Opción 1 */
                   <Slider {...sliderSettings} className="flex-grow-1">
                     <div>
-                      <h1 className="verde">Builds por nichos</h1>
+                      <h1 className="verde">Builds por nicho</h1>
                       <Row>
                         <Col xs={3}>
                           {/* Zona con 3 botones de gamas */}
@@ -236,7 +236,7 @@ function SelectBuild({ context }) {
                               );
                             }}
                           >
-                            Uso Basico
+                            Uso básico
                           </Button>
                         </Col>
                       </Row>
@@ -253,7 +253,7 @@ function SelectBuild({ context }) {
                               );
                             }}
                           >
-                            Gama Baja{" "}
+                            Gama baja
                           </Button>
                           <Button
                             onClick={() => {
@@ -262,7 +262,7 @@ function SelectBuild({ context }) {
                               );
                             }}
                           >
-                            Gama Media
+                            Gama media
                           </Button>
                           <Button
                             onClick={() => {
@@ -271,7 +271,7 @@ function SelectBuild({ context }) {
                               );
                             }}
                           >
-                            Gama Alta
+                            Gama alta
                           </Button>
                         </Col>
                       </Row>
@@ -308,7 +308,7 @@ function SelectBuild({ context }) {
                                 });
                               }}
                             >
-                              Hacer Build
+                              Hacer build
                             </Button>
                           </Col>
                         </Col>

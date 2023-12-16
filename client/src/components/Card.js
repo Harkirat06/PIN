@@ -41,7 +41,7 @@ function Cardd({ item, nombre, imagen, onClick, precio, esMarketing, context }) 
                 if(onClick !== undefined){
                   onClick("ebay");
                 } else {
-                  openInNewTab(item.link.ebay.toFixed(2));
+                  openInNewTab(item.link.ebay);
                 }
               }}
             >

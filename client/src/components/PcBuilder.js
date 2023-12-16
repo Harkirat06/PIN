@@ -5,7 +5,6 @@ import "./PcBuilder.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import OffCanvasCustom from "./OffCanvasCustom";
 import { useNavigate } from "react-router-dom";
-import pc from "./PcPequeño.png";
 
 function PcBuilder({ context }) {
   const {
@@ -22,6 +21,8 @@ function PcBuilder({ context }) {
     setNombreLista,
     show,
     user,
+    imagen,
+    setImagen
   } = useContext(context);
 
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ function PcBuilder({ context }) {
     }
     getListas(build[0]).then((r) => {
       setListasComponentes(r.data);
+      setImagen("/image/Pc0.jpg")
       console.log("Actualizada listas");
     });
   }, [build]);
@@ -47,6 +49,33 @@ function PcBuilder({ context }) {
   const [presupuesto, setPresupuesto] = useState(0);
 
   const handleBoton = (lista) => {
+    console.log("Hola")
+    switch(lista){
+      case "placasList": 
+        setImagen("/image/Pc1.jpg");
+        break;
+      case "ramList":
+        setImagen("/image/Pc2.jpg");
+        break;
+      case "cpuList":
+        setImagen("/image/Pc3.jpg");
+        break;
+      case "gpuList":
+        setImagen("/image/Pc4.jpg");
+        break;
+      case "disipadorList":
+        setImagen("/image/Pc5.jpg");
+        break;
+      case "cajaList":
+        setImagen("/image/Pc6.jpg");
+        break;
+      case "discoList":
+        setImagen("/image/Pc7.jpg");
+        break;
+      case "fuenteList":
+        setImagen("/image/Pc8.jpg");
+        break;
+    }
     setNombreLista(lista);
     setListaComponente(listasComponentes[lista]);
     setShow(true);
@@ -244,7 +273,7 @@ function PcBuilder({ context }) {
             <div>
               <div className="imagen">
                 <img
-                  src={pc} // Coloca la URL de tu imagen
+                  src={imagen} // Coloca la URL de tu imagen
                   alt="Imagen"
                   className="img-fluid"
                 />
@@ -259,7 +288,7 @@ function PcBuilder({ context }) {
           <div className="col-md-6">
             <div className="d-flex align-items-center justify-content-center h-100">
               <div cstyle={{ position: "absolute", top: 0, right: 0 }}>
-                <OffCanvasCustom context={context} />
+                <OffCanvasCustom context={context} setImagen = {()=>setImagen("/image/Pc1.jpg")} />
                 <div className="container justify-content-center align-items-center">
                   <div className="row g-4">
                     {listasComponentes &&

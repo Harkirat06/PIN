@@ -14,10 +14,14 @@ function OffCanvasCustom({ context  }) {
     setBuild,
     setElementosSeleccionados,
     elementosSeleccionados,
-    nombreLista
+    nombreLista,
+    setImagen
   } = useContext(context);
   let i = 0;
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setImagen("/image/Pc0.jpg")
+    setShow(false);
+  }
 
   const handleBuild = (item, selectedType) => {
     let propiedad = nombreLista.replace("List", "");

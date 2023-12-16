@@ -3,21 +3,6 @@ const {
     shortByPrecioSegundaMano
 } = require('./shortearListasPorPrecio');
 
-describe('shortByPrecioPrimeraMano', () => {
-    test('debería ordenar las listas correctamente en primera mano', () => {
-        const lista = [
-                { precio: { amazon: 100, ebay: 120 } },
-                { precio: { amazon: 80, ebay: 90 } }
-        ]
-
-        const resultado = shortByPrecioPrimeraMano(lista);
-
-        expect(resultado[0].precio.amazon).toBeLessThanOrEqual(resultado[1].precio.amazon);
-        // Realiza más aserciones según tus necesidades
-    });
-
-    // Agrega más casos de prueba según sea necesario
-});
 
 describe('shortByPrecioSegundaMano', () => {
     test('debería ordenar las listas correctamente en segunda mano', () => {

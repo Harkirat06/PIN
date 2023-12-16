@@ -1,25 +1,5 @@
-const shortearListasPorPrecio = (segundaMano, lista) => {
-  if (segundaMano) {
+const shortearListasPorPrecio = (lista) => {
     return shortByPrecioSegundaMano(lista);
-  } else {
-    return shortByPrecioPrimeraMano(lista);
-  }
-};
-
-const shortByPrecioPrimeraMano = (lista) => {
-  lista.sort((a, b) => {
-    const precioA = Math.min(
-      a.precio.amazon || Infinity,
-      a.precio.ebay || Infinity
-    );
-    const precioB = Math.min(
-      b.precio.amazon || Infinity,
-      b.precio.ebay || Infinity
-    );
-    return precioA - precioB;
-  });
-
-  return lista
 };
 
 const shortByPrecioSegundaMano = (lista) => {
@@ -42,5 +22,4 @@ const shortByPrecioSegundaMano = (lista) => {
 };
 
 exports.shortearListasPorPrecio = shortearListasPorPrecio;
-exports.shortByPrecioPrimeraMano = shortByPrecioPrimeraMano; // Exponer estas funciones para las pruebas
 exports.shortByPrecioSegundaMano = shortByPrecioSegundaMano; // Exponer estas funciones para las pruebas

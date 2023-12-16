@@ -5,6 +5,8 @@ import "./PcBuilder.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import OffCanvasCustom from "./OffCanvasCustom";
 import { useNavigate } from "react-router-dom";
+import { GrFormNextLink } from "react-icons/gr";
+import { GrFormPreviousLink } from "react-icons/gr";
 
 function PcBuilder({ context }) {
   const {
@@ -28,19 +30,46 @@ function PcBuilder({ context }) {
   const navigate = useNavigate();
   const [showError, setShowError] = useState(false);
   const [mensaje, setMensaje] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [lista1, setLista1] = useState({})
+  const [lista2, setLista2] = useState({}) 
+  const [mesa, setMesa] = useState(false)
 
   useEffect(() => {
     if (!user) {
       navigate("/");
     }
     getListas(build[0]).then((r) => {
-      setListasComponentes(r.data);
-      setImagen("/image/Pc0.jpg")
+      setListasComponentes(()=>{
+        let list1 = {}
+        let list2 = {}
+        let propiedades = Object.keys(r.data)
+        for(let i = 0; i<11; i++){
+          if(i<8){
+            list1[propiedades[i]] = r.data[i]
+          }else{
+            list2[propiedades[i]] = r.data[i]
+          }
+        }
+        setLista1(()=>{
+          let e = {...list1}
+          return e
+        })
+        setLista2(()=>{
+          let e = {...list2}
+          return e
+        })
+        return r.data
+      });
+      if(mesa){
+        setImagen("/image/mesa0.jpg")
+      }else{
+        setImagen("/image/Pc0.jpg")
+      }
       console.log("Actualizada listas");
     });
   }, [build]);
 
-  const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
@@ -49,7 +78,6 @@ function PcBuilder({ context }) {
   const [presupuesto, setPresupuesto] = useState(0);
 
   const handleBoton = (lista) => {
-    console.log("Hola")
     switch(lista){
       case "placasList": 
         setImagen("/image/Pc1.jpg");
@@ -74,6 +102,15 @@ function PcBuilder({ context }) {
         break;
       case "fuenteList":
         setImagen("/image/Pc8.jpg");
+        break;
+      case "monitorList":
+        setImagen("/image/mesa1.jpg");
+        break;
+      case "tecladoList":
+        setImagen("/image/mesa2.jpg");
+        break;
+      case "ratonList":
+        setImagen("/image/mesa3.jpg");
         break;
     }
     setNombreLista(lista);
@@ -222,7 +259,7 @@ function PcBuilder({ context }) {
                 size="sm"
                 onClick={() => deleteSelection(propiedad, item.nombre)}
               >
-                X
+                <strong>X</strong>
               </Button>
             </Card.Text>
           );
@@ -236,7 +273,7 @@ function PcBuilder({ context }) {
               size="sm"
               onClick={() => deleteSelection(propiedad)}
             >
-              X
+               <strong>X</strong>
             </Button>
           </Card.Text>
         );
@@ -269,7 +306,7 @@ function PcBuilder({ context }) {
       <div className="container-fluid">
         <div className="row">
           {/* Parte izquierda */}
-          <div className="col-md-6">
+          <div className="col-md-5">
             <div>
               <div className="imagen">
                 <img
@@ -285,14 +322,14 @@ function PcBuilder({ context }) {
           </div>
 
           {/* Parte derecha */}
-          <div className="col-md-6">
+          <div className="col-md-7">
             <div className="d-flex align-items-center justify-content-center h-100">
               <div cstyle={{ position: "absolute", top: 0, right: 0 }}>
-                <OffCanvasCustom context={context} setImagen = {()=>setImagen("/image/Pc1.jpg")} />
+                <OffCanvasCustom context={context} mesa={mesa} />
                 <div className="container justify-content-center align-items-center">
                   <div className="row g-4">
-                    {listasComponentes &&
-                      Object.keys(listasComponentes).map((lista) => {
+                    {!mesa &&
+                      Object.keys(lista1).map((lista) => {
                         let nombre = handleNombre(lista);
                         return (
                           <div
@@ -309,7 +346,44 @@ function PcBuilder({ context }) {
                           </div>
                         );
                       })}
-                    <Container className="centered">
+                      {mesa &&
+                      Object.keys(lista2).map((lista) => {
+                        let nombre = handleNombre(lista);
+                        return (
+                          <div
+                            className="col-6 col-md-4 col-lg-3 d-flex align-items-stretch"
+                            key={i++}
+                          >
+                            <Card onClick={() => handleBoton(lista)}>
+                              <Card.Img
+                                variant="top"
+                                src={"/image/" + nombre + "Icon.png"}
+                              />
+                              <Card.Body>{handleSeleccion(nombre)}</Card.Body>
+                            </Card>
+                          </div>
+                        );
+                      })}
+                    <Container className="contenedor">
+                      <Button
+                        size="large"
+                        onClick={() => {
+                          setMesa((prev)=>{
+                            if(!prev){
+                              setImagen("/image/mesa0.jpg")
+                            }else{
+                              setImagen("/image/Pc0.jpg")
+                            }
+                            return !prev
+                          })
+                        }}
+                        className="flecha"
+                      >
+                        {mesa ? 
+                        <GrFormPreviousLink />
+                        :
+                        <GrFormNextLink />}
+                      </Button>
                       <Button
                         size="large"
                         onClick={() => navigate("/paginaPagar")}
@@ -350,13 +424,6 @@ function PcBuilder({ context }) {
           </Button>
         </Modal.Footer>
       </Modal>
-      <Container>
-        <h1>Pc Builder</h1>
-      </Container>
-      <Container className="centered"></Container>
-      <br />
-      <Container></Container>
-      <br />
     </div>
   );
 }

@@ -1,14 +1,7 @@
-h1{
-  color: #faf6f6;
-  text-align: center;
-}
-.centered {
+.contenedor {
   display: flex;
-  justify-content: right;
-  align-items: center;
+  justify-content: space-between;
 }
-
-
 
 html:has(.PcBuilder), body:has(.PcBuilder) {
   background-color: #fff;
@@ -27,16 +20,19 @@ html:has(.PcBuilder), body:has(.PcBuilder) {
 }
 
 .PcBuilder .imagen{
-  margin: 12%;
+  margin: 5%;
+}
+.PcBuilder .col-md-7{
+  margin-top: 1%;
 }
 
 
 .PcBuilder .container-fluid{
-  margin-top: 1%;
+  margin-top: 0%;
 }
 .PcBuilder .flex-grow-1{
   margin-top: 5%;
-  margin-bottom: 12%;
+  margin-bottom: 0%;
 }
 
 .productName {
@@ -114,4 +110,20 @@ html:has(.PcBuilder), body:has(.PcBuilder) {
 }
 .autocomplete:hover{
   background-color: #20f299;
+}
+
+.flecha{
+  background-color: #20f299;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flecha:hover{
+  background-color: #222225;
 }

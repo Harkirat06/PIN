@@ -5,7 +5,7 @@ import "./PcBuilder.css"
 import { useContext, useState } from "react";
 import { getListas } from "./Axios";
 
-function OffCanvasCustom({ context  }) {
+function OffCanvasCustom({ context, mesa  }) {
   const {
     show,
     setShow,
@@ -19,7 +19,11 @@ function OffCanvasCustom({ context  }) {
   } = useContext(context);
   let i = 0;
   const handleClose = () => {
-    setImagen("/image/Pc0.jpg")
+    if(mesa){
+      setImagen("/image/mesa0.jpg")
+    }else{
+      setImagen("/image/Pc0.jpg")
+    }
     setShow(false);
   }
 

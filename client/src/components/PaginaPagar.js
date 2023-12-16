@@ -92,7 +92,7 @@ function PaginaPagar({ context }) {
                 <a><img className="userProfile"/></a>
             </div>
             <div className="mainWrapper">
-                <span className="title">tus productos seleccionados</span>
+                <span className="title">Tus productos seleccionados</span>
                 <div className="listWrapper">
                     <div className="list">
                         {Object.keys(productList).map((propiedad) => (
@@ -110,7 +110,7 @@ function PaginaPagar({ context }) {
                 </div>
                 <div className="btnWrapper">
                     <Button className="navBtn" onClick={()=>navigate("/marketplace")}>Volver al inicio</Button>
-                    <Button className="navBtn" onClick={() => openLinks()}>Abrir Links</Button>
+                    <Button className="navBtn" onClick={() => openLinks()}>Abrir links</Button>
                 </div>
             </div>
         </div>

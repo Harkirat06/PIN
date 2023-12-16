@@ -25,22 +25,25 @@ const { mapeo } = require("./gamasEnum");
 
 const filtroPorGama = (gama, lista) => {
   const gamaNumerica = mapeo[gama];
-  let newLista = lista.filter(
-    (item) =>
-      mapeo[item.gama] == gamaNumerica
-  );
-  return newLista
+  let newLista = lista.filter((item) => mapeo[item.gama] == gamaNumerica);
+  return newLista;
 };
 
-
 const buildPorPrecio = (build = {}, presupuesto = 0) => {
-  let listaGamas = ["Premium","Alta", "MediaAlta",  "Media", "BajaMedia",  "Baja"];
+  let listaGamas = [
+    "Premium",
+    "Alta",
+    "MediaAlta",
+    "Media",
+    "BajaMedia",
+    "Baja",
+  ];
 
   if (presupuesto <= 0) {
     return { Error: "El presupuesto es 0 o negativo" };
   }
 
-  for (let gamaBuild = 0; gamaBuild < listaGamas.length; gamaBuild++) {
+  for (let gamaBuild = 1; gamaBuild <= listaGamas.length; gamaBuild++) {
     let configuracionPorPrecio = { ...build };
     let auxPresupuesto = presupuesto;
     if (!configuracionPorPrecio.placas) {
@@ -52,7 +55,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
         configuracionPorPrecio.m2,
         configuracionPorPrecio.sata
       );
-      let placas = shortearListasPorPrecio( listaPlacas);
+      let placas = shortearListasPorPrecio(listaPlacas);
       if (placas.length != 0) {
         configuracionPorPrecio.placas = placas[0];
         if (!placas[0].precio.segundaMano) {
@@ -79,7 +82,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
         configuracionPorPrecio.placas,
         configuracionPorPrecio.ram
       );
-      let CPUs = shortearListasPorPrecio( listaCPU);
+      let CPUs = shortearListasPorPrecio(listaCPU);
       if (CPUs.length != 0) {
         configuracionPorPrecio.cpu = CPUs[0];
         if (!CPUs[0].precio.segundaMano) {
@@ -106,7 +109,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
         configuracionPorPrecio.placas,
         configuracionPorPrecio.cpu
       );
-      let rams = shortearListasPorPrecio( listaRam);
+      let rams = shortearListasPorPrecio(listaRam);
       if (rams.length != 0) {
         configuracionPorPrecio.ram = rams[0];
         if (!rams[0].precio.segundaMano) {
@@ -128,7 +131,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
 
     if (!configuracionPorPrecio.gpu) {
       let listaGPU = filtroPorGama(listaGamas[gamaBuild], gpuList);
-      listaGPU = shortearListasPorPrecio( listaGPU);
+      listaGPU = shortearListasPorPrecio(listaGPU);
       if (listaGPU.length != 0) {
         configuracionPorPrecio.gpu = listaGPU[0];
         if (!listaGPU[0].precio.segundaMano) {
@@ -148,35 +151,6 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
       }
     }
 
-    if (!configuracionPorPrecio.m2) {
-      let listaDisco = filtroPorGama(listaGamas[gamaBuild], discoList);
-      listaDisco = handleDisco(
-        listaDisco,
-        configuracionPorPrecio.placas,
-        configuracionPorPrecio.m2,
-        configuracionPorPrecio.sata
-      );
-      listaDisco.filter((item) => item.tecnologia == "m.2");
-      let m2s = shortearListasPorPrecio( listaDisco);
-      if (m2s.length != 0) {
-        configuracionPorPrecio.m2 = m2s && [m2s[0]];
-        if (!m2s[0].precio.segundaMano) {
-          precioAmazon = m2s[0].precio.amazon;
-          precioEbay = m2s[0].precio.ebay;
-          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
-        } else {
-          precioAmazon = m2s[0].precio.amazon;
-          precioEbay = m2s[0].precio.ebay;
-          precioSegundaMano = m2s[0].precio.segundaMano;
-          auxPresupuesto -= Math.min(
-            precioAmazon,
-            precioEbay,
-            precioSegundaMano
-          );
-        }
-      }
-    }
-
     if (!configuracionPorPrecio.sata) {
       let listaDisco = filtroPorGama(listaGamas[gamaBuild], discoList);
       listaDisco = handleDisco(
@@ -185,8 +159,8 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
         configuracionPorPrecio.m2,
         configuracionPorPrecio.sata
       );
-      listaDisco.filter((item) => item.tecnologia == "Sata");
-      let satas = shortearListasPorPrecio( listaDisco);
+      listaDisco = listaDisco.filter((item) => item.tecnologia == "Sata");
+      let satas = shortearListasPorPrecio(listaDisco);
       if (satas.length != 0) {
         configuracionPorPrecio.sata = satas && [satas[0]];
         if (!satas[0].precio.segundaMano) {
@@ -206,13 +180,42 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
       }
     }
 
+    if (!configuracionPorPrecio.m2) {
+      let listaDisco = filtroPorGama(listaGamas[gamaBuild], discoList);
+      listaDisco = handleDisco(
+        listaDisco,
+        configuracionPorPrecio.placas,
+        configuracionPorPrecio.m2,
+        configuracionPorPrecio.sata
+      );
+      listaDisco = listaDisco.filter((item) => item.tecnologia === "m2");
+      let m2s = shortearListasPorPrecio(listaDisco);
+      if (m2s.length != 0) {
+        configuracionPorPrecio.m2 = m2s && [m2s[0]];
+        if (!m2s[0].precio.segundaMano) {
+          precioAmazon = m2s[0].precio.amazon;
+          precioEbay = m2s[0].precio.ebay;
+          auxPresupuesto -= Math.min(precioAmazon, precioEbay);
+        } else {
+          precioAmazon = m2s[0].precio.amazon;
+          precioEbay = m2s[0].precio.ebay;
+          precioSegundaMano = m2s[0].precio.segundaMano;
+          auxPresupuesto -= Math.min(
+            precioAmazon,
+            precioEbay,
+            precioSegundaMano
+          );
+        }
+      }
+    }
+
     if (!configuracionPorPrecio.disipador) {
       let listaDisipador = filtroPorGama(listaGamas[gamaBuild], disipadorList);
       listaDisipador = handleDisipador(
         listaDisipador,
         configuracionPorPrecio.cpu
       );
-      let disipadores = shortearListasPorPrecio( listaDisipador);
+      let disipadores = shortearListasPorPrecio(listaDisipador);
       if (disipadores.length != 0) {
         configuracionPorPrecio.disipador = disipadores && disipadores[0];
         if (!disipadores[0].precio.segundaMano) {
@@ -239,7 +242,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
         configuracionPorPrecio.cpu,
         configuracionPorPrecio.gpu
       );
-      let fuentes = shortearListasPorPrecio( listaFuentes);
+      let fuentes = shortearListasPorPrecio(listaFuentes);
       if (fuentes.length != 0) {
         configuracionPorPrecio.fuente = fuentes && fuentes[0];
         if (!fuentes[0].precio.segundaMano) {
@@ -261,7 +264,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
 
     if (!configuracionPorPrecio.caja) {
       let listaCajas = filtroPorGama(listaGamas[gamaBuild], cajaList);
-      listaCajas = shortearListasPorPrecio( listaCajas);
+      listaCajas = shortearListasPorPrecio(listaCajas);
       if (listaCajas.length != 0) {
         configuracionPorPrecio.caja = listaCajas && listaCajas[0];
         if (!listaCajas[0].precio.segundaMano) {
@@ -283,7 +286,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
 
     if (!configuracionPorPrecio.monitor) {
       let listaMonitor = filtroPorGama(listaGamas[gamaBuild], monitorList);
-      listaMonitor = shortearListasPorPrecio( listaMonitor);
+      listaMonitor = shortearListasPorPrecio(listaMonitor);
       if (listaMonitor.length != 0) {
         configuracionPorPrecio.monitor = listaMonitor && listaMonitor[0];
         if (!listaMonitor[0].precio.segundaMano) {
@@ -305,7 +308,7 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
 
     if (!configuracionPorPrecio.teclado) {
       let listaTeclado = filtroPorGama(listaGamas[gamaBuild], tecladoList);
-      listaTeclado = shortearListasPorPrecio( listaTeclado);
+      listaTeclado = shortearListasPorPrecio(listaTeclado);
       if (listaTeclado.length != 0) {
         configuracionPorPrecio.teclado = listaTeclado && listaTeclado[0];
         if (!listaTeclado[0].precio.segundaMano) {
@@ -346,15 +349,16 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
         }
       }
     }
-    if (
-      auxPresupuesto >= 0
-    ) {
+    if (auxPresupuesto >= 0) {
       console.log(`Build con ${auxPresupuesto}€ sobrante es: `);
-      //console.log(configuracionPorPrecio);
+      console.log(configuracionPorPrecio);
       return configuracionPorPrecio;
     }
   }
-  return {Error: "No se ha podido encontrar una build por el presupuesto especificado"};
+  return {
+    Error:
+      "No se ha podido encontrar una build por el presupuesto especificado",
+  };
 };
 
 builderPorPrecioRouter.get("/", async (req, res) => {

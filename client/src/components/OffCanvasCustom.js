@@ -1,6 +1,7 @@
 import Cardd from "./Card";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./PcBuilder.css"
 import { useContext, useState } from "react";
 import { getListas } from "./Axios";
 
@@ -70,19 +71,19 @@ function OffCanvasCustom({ context  }) {
       show={show}
       onHide={handleClose}
       placement="end"
-      style={{ width: "70vw" }}
-      className="offcanvas-dark"
+      style={{ width: "50vw" }}
+      className="offcanvas"
     >
-      <Offcanvas.Header closeButton>
+      <Offcanvas.Header className="bg-dark text-white" closeButton>
         <Offcanvas.Title>Productos</Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body className="bg-dark text-white">
+      <Offcanvas.Body style={{"backgroundColor": "#e9eaea"}}>
         <div className="container justify-content-center align-items-center">
           <div className="row g-4">
             {listaComponente ? (
               listaComponente.map((item) => (
                 <div
-                  className="col-12 col-md-6 col-lg-3 d-flex align-items-stretch"
+                  className="col-12 col-md-6 col-lg-4 d-flex align-items-stretch"
                   key={i++}
                 >
                   <Cardd

@@ -5,6 +5,7 @@ import "./PcBuilder.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import OffCanvasCustom from "./OffCanvasCustom";
 import { useNavigate } from "react-router-dom";
+import pc from "./PcPequeño.png";
 
 function PcBuilder({ context }) {
   const {
@@ -33,7 +34,7 @@ function PcBuilder({ context }) {
     }
     getListas(build[0]).then((r) => {
       setListasComponentes(r.data);
-      console.log("Actualizada listas")
+      console.log("Actualizada listas");
     });
   }, [build]);
 
@@ -59,8 +60,8 @@ function PcBuilder({ context }) {
       setElementosSeleccionados(() => {
         let elementos = { ...elementosSeleccionados[0] };
         Object.keys(selectedBuild).forEach((propiedad) => {
-          console.log(propiedad)
-        })
+          console.log(propiedad);
+        });
         Object.keys(selectedBuild).forEach((propiedad) => {
           if (propiedad != "0") {
             if (propiedad == "sata" || propiedad == "m2") {
@@ -68,16 +69,42 @@ function PcBuilder({ context }) {
                 elementos["disco"] = [];
               }
               selectedBuild[propiedad].forEach((item) => {
-                if (!item.price) {console.log("ERROR: " + item + " of type " + propiedad + " does not have price!")}
+                if (!item.price) {
+                  console.log(
+                    "ERROR: " +
+                      item +
+                      " of type " +
+                      propiedad +
+                      " does not have price!"
+                  );
+                }
                 const selectedType = getPriceType(item, secondHand);
-                elementos["disco"] = elementos["disco"].concat({nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]});
+                elementos["disco"] = elementos["disco"].concat({
+                  nombre: item.nombre,
+                  selectedType: selectedType,
+                  link: item.link[selectedType],
+                  selectedPrice: item.precio[selectedType],
+                });
               });
             } else {
               const item = selectedBuild[propiedad];
-  
-              if (!item.price) {console.log("ERROR: " + item + " of type " + propiedad + " does not have price!")}
+
+              if (!item.price) {
+                console.log(
+                  "ERROR: " +
+                    item +
+                    " of type " +
+                    propiedad +
+                    " does not have price!"
+                );
+              }
               const selectedType = getPriceType(item, secondHand);
-              elementos[propiedad] = {nombre: item.nombre, selectedType: selectedType, link: item.link[selectedType], selectedPrice: item.precio[selectedType]};
+              elementos[propiedad] = {
+                nombre: item.nombre,
+                selectedType: selectedType,
+                link: item.link[selectedType],
+                selectedPrice: item.precio[selectedType],
+              };
             }
           }
         });
@@ -97,17 +124,16 @@ function PcBuilder({ context }) {
         item.precio.segundaMano
       );
     } else {
-      minPrice = Math.min(
-        item.precio.amazon,
-        item.precio.ebay
-      );
+      minPrice = Math.min(item.precio.amazon, item.precio.ebay);
     }
     if (minPrice == item.precio.amazon) {
       return "amazon";
     } else if (minPrice == item.precio.ebay) {
       return "ebay";
-    } else {return "segundaMano"}
-  }
+    } else {
+      return "segundaMano";
+    }
+  };
 
   const handleNombre = (lista) => {
     return lista.replace("List", "");
@@ -117,7 +143,9 @@ function PcBuilder({ context }) {
     if (Array.isArray(elementosSeleccionados[0][propiedad])) {
       setElementosSeleccionados((prevElementosSeleccionados) => {
         let elementos = { ...prevElementosSeleccionados[0] };
-        const updatedArray = elementos[propiedad].filter((i) => i.nombre !== item);
+        const updatedArray = elementos[propiedad].filter(
+          (i) => i.nombre !== item
+        );
         elementos[propiedad] =
           updatedArray.length > 0 ? updatedArray : "Elemento no seleccionado";
         return [elementos];
@@ -190,12 +218,85 @@ function PcBuilder({ context }) {
   };
 
   return (
-    <Container>
+    <div className="PcBuilder">
+      <div className="header">
+        <a>
+          <img className="logo" />
+        </a>
+        <Button
+          onClick={() => navigate("/SelectBuild")}
+          className="custom-color"
+          variant="outline-primary"
+        >
+          Return to selection
+        </Button>
+      </div>
       {showError && (
         <Alert variant="danger" onClose={() => setShowError(false)} dismissible>
           {mensaje}
         </Alert>
       )}
+
+      <div className="container-fluid">
+        <div className="row">
+          {/* Parte izquierda */}
+          <div className="col-md-6">
+            <div>
+              <div className="imagen">
+                <img
+                  src={pc} // Coloca la URL de tu imagen
+                  alt="Imagen"
+                  className="img-fluid"
+                />
+                <Button onClick={handleShow} className="autocomplete">
+                  Autobuild
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Parte derecha */}
+          <div className="col-md-6">
+            <div className="d-flex align-items-center justify-content-center h-100">
+              <div cstyle={{ position: "absolute", top: 0, right: 0 }}>
+                <OffCanvasCustom context={context} />
+                <div className="container justify-content-center align-items-center">
+                  <div className="row g-4">
+                    {listasComponentes &&
+                      Object.keys(listasComponentes).map((lista) => {
+                        let nombre = handleNombre(lista);
+                        return (
+                          <div
+                            className="col-6 col-md-4 col-lg-3 d-flex align-items-stretch"
+                            key={i++}
+                          >
+                            <Card onClick={() => handleBoton(lista)}>
+                              <Card.Img
+                                variant="top"
+                                src={"/image/" + nombre + "Icon.png"}
+                              />
+                              <Card.Body>{handleSeleccion(nombre)}</Card.Body>
+                            </Card>
+                          </div>
+                        );
+                      })}
+                    <Container className="centered">
+                      <Button
+                        size="large"
+                        onClick={() => navigate("/paginaPagar")}
+                        className="autocomplete"
+                      >
+                        Finalizar Montaje
+                      </Button>
+                    </Container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Presupuesto para completar la build</Modal.Title>
@@ -223,43 +324,11 @@ function PcBuilder({ context }) {
       <Container>
         <h1>Pc Builder</h1>
       </Container>
-      <Container className="centered">
-        <Button onClick={handleShow}>Autocompletar</Button>
-      </Container>
+      <Container className="centered"></Container>
       <br />
-      <Container>
-        <div className="container justify-content-center align-items-center">
-          <div className="row g-4">
-            {listasComponentes &&
-              Object.keys(listasComponentes).map((lista) => {
-                let nombre = handleNombre(lista);
-                return (
-                  <div
-                    className="col-6 col-md-4 col-lg-3 d-flex align-items-stretch"
-                    key={i++}
-                  >
-                    <Card onClick={() => handleBoton(lista)}>
-                      <Card.Img
-                        variant="top"
-                        src={"/image/" + nombre + "Icon.png"}
-                      />
-                      <Card.Body>{handleSeleccion(nombre)}</Card.Body>
-                    </Card>
-                  </div>
-                );
-              })}
-          </div>
-        </div>
-      </Container>
+      <Container></Container>
       <br />
-      <Container>
-        <OffCanvasCustom context={context} />
-      </Container>
-      <Container className="centered">
-        <Button size="large" onClick={() => navigate("/paginaPagar")} >Finalizar Montaje</Button>
-      </Container>
-      <br/>
-    </Container>
+    </div>
   );
 }
 

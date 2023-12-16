@@ -4,6 +4,114 @@ h1{
 }
 .centered {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
+}
+
+
+
+html:has(.PcBuilder), body:has(.PcBuilder) {
+  background-color: #fff;
+}
+
+.PcBuilder .header {
+  background-color: #222225;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PcBuilder .logo {
+  content: url(./logo.svg);
+}
+
+.PcBuilder .imagen{
+  margin: 12%;
+}
+
+
+.PcBuilder .container-fluid{
+  margin-top: 1%;
+}
+.PcBuilder .flex-grow-1{
+  margin-top: 5%;
+  margin-bottom: 12%;
+}
+
+.productName {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #222225;
+}
+
+.mb-2 {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #222225;
+  margin: 0px;
+  padding: 0px;
+}
+
+.w-100.col-lg-6.col-md-8.col-sm-10 {
+  background-color: transparent;
+  border-radius: 0%;
+  overflow: hidden;
+  border: none;
+}
+
+.price {
+  background-color: #222225;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.price:hover {
+  background-color: #20f299;
+}
+
+.price:active {
+  background-color: #ffffff;
+  color: #222225;
+}
+.productImg {
+  border-radius: 0%;
+}
+
+.productsList {
+  padding: 20px;
+}
+.noRes {
+  font-family: 'Mukta', sans-serif;
+  color: #222225;
+}
+.btn-close{
+  color: #fff;
+  background-color: #fff;
+}
+
+.autocomplete{
+  background-color: #222225;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.autocomplete:hover{
+  background-color: #20f299;
 }

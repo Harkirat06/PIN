@@ -14,6 +14,31 @@ html:has(.SelectBuild), body:has(.SelectBuild) {
 .logo {
     content: url(./logo.svg);
 }
+
+.boton-verde {
+    background-color: #20f299;
+    color: #fff;
+    /* Establecer el padding (espaciado interno) del botón */
+    padding: 10px 20px;
+    /* Establecer el borde del botón */
+    border: none;
+    /* Establecer el radio de borde para esquinas redondeadas */
+    border-radius: 5px;
+    /* Establecer un ancho específico */
+    width: 200px;
+    /* Establecer el cursor al pasar el ratón sobre el botón */
+    cursor: pointer;
+}
+
+.boton-verde:focus,
+.boton-verde:hover {
+    background-color: blue;
+}
+
+.contenedor {
+    background-color: #ccc;
+}
+
 h2{
     font: "Nohemi";
     font-weight: 400;

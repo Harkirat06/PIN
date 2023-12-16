@@ -173,26 +173,41 @@ function SelectBuild({ context }) {
           </div>
 
           {/* Parte derecha */}
-          <div className="col-md-6">
+          <div className="col-md-6 ">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <div className="rounded p-3 w-100 h-100 d-flex flex-column">
+              <div className="rounded p-3 w-100 h-100 d-flex flex-column contenedor">
                 {/* Contenido para elegir entre dos opciones */}
                 {!mostrarSlider ? (
                   <div className="flex-grow-1">
                     <h3 className="verde">Elige una de las dos opciones</h3>
-                    <Button
-                      onClick={() => {
-                        navigate("/PcBuilder");
-                      }}
-                    >
-                      Build desde cero
-                    </Button>
-                    <button
-                      className="btn btn-secondary"
-                      onClick={() => handleOpcionSeleccionada("opcion1")}
-                    >
-                      Build prefabricada
-                    </button>
+                    <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '20px' }}>
+                      <div style={{ flex: 1 }}>
+                        <p>Texto de la primera columna</p>
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <p>Texto de la segunda columna</p>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                      <div style={{ flex: 1 }}>
+                        <Button
+                          className="boton-verde"
+                          onClick={() => {
+                            navigate("/PcBuilder");
+                          }}
+                        >
+                          Build desde cero
+                        </Button>
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <Button
+                          className="boton-verde"
+                          onClick={() => handleOpcionSeleccionada("opcion1")}
+                        >
+                          Build prefabricada
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                 ) : (
                   /* Contenido del slider si se elige la Opción 1 */
@@ -295,6 +310,7 @@ function SelectBuild({ context }) {
                           </Form>
                           <Col>
                             <Button
+                              className="boton-verde"
                               onClick={() => {
                                 buildPorPrecio(presupuesto).then((result) => {
                                   if (result && result.Error) {

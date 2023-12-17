@@ -102,14 +102,47 @@ html:has(.PcBuilder), body:has(.PcBuilder) {
   font-weight: 400;
   font-size: 15px;
   color: #ffffff;
-  border: none;
+  border: 1.5px solid #222225;
   margin-top: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.autocomplete:hover{
+.autocomplete:hover,
+.autocomplete:focus {
   background-color: #20f299;
+  border-color: #20f299;
+}
+
+.autocomplete:active {
+  background-color: #ffffff !important;
+  border-color: #222225 !important;
+  color: #222225 !important;
+}
+
+.cancel {
+  background-color: #df0d66;
+  border: 1.5px solid #df0d66;
+}
+
+.submit {
+  background-color: #20f299;
+  border: 1.5px solid #20f299;
+}
+
+.submit:hover,
+.submit:focus,
+.cancel:hover,
+.cancel:focus {
+  background-color: #ffffff !important;
+  color: #222225 !important;
+  border-color: #222225 !important;
+}
+
+.submit:active,
+.cancel:active {
+  background-color: #222225 !important;
+  color: #ffffff !important;
 }
 
 .flecha{

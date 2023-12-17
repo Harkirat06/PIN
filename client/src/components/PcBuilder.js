@@ -416,10 +416,10 @@ function PcBuilder({ context }) {
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button className="cancel" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleAutocomplete}>
+          <Button className="submit" onClick={handleAutocomplete}>
             Guardar cambios
           </Button>
         </Modal.Footer>

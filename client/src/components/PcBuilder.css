@@ -58,7 +58,7 @@ html:has(.PcBuilder), body:has(.PcBuilder) {
   border: none;
 }
 
-.price {
+.offcanvas .price {
   background-color: #222225;
   font-family: 'Mukta', sans-serif;
   font-weight: 400;
@@ -72,11 +72,11 @@ html:has(.PcBuilder), body:has(.PcBuilder) {
   width: 100%;
 }
 
-.price:hover {
+.offcanvas .price:hover {
   background-color: #20f299;
 }
 
-.price:active {
+.offcanvas .price:active {
   background-color: #ffffff;
   color: #222225;
 }

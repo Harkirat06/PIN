@@ -7,7 +7,6 @@ function PaginaPagar({ context }) {
     const { elementosSeleccionados } = useContext(context);
 
     const productList = elementosSeleccionados[0];
-    //const productList = Object.values(elementosSeleccionados[0]);
 
     let total = 0;
 
@@ -75,7 +74,7 @@ function PaginaPagar({ context }) {
 
     const openLinks = () => {
         Object.keys(productList).map((propiedad) => {
-            if (propiedad == "disco") {
+            if (propiedad == "disco" && productList[propiedad] != "Elemento no seleccionado") {
                 productList[propiedad].map((item) => {
                     handleLink(item);
                 })

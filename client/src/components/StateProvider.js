@@ -14,7 +14,7 @@ function StateProvider({ context, children }) {
   const [login, setLogin] = useState(true);
   const [user, setUser] = useState(false);
   const [checkboxState, setCheckboxState] = useState(false);
-  const [imagen, setImagen] = useState("/image/Pc0.jpg")
+  const [imagen, setImagen] = useState("/image/PC.png")
 
   const [elementosSeleccionados, setElementosSeleccionados] = useState([
     {

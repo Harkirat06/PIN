@@ -20,9 +20,9 @@ function OffCanvasCustom({ context, mesa  }) {
   let i = 0;
   const handleClose = () => {
     if(mesa){
-      setImagen("/image/mesa0.jpg")
+      setImagen("/image/mesa.png")
     }else{
-      setImagen("/image/Pc0.jpg")
+      setImagen("/image/PC.png")
     }
     setShow(false);
   }

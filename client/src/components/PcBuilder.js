@@ -62,9 +62,9 @@ function PcBuilder({ context }) {
         return r.data
       });
       if(mesa){
-        setImagen("/image/mesa0.jpg")
+        setImagen("/image/mesa.png")
       }else{
-        setImagen("/image/Pc0.jpg")
+        setImagen("/image/PC.png")
       }
       console.log("Actualizada listas");
     });
@@ -80,37 +80,37 @@ function PcBuilder({ context }) {
   const handleBoton = (lista) => {
     switch(lista){
       case "placasList": 
-        setImagen("/image/Pc1.jpg");
+        setImagen("/image/PC_placa.png");
         break;
       case "ramList":
-        setImagen("/image/Pc2.jpg");
+        setImagen("/image/PC_ram.png");
         break;
       case "cpuList":
-        setImagen("/image/Pc3.jpg");
+        setImagen("/image/PC_cpu.png");
         break;
       case "gpuList":
-        setImagen("/image/Pc4.jpg");
+        setImagen("/image/PC_gpu.png");
         break;
       case "disipadorList":
-        setImagen("/image/Pc5.jpg");
+        setImagen("/image/PC_disipador.png");
         break;
       case "cajaList":
-        setImagen("/image/Pc6.jpg");
+        setImagen("/image/PC_caja.png");
         break;
       case "discoList":
-        setImagen("/image/Pc7.jpg");
+        setImagen("/image/PC_disco.png");
         break;
       case "fuenteList":
-        setImagen("/image/Pc8.jpg");
+        setImagen("/image/PC_fuente.png");
         break;
       case "monitorList":
-        setImagen("/image/mesa1.jpg");
+        setImagen("/image/mesa_monitor.png");
         break;
       case "tecladoList":
-        setImagen("/image/mesa2.jpg");
+        setImagen("/image/mesa_teclado.png");
         break;
       case "ratonList":
-        setImagen("/image/mesa3.jpg");
+        setImagen("/image/mesa_raton.png");
         break;
     }
     setNombreLista(lista);
@@ -370,9 +370,9 @@ function PcBuilder({ context }) {
                         onClick={() => {
                           setMesa((prev)=>{
                             if(!prev){
-                              setImagen("/image/mesa0.jpg")
+                              setImagen("/image/mesa.png")
                             }else{
-                              setImagen("/image/Pc0.jpg")
+                              setImagen("/image/PC.png")
                             }
                             return !prev
                           })

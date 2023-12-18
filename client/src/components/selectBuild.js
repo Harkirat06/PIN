@@ -297,7 +297,7 @@ function SelectBuild({ context }) {
                     <div>
                       <h3>Build por precio</h3>
                       <Form>
-                            <Form.Label style={{ color: "white" }}>
+                            <Form.Label style={{ color: "black" }}>
                               Presupuesto
                             </Form.Label>
                             <Form.Control

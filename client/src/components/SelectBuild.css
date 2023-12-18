@@ -23,7 +23,7 @@ html:has(.SelectBuild), body:has(.SelectBuild) {
     font: "Nohemi";
     text-align: center;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .boton-verde {
@@ -126,7 +126,7 @@ h2 {
 }
 
 .SelectBuild .presupuestoInput {
-    width: 300px;
+    width: 110px;
     margin: auto;
     margin-bottom: 10px;
 }

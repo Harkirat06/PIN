@@ -119,22 +119,48 @@ function PcBuilder({ context }) {
   };
   const handleAutocomplete = () => {
     buildPorPrecio(presupuesto, false, build).then((selectedBuild) => {
-      setBuild(() => {
-        let conf = { ...selectedBuild };
-        return [conf];
-      });
-      setElementosSeleccionados(() => {
-        let elementos = { ...elementosSeleccionados[0] };
-        Object.keys(selectedBuild).forEach((propiedad) => {
-          console.log(propiedad);
+      //if (selectedBuild.Error) {return console.log("PENE"+selectedBuild)}
+      if (selectedBuild && selectedBuild.Error) {
+        // Si buildPorPrecio devuelve un objeto Error, muestra un pop-up con el mensaje de error
+        setMensaje(selectedBuild.Error);
+        setShowError(true);
+      } else {
+        setBuild(() => {
+          let conf = { ...selectedBuild };
+          return [conf];
         });
-        Object.keys(selectedBuild).forEach((propiedad) => {
-          if (propiedad != "0") {
-            if (propiedad == "sata" || propiedad == "m2") {
-              if (elementos["disco"] == "Elemento no seleccionado") {
-                elementos["disco"] = [];
-              }
-              selectedBuild[propiedad].forEach((item) => {
+        setElementosSeleccionados(() => {
+          let elementos = { ...elementosSeleccionados[0] };
+          Object.keys(selectedBuild).forEach((propiedad) => {
+            console.log(propiedad);
+          });
+          Object.keys(selectedBuild).forEach((propiedad) => {
+            if (propiedad != "0") {
+              if (propiedad == "sata" || propiedad == "m2") {
+                if (elementos["disco"] == "Elemento no seleccionado") {
+                  elementos["disco"] = [];
+                }
+                selectedBuild[propiedad].forEach((item) => {
+                  if (!item.price) {
+                    console.log(
+                      "ERROR: " +
+                        item +
+                        " of type " +
+                        propiedad +
+                        " does not have price!"
+                    );
+                  }
+                  const selectedType = getPriceType(item, secondHand);
+                  elementos["disco"] = elementos["disco"].concat({
+                    nombre: item.nombre,
+                    selectedType: selectedType,
+                    link: item.link[selectedType],
+                    selectedPrice: item.precio[selectedType],
+                  });
+                });
+              } else {
+                const item = selectedBuild[propiedad];
+  
                 if (!item.price) {
                   console.log(
                     "ERROR: " +
@@ -145,40 +171,22 @@ function PcBuilder({ context }) {
                   );
                 }
                 const selectedType = getPriceType(item, secondHand);
-                elementos["disco"] = elementos["disco"].concat({
+                elementos[propiedad] = {
                   nombre: item.nombre,
                   selectedType: selectedType,
                   link: item.link[selectedType],
                   selectedPrice: item.precio[selectedType],
-                });
-              });
-            } else {
-              const item = selectedBuild[propiedad];
-
-              if (!item.price) {
-                console.log(
-                  "ERROR: " +
-                    item +
-                    " of type " +
-                    propiedad +
-                    " does not have price!"
-                );
+                };
               }
-              const selectedType = getPriceType(item, secondHand);
-              elementos[propiedad] = {
-                nombre: item.nombre,
-                selectedType: selectedType,
-                link: item.link[selectedType],
-                selectedPrice: item.precio[selectedType],
-              };
             }
-          }
+          });
+          return [elementos];
         });
-        return [elementos];
-      });
+        handleClose();
+      }
     });
 
-    handleClose();
+    
   };
 
   const getPriceType = (item, secondHand) => {
@@ -297,11 +305,6 @@ function PcBuilder({ context }) {
           Volver a Selección
         </Button>
       </div>
-      {showError && (
-        <Alert variant="danger" onClose={() => setShowError(false)} dismissible>
-          {mensaje}
-        </Alert>
-      )}
 
       <div className="container-fluid">
         <div className="row">
@@ -414,6 +417,11 @@ function PcBuilder({ context }) {
               setPresupuesto(e.target.value);
             }}
           />
+          {showError && (
+            <Alert variant="danger" onClose={() => setShowError(false)} dismissible>
+              {mensaje}
+            </Alert>
+          )}
         </Modal.Body>
         <Modal.Footer>
           <Button className="cancel" onClick={handleClose}>

@@ -183,7 +183,7 @@ function SelectBuild({ context }) {
                     <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '20px' }}>
                       <div style={{ flex: 1 }}>
                         <p>Hecho para usuarios más experimentados. Elige los componentes a tu gusto. </p>
-                        <p>Si lo deseas, puedes elegir un componente concreto y clicat en "Autobuild". Nosotros elegiremos los componentes óptimos para el resto de la build.</p>
+                        <p>Si lo deseas, puedes elegir un componente concreto y clicar en "Autobuild". Nosotros elegiremos los componentes óptimos para el resto de la build.</p>
                       </div>
                       <div style={{ flex: 1 }}>
                         <p>Hecho para principiantes o personas con menos tiempo. Danos algunos detalles sobre tus necesidades. Construiremos un PC de acuerdo a tu presupuesto, gustos y necesidades.</p>

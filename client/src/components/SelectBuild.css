@@ -1,9 +1,11 @@
 html:has(.SelectBuild), body:has(.SelectBuild) {
-    background-color: #fff;
+    background-color: #ffffff;
 }
-.verde{
+
+.verde {
     color: #20f299;
 }
+
 .header {
     background-color: #222225;
     padding: 20px;
@@ -11,72 +13,147 @@ html:has(.SelectBuild), body:has(.SelectBuild) {
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     content: url(./logo.svg);
 }
 
+.SelectBuild h3 {
+    color: #222225;
+    font: "Nohemi";
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
 .boton-verde {
-    background-color: #20f299;
-    color: #fff;
+    font-family: 'Mukta', sans-serif;
+    background-color: #222225;
+    color: #ffffff;
+    font-weight: 300;
     /* Establecer el padding (espaciado interno) del botón */
-    padding: 10px 20px;
+    padding: 10px 15px;
     /* Establecer el borde del botón */
     border: none;
     /* Establecer el radio de borde para esquinas redondeadas */
     border-radius: 5px;
-    /* Establecer un ancho específico */
-    width: 200px;
     /* Establecer el cursor al pasar el ratón sobre el botón */
     cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SelectBuild .col-md-6:has(.imagen) {
+    padding: 0px;
+}
+
+.SelectBuild .col-md-6:has(.slick-slider) {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.SelectBuild .align-items-center.justify-content-center {
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+}
+
+.SelectBuild .btnContainer {
+    text-align: center;
 }
 
 .boton-verde:focus,
 .boton-verde:hover {
-    background-color: blue;
+    background-color: #20f299;
+}
+
+.boton-verde:active {
+    background-color: #ffffff !important;
+    color: #222225 !important;
 }
 
 .contenedor {
     background-color: #ccc;
 }
 
-h2{
+h2 {
     font: "Nohemi";
     font-weight: 400;
-    margin-left: 2%;
+    margin-left: 20px;
     font-size: 48px;
 }
-.imagen{
-    margin: 12%;
+
+.imagen {
+    margin: 25px 12% 25px 12%;
 }
 
-.container-fluid{
+.container-fluid {
     margin-top: 1%;
 }
-.flex-grow-1{
-    margin-top: 5%;
-    margin-bottom: 12%;
+
+.flex-grow-1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.slick-slider.flex-grow-1.slick-initialized {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.SelectBuild .gamaNichoBtn {
+    background-color: #222225;
+    color: #ffffff;
+    border: none !important;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gamaNichoBtn:hover,
+.gamaNichoBtn:focus {
+    background-color: #20f299;
+}
+
+.gamaNichoBtn:active {
+    background-color: #ffffff !important;
+    color: #222225 !important;
+    margin: auto;
+}
+
+.SelectBuild .presupuestoInput {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/** Cambia el color de los botones de navegación del slider */
+.slick-arrow.slick-prev {
+    margin-left: 20px;
+}
+
+.slick-arrow.slick-next {
+    margin-right: 20px;
 }
 
 /* Cambia el color de los botones de navegación del slider */
-.slick-arrow.slick-next {
-  color: #20f299 !important; /* Cambia el color a negro o al color que prefieras */
-  background-color: #20f299 !important;
+.slick-arrow.slick-prev:before,
+.slick-arrow.slick-next:before {
+    color: #20f299 !important; /* Cambia el color a negro o al color que prefieras */
 }
-
+  
+.slick-arrow.slick-prev:hover,
 .slick-arrow.slick-next:hover {
     color: black !important; /* Cambia el color a negro o al color que prefieras */
-    background-color: black !important;
-  }
+}
 
-  /* Cambia el color de los botones de navegación del slider */
-.slick-arrow.slick-prev {
-    color: #20f299 !important; /* Cambia el color a negro o al color que prefieras */
-    background-color: #20f299 !important;
-  }
-  
-.slick-arrow.slick-prev:hover {
-      color: black !important; /* Cambia el color a negro o al color que prefieras */
-      background-color: black !important;
+.slick-arrow.slick-prev:active,
+.slick-arrow.slick-next:active {
+    color: #ffffff !important;
 }
 
 .slick-dots li button {
@@ -88,5 +165,5 @@ h2{
   
   /* Estilo personalizado para el punto activo del slider */
   .slick-dots li.slick-active button {
-    background-color: #2ecc71; /* Cambia el color del punto activo */
+    background-color: #20f299; /* Cambia el color del punto activo */
   }

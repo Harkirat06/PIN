@@ -174,12 +174,12 @@ function SelectBuild({ context }) {
 
           {/* Parte derecha */}
           <div className="col-md-6 ">
-            <div className="d-flex align-items-center justify-content-center h-100">
+            <div className="slickContainer align-items-center justify-content-center">
               <div className="rounded p-3 w-100 h-100 d-flex flex-column contenedor">
                 {/* Contenido para elegir entre dos opciones */}
                 {!mostrarSlider ? (
                   <div className="flex-grow-1">
-                    <h3 className="verde">Elige una de las dos opciones</h3>
+                    <h3>Elige una de las dos opciones</h3>
                     <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '20px' }}>
                       <div style={{ flex: 1 }}>
                         <p>Hecho para usuarios más experimentados. Elige los componentes a tu gusto. </p>
@@ -191,7 +191,7 @@ function SelectBuild({ context }) {
                       </div>
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
-                      <div style={{ flex: 1 }}>
+                      <div className="btnContainer" style={{ flex: 1 }}>
                         <Button
                           className="boton-verde"
                           onClick={() => {
@@ -201,7 +201,7 @@ function SelectBuild({ context }) {
                           Build desde cero
                         </Button>
                       </div>
-                      <div style={{ flex: 1 }}>
+                      <div className="btnContainer" style={{ flex: 1 }}>
                         <Button
                           className="boton-verde"
                           onClick={() => handleOpcionSeleccionada("opcion1")}
@@ -215,11 +215,10 @@ function SelectBuild({ context }) {
                   /* Contenido del slider si se elige la Opción 1 */
                   <Slider {...sliderSettings} className="flex-grow-1">
                     <div>
-                      <h1 className="verde">Builds por nicho</h1>
-                      <Row>
-                        <Col xs={3}>
-                          {/* Zona con 3 botones de gamas */}
+                      <h3>Builds por nicho</h3>
+                      <div>
                           <Button
+                            className="gamaNichoBtn"
                             onClick={() => {
                               buildPorNicho("Gamers").then((r) =>
                                 selectBuild(r, false)
@@ -229,6 +228,7 @@ function SelectBuild({ context }) {
                             Gamers
                           </Button>
                           <Button
+                            className="gamaNichoBtn"
                             onClick={() => {
                               buildPorNicho("Profesionales").then((r) =>
                                 selectBuild(r, false)
@@ -238,6 +238,7 @@ function SelectBuild({ context }) {
                             Profesionales
                           </Button>
                           <Button
+                            className="gamaNichoBtn"
                             onClick={() => {
                               buildPorNicho("Estudiantes").then((r) =>
                                 selectBuild(r, false)
@@ -247,6 +248,7 @@ function SelectBuild({ context }) {
                             Estudiantes
                           </Button>
                           <Button
+                            className="gamaNichoBtn"
                             onClick={() => {
                               buildPorNicho("Uso Basico").then((r) =>
                                 selectBuild(r, false)
@@ -255,15 +257,13 @@ function SelectBuild({ context }) {
                           >
                             Uso básico
                           </Button>
-                        </Col>
-                      </Row>
+                        </div>
                     </div>
                     <div>
-                      <h1 className="verde">Builds por gama</h1>
-                      <Row>
-                        <Col xs={3}>
-                          {/* Zona con 3 botones de gamas */}
+                      <h3>Builds por gama</h3>
+                      <div>
                           <Button
+                            className="gamaNichoBtn"
                             onClick={() => {
                               buildPorGama("baja").then((r) =>
                                 selectBuild(r, false)
@@ -273,6 +273,7 @@ function SelectBuild({ context }) {
                             Gama baja
                           </Button>
                           <Button
+                            className="gamaNichoBtn"
                             onClick={() => {
                               buildPorGama("media").then((r) =>
                                 selectBuild(r, false)
@@ -282,6 +283,7 @@ function SelectBuild({ context }) {
                             Gama media
                           </Button>
                           <Button
+                            className="gamaNichoBtn"
                             onClick={() => {
                               buildPorGama("alta").then((r) =>
                                 selectBuild(r, false)
@@ -290,18 +292,16 @@ function SelectBuild({ context }) {
                           >
                             Gama alta
                           </Button>
-                        </Col>
-                      </Row>
+                        </div>  
                     </div>
                     <div>
-                      <h3 className="verde">Build por precio</h3>
-                      <Row>
-                        <Col xs={3}>
-                          <Form>
+                      <h3>Build por precio</h3>
+                      <Form>
                             <Form.Label style={{ color: "white" }}>
                               Presupuesto
                             </Form.Label>
                             <Form.Control
+                              className="presupuestoInput" 
                               type="text"
                               placeholder="ej: 1000"
                               value={presupuesto}
@@ -310,7 +310,6 @@ function SelectBuild({ context }) {
                               }}
                             />
                           </Form>
-                          <Col>
                             <Button
                               className="boton-verde"
                               onClick={() => {
@@ -328,9 +327,6 @@ function SelectBuild({ context }) {
                             >
                               Hacer build
                             </Button>
-                          </Col>
-                        </Col>
-                      </Row>
                     </div>
                   </Slider>
                 )}

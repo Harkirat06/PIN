@@ -39,7 +39,7 @@ describe("filtroPorGama function", () => {
 
     // Realiza las comprobaciones pertinentes para verificar si la lista se ha filtrado correctamente
     // Por ejemplo:
-    expect(filteredList).toHaveLength(7);
+    expect(filteredList).toHaveLength(8);
     // Agrega más aserciones según la lógica de filtrado y los datos de prueba utilizados
   });
 });

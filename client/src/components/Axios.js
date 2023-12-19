@@ -1,10 +1,9 @@
 import axios from 'axios'
 
-export async function buildPorPrecio(presupuesto = 0, segundaMano = false, build = {}){
+export async function buildPorPrecio(presupuesto = 0, build = {}){
     const response = await axios.get("/api/builder/precio",{
         params: {
             presupuesto,
-            segundaMano,
             build
         }
     })

@@ -155,8 +155,8 @@ describe("handleRam function", () => {
 
 describe("handleDisco function", () => {
   const discoList = [
-    { tipo: "Sata" },
-    { tipo: "m.2" },
+    { tecnologia: "Sata" },
+    { tecnologia: "m2" },
     // Mocked disco data
   ];
 
@@ -172,15 +172,15 @@ describe("handleDisco function", () => {
       []
     );
     expect(filteredListWithPlacaBase).toEqual([
-      { tipo: "Sata" },
-      { tipo: "m.2" },
+      { tecnologia: "Sata" },
+      { tecnologia: "m2" },
     ]);
 
     const filteredListWithM2 = handleDisco(discoList, {}, mockedM2, []);
-    expect(filteredListWithM2).toEqual([{ tipo: "Sata" }]);
+    expect(filteredListWithM2).toEqual([{ tecnologia: "Sata" }]);
 
     const filteredListWithSata = handleDisco(discoList, {}, [], mockedSata);
-    expect(filteredListWithSata).toEqual([{ tipo: "m.2" }]);
+    expect(filteredListWithSata).toEqual([{ tecnologia: "m2" }]);
 
     const filteredListWithBoth = handleDisco(
       discoList,
@@ -196,7 +196,7 @@ describe("handleDisco function", () => {
       ["M2_3"],
       ["SATA_3"]
     );
-    expect(emptyFilteredList).toEqual([{ tipo: "Sata" }]);
+    expect(emptyFilteredList).toEqual([{ tecnologia: "Sata" }]);
     2;
     const emptyList = handleDisco(
       discoList,
@@ -204,7 +204,7 @@ describe("handleDisco function", () => {
       ["M2_3"],
       ["SATA_3", "SATA_4"]
     );
-    expect(emptyList).toEqual([{ tipo: "m.2" }]);
+    expect(emptyList).toEqual([{ tecnologia: "m2" }]);
   });
 });
 

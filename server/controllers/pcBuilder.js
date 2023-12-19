@@ -61,17 +61,17 @@ const handleRam = (lista, placaBase, cpu) => {
 
 const handleDisco = (lista, placaBase = {}, m2 = [], sata = []) => {
   if (m2.length >= placaBase.numeroM2) {
-    lista = lista.filter((item) => item.tipo == "Sata");
+    lista = lista.filter((item) => item.tecnologia == "Sata");
   }
   if (sata.length >= placaBase.numeroSata) {
-    lista = lista.filter((item) => item.tipo == "m.2");
+    lista = lista.filter((item) => item.tecnologia == "m2");
   }
 
   if (m2.length >= 2) {
-    lista = lista.filter((item) => item.tipo == "Sata");
+    lista = lista.filter((item) => item.tecnologia == "Sata");
   }
   if (sata.length >= 2) {
-    lista = lista.filter((item) => item.tipo == "m.2");
+    lista = lista.filter((item) => item.tecnologia == "m2");
   }
   return lista;
 };

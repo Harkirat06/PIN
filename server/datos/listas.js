@@ -431,10 +431,10 @@ const cpuList = [
 {
     marca: "AMD",
     nombre: "AMD Ryzen 7 5800X",
-    gama: "Media",
+    gama: "MediaAlta",
     socket: "AM5",
     consumo: 105,
-    tipoRam: "DDR4",
+    tipoRam: "DDR5",
     ventilador: false,
     gpu: false,
     precio: {

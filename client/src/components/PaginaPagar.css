@@ -109,6 +109,7 @@ html:has(.PaginaPagar), :has(.PaginaPagar) {
     margin: 0px 50px;
     color: #ffffff;
     height: 1px;
+    opacity: 0.75;
 }
 
 .PaginaPagar .btnWrapper {

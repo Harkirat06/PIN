@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Container, Row, Button, Col } from 'react-bootstrap';
+import { Alert, Container, Row, Button, Col } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import "./PaginaPagar.css"
 
@@ -22,7 +22,7 @@ function PaginaPagar({ context }) {
 
     const openInNewTab = (url) => {
         window.open(url, "_blank", "noreferrer");
-      };
+    };
 
     const handleSeleccion = (propiedad) => {
         if (productList[propiedad] !== "Elemento no seleccionado") {
@@ -90,6 +90,11 @@ function PaginaPagar({ context }) {
                 <a><img className="logo"/></a>
                 <a><img className="userProfile"/></a>
             </div>
+            {(
+                <Alert variant="danger" dismissible>
+                    Por favor, asegúrate de que tu bloqueador de ventanas emergentes está desactivado para Briko.
+                </Alert>
+            )}
             <div className="mainWrapper">
                 <span className="title">Tus productos seleccionados</span>
                 <div className="listWrapper">

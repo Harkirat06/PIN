@@ -104,6 +104,7 @@ html:has(.PcBuilder), body:has(.PcBuilder) {
   color: #ffffff;
   border: 1.5px solid #222225;
   margin-top: 2%;
+  margin-bottom: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -153,6 +154,7 @@ html:has(.PcBuilder), body:has(.PcBuilder) {
   color: #ffffff;
   border: none;
   margin-top: 2%;
+  margin-bottom: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -183,7 +183,7 @@ function SelectBuild({ context }) {
                     <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '20px' }}>
                       <div style={{ flex: 1 }}>
                         <b>Build desde cero:</b>
-                        <p>Hecho para usuarios más experimentados. Elige los componentes a tu gusto. </p>
+                        <p>Hecho para usuarios más experimentados. Elige los componentes a tu gusto.</p>
                         <p>Si lo deseas, puedes elegir un componente concreto y clicar en "Autobuild". Nosotros elegiremos los componentes óptimos para el resto de la build.</p>
                       </div>
                       <div style={{ flex: 1 }}>

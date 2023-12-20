@@ -84,7 +84,6 @@ const buildPorPrecio = (build = {}, presupuesto = 0) => {
         configuracionPorPrecio.placas,
         configuracionPorPrecio.ram
       );
-      console.log(listaCPU)
       let CPUs = shortearListasPorPrecio(listaCPU);
       if (CPUs.length != 0) {
         configuracionPorPrecio.cpu = CPUs[0];

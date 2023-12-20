@@ -132,13 +132,7 @@ h2 {
 }
 
 /** Cambia el color de los botones de navegación del slider */
-.slick-arrow.slick-prev {
-    margin-left: 20px;
-}
 
-.slick-arrow.slick-next {
-    margin-right: 20px;
-}
 
 /* Cambia el color de los botones de navegación del slider */
 .slick-arrow.slick-prev:before,
@@ -149,11 +143,6 @@ h2 {
 .slick-arrow.slick-prev:hover,
 .slick-arrow.slick-next:hover {
     color: black !important; /* Cambia el color a negro o al color que prefieras */
-}
-
-.slick-arrow.slick-prev:active,
-.slick-arrow.slick-next:active {
-    color: #ffffff !important;
 }
 
 .slick-dots li button {

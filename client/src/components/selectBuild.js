@@ -72,7 +72,7 @@ function SelectBuild({ context }) {
   // Función para manejar el cambio en el slider
 
   // Al seleccionar una build, establece la build en el contexto
-  const selectBuild = (selectedBuild, secondHand) => {
+  const selectBuild = (selectedBuild) => {
     setBuild(() => {
       let conf = { ...selectedBuild };
       return [conf];
@@ -85,7 +85,7 @@ function SelectBuild({ context }) {
             elementos["disco"] = [];
           }
           selectedBuild[propiedad].forEach((item) => {
-            const selectedType = getPriceType(item, secondHand);
+            const selectedType = getPriceType(item);
             elementos["disco"] = elementos["disco"].concat({
               nombre: item.nombre,
               selectedType: selectedType,
@@ -95,7 +95,7 @@ function SelectBuild({ context }) {
           });
         } else {
           const item = selectedBuild[propiedad];
-          const selectedType = getPriceType(item, secondHand);
+          const selectedType = getPriceType(item);
           elementos[propiedad] = {
             nombre: item.nombre,
             selectedType: selectedType,
@@ -109,9 +109,9 @@ function SelectBuild({ context }) {
     navigate("/PcBuilder");
   };
 
-  const getPriceType = (item, secondHand) => {
+  const getPriceType = (item) => {
     let minPrice = 0;
-    if (secondHand && item.precio.segundaMano) {
+    if (item.precio.segundaMano) {
       minPrice = Math.min(
         item.precio.amazon,
         item.precio.ebay,

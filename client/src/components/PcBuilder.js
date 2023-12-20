@@ -118,7 +118,7 @@ function PcBuilder({ context }) {
     setShow(true);
   };
   const handleAutocomplete = () => {
-    buildPorPrecio(presupuesto, false, build).then((selectedBuild) => {
+    buildPorPrecio(presupuesto, build).then((selectedBuild) => {
       //if (selectedBuild.Error) {return console.log("PENE"+selectedBuild)}
       if (selectedBuild && selectedBuild.Error) {
         // Si buildPorPrecio devuelve un objeto Error, muestra un pop-up con el mensaje de error
@@ -131,9 +131,6 @@ function PcBuilder({ context }) {
         });
         setElementosSeleccionados(() => {
           let elementos = { ...elementosSeleccionados[0] };
-          Object.keys(selectedBuild).forEach((propiedad) => {
-            console.log(propiedad);
-          });
           Object.keys(selectedBuild).forEach((propiedad) => {
             if (propiedad != "0") {
               if (propiedad == "sata" || propiedad == "m2") {
@@ -150,7 +147,7 @@ function PcBuilder({ context }) {
                         " does not have price!"
                     );
                   }
-                  const selectedType = getPriceType(item, secondHand);
+                  const selectedType = getPriceType(item);
                   elementos["disco"] = elementos["disco"].concat({
                     nombre: item.nombre,
                     selectedType: selectedType,
@@ -170,7 +167,7 @@ function PcBuilder({ context }) {
                       " does not have price!"
                   );
                 }
-                const selectedType = getPriceType(item, secondHand);
+                const selectedType = getPriceType(item);
                 elementos[propiedad] = {
                   nombre: item.nombre,
                   selectedType: selectedType,
@@ -189,9 +186,10 @@ function PcBuilder({ context }) {
     
   };
 
-  const getPriceType = (item, secondHand) => {
+  const getPriceType = (item) => {
+    console.log("Item: " + item)
     let minPrice = 0;
-    if (secondHand && item.precio.segundaMano) {
+    if (item.precio.segundaMano) {
       minPrice = Math.min(
         item.precio.amazon,
         item.precio.ebay,

@@ -367,7 +367,7 @@ const cpuList = [
         amazon: "https://www.amazon.es/AMD-Ryzen-7950X3D-desenfrenados-Arquitectura/dp/B0BTRH9MNS/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2GR1B5K5Q91GD&keywords=AMD+Ryzen+9+7950X&qid=1701167090&sprefix=amd+ryzen+9+7950x%2Caps%2C147&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/126176041927?hash=item1d60ad9bc7:g:kDkAAOSwj9FlS2WS&amdata=enc%3AAQAIAAAA4GGGVPWdZ%2B%2Bmuoue%2BTFuLZzkDtLS6pGJL0qtwDCesYy%2Fchys9cD4DTtJzspfAwSmcmW3Q0Lo0mNEz%2F%2FzW5W3%2FUR94iZaZTD9nyBndnyYcNzyGr8YKgi6BA4lgXeY0jnMzCcqOGRQGG1rhkobHEgLgE0eUXNXZi2DuXrw%2F4Z%2FaTDU3bRZzSrvHRS%2BHUc236A06AhUXNUhGgdzqqEqlvUi3o6kfo1ISeokR4G14gtlhKXaBqfyF6V8VbkKMWGdfoXb26tStwyfgT0y0K17TBhaPPoE1KWUG4NJbyFaqRvYwVTe%7Ctkp%3ABk9SR9jJx9eCYw",
     },
-    imagen: "intel.jpg",
+    imagen: "amd.jpg",
 },
 {
     marca: "AMD",
@@ -387,7 +387,7 @@ const cpuList = [
         amazon: "https://www.amazon.es/AMD-Ryzen-7800X3D-desenfrenados-Arquitectura/dp/B0BTZB7F88/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10EE0ZM74K8QG&keywords=AMD+Ryzen+7+7800X3D&qid=1701167521&sprefix=amd+ryzen+7+7800x3d%2Caps%2C100&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/266435328807?hash=item3e08c87b27:g:UTEAAOSwQh9lUoI3&amdata=enc%3AAQAIAAAA4CjqxqbmApS2YK%2BOLByx%2Bbu5SpNJWs0k6rHZ8W5lMI%2F4Uh1rQypEPl01PciL3bkeKDFsonYxM%2FpKH%2BqcWNpxqlxVCrVC3%2BcwWk5wYnwIrvtmxO5YmM5i8CMVsDeCOvolNfMCY7L9ltwIiJ0Pf6BJqCYxKW06ke5LWlX9%2F7KafKGntJAnJScKNZCa9o%2FKb40atvyJdrWZ2X%2F7bfRblCOkT6OZOGzRYevgNGn9CXz08QFyWvGiqmFo8djZd0PEP7%2Bm1iOhGqaaDgJjrzW0ZS%2Bsp0GA1SkjXjo9M6eGr9%2FojEZa%7Ctkp%3ABk9SR6zP9deCYw",
     },
-    imagen: "intel.jpg",
+    imagen: "amd.jpg",
 },
 {
     marca: "AMD",
@@ -406,7 +406,7 @@ const cpuList = [
         amazon: "https://www.amazon.es/AMD-Ryzen-7600-Processor-Negro/dp/B0BMQJWBDM/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2JB6ISUKUKUP3&keywords=AMD+Ryzen+5+7600X&qid=1701167793&sprefix=amd+ryzen+5+7600x%2Caps%2C87&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/285571541885?hash=item427d63eb7d:g:sjcAAOSw-jNlXlHF&amdata=enc%3AAQAIAAAA4J99uFpg9XI7yBHex8ICx7Dfpeqzn64K4Y2h85UqGT0QsjpBkIOqZdrfikRAnCPKhHEqEHSD6XdSvnoWI4yNderb7q5G9dNr%2BB88sxOfAa30dDcz4KPiW1K8YrCpxaMMIY23UMsq7qC5lTf68SwtpFBV%2Bxp3tL4EoVA%2BlasqjmxfjPNdB%2BuYdnLSrJaQEcqgDHsiqYo4b519I%2B9h1wE5XficMuUcFYscyMUCTTDNCPTNaeplV1SDCB6GvXTUJ5UBesmcoilPDlnBbq4mJYvj3Z7ELspdIl7KIjnwxdKSYLQ7%7Ctkp%3ABFBMsImJ2IJj",
     },
-    imagen: "intel.jpg",
+    imagen: "amd.jpg",
 },
 {
     marca: "AMD",
@@ -426,7 +426,7 @@ const cpuList = [
         amazon: "https://www.amazon.es/AMD-Ryzen-9-5950X-Box/dp/B0815Y8J9N/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=36QZ0SQ1SU4VW&keywords=AMD+Ryzen+9+5950X&qid=1701168257&sprefix=amd+ryzen+9+5950x%2Caps%2C152&sr=8-1&ufe=app_do%3Aamzn1.fos.0fd54328-1d46-4534-bd0f-16141b40bb5b",
         ebay: "https://www.ebay.es/itm/256117053201?hash=item3ba1c41711:g:mL8AAOSwWxNkkuCj&amdata=enc%3AAQAIAAAA4Mrl2zoGPX4IGAIx1uFG6zB7XH8Fbo73xE5RSuDLsXdtqoDgY4TTSM%2BaRXSCk0831tqFAxwlMUtvQ6yVo0bXDnPQ5r%2BkCKwTNU3SiVFjW9PgVUxG5daV05tsExng0Q7bDcelxix6BaevGpSnngc4m4HGyl1%2F7H12G41UbWwGiBX6bEqGB4sjJN3q5szbLG4E%2BFgxW9A9L5YR5%2FmbxpVlDEqsq%2Bqrz6vQaso5faTqazcZAJF4e9aCmjRGXOX9UTuqosBm9xD22slt1N5ffeeLJEdND0GudSbawR2F%2Bm2qd6qB%7Ctkp%3ABFBMuufA2IJj",
     },
-    imagen: "intel.jpg",
+    imagen: "amd.jpg",
 },
 {
     marca: "AMD",
@@ -446,7 +446,7 @@ const cpuList = [
         amazon: "https://www.amazon.es/AMD-Ryzen-7-5800X-Box/dp/B0815XFSGK/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JIMB1KVLC24A&keywords=AMD+Ryzen+7+5800X&qid=1701168419&sprefix=amd+ryzen+7+5800x%2Caps%2C89&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/186178440906?hash=item2b59198eca:g:wyYAAOSw9Q5lX-ir&amdata=enc%3AAQAIAAAA4I%2BwAW0UGkqLcN%2BQmFForHHt9uB%2Fs6Wx995BAmCcG%2B%2FhbQwhnqFNf1Yb%2FgsClEvvjCbzBxgxJt2SB1uZ4fhjLyybRqExT0vVSeBg0gzcAnC1e972x6JUp0Pg5vBZJwqPFocKCMHEHoDlctYNFr3DITupEucGgWBBkwQXiVbfJLaXk9EElTwrNX2xSKT0NHoCMeZbI5IKKsZtlSbN03NlUfa8YHd%2FdRzFyTqB0A2r1WsHPk7LsUtGwKfLov%2FPSbukau2GtwD97N6voOWMIfPJ7q35oOoJ4cnxAXks6z5SHto9%7Ctkp%3ABFBM6qvl2IJj",
     },
-    imagen: "intel.jpg",
+    imagen: "amd.jpg",
 },
 {
     marca: "AMD",
@@ -466,7 +466,7 @@ const cpuList = [
         amazon: "https://www.amazon.es/AMD-Ryzen-5600-Box-Negro/dp/B09VCHR1VH/ref=sr_1_1_mod_primary_new?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=PQ3BURFYN30&keywords=AMD+Ryzen+5+5600X&qid=1701168760&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=amd+ryzen+5+5600x%2Caps%2C158&sr=8-1",
         ebay: "https://www.ebay.es/itm/133769938956?hash=item1f254f480c:g:etsAAOSwthxgq3iU&amdata=enc%3AAQAIAAAA4HtXup0Pixdty9z9OsdNYYpB0v1audtMtv%2FDOpGktnBuNQhj6tDZQuok5q6uY%2B6lPH8eCWYx7j5FQwOjaMobrjujS2bNUYm3QmsKIEWhiFsDfZHkbr0e4JEROuOnQHUKZLXC92f4eZR8lBgwRsWcVtFh%2BTi3tq3J%2FOlkFspnYb3s9SoByQq1BhhXse8FZT8iM2YUhc7SOgZfspqzy%2F0x3e6zr1LO0K7o1sJAcHMbbsexkEdVlDa1xdfz8vuSSHlXwLEeH0hjv2y7C%2B0LWFK9dVRLYuxDnVLlVKGizQZ9TwmF%7Ctkp%3ABk9SR_Lg_diCYw",
     },
-    imagen: "intel.jpg",
+    imagen: "amd.jpg",
 },
 ]
 
@@ -488,7 +488,7 @@ const placasList = [
           amazon: "https://www.amazon.es/Gigabyte-H610M-V2-DDR4-Z%C3%B3calo/dp/B0C3XJPGM6/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3PGGP4N21TY5V&keywords=Gigabyte+H610M&qid=1702369528&sprefix=gigabyte+h610m%2Caps%2C87&sr=8-2&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
           ebay: "https://www.ebay.es/itm/175743088939?hash=item28eb1ab92b%3Ag%3A0y0AAOSwotVkbjoZ&amdata=enc%3AAQAIAAAAwDZIFouCc%2BNU8UXWEO%2FRaM660h51v4Gq%2FlIRg22%2B72lSNGCTlijEBn1gSPJVDcu4resG6GkS0x3RGXLMF1RQfoHIuZTavY7GHuoEmJVaRvJH01XlwuoLkGtJ%2BUKelAxmngwB5VTItCumLz94FbPWmQDtgKHKA7Tm65BgzzYA2IVHLF%2BJYw8TCZk8fBfOS%2Fz1vEn11BWC%2BWl1uZP%2Buohc%2B9ok7E0IuT1V9iO%2B0uukRU4qrPsTs2qKmR4hNwCEbPatWw%3D%3D%7Ctkp%3ABk9SR8zNj9KLYw&LH_ItemCondition=3",
       },
-      imagen: "placa.jpg"
+      imagen: "placaIntel.jpg"
   },
   {
       marca: "MSI",
@@ -507,7 +507,7 @@ const placasList = [
           amazon: "https://www.amazon.es/MSI-Micro-ATX-Procesadores-Ranuras-PROB660M/dp/B09NTP4PVK/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2Q5OZ0P5S4CHT&keywords=MSI%2BPRO%2BB660M-E&qid=1702370067&sprefix=msi%2Bpro%2Bb660m-e%2Caps%2C177&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b&th=1",
           ebay: "https://www.ebay.es/itm/266383590880?hash=item3e05b305e0:g:cJgAAOSwE4lk5Vi4&amdata=enc%3AAQAIAAAA4HbpUsXrRUXGNe834Ny3aXSRSN%2Bif%2B2KpzO5WTv4XeNoLuVzpd62hQKL9aBJZcc27lOMx0gjBOersQ6yF1dgAtsnjhHA3JvSxi7vCd22pCA0ZYl8KXyTdGJbD7M6m5TWedLA0%2F7v4BywX0fPd7j6EgSFBa%2BEvxTheqQZ%2BqRACke%2FOMGnRGE6HHUHLHhbN4PdH7%2B4hDjExYm5RI7IYiR5AO6quHpoSkOGrgnH%2F7%2FwNGf379Zfx5%2BaQWTBRrAMKThDsnju%2FBi37D%2FV2ougpVYcjxJ%2F2O8oA6%2FlcEKoGJyMTs6J%7Ctkp%3ABk9SR5Ta2tKLYw",
       },
-      imagen: "placa.jpg"
+      imagen: "placaIntel.jpg"
   },
   {
       marca: "Gigabyte",
@@ -525,7 +525,7 @@ const placasList = [
           amazon: "https://www.amazon.es/GIGABYTE-Z790-Gaming-AX-G10/dp/B0BLF7QXJK/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=QTQXRPKUV97N&keywords=Gigabyte+Z790+GAMING+X&qid=1702370235&sprefix=gigabyte+z790+gaming+x%2Caps%2C103&sr=8-2&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
           ebay: "https://www.ebay.es/itm/204228941818?hash=item2f8cfe57fa:g:~oAAAOSwWRVj2AaK&amdata=enc%3AAQAIAAAA8O0zTbXUKtkOb%2FVANdsO9iddshguHd4FSpxtDKARwCGru8G9oU314ZKlcLcE47%2B0%2FOOYJDh0uvTfj3ApPXb99VdAvtFSy3dIbhmeQLtaEo8851dV0Phab0q6ir2a2U5xrn54tk6Xm6yS9v43g%2FDmMEqgJs4Rl4zm37QEwO0w4DBupKDQnj8waY1vhLB3S18g9JDmAhX2DvFLjFs%2FdgMQbWH8FWGGfvx%2F53LS4Y1%2FUHuyrtnm%2BAItmWAsIp4VRHU4kDJGBILO0S3yQqZgGffHXphQJvUnfWW8Yffwl%2FrlWWUEVeWaxAKnCsdqzlbM1k79rw%3D%3D%7Ctkp%3ABFBMxqjo0otj",
       },
-      imagen: "placa.jpg"
+      imagen: "placaIntel.jpg"
   },
   {
       marca: "Gigabyte",
@@ -544,7 +544,7 @@ const placasList = [
           amazon: "https://www.amazon.es/Gigabyte-Z790-AORUS-Pro-Placa/dp/B0CK498K6N/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LG7D5D8ELOB5&keywords=Gigabyte+Z790+AORUS+PRO+X&qid=1702370480&sprefix=gigabyte+z790+aorus+pro+x%2Caps%2C119&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
           ebay: "https://www.ebay.es/itm/355250702723?hash=item52b6978983%3Ag%3AugkAAOSw2OplajGL&amdata=enc%3AAQAIAAAA0BRSUaXoPMwIfe0NDN2Jymhwnd2BQb%2BLIeiu4o4Mkm4TxaYQqcLRwfdBN1fGSSa3SaW%2FgBuq52G06bJtSH%2Bsfabj%2BT%2BNkC2tO0rw5%2BDayuDvGr3J2TH4yaGwt8fEPlXCTNXByAL5boeY2IZt%2FuCQwJpT6jl9X%2BNJoJmbtDGPflSb5YwNEA%2B9d5GDK5Ok2bBYjIRuxWVM1QRV4OXc49f6m6NdQtq%2B%2Fdy2O3ITmIkk%2FoyauXpvNxefeg8pWWbuqtFyCVHI3RbgkBx3frPURpFz3Z0%3D%7Ctkp%3ABk9SR77fhNOLYw&LH_ItemCondition=3",
       },
-      imagen: "placa.jpg"
+      imagen: "placaIntel.jpg"
   },
   {
       marca: "Gigabyte",
@@ -562,7 +562,7 @@ const placasList = [
           amazon: "https://www.amazon.es/PLACA-BASE-GIGABYTE-AORUS-MASTER/dp/B09KC6V6D6/ref=sr_1_2_mod_primary_new?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3OIYG85OULCB3&keywords=Gigabyte+Z690+AORUS+MASTER&qid=1702370553&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=gigabyte+z690+aorus+master%2Caps%2C94&sr=8-2",
           ebay: "https://www.ebay.es/itm/296064976687?hash=item44eed9072f:g:XBEAAOSwCPZlXwzm&amdata=enc%3AAQAIAAAA8INxcPE4u93oJ1Vlks8sNDSDLy3gtHVwwzFPUhkAhgTsVEX6buT46pDYUX3mBTwYr9hwo%2B3uCqQq%2BFnYA5yMwj1lBBE%2FpQ9Mk%2FTjcIIoVLwoUBQsoyPvfY2v5DaXr599spqpXIZ%2B6TocPkTN0BQpXAVIEpPOzkyFaso4zVTt8j%2Fj2miEtosw6jPqKSAFFAR5ng0k1iUdysA1ftjpsZWfxth0dFDRQPzF%2FfPQQd%2BavsW3AEqVual%2Bx5LuY107INx0Ic6IIWyUHSgIeEgQ9SF6KEdGIvS3r5jRvV75a3AhZiNod6WgMTqkBHFOAnXRRNOgWg%3D%3D%7Ctkp%3ABk9SR_b6idOLYw",
       },
-      imagen: "placa.jpg"
+      imagen: "placaIntel.jpg"
   },
   {
       marca: "Gigabyte",
@@ -581,7 +581,7 @@ const placasList = [
           amazon: "https://www.amazon.es/Intel-1700-Z790-AORUS-Xtreme/dp/B0BYSML1N6/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2CRLRBIM9KQNO&keywords=Gigabyte+Z790+AORUS+XTREME+X&qid=1702370657&sprefix=gigabyte+z790+aorus+xtreme+x%2Caps%2C96&sr=8-1",
           ebay: "https://www.ebay.es/itm/335115164224?hash=item4e066b9a40:g:NggAAOSwwBxlUDbD&amdata=enc%3AAQAIAAAA0NVNEhV1P6EdEZ0NJTqv%2B1t6%2FCDXif%2BKRH1OPRGTDww3VW38YTG10zOQcgnJbEpSIzlZ1Zjy0n89Tw7xPE05musLJCQjctw%2BjLIdc5NNOYKgIdxJz%2FlUATkydIJvD%2F11GWBC7fHixsk4enaA2WgU2zFtFWoLjjJQDKKWFJaehRO0AP1eKKhPLDkBvarvEtolD28pdOrzbs1XE9PVqS1qJlwbWXsW6llc2GPC8ewIJCcG1RtMbYn1xcLMWD4fxbA4tVJq1BaX6eQ7D%2FCyNSt9Di4%3D%7Ctkp%3ABk9SR4a-ltOLYw",
       },
-      imagen: "placa.jpg"
+      imagen: "placaIntel.jpg"
   },
   {
       marca: "MSI",
@@ -899,7 +899,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/SAPPHIRE-Pulse-Radeon-7900-GDDR6/dp/B0BQNCSW3X/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=384HK2HNK47HD&keywords=rx+7900+xt&qid=1701245245&sprefix=rx+7900+xtx%2Caps%2C188&sr=8-2",
         ebay: "https://www.ebay.es/itm/266491008764?hash=item3e0c1a16fc%3Ag%3AAd0AAOSwsMtlR1zW&amdata=enc%3AAQAIAAAA4FfoJz0qVuqsVyf6PXyJndTkKALc0OHtwR%2F41q5LpkczVWLbKfbqoyUEGKaBoVg9BOlXA%2Fb0iNJc44fgslvGXhxzy332KrGSvq1mUpQIg1YxitiZ74B26V98bRtx5szByMtRoBZhPrHyrEZAOvYGGu8cKfUtGPkyd2xVxGw1wBK%2BmYtNus8fxRjFnbNi0WONd%2Br3FGv%2FRxoWLq0xNZu6MApSztzguGJOiXLK9jYYu4nqF%2FdLGl7818ncB8meND1mMFqiy6FfRh0PbedCFOht1AHg6LI6tXzHp6%2BkxiQfuEOh%7Ctkp%3ABk9SR5bOiKKDYw&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -916,7 +916,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/SAPPHIRE-Radeon-Gaming-RX7800XT-Ventiladores/dp/B0CGLYWWKX/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2WT4JITINIBEV&keywords=rx+7800+xt&qid=1701245669&sprefix=rx+7800+xt%2Caps%2C102&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/404633964638?hash=item5e3610505e%3Ag%3AP48AAOSw2JRlW0aB&amdata=enc%3AAQAIAAAA4O5hTI8F2yQSUAaIjZDt%2B69xwBznYd7q2ZC97zIkIVmew51x1DYvsFD4%2F1zBp%2Be7%2B70CVG9SQfOWhUXVHCpr%2FoUyPci63PoAFRLLc8WpuwKtleH32nt3WPL3eFRNEp7WqO3SaYVGRdbogGUBZiRnar9UWmyahmj0odxdScE2Da61RdrND9rAFZFoWxzkF6JJoSghuUp%2Fsx2qkZ1KMYgWg2JC2UJf8dA7zQ9DXtYzMgqhgePknf8smnEHIV2odOTVzhJmobIvsTVtqJGjHybfPgueeOXzYDWBaAmCKv3zTPuS%7Ctkp%3ABk9SR4ToqaKDYw&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -932,7 +932,7 @@ const gpuList = [
           amazon: "https://www.amazon.es/SAPPHIRE-Radeon-Gaming-RX7700XT-Ventiladores/dp/B0CGLYPBHS/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=13KW7AJKOW43A&keywords=rx+7700+xt&qid=1701245793&sprefix=rx+7700+xt%2Caps%2C95&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
           ebay: "https://www.ebay.es/itm/235294245582?hash=item36c8a142ce%3Ag%3AwysAAOSwal1lUDI8&amdata=enc%3AAQAIAAAAwMcCPbiSqThwHFsoTryd0cFXw3bk5lMdKW4OnYAFXSE9eQ7K6zMzo9%2BY705JBTDhpLJVjNjF%2FlM3eZTGC3rbwiUbFbR6EUSsL5WIUMYK0upA61bhnJLoOWjhop3zk%2FZfJEDIcXB8IFVlTa2pTS4wu9aQyHIb2vLGqmijYKicQ71mDmmZexnQZZUqsWDRoz6jjsSOwkoo9xYjz3nP356dM%2BfQICyQ2m7N6rJ8LDPOyDXR9MU0UGWe%2BBauWcmR3AQ6gg%3D%3D%7Ctkp%3ABk9SR8rCwKKDYw&LH_ItemCondition=3",
       },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -949,7 +949,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/Sapphire-Pulse-11324-01-20G-Radeon-7600/dp/B0C49S5R55/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=8G6CE8MDXPQX&keywords=rx+7600+xt&qid=1701246039&sprefix=rx+7600+xt%2Caps%2C87&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/325900863602?hash=item4be1348872%3Ag%3ATmMAAOSw1ORlYfuQ&amdata=enc%3AAQAIAAAA4ETW%2FKFSTs7a1tRhmOZCrYgiUSskuXcpPv9O%2FxphIyB2gDUvDbxHvR4ciXS2nFK%2B2DEIoceDfF4D3fKiPtzHhaHg0ExXslbhpVtdBU64ZoMWpoORUBtzlOh1jdu6wnc6qBnqvfJLZWAAMAy5EERzey6Iu%2FEBBypyjSLEMgQ8AZ3prS07VvEj3YRXRyKsveNqrSdwKcUVDItWN%2BYPOq2XGyMrUrQ7eLMbsMtxPtF3Ki83DWiviISMx7syX9vMx%2BL%2BWwsLyty9%2FxxRvrFSf52pZYnUTGSgPqbD0LdT1IQRYBzz%7Ctkp%3ABFBMktDXooNj&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -965,7 +965,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/PowerColor-Radeon-Ultimate-Memoria-Alimentado/dp/B09258PCFS/ref=sr_1_3?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2GO9XKM6571RI&keywords=rx+6900+xt&qid=1701246488&sprefix=rx+6900+xt%2Caps%2C112&sr=8-3",
         ebay: "https://www.ebay.es/itm/125140333526?hash=item1d22f1f3d6%3Ag%3AtD4AAOSw9r9iA9zT&amdata=enc%3AAQAIAAAA4HOb9p2XeTFMilDmRdwxIUaxicwYbOdDQx2yh%2FCoB0u4RMTBl63GDHzTFjqV5bvq66PvumeGOELkClHS%2BruFWBtYVV%2B53WkO6VgXkOikMPPb2toAHJq9LAjl3hO4bNAGECiXlXh21SHgj3Pl5rgVrYX3MR1T7cmFPqP9vbI5MgPqHErcz3%2FS241wQ2JiU3a0Fuo4Wf4C6TyumwYAAUy3pKgZFXnSOCZdWmIId76m1phrk%2F3Lc9nxK6aiIh585WghEnEXWhU1QCZihfZDk3sxMP4hsq06WQ5kXD3jMhcTFpQc%7Ctkp%3ABk9SR9rEjqODYw&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -982,7 +982,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/XFX-Speedster-MERC319-Radeon-6800/dp/B08TJ2BHCQ/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=34W3045IR4URE&keywords=rx+6800+xt&qid=1701246675&sprefix=rx+6800+xt%2Caps%2C87&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/235237270409?hash=item36c53be389%3Ag%3ANdcAAOSwCyllGiH4&amdata=enc%3AAQAIAAAA4AiEVEc5RAIUuEGqplljCkMwLCwASd24ak4nGFkbHuQdS0Tc%2B5GRwHK2Jkv7j8EodWimNB2pVDvDDsXOUiXyQUnhd0TYlrurCEjKF4piMK6gg8lmB9v%2FKch5WH%2F7McuxkRoDntP4gBQGfzDTnTW9OSbdjv5jigmAdcj0X5CY05iJxvt4qvNy%2F%2BTPqOTGmny3eUfsA6vvZC1wwvnooJGcB9k3BeEqqJUGY2YPU0BSsZY9NB4C1UPm%2Fv3sJUwILB%2F03PkbmXIZfI8a6rqkkQCPGcKZeOUX%2B32BsvNMRv4RFjpF%7Ctkp%3ABk9SR6DSpqODYw&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -999,7 +999,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/PowerColor-Fighter-AMD-Radeon-6700/dp/B08Y91QVG8/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=28IFIRL4XCDR1&keywords=rx+6700+xt&qid=1701246795&sprefix=rx+6700+xt%2Caps%2C109&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/126191450628?hash=item1d6198ba04%3Ag%3AFCsAAOSw11tlV31l&amdata=enc%3AAQAIAAAAwIo2xc3wth0jlrnph%2FsIZgoJdM6Qsw6dDt5xVgcB5EVAzf41XZCV0ql%2FVKjgxBv%2BpJN2Rb2YSWWAGSRB4Y5TGUmFOqObbBoalI3NREH%2F8GsXubI9RqgFjSqG5bOcxjlCctpH0bXLPyLceicx6dZD7U9XljXdzBylr0SdoDSV50xuCiAYgDYM5ev9roa4zn0hFd17wODQYDoh4pBjxXMnHfpRcGPpZKwccWcK8avBh1qhJHk6fMVAlAD0qNrNPHVZ6Q%3D%3D%7Ctkp%3ABk9SR8ros6ODYw&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -1015,7 +1015,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/Gigabyte-Technology-Radeon-6600-Eagle/dp/B09JCKJ2G9/ref=sr_1_2_mod_primary_new?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=QRP3VDGNCZI6&keywords=rx+6600+xt&qid=1701246994&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=rx+600+xt%2Caps%2C141&sr=8-2",
         ebay: "https://www.ebay.es/itm/296018655401?hash=item44ec1638a9%3Ag%3AZqwAAOSwpE5lYpUU&amdata=enc%3AAQAIAAAAwPOXqPd6H2hXogZk0DeVYutPfCM45r6HG3ngpCM9sMOI1k%2BpAzOQG2t9sJHPsDm4etNOsJk5iR5TVc%2B8sHKtdE3TPsSR5ToHm6Yl%2BDMLUjgBpXESk%2BOPDMLRRvAvRWkK84wJ3I8euTnQs0s8I30x%2Bfq6D5AL%2BPD6rXX8xmKz2pj7j%2FeSJSHnQST1oqjG%2FcgfCQKwPiQKNV15L46UJHmlPD3tNF9tRAW48RqsucVdcU1p9%2Fhm2Q%2Fi7keGVilrtnBIww%3D%3D%7Ctkp%3ABk9SR4bg2KODYw&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 {
     marca: "AMD",
@@ -1032,7 +1032,7 @@ const gpuList = [
         amazon: "https://www.amazon.es/MSI-2825Mhz-tarjeta-gr%C3%A1fica-4719072929985/dp/B09R1RVN3R/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=222QR235RF8SF&keywords=rx+6500+xt&qid=1701247387&sprefix=rx+6500+xt%2Caps%2C143&sr=8-1&ufe=app_do%3Aamzn1.fos.7911a93e-3532-4810-a632-e84fe123af2b",
         ebay: "https://www.ebay.es/itm/225881626060?hash=item34979815cc%3Ag%3ArjgAAOSwHZxlXOIZ&amdata=enc%3AAQAIAAAA4GsZWXJ1aknBC0Q48n4qeQEf%2FayLar4AdYk5qnNHrp4Kiq7RGEZEdv4wnJINVwgAdGL9LaBKzF%2Bp26saUHbAEtajgqh2cYyZcSAhnoOEPvdtrfkKsfPrQeZTFE8Efrg0xHQEOrtaaCkXqbJ0JQTB4KLvEsP9mKtiyVRzq841O3xoU7HtE1DZ2BBX0r5Db0WxcSYyS7OiksFyzVG8IpumHJr7ui4GdgpLmeyoGu32aSVhQ6AnJZ%2F2%2F0P3fiHxXRHTpz4t5Vz957NhP8tWTwEgGLA67GLFoInB2YIGcMT7rSzW%7Ctkp%3ABFBMruqNpINj&LH_ItemCondition=1000",
     },
-    imagen: "gpu.jpg"
+    imagen: "graficaAmd.jpg"
 },
 ]
 

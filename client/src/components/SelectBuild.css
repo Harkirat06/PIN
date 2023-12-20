@@ -132,7 +132,13 @@ h2 {
 }
 
 /** Cambia el color de los botones de navegación del slider */
+.slick-arrow.slick-prev {
+    margin-left: 10px;
+}
 
+.slick-arrow.slick-next {
+    margin-right: 20px;
+}
 
 /* Cambia el color de los botones de navegación del slider */
 .slick-arrow.slick-prev:before,

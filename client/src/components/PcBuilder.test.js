@@ -9,16 +9,30 @@ const mockContext = {
   listasComponentes: {},
   setListasComponentes: jest.fn(),
   setShow: jest.fn(),
-  build: [],
-  elementosSeleccionados: [{}],
+  build: [{}],
+  elementosSeleccionados: [
+    {
+      placas: "Elemento no seleccionado",
+      cpu: "Elemento no seleccionado",
+      gpu: "Elemento no seleccionado",
+      ram: "Elemento no seleccionado",
+      disipador: "Elemento no seleccionado",
+      fuente: "Elemento no seleccionado",
+      disco: "Elemento no seleccionado",
+      caja: "Elemento no seleccionado",
+      monitor: "Elemento no seleccionado",
+      teclado: "Elemento no seleccionado",
+      raton: "Elemento no seleccionado",
+    },
+  ],
   setElementosSeleccionados: jest.fn(),
   setBuild: jest.fn(),
-  listaComponente: {},
+  listaComponente: [],
   setListaComponente: jest.fn(),
   nombreLista: "",
   setNombreLista: jest.fn(),
   show: false,
-  user: {},
+  user: true,
 };
 
 jest.mock("./Axios", () => ({
@@ -30,25 +44,24 @@ describe("PcBuilder Component", () => {
   it("renders PcBuilder component correctly", () => {
     render(<PcBuilder context={mockContext} />);
     // Add assertions based on your component structure
-    expect(screen.getByText("Pc Builder")).toBeInTheDocument();
-    expect(screen.getByText("Autocompletar")).toBeInTheDocument();
+    expect(screen.getByText("Autobuild")).toBeInTheDocument();
   });
 
   it("opens modal on Autocompletar button click", () => {
     render(<PcBuilder context={mockContext} />);
-    fireEvent.click(screen.getByText("Autocompletar"));
+    fireEvent.click(screen.getByText("Autobuild"));
     expect(screen.getByText("Presupuesto para completar la build")).toBeInTheDocument();
   });
 
   it("handles Autocomplete and closes modal", async () => {
     render(<PcBuilder context={mockContext} />);
-    fireEvent.click(screen.getByText("Autocompletar"));
+    fireEvent.click(screen.getByText("AutoBuild"));
 
     // Simulate entering a budget in the input field
-    const budgetInput = screen.getByPlaceholderText("ej: 1000");
+    const budgetInput = screen.getByLabelText("0");
     fireEvent.change(budgetInput, { target: { value: "1000" } });
 
-    fireEvent.click(screen.getByText("Save Changes"));
+    fireEvent.click(screen.getByText("Guardar Cambios"));
 
     // Wait for the asynchronous operations (e.g., Axios calls) to complete
     await waitFor(() => {
